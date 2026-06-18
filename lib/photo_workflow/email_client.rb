@@ -28,7 +28,7 @@ module PhotoWorkflow
         to: recipient,
         subject: subject_for(event),
         body: body_for(event, card),
-        calendar: calendar_attachment_for(event)
+        calendar: calendar_attachment_for(event, recipient)
       )
       puts "Email notification sent to #{recipient} for #{event.fetch("summary", event.fetch("id"))}"
       true
@@ -68,7 +68,8 @@ module PhotoWorkflow
         body,
         "",
         "--#{boundary}",
-        "Content-Type: text/calendar; charset=UTF-8; method=PUBLISH; name=\"ensaio.ics\"",
+        "Content-Type: text/calendar; charset=UTF-8; method=REQUEST; name=\"ensaio.ics\"",
+        "Content-Class: urn:content-classes:calendarmessage",
         "Content-Disposition: attachment; filename=\"ensaio.ics\"",
         "Content-Transfer-Encoding: 8bit",
         "",
@@ -100,9 +101,8 @@ module PhotoWorkflow
         "Ensaio: #{event.fetch("summary", "")}",
         "Data: #{formatted_time(event.fetch("start", {}))}",
         optional_line("Local", event["location"]),
-        optional_line("Adicionar ao calendario", event["htmlLink"]),
         "",
-        "Tambem anexamos um arquivo ensaio.ics para adicionar este ensaio ao seu calendario.",
+        "Para adicionar ao seu calendario, use o convite anexado neste e-mail.",
         "",
         "Se precisar ajustar alguma informacao, responda este e-mail.",
         "",
@@ -136,22 +136,30 @@ module PhotoWorkflow
       value.to_s
     end
 
-    def calendar_attachment_for(event)
+    def calendar_attachment_for(event, attendee_email)
+      timezone = calendar_timezone(event)
+
       [
         "BEGIN:VCALENDAR",
         "VERSION:2.0",
         "PRODID:-//Photo Workflow//Calendar Confirmation//PT-BR",
         "CALSCALE:GREGORIAN",
-        "METHOD:PUBLISH",
+        "METHOD:REQUEST",
+        "X-WR-TIMEZONE:#{ics_escape(timezone)}",
         "BEGIN:VEVENT",
         "UID:#{ics_escape(event["iCalUID"] || "#{event.fetch("id", SecureRandom.uuid)}@photo-workflow")}",
         "DTSTAMP:#{ics_datetime(Time.now.utc)}",
-        ics_date_property("DTSTART", event.fetch("start", {})),
-        ics_date_property("DTEND", event.fetch("end", {})),
+        ics_date_property("DTSTART", event.fetch("start", {}), timezone),
+        ics_date_property("DTEND", event.fetch("end", {}), timezone),
         "SUMMARY:#{ics_escape(event.fetch("summary", ""))}",
         optional_ics_line("LOCATION", event["location"]),
         optional_ics_line("DESCRIPTION", calendar_description(event)),
         optional_ics_line("URL", event["htmlLink"]),
+        organizer_line(event),
+        "ATTENDEE;CN=#{ics_escape(attendee_email)};ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=TRUE:mailto:#{attendee_email}",
+        "STATUS:CONFIRMED",
+        "SEQUENCE:#{event.fetch("sequence", 0)}",
+        "TRANSP:OPAQUE",
         "END:VEVENT",
         "END:VCALENDAR"
       ].compact.join("\r\n") + "\r\n"
@@ -165,16 +173,31 @@ module PhotoWorkflow
       ].compact.join("\n\n")
     end
 
-    def ics_date_property(name, date_hash)
+    def ics_date_property(name, date_hash, timezone)
       if date_hash["date"]
         "#{name};VALUE=DATE:#{date_hash.fetch("date").delete("-")}"
       else
-        "#{name}:#{ics_datetime(Time.parse(date_hash.fetch("dateTime")).utc)}"
+        "#{name};TZID=#{timezone}:#{ics_local_datetime(Time.parse(date_hash.fetch("dateTime")))}"
       end
     end
 
     def ics_datetime(time)
       time.strftime("%Y%m%dT%H%M%SZ")
+    end
+
+    def ics_local_datetime(time)
+      time.strftime("%Y%m%dT%H%M%S")
+    end
+
+    def calendar_timezone(event)
+      event.dig("start", "timeZone") || event.dig("end", "timeZone") || env_value("CALENDAR_TIMEZONE", "America/Sao_Paulo")
+    end
+
+    def organizer_line(event)
+      email = event.dig("organizer", "email") || required_env("EMAIL_FROM")
+      name = event.dig("organizer", "displayName") || from_name
+
+      "ORGANIZER;CN=#{ics_escape(name)}:mailto:#{email}"
     end
 
     def optional_ics_line(name, value)
