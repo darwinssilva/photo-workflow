@@ -4,7 +4,7 @@ MVP barato para sincronizar ensaios do Google Agenda com Trello.
 
 Fluxo:
 
-1. GitHub Actions roda a cada 30 minutos.
+1. GitHub Actions roda a cada 5 minutos.
 2. O script busca eventos futuros do Google Agenda.
 3. Eventos futuros viram cards no Trello, exceto os que baterem no filtro de exclusao.
 4. O arquivo `data/calendar_event_syncs.json` guarda `google_event_id` e `trello_card_id`.
@@ -158,7 +158,8 @@ summary,start,end,location,description,calendar_link,trello_link
 
 ## Confirmacao por e-mail
 
-Quando `EMAIL_ENABLED=true`, o script envia confirmacao para o cliente somente quando cria um card novo.
+Quando `EMAIL_ENABLED=true`, o script envia confirmacao para o cliente quando cria um card novo.
+Se um evento ja tinha sido sincronizado antes da funcao de e-mail existir, o proximo sync envia uma vez e grava `email_notified_at` no state.
 
 Secrets recomendados para Gmail:
 
