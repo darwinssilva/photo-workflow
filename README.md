@@ -160,6 +160,7 @@ summary,start,end,location,description,calendar_link,trello_link
 
 Quando `EMAIL_ENABLED=true`, o script envia confirmacao para o cliente quando cria um card novo.
 Se um evento ja tinha sido sincronizado antes da funcao de e-mail existir, o proximo sync envia uma vez e grava `email_notified_at` no state.
+O e-mail inclui um anexo `ensaio.ics` para o cliente adicionar o ensaio ao calendario.
 
 Secrets recomendados para Gmail:
 
@@ -187,6 +188,8 @@ Seu ensaio foi agendado com sucesso.
 Ensaio: {{summary}}
 Data: {{start}}
 Local: {{location}}
+
+Tambem anexamos um arquivo ensaio.ics para adicionar este ensaio ao seu calendario.
 
 Se precisar ajustar alguma informacao, responda este e-mail.
 ```

@@ -1,3 +1,4 @@
+require "securerandom"
 require "net/smtp"
 require "time"
 
@@ -26,7 +27,8 @@ module PhotoWorkflow
       deliver(
         to: recipient,
         subject: subject_for(event),
-        body: body_for(event, card)
+        body: body_for(event, card),
+        calendar: calendar_attachment_for(event)
       )
       puts "Email notification sent to #{recipient} for #{event.fetch("summary", event.fetch("id"))}"
       true
@@ -50,15 +52,29 @@ module PhotoWorkflow
       attendees.map { |attendee| attendee["email"] }.compact.find { |email| email.match?(EMAIL_PATTERN) }
     end
 
-    def deliver(to:, subject:, body:)
+    def deliver(to:, subject:, body:, calendar:)
+      boundary = "photo-workflow-#{SecureRandom.hex(12)}"
       message = [
         "From: #{from_label} <#{required_env("EMAIL_FROM")}>",
         "To: #{to}",
         "Subject: #{encode_subject(subject)}",
         "MIME-Version: 1.0",
-        "Content-Type: text/plain; charset=UTF-8",
+        "Content-Type: multipart/mixed; boundary=\"#{boundary}\"",
         "",
-        body
+        "--#{boundary}",
+        "Content-Type: text/plain; charset=UTF-8",
+        "Content-Transfer-Encoding: 8bit",
+        "",
+        body,
+        "",
+        "--#{boundary}",
+        "Content-Type: text/calendar; charset=UTF-8; method=PUBLISH; name=\"ensaio.ics\"",
+        "Content-Disposition: attachment; filename=\"ensaio.ics\"",
+        "Content-Transfer-Encoding: 8bit",
+        "",
+        calendar,
+        "",
+        "--#{boundary}--"
       ].join("\r\n")
 
       smtp = Net::SMTP.new(required_env("SMTP_HOST"), env_integer("SMTP_PORT", DEFAULT_PORT))
@@ -84,6 +100,9 @@ module PhotoWorkflow
         "Ensaio: #{event.fetch("summary", "")}",
         "Data: #{formatted_time(event.fetch("start", {}))}",
         optional_line("Local", event["location"]),
+        optional_line("Adicionar ao calendario", event["htmlLink"]),
+        "",
+        "Tambem anexamos um arquivo ensaio.ics para adicionar este ensaio ao seu calendario.",
         "",
         "Se precisar ajustar alguma informacao, responda este e-mail.",
         "",
@@ -115,6 +134,61 @@ module PhotoWorkflow
       Time.parse(value).strftime("%d/%m/%Y %H:%M")
     rescue ArgumentError
       value.to_s
+    end
+
+    def calendar_attachment_for(event)
+      [
+        "BEGIN:VCALENDAR",
+        "VERSION:2.0",
+        "PRODID:-//Photo Workflow//Calendar Confirmation//PT-BR",
+        "CALSCALE:GREGORIAN",
+        "METHOD:PUBLISH",
+        "BEGIN:VEVENT",
+        "UID:#{ics_escape(event["iCalUID"] || "#{event.fetch("id", SecureRandom.uuid)}@photo-workflow")}",
+        "DTSTAMP:#{ics_datetime(Time.now.utc)}",
+        ics_date_property("DTSTART", event.fetch("start", {})),
+        ics_date_property("DTEND", event.fetch("end", {})),
+        "SUMMARY:#{ics_escape(event.fetch("summary", ""))}",
+        optional_ics_line("LOCATION", event["location"]),
+        optional_ics_line("DESCRIPTION", calendar_description(event)),
+        optional_ics_line("URL", event["htmlLink"]),
+        "END:VEVENT",
+        "END:VCALENDAR"
+      ].compact.join("\r\n") + "\r\n"
+    end
+
+    def calendar_description(event)
+      [
+        "Ensaio agendado.",
+        event["description"],
+        event["htmlLink"]
+      ].compact.join("\n\n")
+    end
+
+    def ics_date_property(name, date_hash)
+      if date_hash["date"]
+        "#{name};VALUE=DATE:#{date_hash.fetch("date").delete("-")}"
+      else
+        "#{name}:#{ics_datetime(Time.parse(date_hash.fetch("dateTime")).utc)}"
+      end
+    end
+
+    def ics_datetime(time)
+      time.strftime("%Y%m%dT%H%M%SZ")
+    end
+
+    def optional_ics_line(name, value)
+      return nil if value.nil? || value.to_s.empty?
+
+      "#{name}:#{ics_escape(value)}"
+    end
+
+    def ics_escape(value)
+      value.to_s
+           .gsub("\\", "\\\\\\")
+           .gsub(";", "\\;")
+           .gsub(",", "\\,")
+           .gsub(/\r\n|\r|\n/, "\\n")
     end
 
     def optional_line(label, value)
