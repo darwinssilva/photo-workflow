@@ -2,16 +2,20 @@ require "digest"
 require "json"
 require "time"
 
+require_relative "email_client"
 require_relative "google_calendar_client"
 require_relative "state_store"
 require_relative "trello_client"
+require_relative "whatsapp_client"
 
 module PhotoWorkflow
   class CalendarToTrelloSync
-    def initialize(calendar_client: GoogleCalendarClient.new, trello_client: TrelloClient.new, state_store: StateStore.new)
+    def initialize(calendar_client: GoogleCalendarClient.new, trello_client: TrelloClient.new, state_store: StateStore.new, whatsapp_client: WhatsAppClient.new, email_client: EmailClient.new)
       @calendar_client = calendar_client
       @trello_client = trello_client
       @state_store = state_store
+      @whatsapp_client = whatsapp_client
+      @email_client = email_client
     end
 
     def call
@@ -31,6 +35,7 @@ module PhotoWorkflow
         if current_state.nil? || current_state["archived_at"]
           card = trello_client.create_card(**payload)
           state[event_id] = state_payload(event, card.fetch("id"), fingerprint)
+          notify_event_created(event, card)
           synced_count += 1
           puts "Created Trello card for #{event.fetch("summary")}"
         elsif current_state["fingerprint"] != fingerprint
@@ -48,7 +53,7 @@ module PhotoWorkflow
 
     private
 
-    attr_reader :calendar_client, :trello_client, :state_store
+    attr_reader :calendar_client, :trello_client, :state_store, :whatsapp_client, :email_client
 
     def syncable_event?(event)
       summary = event.fetch("summary", "")
@@ -82,6 +87,17 @@ module PhotoWorkflow
       end
 
       archived_count
+    end
+
+    def notify_event_created(event, card)
+      notify_with("WhatsApp", event) { whatsapp_client.notify_event_created(event: event, card: card) }
+      notify_with("Email", event) { email_client.notify_event_created(event: event, card: card) }
+    end
+
+    def notify_with(channel, event)
+      yield
+    rescue StandardError => error
+      warn "#{channel} notification failed for #{event.fetch("summary", event.fetch("id"))}: #{error.message}"
     end
 
     def tracked_event_still_relevant?(record)

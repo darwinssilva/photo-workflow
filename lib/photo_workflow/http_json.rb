@@ -20,19 +20,26 @@ module PhotoWorkflow
       request(Net::HTTP::Post, uri)
     end
 
+    def self.post_json(url, body:, headers: {})
+      request(Net::HTTP::Post, url, headers: headers.merge(
+        "Content-Type" => "application/json"
+      ), body: JSON.generate(body))
+    end
+
     def self.put(url, query: {})
       uri = URI(url)
       uri.query = URI.encode_www_form(query)
       request(Net::HTTP::Put, uri)
     end
 
-    def self.request(klass, url, headers: {})
+    def self.request(klass, url, headers: {}, body: nil)
       uri = url.is_a?(URI) ? url : URI(url)
       http = Net::HTTP.new(uri.host, uri.port)
       http.use_ssl = uri.scheme == "https"
 
       request = klass.new(uri)
       headers.each { |key, value| request[key] = value }
+      request.body = body if body
 
       parse_response(http.request(request))
     end
@@ -49,4 +56,3 @@ module PhotoWorkflow
     end
   end
 end
-

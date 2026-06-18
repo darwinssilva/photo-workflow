@@ -25,6 +25,36 @@ TRELLO_TOKEN
 TRELLO_LIST_ID
 ```
 
+Secrets opcionais para WhatsApp Cloud API:
+
+```text
+WHATSAPP_ENABLED
+WHATSAPP_ACCESS_TOKEN
+WHATSAPP_PHONE_NUMBER_ID
+WHATSAPP_TO
+WHATSAPP_TEMPLATE_NAME
+WHATSAPP_TEMPLATE_LANGUAGE
+WHATSAPP_TEMPLATE_VARIABLES
+WHATSAPP_GRAPH_API_VERSION
+```
+
+Secrets opcionais para confirmacao por e-mail:
+
+```text
+EMAIL_ENABLED
+SMTP_HOST
+SMTP_PORT
+SMTP_DOMAIN
+SMTP_USERNAME
+SMTP_PASSWORD
+SMTP_STARTTLS
+SMTP_AUTH
+EMAIL_FROM
+EMAIL_FROM_NAME
+EMAIL_SUBJECT_PREFIX
+EMAIL_BODY_TEMPLATE
+```
+
 ## Variaveis opcionais
 
 ```text
@@ -63,11 +93,15 @@ Ensaio Gestante - Maria Silva
 Descricao:
 
 ```text
+Email: cliente@example.com
 Telefone: 11999999999
 Pacote: Gestante Premium
 Pagamento: Pendente
 Observacoes: Levar vestido azul
 ```
+
+O e-mail de confirmacao usa o primeiro e-mail encontrado na descricao do evento.
+Se nao encontrar, tenta usar o primeiro participante da agenda.
 
 ## Trello
 
@@ -79,4 +113,91 @@ Para achar IDs de board/listas, abra:
 
 ```text
 https://api.trello.com/1/boards/TRELLO_BOARD_ID/lists?key=TRELLO_KEY&token=TRELLO_TOKEN
+```
+
+## WhatsApp Cloud API
+
+Quando `WHATSAPP_ENABLED=true`, o script envia uma mensagem somente quando cria um card novo.
+
+Template recomendado:
+
+```text
+Nome: novo_ensaio_agendado
+Idioma: pt_BR
+Categoria: Utility
+Corpo:
+Novo ensaio agendado: {{1}}
+Data: {{2}}
+Local: {{3}}
+```
+
+Secrets recomendados:
+
+```text
+WHATSAPP_ENABLED=true
+WHATSAPP_PHONE_NUMBER_ID=ID_DO_NUMERO_DA_META
+WHATSAPP_ACCESS_TOKEN=TOKEN_DA_META
+WHATSAPP_TO=5511999999999
+WHATSAPP_TEMPLATE_NAME=novo_ensaio_agendado
+WHATSAPP_TEMPLATE_LANGUAGE=pt_BR
+WHATSAPP_TEMPLATE_VARIABLES=summary,start,location
+WHATSAPP_GRAPH_API_VERSION=v24.0
+```
+
+`WHATSAPP_TO` aceita mais de um telefone separado por virgula:
+
+```text
+WHATSAPP_TO=5511999999999,5511888888888
+```
+
+Variaveis disponiveis para `WHATSAPP_TEMPLATE_VARIABLES`:
+
+```text
+summary,start,end,location,description,calendar_link,trello_link
+```
+
+## Confirmacao por e-mail
+
+Quando `EMAIL_ENABLED=true`, o script envia confirmacao para o cliente somente quando cria um card novo.
+
+Secrets recomendados para Gmail:
+
+```text
+EMAIL_ENABLED=true
+SMTP_HOST=smtp.gmail.com
+SMTP_PORT=587
+SMTP_DOMAIN=gmail.com
+SMTP_USERNAME=seuemail@gmail.com
+SMTP_PASSWORD=SENHA_DE_APP_DO_GMAIL
+SMTP_STARTTLS=true
+SMTP_AUTH=plain
+EMAIL_FROM=seuemail@gmail.com
+EMAIL_FROM_NAME=Nome do Studio
+EMAIL_SUBJECT_PREFIX=Confirmacao de ensaio
+```
+
+Mensagem padrao:
+
+```text
+Ola!
+
+Seu ensaio foi agendado com sucesso.
+
+Ensaio: {{summary}}
+Data: {{start}}
+Local: {{location}}
+
+Se precisar ajustar alguma informacao, responda este e-mail.
+```
+
+Para personalizar, configure `EMAIL_BODY_TEMPLATE` usando estas variaveis:
+
+```text
+{{summary}}
+{{start}}
+{{end}}
+{{location}}
+{{description}}
+{{calendar_link}}
+{{trello_link}}
 ```
