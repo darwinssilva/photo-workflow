@@ -27,6 +27,19 @@ module PhotoWorkflow
       ))
     end
 
+    def active_card?(card_id)
+      card = get_card(card_id)
+      !card["closed"]
+    rescue HttpJson::Error => error
+      return false if error.code == 404
+
+      raise
+    end
+
+    def get_card(card_id)
+      HttpJson.get("#{BASE_URL}/cards/#{card_id}", headers: {}, query: auth_params)
+    end
+
     private
 
     def auth_params

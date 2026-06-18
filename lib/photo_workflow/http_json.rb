@@ -4,8 +4,20 @@ require "uri"
 
 module PhotoWorkflow
   class HttpJson
-    def self.get(url, headers: {})
-      request(Net::HTTP::Get, url, headers: headers)
+    class Error < StandardError
+      attr_reader :code, :body
+
+      def initialize(code, body)
+        @code = code.to_i
+        @body = body
+        super("HTTP #{code}: #{body}")
+      end
+    end
+
+    def self.get(url, headers: {}, query: {})
+      uri = url.is_a?(URI) ? url : URI(url)
+      uri.query = URI.encode_www_form(query) unless query.empty?
+      request(Net::HTTP::Get, uri, headers: headers)
     end
 
     def self.post_form(url, form:)
@@ -50,9 +62,9 @@ module PhotoWorkflow
 
       return parsed if response.is_a?(Net::HTTPSuccess)
 
-      raise "HTTP #{response.code}: #{parsed}"
+      raise Error.new(response.code, parsed)
     rescue JSON::ParserError
-      raise "HTTP #{response.code}: #{body}"
+      raise Error.new(response.code, body)
     end
   end
 end

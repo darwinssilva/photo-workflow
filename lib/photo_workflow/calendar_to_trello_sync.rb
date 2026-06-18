@@ -32,17 +32,22 @@ module PhotoWorkflow
         fingerprint = fingerprint_for(payload)
         current_state = state[event_id]
 
-        if current_state.nil? || current_state["archived_at"]
+        if should_create_card?(current_state)
           card = trello_client.create_card(**payload)
-          state[event_id] = state_payload(event, card.fetch("id"), fingerprint)
-          notify_event_created(event, card)
+          state[event_id] = state_payload(event, card.fetch("id"), fingerprint, trello_card_url(card))
+          mark_email_notification(state[event_id]) if notify_event_created(event, card)
           synced_count += 1
           puts "Created Trello card for #{event.fetch("summary")}"
         elsif current_state["fingerprint"] != fingerprint
           trello_client.update_card(current_state.fetch("trello_card_id"), **payload)
-          state[event_id] = state_payload(event, current_state.fetch("trello_card_id"), fingerprint)
+          state[event_id] = state_payload(event, current_state.fetch("trello_card_id"), fingerprint, current_state["trello_card_url"])
+          mark_email_notification(state[event_id], current_state["email_notified_at"])
+          mark_email_notification(state[event_id]) if email_notification_pending?(state[event_id]) && notify_email_created(event, trello_card_reference(state[event_id]))
           synced_count += 1
           puts "Updated Trello card for #{event.fetch("summary")}"
+        elsif email_notification_pending?(current_state)
+          card = trello_card_reference(current_state)
+          mark_email_notification(current_state) if notify_email_created(event, card)
         end
       end
 
@@ -71,6 +76,23 @@ module PhotoWorkflow
       Regexp.new(ENV.fetch("EXCLUDED_EVENT_SUMMARY_PATTERN", "\\A\\z"), Regexp::IGNORECASE)
     end
 
+    def should_create_card?(record)
+      return true if record.nil? || record["archived_at"]
+
+      if trello_card_inactive?(record)
+        puts "Trello card missing or archived for #{record.fetch("summary", record.fetch("google_event_id", "unknown"))}; creating a new card."
+        return true
+      end
+
+      false
+    end
+
+    def trello_card_inactive?(record)
+      !trello_client.active_card?(record.fetch("trello_card_id"))
+    rescue KeyError
+      true
+    end
+
     def archive_removed_events(state, events)
       active_event_ids = events.reject { |event| event["status"] == "cancelled" }.map { |event| event.fetch("id") }
       archived_count = 0
@@ -80,7 +102,7 @@ module PhotoWorkflow
         next if active_event_ids.include?(event_id)
         next unless tracked_event_still_relevant?(record)
 
-        trello_client.archive_card(record.fetch("trello_card_id"))
+        archive_trello_card(record)
         record["archived_at"] = Time.now.utc.iso8601
         archived_count += 1
         puts "Archived Trello card for #{record.fetch("summary", event_id)}"
@@ -89,8 +111,20 @@ module PhotoWorkflow
       archived_count
     end
 
+    def archive_trello_card(record)
+      trello_client.archive_card(record.fetch("trello_card_id"))
+    rescue HttpJson::Error => error
+      raise unless error.code == 404
+
+      puts "Trello card already missing for #{record.fetch("summary", record.fetch("google_event_id", "unknown"))}; marking as archived."
+    end
+
     def notify_event_created(event, card)
       notify_with("WhatsApp", event) { whatsapp_client.notify_event_created(event: event, card: card) }
+      notify_email_created(event, card)
+    end
+
+    def notify_email_created(event, card)
       notify_with("Email", event) { email_client.notify_event_created(event: event, card: card) }
     end
 
@@ -98,6 +132,26 @@ module PhotoWorkflow
       yield
     rescue StandardError => error
       warn "#{channel} notification failed for #{event.fetch("summary", event.fetch("id"))}: #{error.message}"
+      false
+    end
+
+    def email_notification_pending?(record)
+      email_client.enabled? && !record["email_notified_at"]
+    end
+
+    def mark_email_notification(record, timestamp = Time.now.utc.iso8601)
+      record["email_notified_at"] = timestamp
+    end
+
+    def trello_card_reference(record)
+      {
+        "id" => record.fetch("trello_card_id"),
+        "shortUrl" => record["trello_card_url"]
+      }
+    end
+
+    def trello_card_url(card)
+      card["shortUrl"] || card["url"]
     end
 
     def tracked_event_still_relevant?(record)
@@ -180,10 +234,11 @@ module PhotoWorkflow
       Digest::SHA256.hexdigest(Marshal.dump(payload))
     end
 
-    def state_payload(event, trello_card_id, fingerprint)
+    def state_payload(event, trello_card_id, fingerprint, trello_card_url = nil)
       {
         "google_event_id" => event.fetch("id"),
         "trello_card_id" => trello_card_id,
+        "trello_card_url" => trello_card_url,
         "summary" => event.fetch("summary"),
         "starts_at" => event_start(event).iso8601,
         "fingerprint" => fingerprint,

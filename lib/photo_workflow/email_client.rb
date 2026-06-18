@@ -8,16 +8,19 @@ module PhotoWorkflow
     EMAIL_PATTERN = /[A-Z0-9._%+\-]+@[A-Z0-9.\-]+\.[A-Z]{2,}/i.freeze
 
     def enabled?
-      ENV.fetch("EMAIL_ENABLED", "false").casecmp("true").zero?
+      env_value("EMAIL_ENABLED", "false").casecmp("true").zero?
     end
 
     def notify_event_created(event:, card:)
-      return unless enabled?
+      unless enabled?
+        puts "Email notification disabled for #{event.fetch("summary", event.fetch("id"))}"
+        return false
+      end
 
       recipient = recipient_for(event)
       unless recipient
         warn "Email notification skipped for #{event.fetch("summary", event.fetch("id"))}: missing client email"
-        return
+        return false
       end
 
       deliver(
@@ -25,6 +28,8 @@ module PhotoWorkflow
         subject: subject_for(event),
         body: body_for(event, card)
       )
+      puts "Email notification sent to #{recipient} for #{event.fetch("summary", event.fetch("id"))}"
+      true
     end
 
     private
@@ -64,11 +69,11 @@ module PhotoWorkflow
     end
 
     def subject_for(event)
-      ENV.fetch("EMAIL_SUBJECT_PREFIX", "Confirmacao de ensaio") + " - " + event.fetch("summary", "")
+      env_value("EMAIL_SUBJECT_PREFIX", "Confirmacao de ensaio") + " - " + event.fetch("summary", "")
     end
 
     def body_for(event, card)
-      template = ENV["EMAIL_BODY_TEMPLATE"]
+      template = env_value("EMAIL_BODY_TEMPLATE")
       return interpolate(template, event, card) if template && !template.empty?
 
       [
@@ -127,23 +132,33 @@ module PhotoWorkflow
     end
 
     def from_name
-      ENV.fetch("EMAIL_FROM_NAME", "Photo Workflow")
+      env_value("EMAIL_FROM_NAME", "Photo Workflow")
     end
 
     def starttls?
-      ENV.fetch("SMTP_STARTTLS", "true").casecmp("true").zero?
+      env_value("SMTP_STARTTLS", "true").casecmp("true").zero?
     end
 
     def auth_method
-      ENV.fetch("SMTP_AUTH", DEFAULT_AUTH.to_s).to_sym
+      env_value("SMTP_AUTH", DEFAULT_AUTH.to_s).to_sym
     end
 
     def env_integer(name, fallback)
-      ENV.fetch(name, fallback).to_i
+      env_value(name, fallback).to_i
     end
 
     def required_env(name)
-      ENV.fetch(name) { raise "Missing ENV #{name}" }
+      value = env_value(name)
+      raise "Missing ENV #{name}" if value.nil?
+
+      value
+    end
+
+    def env_value(name, fallback = nil)
+      value = ENV[name]
+      return fallback if value.nil? || value.empty?
+
+      value
     end
   end
 end
