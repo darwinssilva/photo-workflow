@@ -130,7 +130,7 @@ module PhotoWorkflow
     end
 
     def state_key(card, config)
-      [config.fetch(:kind), card.fetch("id"), card["due"]].join(":")
+      [config.fetch(:kind), card.fetch("id"), card["due"], today.iso8601].join(":")
     end
 
     def recipients

@@ -139,7 +139,7 @@ O script `bin/send_trello_reminders` usa a data `due` do card como referencia:
 
 - cards em `Aguardando Galeria`: envia lembrete quando passaram 2 dias do `due`;
 - cards em `Aguardando Edicao`: envia lembrete quando passaram 15 dias do `due`;
-- o arquivo `data/trello_reminders.json` evita reenviar o mesmo lembrete para o mesmo card e mesma data.
+- o arquivo `data/trello_reminders.json` evita reenviar o mesmo lembrete mais de uma vez no mesmo dia.
 
 Para achar IDs de board/listas, abra:
 
