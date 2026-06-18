@@ -12,6 +12,6 @@ if File.exist?(env_path)
   end
 end
 
-require "photo_workflow/calendar_to_trello_sync"
+require "photo_workflow/trello_reminder_email"
 
-PhotoWorkflow::CalendarToTrelloSync.new.call
+PhotoWorkflow::TrelloReminderEmail.new.call

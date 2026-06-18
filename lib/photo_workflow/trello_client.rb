@@ -40,6 +40,12 @@ module PhotoWorkflow
       HttpJson.get("#{BASE_URL}/cards/#{card_id}", headers: {}, query: auth_params)
     end
 
+    def list_cards(list_id)
+      HttpJson.get("#{BASE_URL}/lists/#{list_id}/cards", headers: {}, query: auth_params.merge(
+        fields: "id,name,desc,due,dueComplete,shortUrl,url,closed,dateLastActivity"
+      ))
+    end
+
     private
 
     def auth_params

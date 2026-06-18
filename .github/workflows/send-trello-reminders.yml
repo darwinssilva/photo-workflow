@@ -1,0 +1,50 @@
+name: Send Trello Reminders
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 11 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  reminders:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.3"
+          bundler-cache: true
+
+      - name: Send Trello reminder emails
+        run: ruby bin/send_trello_reminders
+        env:
+          TRELLO_KEY: ${{ secrets.TRELLO_KEY }}
+          TRELLO_TOKEN: ${{ secrets.TRELLO_TOKEN }}
+          TRELLO_GALLERY_LIST_ID: ${{ secrets.TRELLO_GALLERY_LIST_ID }}
+          TRELLO_EDITING_LIST_ID: ${{ secrets.TRELLO_EDITING_LIST_ID }}
+          GALLERY_REMINDER_DAYS_AFTER_SESSION: ${{ secrets.GALLERY_REMINDER_DAYS_AFTER_SESSION }}
+          EDITING_REMINDER_DAYS_AFTER_SESSION: ${{ secrets.EDITING_REMINDER_DAYS_AFTER_SESSION }}
+          REMINDER_EMAIL_TO: ${{ secrets.REMINDER_EMAIL_TO }}
+          EMAIL_ENABLED: ${{ secrets.EMAIL_ENABLED }}
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_DOMAIN: ${{ secrets.SMTP_DOMAIN }}
+          SMTP_USERNAME: ${{ secrets.SMTP_USERNAME }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+          SMTP_STARTTLS: ${{ secrets.SMTP_STARTTLS }}
+          SMTP_AUTH: ${{ secrets.SMTP_AUTH }}
+          EMAIL_FROM: ${{ secrets.EMAIL_FROM }}
+          EMAIL_FROM_NAME: ${{ secrets.EMAIL_FROM_NAME }}
+
+      - name: Commit reminder state
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/trello_reminders.json || true
+          git diff --cached --quiet || git commit -m "Update Trello reminder state"
+          git push

@@ -35,19 +35,19 @@ module PhotoWorkflow
         if should_create_card?(current_state)
           card = trello_client.create_card(**payload)
           state[event_id] = state_payload(event, card.fetch("id"), fingerprint, trello_card_url(card))
-          mark_email_notification(state[event_id]) if notify_event_created(event, card)
+          handle_email_notification_result(state[event_id], notify_event_created(event, card))
           synced_count += 1
           puts "Created Trello card for #{event.fetch("summary")}"
         elsif current_state["fingerprint"] != fingerprint
           trello_client.update_card(current_state.fetch("trello_card_id"), **payload)
           state[event_id] = state_payload(event, current_state.fetch("trello_card_id"), fingerprint, current_state["trello_card_url"])
-          mark_email_notification(state[event_id], current_state["email_notified_at"])
-          mark_email_notification(state[event_id]) if email_notification_pending?(state[event_id]) && notify_email_created(event, trello_card_reference(state[event_id]))
+          preserve_email_notification(state[event_id], current_state)
+          handle_email_notification_result(state[event_id], notify_email_created(event, trello_card_reference(state[event_id]))) if email_notification_pending?(state[event_id])
           synced_count += 1
           puts "Updated Trello card for #{event.fetch("summary")}"
         elsif email_notification_pending?(current_state)
           card = trello_card_reference(current_state)
-          mark_email_notification(current_state) if notify_email_created(event, card)
+          handle_email_notification_result(current_state, notify_email_created(event, card))
         end
       end
 
@@ -136,11 +136,37 @@ module PhotoWorkflow
     end
 
     def email_notification_pending?(record)
-      email_client.enabled? && !record["email_notified_at"]
+      email_client.enabled? &&
+        !record["email_notified_at"] &&
+        record["email_skipped_fingerprint"] != record["fingerprint"]
     end
 
     def mark_email_notification(record, timestamp = Time.now.utc.iso8601)
       record["email_notified_at"] = timestamp
+      record.delete("email_skipped_at")
+      record.delete("email_skip_reason")
+      record.delete("email_skipped_fingerprint")
+    end
+
+    def mark_email_skip(record, reason, timestamp = Time.now.utc.iso8601)
+      record["email_skipped_at"] = timestamp
+      record["email_skip_reason"] = reason
+      record["email_skipped_fingerprint"] = record["fingerprint"]
+    end
+
+    def preserve_email_notification(record, previous_record)
+      return unless previous_record["email_notified_at"]
+
+      mark_email_notification(record, previous_record["email_notified_at"])
+    end
+
+    def handle_email_notification_result(record, result)
+      case result
+      when :sent
+        mark_email_notification(record)
+      when :missing_client_email
+        mark_email_skip(record, "missing_client_email")
+      end
     end
 
     def trello_card_reference(record)

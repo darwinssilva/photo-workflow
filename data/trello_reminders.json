@@ -1,0 +1,65 @@
+{
+  "editing:6a3324754b4775e28538f9b1:2026-06-01T20:30:00.000Z": {
+    "card_id": "6a3324754b4775e28538f9b1",
+    "kind": "editing",
+    "card_name": "Newbor Maria Alice (Josy)",
+    "due": "2026-06-01T20:30:00.000Z",
+    "sent_at": "2026-06-18T22:56:50Z"
+  },
+  "editing:6a33247c4d18b2467fcd2e28:2026-05-30T20:45:00.000Z": {
+    "card_id": "6a33247c4d18b2467fcd2e28",
+    "kind": "editing",
+    "card_name": "Newborn Henrique (Gessica)",
+    "due": "2026-05-30T20:45:00.000Z",
+    "sent_at": "2026-06-18T22:56:46Z"
+  },
+  "editing:6a33247f94535479f512bf5b:2026-06-03T18:30:00.000Z": {
+    "card_id": "6a33247f94535479f512bf5b",
+    "kind": "editing",
+    "card_name": "Newborn Agatha (Abigail)",
+    "due": "2026-06-03T18:30:00.000Z",
+    "sent_at": "2026-06-18T22:56:58Z"
+  },
+  "editing:6a332486a094c12f2530fa94:2026-06-03T21:30:00.000Z": {
+    "card_id": "6a332486a094c12f2530fa94",
+    "kind": "editing",
+    "card_name": "Newborn Clara (Paula)",
+    "due": "2026-06-03T21:30:00.000Z",
+    "sent_at": "2026-06-18T22:57:02Z"
+  },
+  "editing:6a33248712ee2be0f757b09e:2026-06-03T15:00:00.000Z": {
+    "card_id": "6a33248712ee2be0f757b09e",
+    "kind": "editing",
+    "card_name": "Newborn Matteo e Murillo (Daniele)",
+    "due": "2026-06-03T15:00:00.000Z",
+    "sent_at": "2026-06-18T22:56:54Z"
+  },
+  "gallery:6a332488287f44dc866ad9ea:2026-06-12T14:45:00.000Z": {
+    "card_id": "6a332488287f44dc866ad9ea",
+    "kind": "gallery",
+    "card_name": "Newborn Lian (Kethelyn)",
+    "due": "2026-06-12T14:45:00.000Z",
+    "sent_at": "2026-06-18T22:56:29Z"
+  },
+  "gallery:6a33249344d306e5c89094a2:2026-06-15T22:00:00.000Z": {
+    "card_id": "6a33249344d306e5c89094a2",
+    "kind": "gallery",
+    "card_name": "Newborn Heitor Lucca (Valéria)",
+    "due": "2026-06-15T22:00:00.000Z",
+    "sent_at": "2026-06-18T22:56:42Z"
+  },
+  "gallery:6a3324945bc6e57c6435c949:2026-06-15T15:00:00.000Z": {
+    "card_id": "6a3324945bc6e57c6435c949",
+    "kind": "gallery",
+    "card_name": "Newborn Clara (Taiany)",
+    "due": "2026-06-15T15:00:00.000Z",
+    "sent_at": "2026-06-18T22:56:34Z"
+  },
+  "gallery:6a33249802a131dab31f3775:2026-06-15T20:00:00.000Z": {
+    "card_id": "6a33249802a131dab31f3775",
+    "kind": "gallery",
+    "card_name": "Newborn Murilo (Mariana)",
+    "due": "2026-06-15T20:00:00.000Z",
+    "sent_at": "2026-06-18T22:56:38Z"
+  }
+}

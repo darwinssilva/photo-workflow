@@ -15,13 +15,13 @@ module PhotoWorkflow
     def notify_event_created(event:, card:)
       unless enabled?
         puts "Email notification disabled for #{event.fetch("summary", event.fetch("id"))}"
-        return false
+        return :disabled
       end
 
       recipient = recipient_for(event)
       unless recipient
         warn "Email notification skipped for #{event.fetch("summary", event.fetch("id"))}: missing client email"
-        return false
+        return :missing_client_email
       end
 
       deliver(
@@ -31,7 +31,19 @@ module PhotoWorkflow
         calendar: calendar_attachment_for(event, recipient)
       )
       puts "Email notification sent to #{recipient} for #{event.fetch("summary", event.fetch("id"))}"
-      true
+      :sent
+    end
+
+    def deliver_text(to:, subject:, body:)
+      recipients = Array(to).map(&:to_s).map(&:strip).reject(&:empty?)
+      raise "Missing email recipient" if recipients.empty?
+
+      deliver(
+        to: recipients,
+        subject: subject,
+        body: body,
+        calendar: nil
+      )
     end
 
     private
@@ -54,9 +66,10 @@ module PhotoWorkflow
 
     def deliver(to:, subject:, body:, calendar:)
       boundary = "photo-workflow-#{SecureRandom.hex(12)}"
-      message = [
+      recipients = Array(to).map(&:to_s).map(&:strip).reject(&:empty?)
+      parts = [
         "From: #{from_label} <#{required_env("EMAIL_FROM")}>",
-        "To: #{to}",
+        "To: #{recipients.join(", ")}",
         "Subject: #{encode_subject(subject)}",
         "MIME-Version: 1.0",
         "Content-Type: multipart/mixed; boundary=\"#{boundary}\"",
@@ -66,22 +79,29 @@ module PhotoWorkflow
         "Content-Transfer-Encoding: 8bit",
         "",
         body,
-        "",
-        "--#{boundary}",
-        "Content-Type: text/calendar; charset=UTF-8; method=REQUEST; name=\"ensaio.ics\"",
-        "Content-Class: urn:content-classes:calendarmessage",
-        "Content-Disposition: attachment; filename=\"ensaio.ics\"",
-        "Content-Transfer-Encoding: 8bit",
-        "",
-        calendar,
-        "",
-        "--#{boundary}--"
-      ].join("\r\n")
+        ""
+      ]
+
+      if calendar
+        parts.concat([
+          "--#{boundary}",
+          "Content-Type: text/calendar; charset=UTF-8; method=REQUEST; name=\"ensaio.ics\"",
+          "Content-Class: urn:content-classes:calendarmessage",
+          "Content-Disposition: attachment; filename=\"ensaio.ics\"",
+          "Content-Transfer-Encoding: 8bit",
+          "",
+          calendar,
+          ""
+        ])
+      end
+
+      parts << "--#{boundary}--"
+      message = parts.join("\r\n")
 
       smtp = Net::SMTP.new(required_env("SMTP_HOST"), env_integer("SMTP_PORT", DEFAULT_PORT))
       smtp.enable_starttls_auto if starttls?
       smtp.start(required_env("SMTP_DOMAIN"), required_env("SMTP_USERNAME"), required_env("SMTP_PASSWORD"), auth_method) do |connection|
-        connection.send_message(message, required_env("EMAIL_FROM"), to)
+        connection.send_message(message, required_env("EMAIL_FROM"), recipients)
       end
     end
 
