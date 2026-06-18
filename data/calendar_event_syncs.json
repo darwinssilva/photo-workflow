@@ -11,98 +11,132 @@
   "0mq3r1o33hhutmbhskqv4rs8qs": {
     "google_event_id": "0mq3r1o33hhutmbhskqv4rs8qs",
     "trello_card_id": "6a333683e6e8f928cfc4c308",
+    "trello_card_url": null,
     "summary": "Agenda fechada",
     "starts_at": "2026-06-24T17:00:00-03:00",
-    "fingerprint": "8719f9ebcd48f9658954516ff8191d6e9eec250998d0644cb0c4d2f26938b964",
-    "synced_at": "2026-06-18T00:12:12Z"
+    "fingerprint": "084bd33e51468b62a4239233bd144d771033925d60af1e73e342497fe93c49e8",
+    "synced_at": "2026-06-18T03:05:15Z",
+    "email_notified_at": null
   },
   "19bje9em8u926d9cdtvkojepvo": {
     "google_event_id": "19bje9em8u926d9cdtvkojepvo",
     "trello_card_id": "6a33367e622dcc9c10b003df",
+    "trello_card_url": null,
     "summary": "Newborn Lucas (Beatriz)",
     "starts_at": "2026-06-20T11:00:00-03:00",
-    "fingerprint": "609ec01acb2491e5fcaeb9fa2fb7b0520d750c0f0937a327aa16374ba2d35787",
-    "synced_at": "2026-06-18T00:12:09Z"
+    "fingerprint": "2db30b2ea7cae9ace17d97340f30c9332940519f6ac7464559de880b35f672c6",
+    "synced_at": "2026-06-18T03:05:13Z",
+    "email_notified_at": null
+  },
+  "2kdtqhpnecdh5trd3j191blc44": {
+    "google_event_id": "2kdtqhpnecdh5trd3j191blc44",
+    "trello_card_id": "6a336066ad083680a966fa59",
+    "trello_card_url": "https://trello.com/c/kNxrxLQX",
+    "summary": "Ensaio Darwin",
+    "starts_at": "2026-06-19T19:00:00-03:00",
+    "fingerprint": "e10fd7dfaa4d4fb522af0cd3fcd6972f032e932f91a007d26cc758236bbaf29f",
+    "synced_at": "2026-06-18T03:05:10Z",
+    "email_notified_at": "2026-06-18T03:05:13Z"
   },
   "68s6cdr4cosm4b9pckojib9k6lgm6b9p60q68bb1ckrjip9o70o3ac9lco": {
     "google_event_id": "68s6cdr4cosm4b9pckojib9k6lgm6b9p60q68bb1ckrjip9o70o3ac9lco",
     "trello_card_id": "6a33367c46b28f6855a05765",
+    "trello_card_url": null,
     "summary": "Newborn Joaquim (Daniela)",
     "starts_at": "2026-06-19T09:00:00-03:00",
-    "fingerprint": "c8a5a5efd9cd08b889023d788bd37a1e10f916cfa22aad3ce98dca22d34cb5c5",
-    "synced_at": "2026-06-18T00:12:08Z"
+    "fingerprint": "483ed905a4f6bb201d12a573a549ffe48943d6b883c5943602824ef9fc9d2646",
+    "synced_at": "2026-06-18T03:05:10Z",
+    "email_notified_at": null
   },
   "69j68d1ochh38b9pckojgb9k60p3cb9ockojgb9l6oo66cb565ij4c1k74": {
     "google_event_id": "69j68d1ochh38b9pckojgb9k60p3cb9ockojgb9l6oo66cb565ij4c1k74",
     "trello_card_id": "6a333684f924e3d7c7b16fd8",
+    "trello_card_url": null,
     "summary": "Newborn Thiago (Anne)",
     "starts_at": "2026-06-27T15:00:00-03:00",
-    "fingerprint": "4cf37ff741f5b01564aab85009d76a90ba4be1df47c400ebcb1424134085459b",
-    "synced_at": "2026-06-18T00:12:13Z"
+    "fingerprint": "1e02b701654927febc0855ede4a92ca0aa9ae045d454db5454f418beb88cc5de",
+    "synced_at": "2026-06-18T03:05:17Z",
+    "email_notified_at": null
   },
   "6go66cr16lh3cb9jcdijcb9k6ss6ab9oc5h68b9k6di3cdpp6li3cd9ick": {
     "google_event_id": "6go66cr16lh3cb9jcdijcb9k6ss6ab9oc5h68b9k6di3cdpp6li3cd9ick",
     "trello_card_id": "6a3336806cfbb4dac9bb62c0",
+    "trello_card_url": null,
     "summary": "Newborn Enrico (Ana)",
     "starts_at": "2026-06-22T14:00:00-03:00",
-    "fingerprint": "bacc0752eba30e1888b986274383f525d661cd98f5a11dbb4a231bcdc263715c",
-    "synced_at": "2026-06-18T00:12:11Z"
+    "fingerprint": "ed3858c74ec91efe46cd92ffd6e1e9d2ce0519235e0c0d874bcd9e85f335aef8",
+    "synced_at": "2026-06-18T03:05:14Z",
+    "email_notified_at": null
   },
   "6lgjic1g6ks6ab9jcgo62b9k6cs38b9pcop32b9kcdgm6pho65hjicb560": {
     "google_event_id": "6lgjic1g6ks6ab9jcgo62b9k6cs38b9pcop32b9kcdgm6pho65hjicb560",
     "trello_card_id": "6a333683dfc034ef148ffc90",
+    "trello_card_url": null,
     "summary": "Newborn Henrique (Dayane)",
     "starts_at": "2026-06-27T10:00:00-03:00",
-    "fingerprint": "89f51bfe6ed223d6553b0fbc5558898e81218f76353016e68e77717eca117da2",
-    "synced_at": "2026-06-18T00:12:13Z"
+    "fingerprint": "c967878b09ab40e1e0c268ee29ac1ee8fb77f9d9054710868ccd8035d920193c",
+    "synced_at": "2026-06-18T03:05:15Z",
+    "email_notified_at": null
   },
   "74p6cp1pcos3ib9g6lj64b9kc4r64bb16cqjab9g6gomcohhcdij8oph6s": {
     "google_event_id": "74p6cp1pcos3ib9g6lj64b9kc4r64bb16cqjab9g6gomcohhcdij8oph6s",
     "trello_card_id": "6a333681102db96e4664d489",
+    "trello_card_url": null,
     "summary": "Maria Lívia (Thais)",
     "starts_at": "2026-06-23T12:00:00-03:00",
-    "fingerprint": "d78132c2cceb41897b1293bb55265ab7e226c7a865d732339e19da5572507737",
-    "synced_at": "2026-06-18T00:12:11Z"
+    "fingerprint": "e9f8e851a730894ef3c185b20545a3bd551bec55bd7cfaa8be4281174dfda64b",
+    "synced_at": "2026-06-18T03:05:14Z",
+    "email_notified_at": null
   },
   "74q36d1o64o34bb1ccs64b9k6hh66bb1ccp6cbb270qj4d1i64qj0dr4cc": {
     "google_event_id": "74q36d1o64o34bb1ccs64b9k6hh66bb1ccp6cbb270qj4d1i64qj0dr4cc",
     "trello_card_id": "6a33367a1c7b156a95197bfe",
+    "trello_card_url": null,
     "summary": "Newborn Lívia (Juliana)",
     "starts_at": "2026-06-18T09:00:00-03:00",
-    "fingerprint": "4c30c0ea97849b2fa13c33b0d91f77b84ec4c53084b4924fcdf32424e078f55a",
-    "synced_at": "2026-06-18T00:12:07Z"
+    "fingerprint": "710d8668bb781729708ba4dbafe761d6179735dff8211c63dd335ef023f5ae3e",
+    "synced_at": "2026-06-18T03:05:09Z",
+    "email_notified_at": null
   },
   "c8r3gchh6cq3ebb568p6cb9k6gr62bb174pj4bb6cgqjaor264o3id1ick": {
     "google_event_id": "c8r3gchh6cq3ebb568p6cb9k6gr62bb174pj4bb6cgqjaor264o3id1ick",
     "trello_card_id": "6a33367b9fe02f30dfd73364",
+    "trello_card_url": null,
     "summary": "Newborn João Miguel (Patricia)",
     "starts_at": "2026-06-18T14:00:00-03:00",
-    "fingerprint": "c1d7d26e5da14ef2ff509c65012d8de4f2ac8650d8ab482ccf6ba40a1d292602",
-    "synced_at": "2026-06-18T00:12:07Z"
+    "fingerprint": "66bfb2b0ee1b4f2869b5e196d1f7b579a8eee93c8a7d57816389a0775ad6d1c4",
+    "synced_at": "2026-06-18T03:05:09Z",
+    "email_notified_at": null
   },
   "c8rj2c9j69h3gbb470p3ab9k64o3cb9o6hi68bb3cli30e9i71hm2phjck": {
     "google_event_id": "c8rj2c9j69h3gbb470p3ab9k64o3cb9o6hi68bb3cli30e9i71hm2phjck",
     "trello_card_id": "6a33367dcdebc21e6da2c5c3",
+    "trello_card_url": null,
     "summary": "3 meses Murilo (Cris)",
     "starts_at": "2026-06-20T09:00:00-03:00",
-    "fingerprint": "dc60ee0245d0c2dceb7b201839e6b976cba6bd753d0cda27a3757ed840bc76f1",
-    "synced_at": "2026-06-18T00:12:09Z"
+    "fingerprint": "e1a417339f7c5afa9324231fc03f676d595289cdfb2c4cbfcf2b4f37098efc87",
+    "synced_at": "2026-06-18T03:05:13Z",
+    "email_notified_at": null
   },
   "c9i66e1j64pjebb56kp6cb9k60s34bb1cgqmcb9pccoj8pj26kp6ap1h6o": {
     "google_event_id": "c9i66e1j64pjebb56kp6cb9k60s34bb1cgqmcb9pccoj8pj26kp6ap1h6o",
     "trello_card_id": "6a33367f45335a84f7282153",
+    "trello_card_url": null,
     "summary": "Cobertura Festa 1 ano Helena",
     "starts_at": "2026-06-20T14:00:00-03:00",
-    "fingerprint": "bfe400b60ed92bdbbfd444def68e2629903ad3f9c754d5880dc2e4298c31137a",
-    "synced_at": "2026-06-18T00:12:10Z"
+    "fingerprint": "4893ebe5cb7861e2a82cd215745e9101df29a8f4d9a26d12a1ce4462c6594ee0",
+    "synced_at": "2026-06-18T03:05:13Z",
+    "email_notified_at": null
   },
   "ccsj4dhocor68b9g6opj8b9k6ti64bb2ccs3ebb2c4r3iob561gm4phpc8": {
     "google_event_id": "ccsj4dhocor68b9g6opj8b9k6ti64bb2ccs3ebb2c4r3iob561gm4phpc8",
     "trello_card_id": "6a33367d0704c154ce51c8d1",
+    "trello_card_url": null,
     "summary": "Newborn Zeinab (Luana)",
     "starts_at": "2026-06-19T14:00:00-03:00",
-    "fingerprint": "eeafcd83c0d0a462d127e5564d69b1ce8a87f45fcd472e289d5f577241a78746",
-    "synced_at": "2026-06-18T00:12:08Z"
+    "fingerprint": "ffc2725d81e7e47d46bb96a25dbb987aeed804b0b1ce8e33109c133838a3ff66",
+    "synced_at": "2026-06-18T03:05:10Z",
+    "email_notified_at": null
   },
   "cgp66p1lc5i68b9m64p3gb9k6sq68bb261ij8bb26ti6ccpkcosmccj160": {
     "google_event_id": "cgp66p1lc5i68b9m64p3gb9k6sq68bb261ij8bb26ti6ccpkcosmccj160",
@@ -115,18 +149,22 @@
   "cgs6coj46os30b9ichi6ab9kcgom4bb168sm8bb5c8o36d3268r62e1gco": {
     "google_event_id": "cgs6coj46os30b9ichi6ab9kcgom4bb168sm8bb5c8o36d3268r62e1gco",
     "trello_card_id": "6a333685f35629ba34e48abd",
+    "trello_card_url": null,
     "summary": "6 meses Murilo (Cris)",
     "starts_at": "2026-09-19T15:00:00-03:00",
-    "fingerprint": "8f2d4adcc48a4ddee5c544ef6cd72a1c2a3f4248303fbb2dc802d7afb98c272c",
-    "synced_at": "2026-06-18T00:12:14Z"
+    "fingerprint": "ecb881465661dfc7a0e8b7670632e3276ec89f45727a6c6beac2525bbb5f96f8",
+    "synced_at": "2026-06-18T03:05:17Z",
+    "email_notified_at": null
   },
   "chh64dj361hmab9p6th3gb9k69i3eb9pcpgjcb9p69ijcc1g69hj2oj364": {
     "google_event_id": "chh64dj361hmab9p6th3gb9k69i3eb9pcpgjcb9p69ijcc1g69hj2oj364",
     "trello_card_id": "6a33367b4129e7c0e1e1a7e7",
+    "trello_card_url": null,
     "summary": "Smash the Cake Helena (Ana Carolina) Ursinho Pooh",
     "starts_at": "2026-06-18T18:00:00-03:00",
-    "fingerprint": "289ee801f1b27e06bbbc21981095fbbfe91608ef2ae3535161d327909ef63998",
-    "synced_at": "2026-06-18T00:12:07Z"
+    "fingerprint": "fc8e46e2604e590c1fd2c89fbbb4bb9ad3c3ceefe107d8729e112e7c7b8e9680",
+    "synced_at": "2026-06-18T03:05:09Z",
+    "email_notified_at": null
   },
   "chij6opg6srj8b9hc5i32b9k68p34b9p68r66b9ockq66e1mckp34o9lco": {
     "google_event_id": "chij6opg6srj8b9hc5i32b9k68p34b9p68r66b9ockq66e1mckp34o9lco",
@@ -139,25 +177,31 @@
   "clj36pj370sjab9i75ij4b9k6dij8bb16ssm8b9pcdj30or3cpj64phjcg": {
     "google_event_id": "clj36pj370sjab9i75ij4b9k6dij8bb16ssm8b9pcdj30or3cpj64phjcg",
     "trello_card_id": "6a3336823dfe70bd24c2b74d",
+    "trello_card_url": null,
     "summary": "Newborn Luísa (Patrícia)",
     "starts_at": "2026-06-23T16:30:00-03:00",
-    "fingerprint": "c91a523b39b99396217b196738981ab6bfa499942c0e005cef48bffd763e0192",
-    "synced_at": "2026-06-18T00:12:12Z"
+    "fingerprint": "fb369b1650beb3925dda08874a7442bdfd43b498cca045ce02820280037f0d66",
+    "synced_at": "2026-06-18T03:05:15Z",
+    "email_notified_at": null
   },
   "coq38e9hccpm2bb46gp66b9kccoj8bb1c4o34bb269h3ic9j6go36p3360": {
     "google_event_id": "coq38e9hccpm2bb46gp66b9kccoj8bb1c4o34bb269h3ic9j6go36p3360",
     "trello_card_id": "6a33367f80d32bb273530d32",
+    "trello_card_url": null,
     "summary": "Newborn Eliseu (Jennypher)",
     "starts_at": "2026-06-22T09:00:00-03:00",
-    "fingerprint": "8e88cf17112b0b82caf2c0fb34c2028286be206c02e0c5d9a0bfb828ee43e9ab",
-    "synced_at": "2026-06-18T00:12:10Z"
+    "fingerprint": "a0d61f02076631556fdcc8a429cf16bdda87a95e79294bdea17ebada06844d92",
+    "synced_at": "2026-06-18T03:05:14Z",
+    "email_notified_at": null
   },
   "f522ltr1mo4urvuo3cnmfigu7s": {
     "google_event_id": "f522ltr1mo4urvuo3cnmfigu7s",
     "trello_card_id": "6a3336847e89a96d1f232889",
+    "trello_card_url": null,
     "summary": "Festa Junina escola Stella",
     "starts_at": "2026-06-28T09:00:00-03:00",
-    "fingerprint": "c452c6babf1b3417cfdc9d3699c330ff859ac2e0ad474c2a5cb1d0c936b7e07a",
-    "synced_at": "2026-06-18T00:12:13Z"
+    "fingerprint": "1437e566365e0f07ef07a061c27609b4086df70ee5a92753a53674955101a9d2",
+    "synced_at": "2026-06-18T03:05:17Z",
+    "email_notified_at": null
   }
 }
