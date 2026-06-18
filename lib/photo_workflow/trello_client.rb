@@ -21,6 +21,12 @@ module PhotoWorkflow
       ))
     end
 
+    def update_card_position(card_id, pos:)
+      HttpJson.put("#{BASE_URL}/cards/#{card_id}", query: auth_params.merge(
+        pos: pos
+      ))
+    end
+
     def archive_card(card_id)
       HttpJson.put("#{BASE_URL}/cards/#{card_id}", query: auth_params.merge(
         closed: true
@@ -42,8 +48,14 @@ module PhotoWorkflow
 
     def list_cards(list_id)
       HttpJson.get("#{BASE_URL}/lists/#{list_id}/cards", headers: {}, query: auth_params.merge(
-        fields: "id,name,desc,due,dueComplete,shortUrl,url,closed,dateLastActivity"
+        fields: "id,name,desc,due,dueComplete,shortUrl,url,closed,dateLastActivity,pos"
       ))
+    end
+
+    def find_active_card_by_name(name, list_id: required_env("TRELLO_LIST_ID"))
+      list_cards(list_id)
+        .select { |card| !card["closed"] && card["name"] == name }
+        .min_by { |card| [card["dateLastActivity"].to_s, card["pos"].to_f] }
     end
 
     private

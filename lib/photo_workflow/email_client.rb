@@ -1,11 +1,18 @@
 require "securerandom"
+require "base64"
 require "net/smtp"
 require "time"
+require "timeout"
+
+require_relative "http_json"
 
 module PhotoWorkflow
   class EmailClient
     DEFAULT_PORT = 587
     DEFAULT_AUTH = :plain
+    DEFAULT_OPEN_TIMEOUT = 10
+    DEFAULT_READ_TIMEOUT = 30
+    DEFAULT_RETRIES = 1
     EMAIL_PATTERN = /[A-Z0-9._%+\-]+@[A-Z0-9.\-]+\.[A-Z]{2,}/i.freeze
 
     def enabled?
@@ -65,8 +72,13 @@ module PhotoWorkflow
     end
 
     def deliver(to:, subject:, body:, calendar:)
-      boundary = "photo-workflow-#{SecureRandom.hex(12)}"
       recipients = Array(to).map(&:to_s).map(&:strip).reject(&:empty?)
+      if resend_enabled?
+        deliver_with_resend(to: recipients, subject: subject, body: body, calendar: calendar)
+        return
+      end
+
+      boundary = "photo-workflow-#{SecureRandom.hex(12)}"
       parts = [
         "From: #{from_label} <#{required_env("EMAIL_FROM")}>",
         "To: #{recipients.join(", ")}",
@@ -98,10 +110,59 @@ module PhotoWorkflow
       parts << "--#{boundary}--"
       message = parts.join("\r\n")
 
-      smtp = Net::SMTP.new(required_env("SMTP_HOST"), env_integer("SMTP_PORT", DEFAULT_PORT))
-      smtp.enable_starttls_auto if starttls?
-      smtp.start(required_env("SMTP_DOMAIN"), required_env("SMTP_USERNAME"), required_env("SMTP_PASSWORD"), auth_method) do |connection|
-        connection.send_message(message, required_env("EMAIL_FROM"), recipients)
+      with_smtp_retries do
+        smtp = Net::SMTP.new(required_env("SMTP_HOST"), env_integer("SMTP_PORT", DEFAULT_PORT))
+        smtp.open_timeout = env_integer("SMTP_OPEN_TIMEOUT", DEFAULT_OPEN_TIMEOUT)
+        smtp.read_timeout = env_integer("SMTP_READ_TIMEOUT", DEFAULT_READ_TIMEOUT)
+
+        if smtp_ssl?
+          smtp.enable_tls
+        elsif starttls?
+          smtp.enable_starttls_auto
+        end
+
+        smtp.start(required_env("SMTP_DOMAIN"), required_env("SMTP_USERNAME"), required_env("SMTP_PASSWORD"), auth_method) do |connection|
+          connection.send_message(message, required_env("EMAIL_FROM"), recipients)
+        end
+      end
+    end
+
+    def deliver_with_resend(to:, subject:, body:, calendar:)
+      payload = {
+        from: resend_from,
+        to: to,
+        subject: subject,
+        text: body
+      }
+
+      if calendar
+        payload[:attachments] = [
+          {
+            filename: "ensaio.ics",
+            content: Base64.strict_encode64(calendar),
+            content_type: "text/calendar"
+          }
+        ]
+      end
+
+      HttpJson.post_json(
+        "https://api.resend.com/emails",
+        headers: { "Authorization" => "Bearer #{required_env("RESEND_API_KEY")}" },
+        body: payload
+      )
+    end
+
+    def with_smtp_retries
+      attempts = env_integer("SMTP_RETRIES", DEFAULT_RETRIES)
+      current_attempt = 0
+
+      begin
+        current_attempt += 1
+        yield
+      rescue Net::OpenTimeout, Net::ReadTimeout, Timeout::Error, EOFError, Errno::ECONNRESET, Errno::ETIMEDOUT, SocketError => error
+        retry if current_attempt <= attempts
+
+        raise "SMTP connection failed after #{current_attempt} attempt(s): #{error.class} - #{error.message}"
       end
     end
 
@@ -113,14 +174,20 @@ module PhotoWorkflow
       template = env_value("EMAIL_BODY_TEMPLATE")
       return interpolate(template, event, card) if template && !template.empty?
 
+      form_fields = form_fields_for(event)
+
       [
         "Ola!",
         "",
         "Seu ensaio foi agendado com sucesso.",
         "",
         "Ensaio: #{event.fetch("summary", "")}",
+        optional_line("Nome", form_fields["nome"]),
+        optional_line("Modelo", form_fields["modelo"]),
+        optional_line("Tipo", form_fields["tipo"]),
         "Data: #{formatted_time(event.fetch("start", {}))}",
         optional_line("Local", event["location"]),
+        optional_line("Referencias", form_fields["referencias"]),
         "",
         "Para adicionar ao seu calendario, use o convite anexado neste e-mail.",
         "",
@@ -132,7 +199,12 @@ module PhotoWorkflow
     end
 
     def interpolate(template, event, card)
+      form_fields = form_fields_for(event)
       replacements = {
+        "client_name" => form_fields["nome"],
+        "model_name" => form_fields["modelo"],
+        "shoot_type" => form_fields["tipo"],
+        "references" => form_fields["referencias"],
         "summary" => event.fetch("summary", ""),
         "start" => formatted_time(event.fetch("start", {})),
         "end" => formatted_time(event.fetch("end", {})),
@@ -145,6 +217,39 @@ module PhotoWorkflow
       replacements.reduce(template) do |text, (key, value)|
         text.gsub("{{#{key}}}", value.to_s)
       end
+    end
+
+    def form_fields_for(event)
+      description_fields(event["description"]).merge(
+        "nome" => description_field(event["description"], "Nome"),
+        "modelo" => description_field(event["description"], "Modelo"),
+        "tipo" => description_field(event["description"], "Tipo"),
+        "referencias" => description_field(event["description"], "Referencias")
+      ) { |_key, old_value, new_value| old_value.to_s.empty? ? new_value : old_value }
+    end
+
+    def description_fields(description)
+      return {} unless description
+
+      description.to_s.each_line.each_with_object({}) do |line, fields|
+        key, value = line.split(":", 2)
+        next unless value
+
+        normalized_key = normalize_description_key(key)
+        fields[normalized_key] = value.strip unless normalized_key.empty?
+      end
+    end
+
+    def description_field(description, field_name)
+      description_fields(description).fetch(normalize_description_key(field_name), "")
+    end
+
+    def normalize_description_key(key)
+      key.to_s
+         .downcase
+         .tr("áàâãäéèêëíìîïóòôõöúùûüç", "aaaaaeeeeiiiiooooouuuuc")
+         .gsub(/[^a-z0-9]+/, "_")
+         .gsub(/\A_+|_+\z/, "")
     end
 
     def formatted_time(date_hash)
@@ -256,8 +361,20 @@ module PhotoWorkflow
       env_value("SMTP_STARTTLS", "true").casecmp("true").zero?
     end
 
+    def smtp_ssl?
+      env_value("SMTP_SSL", "false").casecmp("true").zero?
+    end
+
     def auth_method
       env_value("SMTP_AUTH", DEFAULT_AUTH.to_s).to_sym
+    end
+
+    def resend_enabled?
+      env_value("RESEND_ENABLED", "false").casecmp("true").zero? || !env_value("RESEND_API_KEY", "").empty?
+    end
+
+    def resend_from
+      "#{from_label} <#{required_env("EMAIL_FROM")}>"
     end
 
     def env_integer(name, fallback)

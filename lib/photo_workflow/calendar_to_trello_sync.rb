@@ -18,13 +18,14 @@ module PhotoWorkflow
       @email_client = email_client
     end
 
-    def call
+    def call(events: nil, archive_missing: true)
       state = state_store.all
-      events = calendar_client.upcoming_events
+      events ||= calendar_client.upcoming_events
       synced_count = 0
-      archived_count = archive_removed_events(state, events)
+      archived_count = archive_missing ? archive_removed_events(state, events) : 0
 
       events.each do |event|
+        archived_count += 1 if archive_if_no_longer_syncable(state, event)
         next unless syncable_event?(event)
 
         event_id = event.fetch("id")
@@ -33,16 +34,31 @@ module PhotoWorkflow
         current_state = state[event_id]
 
         if should_create_card?(current_state)
-          card = trello_client.create_card(**payload)
-          state[event_id] = state_payload(event, card.fetch("id"), fingerprint, trello_card_url(card))
-          handle_email_notification_result(state[event_id], notify_event_created(event, card))
+          existing_card = find_existing_card(payload)
+          if existing_card
+            trello_client.update_card(existing_card.fetch("id"), **payload)
+            state[event_id] = state_payload(event, existing_card.fetch("id"), fingerprint, trello_card_url(existing_card))
+            preserve_email_notification(state[event_id], current_state) if current_state
+            handle_email_notification_result(state[event_id], notify_email_created(event, trello_card_reference(state[event_id]))) if email_notification_pending?(state[event_id])
+            puts "Reused existing Trello card for #{event.fetch("summary")}"
+          else
+            card = trello_client.create_card(**payload)
+            state[event_id] = state_payload(event, card.fetch("id"), fingerprint, trello_card_url(card))
+            handle_email_notification_result(state[event_id], notify_event_created(event, card))
+            puts "Created Trello card for #{event.fetch("summary")}"
+          end
           synced_count += 1
-          puts "Created Trello card for #{event.fetch("summary")}"
         elsif current_state["fingerprint"] != fingerprint
           trello_client.update_card(current_state.fetch("trello_card_id"), **payload)
           state[event_id] = state_payload(event, current_state.fetch("trello_card_id"), fingerprint, current_state["trello_card_url"])
           preserve_email_notification(state[event_id], current_state)
-          handle_email_notification_result(state[event_id], notify_email_created(event, trello_card_reference(state[event_id]))) if email_notification_pending?(state[event_id])
+
+          if event_update_notifications_enabled? && notification_relevant_update?(current_state, event)
+            handle_email_notification_result(state[event_id], notify_event_updated(event, trello_card_reference(state[event_id])))
+          elsif email_notification_pending?(state[event_id])
+            handle_email_notification_result(state[event_id], notify_email_created(event, trello_card_reference(state[event_id])))
+          end
+
           synced_count += 1
           puts "Updated Trello card for #{event.fetch("summary")}"
         elsif email_notification_pending?(current_state)
@@ -51,9 +67,15 @@ module PhotoWorkflow
         end
       end
 
+      sort_trello_lists
       state_store.save(state)
       puts "Sync finished. #{synced_count} card(s) created or updated."
       puts "Archive finished. #{archived_count} card(s) archived."
+
+      {
+        synced_count: synced_count,
+        archived_count: archived_count
+      }
     end
 
     private
@@ -68,6 +90,21 @@ module PhotoWorkflow
         !summary.match?(excluded_event_summary_pattern)
     end
 
+    def archive_if_no_longer_syncable(state, event)
+      return false if syncable_event?(event)
+
+      event_id = event["id"]
+      return false if event_id.nil? || event_id.empty?
+
+      record = state[event_id]
+      return false unless record && !record["archived_at"]
+
+      archive_trello_card(record)
+      record["archived_at"] = Time.now.utc.iso8601
+      puts "Archived Trello card for #{record.fetch("summary", event_id)}"
+      true
+    end
+
     def event_summary_pattern
       Regexp.new(ENV.fetch("EVENT_SUMMARY_PATTERN", "."), Regexp::IGNORECASE)
     end
@@ -80,11 +117,18 @@ module PhotoWorkflow
       return true if record.nil? || record["archived_at"]
 
       if trello_card_inactive?(record)
-        puts "Trello card missing or archived for #{record.fetch("summary", record.fetch("google_event_id", "unknown"))}; creating a new card."
+        puts "Trello card missing or archived for #{record.fetch("summary", record.fetch("google_event_id", "unknown"))}; searching for an active matching card."
         return true
       end
 
       false
+    end
+
+    def find_existing_card(payload)
+      trello_client.find_active_card_by_name(payload.fetch(:name))
+    rescue HttpJson::Error => error
+      warn "Could not search existing Trello card for #{payload.fetch(:name)}: #{error.message}"
+      nil
     end
 
     def trello_card_inactive?(record)
@@ -119,13 +163,78 @@ module PhotoWorkflow
       puts "Trello card already missing for #{record.fetch("summary", record.fetch("google_event_id", "unknown"))}; marking as archived."
     end
 
+    def sort_trello_lists
+      sort_trello_list(required_env("TRELLO_LIST_ID"), direction: :asc)
+      reminder_list_ids.each { |list_id| sort_trello_list(list_id, direction: :asc) }
+    end
+
+    def sort_trello_list(list_id, direction:)
+      cards = trello_client.list_cards(list_id).reject { |card| card["closed"] }
+      sorted_cards = cards.sort_by { |card| [card_due_sort_value(card), card["name"].to_s] }
+      sorted_cards.reverse! if direction == :desc
+
+      sorted_cards.each_with_index do |card, index|
+        target_pos = (index + 1) * 1024
+        next if card["pos"].to_f == target_pos
+
+        trello_client.update_card_position(card.fetch("id"), pos: target_pos)
+      end
+
+      puts "Sorted #{sorted_cards.size} Trello card(s) in list #{list_id} by due date."
+    rescue HttpJson::Error => error
+      warn "Could not sort Trello cards in list #{list_id}: #{error.message}"
+    end
+
+    def card_due_sort_value(card)
+      value = card["due"]
+      return Time.at(2**31 - 1) if value.nil? || value.empty?
+
+      Time.parse(value)
+    rescue ArgumentError
+      Time.at(2**31 - 1)
+    end
+
+    def reminder_list_ids
+      [
+        env_value("TRELLO_GALLERY_LIST_ID", "69026faa813ce18fe16387e7"),
+        env_value("TRELLO_EDITING_LIST_ID", "69026fe3e95b323354f27f6d"),
+        env_value("TRELLO_PAYMENT_LIST_ID", "6a330b1331176309a014e4e7"),
+        env_value("TRELLO_EXTRA_PAYMENT_LIST_ID", "6a33287ddf1a985770fec18c")
+      ].compact.reject(&:empty?).uniq
+    end
+
     def notify_event_created(event, card)
       notify_with("WhatsApp", event) { whatsapp_client.notify_event_created(event: event, card: card) }
       notify_email_created(event, card)
     end
 
+    def notify_event_updated(event, card)
+      notify_with("WhatsApp", event) { whatsapp_client.notify_event_created(event: event, card: card) }
+      notify_email_updated(event, card)
+    end
+
     def notify_email_created(event, card)
       notify_with("Email", event) { email_client.notify_event_created(event: event, card: card) }
+    end
+
+    def notify_email_updated(event, card)
+      notify_with("Email", event) { email_client.notify_event_created(event: event, card: card) }
+    end
+
+    def event_update_notifications_enabled?
+      env_value("NOTIFY_ON_EVENT_UPDATE", "true").casecmp("true").zero?
+    end
+
+    def notification_relevant_update?(previous_record, event)
+      previous_summary = previous_record["summary"].to_s
+      current_summary = event.fetch("summary", "").to_s
+      return true if previous_summary != current_summary
+
+      previous_starts_at = previous_record["starts_at"].to_s
+      current_starts_at = event_start(event).iso8601
+      previous_starts_at != current_starts_at
+    rescue StandardError
+      true
     end
 
     def notify_with(channel, event)
@@ -254,6 +363,17 @@ module PhotoWorkflow
 
     def delivery_days_after_event
       ENV.fetch("DELIVERY_DAYS_AFTER_EVENT", 0).to_i
+    end
+
+    def required_env(name)
+      ENV.fetch(name) { raise "Missing ENV #{name}" }
+    end
+
+    def env_value(name, fallback = nil)
+      value = ENV[name]
+      return fallback if value.nil? || value.empty?
+
+      value
     end
 
     def fingerprint_for(payload)

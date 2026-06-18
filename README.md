@@ -26,6 +26,8 @@ TRELLO_TOKEN
 TRELLO_LIST_ID
 TRELLO_GALLERY_LIST_ID
 TRELLO_EDITING_LIST_ID
+TRELLO_PAYMENT_LIST_ID
+TRELLO_EXTRA_PAYMENT_LIST_ID
 ```
 
 Secrets opcionais para WhatsApp Cloud API:
@@ -59,6 +61,15 @@ EMAIL_BODY_TEMPLATE
 REMINDER_EMAIL_TO
 ```
 
+Secrets opcionais para webhook em tempo quase real:
+
+```text
+WEBHOOK_PUBLIC_URL
+WEBHOOK_SHARED_TOKEN
+GOOGLE_WEBHOOK_CHANNEL_ID
+GOOGLE_WEBHOOK_TTL_SECONDS
+```
+
 ## Variaveis opcionais
 
 ```text
@@ -66,6 +77,7 @@ EVENT_SUMMARY_PATTERN=.
 EXCLUDED_EVENT_SUMMARY_PATTERN=^(Agenda fechada|teste)$
 DAYS_AHEAD=180
 DELIVERY_DAYS_AFTER_EVENT=0
+NOTIFY_ON_EVENT_UPDATE=true
 STATE_PATH=data/calendar_event_syncs.json
 TRELLO_REMINDER_STATE_PATH=data/trello_reminders.json
 GALLERY_REMINDER_DAYS_AFTER_SESSION=2
@@ -73,6 +85,12 @@ EDITING_REMINDER_DAYS_AFTER_SESSION=15
 HTTP_OPEN_TIMEOUT=10
 HTTP_READ_TIMEOUT=30
 HTTP_RETRIES=2
+RESEND_ENABLED=false
+RESEND_API_KEY=
+SMTP_SSL=false
+SMTP_OPEN_TIMEOUT=10
+SMTP_READ_TIMEOUT=30
+SMTP_RETRIES=1
 ```
 
 Por padrao, o script aceita qualquer titulo. Use a exclusao para ignorar bloqueios/testes:
@@ -91,6 +109,51 @@ HTTP_RETRIES=2
 ```
 
 O cliente HTTP tenta novamente em timeouts e falhas transitórias de rede antes de abortar.
+
+## Webhook (quase em tempo real)
+
+Agora o projeto tambem suporta webhook do Google Calendar para reduzir a latencia entre criar/editar/cancelar o evento e refletir no Trello.
+
+### Como funciona
+
+1. Um endpoint HTTP recebe notificacoes do Google Calendar.
+2. Ao receber notificacao, o sistema busca apenas mudancas desde o ultimo `sync_token`.
+3. Eventos novos/alterados criam ou atualizam cards no Trello.
+4. Eventos cancelados (ou que deixaram de bater no filtro) arquivam o card correspondente.
+5. Se o `sync_token` expirar, o sistema faz um resync completo automaticamente.
+
+### Variaveis para webhook
+
+```text
+WEBHOOK_STATE_PATH=data/google_calendar_webhook_state.json
+WEBHOOK_BIND=0.0.0.0
+WEBHOOK_PORT=4567
+WEBHOOK_PATH=/google-calendar/webhook
+WEBHOOK_PUBLIC_URL=https://seu-dominio.com/google-calendar/webhook
+WEBHOOK_SHARED_TOKEN=seu-token-compartilhado
+GOOGLE_WEBHOOK_CHANNEL_ID=uuid-opcional
+GOOGLE_WEBHOOK_TTL_SECONDS=604800
+```
+
+### Subir endpoint webhook
+
+```bash
+ruby bin/run_google_calendar_webhook
+```
+
+### Registrar ou renovar canal no Google
+
+```bash
+ruby bin/register_google_calendar_watch
+```
+
+Esse comando salva os dados do canal em `data/google_calendar_webhook_state.json`.
+
+### Recomendacao de deploy
+
+- Mantenha o webhook em um endpoint publico HTTPS (VPS, Render, Fly.io, Cloud Run, etc.).
+- Continue com o workflow agendado como fallback de seguranca.
+- Renove o canal periodicamente (o Google expira canais de watch).
 
 ## Rodar local
 
@@ -133,13 +196,19 @@ Para lembretes internos por e-mail, configure os IDs das listas:
 ```text
 TRELLO_GALLERY_LIST_ID=69026faa813ce18fe16387e7
 TRELLO_EDITING_LIST_ID=69026fe3e95b323354f27f6d
+TRELLO_PAYMENT_LIST_ID=6a330b1331176309a014e4e7
+TRELLO_EXTRA_PAYMENT_LIST_ID=6a33287ddf1a985770fec18c
 ```
 
 O script `bin/send_trello_reminders` usa a data `due` do card como referencia:
 
 - cards em `Aguardando Galeria`: envia lembrete quando passaram 2 dias do `due`;
 - cards em `Aguardando Edicao`: envia lembrete quando passaram 15 dias do `due`;
+- cards em `Aguardando pagamento`: envia lembrete diario enquanto estiverem nessa lista;
+- cards em `Aguardando pagamento extra`: envia lembrete diario enquanto estiverem nessa lista;
 - o arquivo `data/trello_reminders.json` evita reenviar o mesmo lembrete mais de uma vez no mesmo dia.
+
+O sync tambem ordena essas listas pela data `due`, deixando os ensaios mais antigos primeiro.
 
 Para achar IDs de board/listas, abra:
 
@@ -241,8 +310,12 @@ Ola!
 Seu ensaio foi agendado com sucesso.
 
 Ensaio: {{summary}}
+Nome: {{client_name}}
+Modelo: {{model_name}}
+Tipo: {{shoot_type}}
 Data: {{start}}
 Local: {{location}}
+Referencias: {{references}}
 
 Tambem anexamos um arquivo ensaio.ics para adicionar este ensaio ao seu calendario.
 
@@ -259,6 +332,10 @@ Para personalizar, configure `EMAIL_BODY_TEMPLATE` usando estas variaveis:
 {{description}}
 {{calendar_link}}
 {{trello_link}}
+{{client_name}}
+{{model_name}}
+{{shoot_type}}
+{{references}}
 ```
 
 ## Lembretes por e-mail

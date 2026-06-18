@@ -16,7 +16,8 @@
     "starts_at": "2026-06-24T17:00:00-03:00",
     "fingerprint": "084bd33e51468b62a4239233bd144d771033925d60af1e73e342497fe93c49e8",
     "synced_at": "2026-06-18T03:05:15Z",
-    "email_notified_at": null
+    "email_notified_at": null,
+    "archived_at": "2026-06-19T00:50:11Z"
   },
   "19bje9em8u926d9cdtvkojepvo": {
     "google_event_id": "19bje9em8u926d9cdtvkojepvo",
@@ -96,15 +97,13 @@
   },
   "74p34oho6kp34b9mc8o3ib9k6cq3abb2c4p3ebb46ss3cd33cgq38e1k6s": {
     "google_event_id": "74p34oho6kp34b9mc8o3ib9k6cq3abb2c4p3ebb46ss3cd33cgq38e1k6s",
-    "trello_card_id": "6a3477041e4df87d22b4367f",
-    "trello_card_url": "https://trello.com/c/A9jJfaID",
+    "trello_card_id": "6a341b7d1fe7014ee9da6b63",
+    "trello_card_url": "https://trello.com/c/HE7nyqnS",
     "summary": "Acompanhamento Manuela 4 meses (Thais) - Festa Junina",
     "starts_at": "2026-07-13T14:00:00-03:00",
-    "fingerprint": "0fca5f555071337abad04f0aa33dbf2381006dd09f5c58164466801a0138bfb0",
-    "synced_at": "2026-06-18T22:53:56Z",
-    "email_skipped_at": "2026-06-18T22:53:57Z",
-    "email_skip_reason": "missing_client_email",
-    "email_skipped_fingerprint": "0fca5f555071337abad04f0aa33dbf2381006dd09f5c58164466801a0138bfb0"
+    "fingerprint": "e6905f1d20ba7f72a93e7a7e59398c0d592e7b35132f0b74910dfa43ddabbcb0",
+    "synced_at": "2026-06-19T00:07:04Z",
+    "email_notified_at": "2026-06-19T00:07:08Z"
   },
   "74p6cp1pcos3ib9g6lj64b9kc4r64bb16cqjab9g6gomcohhcdij8oph6s": {
     "google_event_id": "74p6cp1pcos3ib9g6lj64b9kc4r64bb16cqjab9g6gomcohhcdij8oph6s",
@@ -254,15 +253,24 @@
   },
   "f522ltr1mo4urvuo3cnmfigu7s": {
     "google_event_id": "f522ltr1mo4urvuo3cnmfigu7s",
-    "trello_card_id": "6a3336847e89a96d1f232889",
-    "trello_card_url": null,
+    "trello_card_id": "6a34923be7190af4846bf911",
+    "trello_card_url": "https://trello.com/c/udbevYck",
     "summary": "Festa Junina escola Stella",
     "starts_at": "2026-06-28T09:00:00-03:00",
     "fingerprint": "c452c6babf1b3417cfdc9d3699c330ff859ac2e0ad474c2a5cb1d0c936b7e07a",
-    "synced_at": "2026-06-18T22:46:58Z",
-    "email_notified_at": null,
-    "email_skipped_at": "2026-06-18T22:53:28Z",
+    "synced_at": "2026-06-19T00:50:16Z",
+    "email_skipped_at": "2026-06-19T00:50:16Z",
     "email_skip_reason": "missing_client_email",
     "email_skipped_fingerprint": "c452c6babf1b3417cfdc9d3699c330ff859ac2e0ad474c2a5cb1d0c936b7e07a"
+  },
+  "j684acag6o0timavop31n8q5t8": {
+    "google_event_id": "j684acag6o0timavop31n8q5t8",
+    "trello_card_id": "6a349209bef06207878ddb36",
+    "trello_card_url": "https://trello.com/c/JnHL5JrY",
+    "summary": "Solicitação - Ouro - Darwin Silva",
+    "starts_at": "2026-06-19T23:00:00-03:00",
+    "fingerprint": "ae19e12371c0e39d502ab2aefa553b16c228963bf416919cc3371d6230d15ab2",
+    "synced_at": "2026-06-19T01:31:14Z",
+    "email_notified_at": "2026-06-19T00:12:09Z"
   }
 }

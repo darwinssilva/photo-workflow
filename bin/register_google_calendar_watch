@@ -1,0 +1,56 @@
+#!/usr/bin/env ruby
+
+$LOAD_PATH.unshift(File.expand_path("../lib", __dir__))
+
+env_path = File.expand_path("../.env", __dir__)
+if File.exist?(env_path)
+  File.readlines(env_path, chomp: true).each do |line|
+    next if line.empty? || line.start_with?("#") || !line.include?("=")
+
+    key, value = line.split("=", 2)
+    ENV[key] ||= value.to_s.strip.gsub(/\A(["'])(.*)\1\z/, "\\2")
+  end
+end
+
+require "securerandom"
+require "photo_workflow/google_calendar_client"
+require "photo_workflow/state_store"
+
+callback_url = ENV.fetch("WEBHOOK_PUBLIC_URL") { raise "Missing ENV WEBHOOK_PUBLIC_URL" }
+channel_id = ENV["GOOGLE_WEBHOOK_CHANNEL_ID"].to_s.strip
+channel_id = SecureRandom.uuid if channel_id.empty?
+channel_token = ENV["WEBHOOK_SHARED_TOKEN"]
+ttl_seconds = ENV.fetch("GOOGLE_WEBHOOK_TTL_SECONDS", "604800").to_i
+
+calendar_client = PhotoWorkflow::GoogleCalendarClient.new
+state_store = PhotoWorkflow::StateStore.new(path: ENV.fetch("WEBHOOK_STATE_PATH", "data/google_calendar_webhook_state.json"))
+state = state_store.all
+
+if state["channel_id"] && state["resource_id"]
+  begin
+    calendar_client.stop_watch(channel_id: state.fetch("channel_id"), resource_id: state.fetch("resource_id"))
+    puts "Stopped old Google watch channel #{state.fetch("channel_id")}"
+  rescue StandardError => error
+    warn "Could not stop old channel: #{error.message}"
+  end
+end
+
+response = calendar_client.watch_events(
+  callback_url: callback_url,
+  channel_id: channel_id,
+  channel_token: channel_token,
+  ttl_seconds: ttl_seconds
+)
+
+state["channel_id"] = response.fetch("id")
+state["resource_id"] = response.fetch("resourceId")
+state["resource_uri"] = response["resourceUri"]
+state["channel_expiration"] = response["expiration"]
+state["webhook_public_url"] = callback_url
+state["updated_at"] = Time.now.utc.iso8601
+state_store.save(state)
+
+puts "Google Calendar watch registrado com sucesso"
+puts "channel_id: #{state.fetch("channel_id")}"
+puts "resource_id: #{state.fetch("resource_id")}"
+puts "expiration: #{state["channel_expiration"]}"

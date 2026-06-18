@@ -1,0 +1,23 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    net-protocol (0.2.2)
+      timeout
+    net-smtp (0.5.1)
+      net-protocol
+    timeout (0.4.4)
+    webrick (1.9.2)
+
+PLATFORMS
+  ruby
+  x86_64-linux
+
+DEPENDENCIES
+  net-smtp (~> 0.5)
+  webrick (~> 1.9)
+
+RUBY VERSION
+  ruby 3.3.0
+
+BUNDLED WITH
+   2.4.10

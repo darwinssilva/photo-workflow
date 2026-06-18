@@ -9,6 +9,8 @@ module PhotoWorkflow
   class TrelloReminderEmail
     GALLERY_KIND = "gallery"
     EDITING_KIND = "editing"
+    PAYMENT_KIND = "payment"
+    EXTRA_PAYMENT_KIND = "extra_payment"
 
     def initialize(trello_client: TrelloClient.new, email_client: EmailClient.new, state_store: StateStore.new(path: ENV.fetch("TRELLO_REMINDER_STATE_PATH", "data/trello_reminders.json")), today: Date.today)
       @trello_client = trello_client
@@ -48,6 +50,20 @@ module PhotoWorkflow
           list_name: "Aguardando Edicao",
           trigger_offset_days: env_integer("EDITING_REMINDER_DAYS_AFTER_SESSION", 15),
           subject: "Lembrete: ensaio aguardando edicao ha 15 dias"
+        },
+        {
+          kind: PAYMENT_KIND,
+          list_id: env_value("TRELLO_PAYMENT_LIST_ID", "6a330b1331176309a014e4e7"),
+          list_name: "Aguardando pagamento",
+          due_required: false,
+          subject: "Lembrete: card aguardando pagamento"
+        },
+        {
+          kind: EXTRA_PAYMENT_KIND,
+          list_id: env_value("TRELLO_EXTRA_PAYMENT_LIST_ID", "6a33287ddf1a985770fec18c"),
+          list_name: "Aguardando pagamento extra",
+          due_required: false,
+          subject: "Lembrete: card aguardando pagamento extra"
         }
       ]
     end
@@ -59,16 +75,18 @@ module PhotoWorkflow
     end
 
     def reminder_due?(card, config)
+      return false if card["closed"] || card["dueComplete"]
+      return true unless config.fetch(:due_required, true)
+
       due_date = card_due_date(card)
       return false unless due_date
-      return false if card["closed"] || card["dueComplete"]
 
       today >= due_date + config.fetch(:trigger_offset_days)
     end
 
     def send_reminder(card, config, state)
       key = state_key(card, config)
-      return false if state[key]
+      return false if reminder_sent_today?(card, config, state)
 
       email_client.deliver_text(
         to: recipients,
@@ -81,6 +99,7 @@ module PhotoWorkflow
         "kind" => config.fetch(:kind),
         "card_name" => card.fetch("name", ""),
         "due" => card["due"],
+        "reminder_date" => today.iso8601,
         "sent_at" => Time.now.utc.iso8601
       }
       puts "Reminder email sent for #{card.fetch("name", card.fetch("id"))}"
@@ -100,7 +119,7 @@ module PhotoWorkflow
         "",
         "Card: #{card.fetch("name", "")}",
         "Lista: #{config.fetch(:list_name)}",
-        "Data de referencia: #{format_date(due_date)}",
+        optional_line("Data de referencia", format_date(due_date)),
         "Link: #{card["shortUrl"] || card["url"]}",
         "",
         "Descricao:",
@@ -117,6 +136,10 @@ module PhotoWorkflow
         "Este ensaio esta aguardando galeria ha 2 dias desde #{format_date(due_date)}."
       when EDITING_KIND
         "Este ensaio esta aguardando edicao ha 15 dias desde #{format_date(due_date)}."
+      when PAYMENT_KIND
+        "Este card ainda esta em Aguardando pagamento."
+      when EXTRA_PAYMENT_KIND
+        "Este card ainda esta em Aguardando pagamento extra."
       end
     end
 
@@ -130,6 +153,14 @@ module PhotoWorkflow
     end
 
     def state_key(card, config)
+      [config.fetch(:kind), card.fetch("id"), today.iso8601].join(":")
+    end
+
+    def reminder_sent_today?(card, config, state)
+      state[state_key(card, config)] || state[legacy_state_key(card, config)]
+    end
+
+    def legacy_state_key(card, config)
       [config.fetch(:kind), card.fetch("id"), card["due"], today.iso8601].join(":")
     end
 
@@ -142,6 +173,12 @@ module PhotoWorkflow
 
     def format_date(date)
       date&.strftime("%d/%m/%Y").to_s
+    end
+
+    def optional_line(label, value)
+      return nil if blank_string?(value)
+
+      "#{label}: #{value}"
     end
 
     def env_integer(name, fallback)
