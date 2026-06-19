@@ -232,7 +232,11 @@ module PhotoWorkflow
 
       previous_starts_at = previous_record["starts_at"].to_s
       current_starts_at = event_start(event).iso8601
-      previous_starts_at != current_starts_at
+      return true if previous_starts_at != current_starts_at
+
+      previous_description = previous_record["description"].to_s
+      current_description = event.fetch("description", "").to_s
+      previous_description != current_description
     rescue StandardError
       true
     end
@@ -387,6 +391,7 @@ module PhotoWorkflow
         "trello_card_url" => trello_card_url,
         "summary" => event.fetch("summary"),
         "starts_at" => event_start(event).iso8601,
+        "description" => event.fetch("description", ""),
         "fingerprint" => fingerprint,
         "synced_at" => Time.now.utc.iso8601
       }

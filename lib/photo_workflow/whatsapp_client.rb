@@ -24,12 +24,18 @@ module PhotoWorkflow
     def notify_event_created(event:, card:)
       return unless enabled?
 
-      recipients.each do |recipient|
-        send_template_message(
-          to: recipient,
-          variables: template_variables(event, card)
-        )
+      # Try to get client phone from event, fallback to WHATSAPP_TO
+      to_number = client_phone(event) || fallback_recipients.first
+      unless to_number
+        puts "WhatsApp notification skipped for #{event.fetch("summary", event.fetch("id", "unknown"))}: missing phone"
+        return
       end
+
+      send_template_message(
+        to: to_number,
+        variables: template_variables(event, card)
+      )
+      puts "WhatsApp notification sent for #{event.fetch("summary", event.fetch("id", "unknown"))} to #{normalize_phone(to_number)}"
     end
 
     private
@@ -134,6 +140,22 @@ module PhotoWorkflow
 
     def recipients
       required_env("WHATSAPP_TO").split(",").map(&:strip).reject(&:empty?)
+    end
+
+    def fallback_recipients
+      ENV.fetch("WHATSAPP_TO", "").split(",").map(&:strip).reject(&:empty?)
+    end
+
+    def client_phone(event)
+      # Try to extract from description: "telefone: 11 98765-4321"
+      phone_from_desc = extract_description_field(event["description"], "telefone")
+      return phone_from_desc unless blank_string?(phone_from_desc)
+
+      # Try to extract from summary: "2025-01-15 - João Silva - (11) 98765-4321"
+      parts = event.fetch("summary", "").split(" - ")
+      return normalize_phone(parts[-1]) if parts.length >= 3
+
+      nil
     end
 
     def client_name(event)
