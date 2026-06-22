@@ -42,6 +42,43 @@
     "email_notified_at": "2026-06-18T03:05:13Z",
     "archived_at": "2026-06-18T22:46:49Z"
   },
+  "2npts2ma7hck9jvlh6bur6cccc": {
+    "google_event_id": "2npts2ma7hck9jvlh6bur6cccc",
+    "trello_card_id": "6a39a81fba77609c50164877",
+    "trello_card_url": "https://trello.com/c/HjKi57Yk",
+    "summary": "Solicitação - Ouro - Darwin SIlva",
+    "starts_at": "2026-06-25T20:00:00-03:00",
+    "description": "Nome: Darwin SIlva\nModelo: Stella\nEmail: darwins.silva.ds@gmail.com\nTelefone: 11983238356\nTipo: Ouro\nReferencias: \n\nOrigem: Google Forms",
+    "fingerprint": "7d5b39bea8b40c5818802c63c5ac81d3530753e5303c92646c3e726603447778",
+    "synced_at": "2026-06-22T21:56:54Z",
+    "email_notified_at": "2026-06-22T21:56:55Z"
+  },
+  "366mpfmjn6srs0elgqhg2liujg": {
+    "google_event_id": "366mpfmjn6srs0elgqhg2liujg",
+    "trello_card_id": "6a363048983f7092cbe103df",
+    "trello_card_url": "https://trello.com/c/sBL00I1u",
+    "summary": "Agenda fechada.",
+    "starts_at": "2026-06-25T09:00:00-03:00",
+    "description": "",
+    "fingerprint": "1e69f917b360570210797489e29a56b3570b3a051358f4daa3e64ce93d040323",
+    "synced_at": "2026-06-22T21:56:53Z",
+    "email_skipped_at": "2026-06-22T21:56:53Z",
+    "email_skip_reason": "missing_client_email",
+    "email_skipped_fingerprint": "1e69f917b360570210797489e29a56b3570b3a051358f4daa3e64ce93d040323"
+  },
+  "68q38c1i70qj2b9kc8q36b9k69gm2bb1cgrjabb16op68d9h70r3cc1hc4": {
+    "google_event_id": "68q38c1i70qj2b9kc8q36b9k69gm2bb1cgrjabb16op68d9h70r3cc1hc4",
+    "trello_card_id": "6a392823e7d6ad47c43d9a89",
+    "trello_card_url": "https://trello.com/c/KHiJUBXA",
+    "summary": "Acompanhamento Davi Dois Meses (Hellen) Tema Cores",
+    "starts_at": "2026-07-04T10:00:00-03:00",
+    "description": "",
+    "fingerprint": "6206d8f0fcb2adc402bcf870d9c726c1752e7aa4f719682855cbde2db570f1aa",
+    "synced_at": "2026-06-22T21:56:56Z",
+    "email_skipped_at": "2026-06-22T21:56:56Z",
+    "email_skip_reason": "missing_client_email",
+    "email_skipped_fingerprint": "6206d8f0fcb2adc402bcf870d9c726c1752e7aa4f719682855cbde2db570f1aa"
+  },
   "68s6cdr4cosm4b9pckojib9k6lgm6b9p60q68bb1ckrjip9o70o3ac9lco": {
     "google_event_id": "68s6cdr4cosm4b9pckojib9k6lgm6b9p60q68bb1ckrjip9o70o3ac9lco",
     "trello_card_id": "6a33367c46b28f6855a05765",
@@ -77,6 +114,19 @@
     "email_skipped_at": "2026-06-19T19:31:08Z",
     "email_skip_reason": "missing_client_email",
     "email_skipped_fingerprint": "ed3858c74ec91efe46cd92ffd6e1e9d2ce0519235e0c0d874bcd9e85f335aef8"
+  },
+  "6gojcc9mclhjibb3corj6b9k6ks66bb26oojeb9pc8r64chh65gm4eb568": {
+    "google_event_id": "6gojcc9mclhjibb3corj6b9k6ks66bb26oojeb9pc8r64chh65gm4eb568",
+    "trello_card_id": "6a373a14e07bca2d075ec1fe",
+    "trello_card_url": "https://trello.com/c/d7GnEeoc",
+    "summary": "Newborn José Murilo (Naiara)",
+    "starts_at": "2026-06-26T18:00:00-03:00",
+    "description": "Pacote Ouro \n\nTema Cavalinho + poltroninha com viola + outro cenario ela ficou de mandar a inspiração \n\nBebê 20 dias",
+    "fingerprint": "eeb1ad8a865c9052a8e683b9e69a9ab074fb7214aa67baba48d3b73da9254440",
+    "synced_at": "2026-06-22T21:56:56Z",
+    "email_skipped_at": "2026-06-22T21:56:56Z",
+    "email_skip_reason": "missing_client_email",
+    "email_skipped_fingerprint": "eeb1ad8a865c9052a8e683b9e69a9ab074fb7214aa67baba48d3b73da9254440"
   },
   "6lgjic1g6ks6ab9jcgo62b9k6cs38b9pcop32b9kcdgm6pho65hjicb560": {
     "google_event_id": "6lgjic1g6ks6ab9jcgo62b9k6cs38b9pcop32b9kcdgm6pho65hjicb560",
@@ -181,6 +231,19 @@
     "starts_at": "2026-06-17T14:00:00-03:00",
     "fingerprint": "0d83223c6dc0db79e3e5c347365a1cd58958a86ce881994f900e8c3197b984b2",
     "synced_at": "2026-06-18T00:12:06Z"
+  },
+  "cgpmcopgc5i38b9k6di32b9k65hj2bb26srm6b9gcphj8pj26pj34e9hcc": {
+    "google_event_id": "cgpmcopgc5i38b9k6di32b9k65hj2bb26srm6b9gcphj8pj26pj34e9hcc",
+    "trello_card_id": "6a397fdf9ef060069f8d82f4",
+    "trello_card_url": "https://trello.com/c/bRv2U6uM",
+    "summary": "9 meses Murilo (Cris)",
+    "starts_at": "2026-12-19T15:00:00-03:00",
+    "description": "",
+    "fingerprint": "97739ac7baeead2b0e6d32e99403ff8fa71d28510745165c39dba8ed767e1406",
+    "synced_at": "2026-06-22T21:56:57Z",
+    "email_skipped_at": "2026-06-22T21:56:57Z",
+    "email_skip_reason": "missing_client_email",
+    "email_skipped_fingerprint": "97739ac7baeead2b0e6d32e99403ff8fa71d28510745165c39dba8ed767e1406"
   },
   "cgs6coj46os30b9ichi6ab9kcgom4bb168sm8bb5c8o36d3268r62e1gco": {
     "google_event_id": "cgs6coj46os30b9ichi6ab9kcgom4bb168sm8bb5c8o36d3268r62e1gco",
