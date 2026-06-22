@@ -61,7 +61,7 @@ module PhotoWorkflow
 
           synced_count += 1
           puts "Updated Trello card for #{event.fetch("summary")}"
-        elsif email_notification_pending?(current_state)
+        elsif backfill_existing_email_notifications? && email_notification_pending?(current_state)
           card = trello_card_reference(current_state)
           handle_email_notification_result(current_state, notify_email_created(event, card))
         end
@@ -156,7 +156,11 @@ module PhotoWorkflow
     end
 
     def archive_trello_card(record)
-      trello_client.archive_card(record.fetch("trello_card_id"))
+      if delete_removed_trello_cards?
+        trello_client.delete_card(record.fetch("trello_card_id"))
+      else
+        trello_client.archive_card(record.fetch("trello_card_id"))
+      end
     rescue HttpJson::Error => error
       raise unless error.code == 404
 
@@ -367,6 +371,14 @@ module PhotoWorkflow
 
     def delivery_days_after_event
       ENV.fetch("DELIVERY_DAYS_AFTER_EVENT", 0).to_i
+    end
+
+    def backfill_existing_email_notifications?
+      env_value("EMAIL_BACKFILL_EXISTING_EVENTS", "false").casecmp("true").zero?
+    end
+
+    def delete_removed_trello_cards?
+      env_value("TRELLO_DELETE_REMOVED_EVENTS", "false").casecmp("true").zero?
     end
 
     def required_env(name)

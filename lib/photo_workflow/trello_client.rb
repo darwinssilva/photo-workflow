@@ -33,6 +33,10 @@ module PhotoWorkflow
       ))
     end
 
+    def delete_card(card_id)
+      HttpJson.delete("#{BASE_URL}/cards/#{card_id}", headers: {}, query: auth_params)
+    end
+
     def active_card?(card_id)
       card = get_card(card_id)
       !card["closed"]

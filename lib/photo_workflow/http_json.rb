@@ -54,6 +54,12 @@ module PhotoWorkflow
       request(Net::HTTP::Put, uri)
     end
 
+    def self.delete(url, headers: {}, query: {})
+      uri = URI(url)
+      uri.query = URI.encode_www_form(query) unless query.empty?
+      request(Net::HTTP::Delete, uri, headers: headers)
+    end
+
     def self.request(klass, url, headers: {}, body: nil)
       uri = url.is_a?(URI) ? url : URI(url)
       http = Net::HTTP.new(uri.host, uri.port)
