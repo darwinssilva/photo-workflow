@@ -227,7 +227,7 @@ module PhotoWorkflow
     end
 
     def event_update_notifications_enabled?
-      env_value("NOTIFY_ON_EVENT_UPDATE", "true").casecmp("true").zero?
+      Settings.boolean("NOTIFY_ON_EVENT_UPDATE", true)
     end
 
     def notification_relevant_update?(previous_record, event)
@@ -375,11 +375,11 @@ module PhotoWorkflow
     end
 
     def backfill_existing_email_notifications?
-      env_value("EMAIL_BACKFILL_EXISTING_EVENTS", "false").casecmp("true").zero?
+      Settings.boolean("EMAIL_BACKFILL_EXISTING_EVENTS", false)
     end
 
     def delete_removed_trello_cards?
-      env_value("TRELLO_DELETE_REMOVED_EVENTS", "false").casecmp("true").zero?
+      Settings.boolean("TRELLO_DELETE_REMOVED_EVENTS", false)
     end
 
     def required_env(name)
@@ -391,7 +391,11 @@ module PhotoWorkflow
     end
 
     def fingerprint_for(payload)
-      Digest::SHA256.hexdigest(Marshal.dump(payload))
+      Digest::SHA256.hexdigest(JSON.generate({
+        name: payload.fetch(:name),
+        desc: payload.fetch(:desc),
+        due: payload[:due]&.iso8601
+      }))
     end
 
     def state_payload(event, trello_card_id, fingerprint, trello_card_url = nil)

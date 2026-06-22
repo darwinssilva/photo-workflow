@@ -17,7 +17,7 @@ module PhotoWorkflow
     EMAIL_PATTERN = /[A-Z0-9._%+\-]+@[A-Z0-9.\-]+\.[A-Z]{2,}/i.freeze
 
     def enabled?
-      env_value("EMAIL_ENABLED", "false").casecmp("true").zero?
+      Settings.boolean("EMAIL_ENABLED", false)
     end
 
     def notify_event_created(event:, card:)
@@ -381,11 +381,11 @@ module PhotoWorkflow
     end
 
     def starttls?
-      env_value("SMTP_STARTTLS", "true").casecmp("true").zero?
+      Settings.boolean("SMTP_STARTTLS", true)
     end
 
     def smtp_ssl?
-      env_value("SMTP_SSL", "false").casecmp("true").zero?
+      Settings.boolean("SMTP_SSL", false)
     end
 
     def auth_method
@@ -393,7 +393,7 @@ module PhotoWorkflow
     end
 
     def resend_enabled?
-      env_value("RESEND_ENABLED", "false").casecmp("true").zero? || !env_value("RESEND_API_KEY", "").empty?
+      Settings.boolean("RESEND_ENABLED", false) || !env_value("RESEND_API_KEY", "").empty?
     end
 
     def resend_from
