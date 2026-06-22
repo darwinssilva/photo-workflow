@@ -33,6 +33,8 @@ module PhotoWorkflow
 
     def boolean(name, fallback = false)
       raw = value(name, fallback)
+      return raw if raw == true || raw == false
+
       raw.to_s.casecmp("true").zero?
     end
 

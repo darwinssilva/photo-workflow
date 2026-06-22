@@ -28,6 +28,7 @@ module PhotoWorkflow
       response(200, "ok: synced=#{result[:synced_count]} archived=#{result[:archived_count]}")
     rescue StandardError => error
       warn "Webhook processing failed: #{error.class} - #{error.message}"
+      warn error.backtrace.first(10).join("\n") if error.backtrace
       response(500, "error")
     end
 

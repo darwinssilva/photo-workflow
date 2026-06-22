@@ -128,17 +128,20 @@ module PhotoWorkflow
     end
 
     def daily_subject(groups_with_cards)
-      base = env_value("REMINDER_EMAIL_DAILY_SUBJECT", "Resumo diario de lembretes Trello")
+      base = env_value("REMINDER_EMAIL_DAILY_SUBJECT", "Pendências para hoje")
       total_cards = groups_with_cards.sum { |entry| entry.fetch(:cards).size }
-      "#{base} - #{today.strftime("%d/%m/%Y")} (#{total_cards} card(s))"
+      "#{base} - #{today.strftime("%d/%m/%Y")} (#{pluralize(total_cards, "pendência", "pendências")})"
     end
 
     def daily_body(groups_with_cards)
+      total_cards = groups_with_cards.sum { |entry| entry.fetch(:cards).size }
       lines = [
-        "Ola!",
+        "Olá!",
         "",
-        "Segue o resumo diario consolidado dos lembretes de Trello.",
-        "Data: #{today.strftime("%d/%m/%Y")}",
+        "Separei os pontos que merecem atenção hoje para ajudar você a priorizar o dia.",
+        pending_summary_sentence(total_cards),
+        "",
+        "Quando resolver um item, é só atualizar ou mover o card no Trello.",
         ""
       ]
 
@@ -146,49 +149,134 @@ module PhotoWorkflow
         config = entry.fetch(:config)
         cards = entry.fetch(:cards)
 
-        lines << "Situacao: #{config.fetch(:list_name)}"
-        lines << "Regra: #{summary_rule_for(config)}"
-        lines << "Quantidade: #{cards.size}"
+        lines << section_title_for(config, cards.size)
+        lines << next_step_for(config)
         lines << ""
 
         cards.each_with_index do |card, index|
-          lines.concat(card_summary_lines(card, index + 1))
+          lines.concat(card_summary_lines(card, config, index + 1))
           lines << ""
         end
       end
 
       lines.concat([
-        "Atenciosamente,",
+        "Qualquer ajuste feito no Trello já entra no próximo resumo.",
+        "",
+        "Bom trabalho!",
         env_value("EMAIL_FROM_NAME", "Photo Workflow")
       ])
 
       lines.join("\n")
     end
 
-    def summary_rule_for(config)
+    def section_title_for(config, count)
+      title = case config.fetch(:kind)
+              when GALLERY_KIND
+                "Galerias para acompanhar"
+              when EDITING_KIND
+                "Edições para revisar"
+              when PAYMENT_KIND
+                "Pagamentos pendentes"
+              when EXTRA_PAYMENT_KIND
+                "Pagamentos extras pendentes"
+              else
+                config.fetch(:list_name)
+              end
+
+      "#{title} - #{pluralize(count, "item", "itens")}"
+    end
+
+    def next_step_for(config)
       case config.fetch(:kind)
       when GALLERY_KIND
-        "Aguardando galeria ha #{config.fetch(:trigger_offset_days)} dia(s) apos o due."
+        "Próximo passo: conferir se a galeria já pode ser enviada ao cliente."
       when EDITING_KIND
-        "Aguardando edicao ha #{config.fetch(:trigger_offset_days)} dia(s) apos o due."
+        "Próximo passo: verificar o andamento da edição e destravar o que estiver parado."
       when PAYMENT_KIND
-        "Card presente na lista de pagamento pendente."
+        "Próximo passo: confirmar cobrança, retorno do cliente ou baixa do pagamento."
       when EXTRA_PAYMENT_KIND
-        "Card presente na lista de pagamento extra pendente."
+        "Próximo passo: confirmar cobrança, retorno do cliente ou baixa do pagamento extra."
       else
-        "Regra nao informada."
+        "Próximo passo: revisar os cards abaixo."
       end
     end
 
-    def card_summary_lines(card, position)
+    def card_summary_lines(card, config, position)
       due_date = card_due_date(card)
+      notes = card_notes(card)
 
       [
         "#{position}. #{card.fetch("name", "(sem nome)")}",
-        optional_line("Data de referencia", format_date(due_date)),
-        "Link: #{card["shortUrl"] || card["url"]}",
-        "Descricao: #{blank_string?(card["desc"]) ? "(sem descricao)" : card["desc"]}"
+        "   #{item_action_for(config)}",
+        optional_indented_line(date_label_for(config), format_date(due_date)),
+        optional_indented_line("Tempo em aberto", overdue_label(due_date, config)),
+        optional_indented_line("Detalhes", notes),
+        "   Trello: #{card["shortUrl"] || card["url"]}"
       ].compact
+    end
+
+    def item_action_for(config)
+      case config.fetch(:kind)
+      when GALLERY_KIND
+        "Conferir galeria e combinar o envio."
+      when EDITING_KIND
+        "Checar edição e atualizar o status do card."
+      when PAYMENT_KIND
+        "Verificar pagamento e registrar a situação."
+      when EXTRA_PAYMENT_KIND
+        "Verificar pagamento extra e registrar a situação."
+      else
+        "Revisar este card."
+      end
+    end
+
+    def date_label_for(config)
+      case config.fetch(:kind)
+      when PAYMENT_KIND, EXTRA_PAYMENT_KIND
+        "Data de referência"
+      else
+        "Data do ensaio"
+      end
+    end
+
+    def overdue_label(due_date, config)
+      return nil unless due_date && config.fetch(:due_required, true)
+
+      days = (today - due_date).to_i
+      return nil unless days.positive?
+
+      pluralize(days, "dia", "dias")
+    end
+
+    def card_notes(card)
+      desc = card["desc"].to_s
+      return nil if blank_string?(desc)
+
+      notes = extract_calendar_description(desc)
+      notes = strip_generated_description(desc) if blank_string?(notes)
+      notes = notes.lines.map(&:strip).reject(&:empty?).first(4).join(" | ")
+      truncate(notes, 360)
+    end
+
+    def extract_calendar_description(desc)
+      marker = "Descricao da agenda:"
+      return nil unless desc.include?(marker)
+
+      after_marker = desc.split(marker, 2).last.to_s
+      after_marker.split("Dados completos da agenda:", 2).first.to_s.strip
+    end
+
+    def strip_generated_description(desc)
+      desc.lines.reject do |line|
+        line.match?(/\A(Ensaio criado automaticamente|Titulo:|Status:|Inicio:|Fim:|Local:|Link da agenda:|Criador:|Organizador:|Participantes:|Dados completos da agenda:|```)/)
+      end.join.strip
+    end
+
+    def truncate(text, limit)
+      return nil if blank_string?(text)
+      return text if text.length <= limit
+
+      text[0, limit - 3].rstrip + "..."
     end
 
     def card_due_date(card)
@@ -227,6 +315,24 @@ module PhotoWorkflow
       return nil if blank_string?(value)
 
       "#{label}: #{value}"
+    end
+
+    def optional_indented_line(label, value)
+      return nil if blank_string?(value)
+
+      "   #{label}: #{value}"
+    end
+
+    def pending_summary_sentence(total_cards)
+      if total_cards == 1
+        "Há 1 pendência em aberto em #{today.strftime("%d/%m/%Y")}."
+      else
+        "Há #{total_cards} pendências em aberto em #{today.strftime("%d/%m/%Y")}."
+      end
+    end
+
+    def pluralize(count, singular, plural)
+      "#{count} #{count == 1 ? singular : plural}"
     end
 
     def env_integer(name, fallback)
