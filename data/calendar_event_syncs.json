@@ -97,11 +97,12 @@
     "trello_card_url": null,
     "summary": "Newborn Thiago (Anne)",
     "starts_at": "2026-06-27T15:00:00-03:00",
-    "fingerprint": "1e02b701654927febc0855ede4a92ca0aa9ae045d454db5454f418beb88cc5de",
-    "synced_at": "2026-06-19T19:31:09Z",
-    "email_skipped_at": "2026-06-19T19:31:09Z",
+    "description": "",
+    "fingerprint": "4cf37ff741f5b01564aab85009d76a90ba4be1df47c400ebcb1424134085459b",
+    "synced_at": "2026-06-22T21:23:00Z",
+    "email_skipped_at": "2026-06-22T21:23:00Z",
     "email_skip_reason": "missing_client_email",
-    "email_skipped_fingerprint": "1e02b701654927febc0855ede4a92ca0aa9ae045d454db5454f418beb88cc5de"
+    "email_skipped_fingerprint": "4cf37ff741f5b01564aab85009d76a90ba4be1df47c400ebcb1424134085459b"
   },
   "6go66cr16lh3cb9jcdijcb9k6ss6ab9oc5h68b9k6di3cdpp6li3cd9ick": {
     "google_event_id": "6go66cr16lh3cb9jcdijcb9k6ss6ab9oc5h68b9k6di3cdpp6li3cd9ick",
@@ -109,11 +110,25 @@
     "trello_card_url": null,
     "summary": "Newborn Enrico (Ana)",
     "starts_at": "2026-06-22T14:00:00-03:00",
-    "fingerprint": "ed3858c74ec91efe46cd92ffd6e1e9d2ce0519235e0c0d874bcd9e85f335aef8",
-    "synced_at": "2026-06-19T19:31:08Z",
-    "email_skipped_at": "2026-06-19T19:31:08Z",
+    "description": "",
+    "fingerprint": "bacc0752eba30e1888b986274383f525d661cd98f5a11dbb4a231bcdc263715c",
+    "synced_at": "2026-06-22T21:22:50Z",
+    "email_skipped_at": "2026-06-22T21:22:50Z",
     "email_skip_reason": "missing_client_email",
-    "email_skipped_fingerprint": "ed3858c74ec91efe46cd92ffd6e1e9d2ce0519235e0c0d874bcd9e85f335aef8"
+    "email_skipped_fingerprint": "bacc0752eba30e1888b986274383f525d661cd98f5a11dbb4a231bcdc263715c"
+  },
+  "6gojcc9mclhjibb3corj6b9k6ks66bb26oojeb9pc8r64chh65gm4eb568": {
+    "google_event_id": "6gojcc9mclhjibb3corj6b9k6ks66bb26oojeb9pc8r64chh65gm4eb568",
+    "trello_card_id": "6a373a14e07bca2d075ec1fe",
+    "trello_card_url": "https://trello.com/c/d7GnEeoc",
+    "summary": "Newborn José Murilo (Naiara)",
+    "starts_at": "2026-06-26T18:00:00-03:00",
+    "description": "Pacote Ouro \n\nTema Cavalinho + poltroninha com viola + outro cenario ela ficou de mandar a inspiração \n\nBebê 20 dias",
+    "fingerprint": "91b1dd01791668f53f6f4245d680617af2de8a3a40c0fe9d816dda8969a7295b",
+    "synced_at": "2026-06-22T21:22:58Z",
+    "email_skipped_at": "2026-06-22T21:22:58Z",
+    "email_skip_reason": "missing_client_email",
+    "email_skipped_fingerprint": "91b1dd01791668f53f6f4245d680617af2de8a3a40c0fe9d816dda8969a7295b"
   },
   "6gojcc9mclhjibb3corj6b9k6ks66bb26oojeb9pc8r64chh65gm4eb568": {
     "google_event_id": "6gojcc9mclhjibb3corj6b9k6ks66bb26oojeb9pc8r64chh65gm4eb568",
@@ -134,11 +149,12 @@
     "trello_card_url": null,
     "summary": "Newborn Henrique (Dayane)",
     "starts_at": "2026-06-27T10:00:00-03:00",
-    "fingerprint": "c967878b09ab40e1e0c268ee29ac1ee8fb77f9d9054710868ccd8035d920193c",
-    "synced_at": "2026-06-19T19:31:09Z",
-    "email_skipped_at": "2026-06-19T19:31:09Z",
+    "description": "",
+    "fingerprint": "89f51bfe6ed223d6553b0fbc5558898e81218f76353016e68e77717eca117da2",
+    "synced_at": "2026-06-22T21:22:59Z",
+    "email_skipped_at": "2026-06-22T21:22:59Z",
     "email_skip_reason": "missing_client_email",
-    "email_skipped_fingerprint": "c967878b09ab40e1e0c268ee29ac1ee8fb77f9d9054710868ccd8035d920193c"
+    "email_skipped_fingerprint": "89f51bfe6ed223d6553b0fbc5558898e81218f76353016e68e77717eca117da2"
   },
   "74p34oho6kp34b9mc8o3ib9k6cq3abb2c4p3ebb46ss3cd33cgq38e1k6s": {
     "google_event_id": "74p34oho6kp34b9mc8o3ib9k6cq3abb2c4p3ebb46ss3cd33cgq38e1k6s",
@@ -146,9 +162,10 @@
     "trello_card_url": "https://trello.com/c/HE7nyqnS",
     "summary": "Acompanhamento Manuela 4 meses (Thais) - Festa Junina",
     "starts_at": "2026-07-13T14:00:00-03:00",
-    "fingerprint": "4deb304547ca0e3ec8011d9211689a093833d74a9231e8c623af4b50d8b812dc",
-    "synced_at": "2026-06-19T19:31:10Z",
-    "email_notified_at": "2026-06-19T00:07:08Z"
+    "description": "Nome: Thais\nEmail: darwins.silva.ds@gmail.com\nTelefone: 1193238356\nPacote: Ouro\nPagamento: a Pagar\nObservacoes: Roupa da barbie",
+    "fingerprint": "e6905f1d20ba7f72a93e7a7e59398c0d592e7b35132f0b74910dfa43ddabbcb0",
+    "synced_at": "2026-06-22T21:23:02Z",
+    "email_notified_at": "2026-06-22T21:23:06Z"
   },
   "74p6cp1pcos3ib9g6lj64b9kc4r64bb16cqjab9g6gomcohhcdij8oph6s": {
     "google_event_id": "74p6cp1pcos3ib9g6lj64b9kc4r64bb16cqjab9g6gomcohhcdij8oph6s",
@@ -156,11 +173,12 @@
     "trello_card_url": null,
     "summary": "Maria Lívia (Thais)",
     "starts_at": "2026-06-23T12:00:00-03:00",
-    "fingerprint": "e9f8e851a730894ef3c185b20545a3bd551bec55bd7cfaa8be4281174dfda64b",
-    "synced_at": "2026-06-19T19:31:08Z",
-    "email_skipped_at": "2026-06-19T19:31:08Z",
+    "description": "Pacote Ouro\n\nFoto com avós e pais (inspiração enviada no grupo de ensaios agendados) + balanço e arco de flores + detalhes \n\nBebê vai estar com 26 dias",
+    "fingerprint": "d78132c2cceb41897b1293bb55265ab7e226c7a865d732339e19da5572507737",
+    "synced_at": "2026-06-22T21:22:51Z",
+    "email_skipped_at": "2026-06-22T21:22:51Z",
     "email_skip_reason": "missing_client_email",
-    "email_skipped_fingerprint": "e9f8e851a730894ef3c185b20545a3bd551bec55bd7cfaa8be4281174dfda64b"
+    "email_skipped_fingerprint": "d78132c2cceb41897b1293bb55265ab7e226c7a865d732339e19da5572507737"
   },
   "74q36d1o64o34bb1ccs64b9k6hh66bb1ccp6cbb270qj4d1i64qj0dr4cc": {
     "google_event_id": "74q36d1o64o34bb1ccs64b9k6hh66bb1ccp6cbb270qj4d1i64qj0dr4cc",
@@ -251,11 +269,12 @@
     "trello_card_url": null,
     "summary": "6 meses Murilo (Cris)",
     "starts_at": "2026-09-19T15:00:00-03:00",
-    "fingerprint": "ecb881465661dfc7a0e8b7670632e3276ec89f45727a6c6beac2525bbb5f96f8",
-    "synced_at": "2026-06-19T19:31:10Z",
-    "email_skipped_at": "2026-06-19T19:31:10Z",
+    "description": "",
+    "fingerprint": "8f2d4adcc48a4ddee5c544ef6cd72a1c2a3f4248303fbb2dc802d7afb98c272c",
+    "synced_at": "2026-06-22T21:23:07Z",
+    "email_skipped_at": "2026-06-22T21:23:07Z",
     "email_skip_reason": "missing_client_email",
-    "email_skipped_fingerprint": "ecb881465661dfc7a0e8b7670632e3276ec89f45727a6c6beac2525bbb5f96f8"
+    "email_skipped_fingerprint": "8f2d4adcc48a4ddee5c544ef6cd72a1c2a3f4248303fbb2dc802d7afb98c272c"
   },
   "chh64dj361hmab9p6th3gb9k69i3eb9pcpgjcb9p69ijcc1g69hj2oj364": {
     "google_event_id": "chh64dj361hmab9p6th3gb9k69i3eb9pcpgjcb9p69ijcc1g69hj2oj364",
@@ -284,11 +303,12 @@
     "trello_card_url": null,
     "summary": "Newborn Luísa (Patrícia)",
     "starts_at": "2026-06-23T16:30:00-03:00",
-    "fingerprint": "fb369b1650beb3925dda08874a7442bdfd43b498cca045ce02820280037f0d66",
-    "synced_at": "2026-06-19T19:31:08Z",
-    "email_skipped_at": "2026-06-19T19:31:08Z",
+    "description": "Pacote Bronze\n\nEstilo Clean \n\nBebê vai estar com 14 dias",
+    "fingerprint": "c91a523b39b99396217b196738981ab6bfa499942c0e005cef48bffd763e0192",
+    "synced_at": "2026-06-22T21:22:52Z",
+    "email_skipped_at": "2026-06-22T21:22:52Z",
     "email_skip_reason": "missing_client_email",
-    "email_skipped_fingerprint": "fb369b1650beb3925dda08874a7442bdfd43b498cca045ce02820280037f0d66"
+    "email_skipped_fingerprint": "c91a523b39b99396217b196738981ab6bfa499942c0e005cef48bffd763e0192"
   },
   "coq38e9hccpm2bb46gp66b9kccoj8bb1c4o34bb269h3ic9j6go36p3360": {
     "google_event_id": "coq38e9hccpm2bb46gp66b9kccoj8bb1c4o34bb269h3ic9j6go36p3360",
@@ -296,11 +316,12 @@
     "trello_card_url": null,
     "summary": "Newborn Eliseu (Jennypher)",
     "starts_at": "2026-06-22T09:00:00-03:00",
-    "fingerprint": "a0d61f02076631556fdcc8a429cf16bdda87a95e79294bdea17ebada06844d92",
-    "synced_at": "2026-06-19T19:31:08Z",
-    "email_skipped_at": "2026-06-19T19:31:08Z",
+    "description": "Pacote Prata\n\nBalanço e Atemporal, gosta de cores neutras\n\nBebê vai estar com 20 dias",
+    "fingerprint": "8e88cf17112b0b82caf2c0fb34c2028286be206c02e0c5d9a0bfb828ee43e9ab",
+    "synced_at": "2026-06-22T21:22:49Z",
+    "email_skipped_at": "2026-06-22T21:22:50Z",
     "email_skip_reason": "missing_client_email",
-    "email_skipped_fingerprint": "a0d61f02076631556fdcc8a429cf16bdda87a95e79294bdea17ebada06844d92"
+    "email_skipped_fingerprint": "8e88cf17112b0b82caf2c0fb34c2028286be206c02e0c5d9a0bfb828ee43e9ab"
   },
   "f522ltr1mo4urvuo3cnmfigu7s": {
     "google_event_id": "f522ltr1mo4urvuo3cnmfigu7s",
@@ -308,11 +329,12 @@
     "trello_card_url": "https://trello.com/c/udbevYck",
     "summary": "Festa Junina escola Stella",
     "starts_at": "2026-06-28T09:00:00-03:00",
-    "fingerprint": "1437e566365e0f07ef07a061c27609b4086df70ee5a92753a53674955101a9d2",
-    "synced_at": "2026-06-19T19:31:09Z",
-    "email_skipped_at": "2026-06-19T19:31:09Z",
+    "description": "",
+    "fingerprint": "c452c6babf1b3417cfdc9d3699c330ff859ac2e0ad474c2a5cb1d0c936b7e07a",
+    "synced_at": "2026-06-22T21:23:00Z",
+    "email_skipped_at": "2026-06-22T21:23:00Z",
     "email_skip_reason": "missing_client_email",
-    "email_skipped_fingerprint": "1437e566365e0f07ef07a061c27609b4086df70ee5a92753a53674955101a9d2"
+    "email_skipped_fingerprint": "c452c6babf1b3417cfdc9d3699c330ff859ac2e0ad474c2a5cb1d0c936b7e07a"
   },
   "j684acag6o0timavop31n8q5t8": {
     "google_event_id": "j684acag6o0timavop31n8q5t8",

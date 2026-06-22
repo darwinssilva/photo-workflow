@@ -4,6 +4,7 @@ require "time"
 
 require_relative "email_client"
 require_relative "google_calendar_client"
+require_relative "settings"
 require_relative "state_store"
 require_relative "trello_client"
 require_relative "whatsapp_client"
@@ -106,11 +107,11 @@ module PhotoWorkflow
     end
 
     def event_summary_pattern
-      Regexp.new(ENV.fetch("EVENT_SUMMARY_PATTERN", "."), Regexp::IGNORECASE)
+      Regexp.new(Settings.value("EVENT_SUMMARY_PATTERN", "."), Regexp::IGNORECASE)
     end
 
     def excluded_event_summary_pattern
-      Regexp.new(ENV.fetch("EXCLUDED_EVENT_SUMMARY_PATTERN", "\\A\\z"), Regexp::IGNORECASE)
+      Regexp.new(Settings.value("EXCLUDED_EVENT_SUMMARY_PATTERN", "\\A\\z"), Regexp::IGNORECASE)
     end
 
     def should_create_card?(record)
@@ -222,7 +223,7 @@ module PhotoWorkflow
     end
 
     def notify_email_updated(event, card)
-      notify_with("Email", event) { email_client.notify_event_created(event: event, card: card) }
+      notify_with("Email", event) { email_client.notify_event_updated(event: event, card: card) }
     end
 
     def event_update_notifications_enabled?
@@ -370,7 +371,7 @@ module PhotoWorkflow
     end
 
     def delivery_days_after_event
-      ENV.fetch("DELIVERY_DAYS_AFTER_EVENT", 0).to_i
+      Settings.integer("DELIVERY_DAYS_AFTER_EVENT", 0)
     end
 
     def backfill_existing_email_notifications?
@@ -382,14 +383,11 @@ module PhotoWorkflow
     end
 
     def required_env(name)
-      ENV.fetch(name) { raise "Missing ENV #{name}" }
+      Settings.required(name)
     end
 
     def env_value(name, fallback = nil)
-      value = ENV[name]
-      return fallback if value.nil? || value.empty?
-
-      value
+      Settings.value(name, fallback)
     end
 
     def fingerprint_for(payload)

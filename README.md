@@ -12,6 +12,22 @@ Fluxo:
 6. Se um evento futuro sair da agenda, o card correspondente e arquivado no Trello.
 7. Um workflow separado pode enviar lembretes internos por e-mail para cards em listas de galeria/edicao.
 
+## Configuracao
+
+A configuracao operacional fica em `config/settings.json`: IDs de listas, filtros, prazos, assunto dos e-mails, timeouts, webhook e templates.
+
+Use `.env` apenas para secrets e dados locais sensiveis. O arquivo `.env` ainda pode sobrescrever qualquer chave do JSON quando voce precisar ajustar algo sem commitar.
+
+```bash
+cp config/sample.env .env
+```
+
+Se quiser usar outro arquivo de configuracao, rode com:
+
+```bash
+PHOTO_WORKFLOW_CONFIG=config/settings.local.json ruby bin/sync_calendar_to_trello
+```
+
 ## Secrets
 
 Configure estes secrets no repositorio do GitHub:
@@ -23,40 +39,22 @@ GOOGLE_CLIENT_SECRET
 GOOGLE_REFRESH_TOKEN
 TRELLO_KEY
 TRELLO_TOKEN
-TRELLO_LIST_ID
-TRELLO_GALLERY_LIST_ID
-TRELLO_EDITING_LIST_ID
-TRELLO_PAYMENT_LIST_ID
-TRELLO_EXTRA_PAYMENT_LIST_ID
 ```
 
 Secrets opcionais para WhatsApp Cloud API:
 
 ```text
-WHATSAPP_ENABLED
 WHATSAPP_ACCESS_TOKEN
 WHATSAPP_PHONE_NUMBER_ID
 WHATSAPP_TO
-WHATSAPP_TEMPLATE_NAME
-WHATSAPP_TEMPLATE_LANGUAGE
-WHATSAPP_TEMPLATE_VARIABLES
-WHATSAPP_GRAPH_API_VERSION
 ```
 
 Secrets opcionais para confirmacao por e-mail:
 
 ```text
-EMAIL_ENABLED
-SMTP_HOST
-SMTP_PORT
-SMTP_DOMAIN
 SMTP_USERNAME
 SMTP_PASSWORD
-SMTP_STARTTLS
-SMTP_AUTH
 EMAIL_FROM
-EMAIL_FROM_NAME
-EMAIL_SUBJECT_PREFIX
 EMAIL_BODY_TEMPLATE
 REMINDER_EMAIL_TO
 ```
@@ -67,10 +65,9 @@ Secrets opcionais para webhook em tempo quase real:
 WEBHOOK_PUBLIC_URL
 WEBHOOK_SHARED_TOKEN
 GOOGLE_WEBHOOK_CHANNEL_ID
-GOOGLE_WEBHOOK_TTL_SECONDS
 ```
 
-## Variaveis opcionais
+## Settings principais
 
 ```text
 EVENT_SUMMARY_PATTERN=.
@@ -122,7 +119,7 @@ Agora o projeto tambem suporta webhook do Google Calendar para reduzir a latenci
 4. Eventos cancelados (ou que deixaram de bater no filtro) arquivam o card correspondente.
 5. Se o `sync_token` expirar, o sistema faz um resync completo automaticamente.
 
-### Variaveis para webhook
+### Settings para webhook
 
 ```text
 WEBHOOK_STATE_PATH=data/google_calendar_webhook_state.json
@@ -218,7 +215,7 @@ https://api.trello.com/1/boards/TRELLO_BOARD_ID/lists?key=TRELLO_KEY&token=TRELL
 
 ## WhatsApp Cloud API
 
-Quando `WHATSAPP_ENABLED=true`, o script envia uma mensagem somente quando cria um card novo.
+Quando `WHATSAPP_ENABLED=true` em `config/settings.json`, o script envia uma mensagem somente quando cria um card novo.
 
 Template recomendado:
 
@@ -240,14 +237,9 @@ Card no Trello: {{6}}
 Secrets recomendados:
 
 ```text
-WHATSAPP_ENABLED=true
 WHATSAPP_PHONE_NUMBER_ID=ID_DO_NUMERO_DA_META
 WHATSAPP_ACCESS_TOKEN=TOKEN_DA_META
 WHATSAPP_TO=5511999999999
-WHATSAPP_TEMPLATE_NAME=ensaio_agendado_sucesso
-WHATSAPP_TEMPLATE_LANGUAGE=pt_BR
-WHATSAPP_TEMPLATE_VARIABLES=client_name,summary,event_date,event_time,location,trello_link
-WHATSAPP_GRAPH_API_VERSION=v24.0
 ```
 
 `WHATSAPP_TO` aceita mais de um telefone separado por virgula:
@@ -274,7 +266,7 @@ Onde: {{4}}
 Trello: {{5}}
 ```
 
-Com:
+Com este setting:
 
 ```text
 WHATSAPP_TEMPLATE_VARIABLES=client_name,event_date,event_time,location,trello_link
@@ -282,24 +274,16 @@ WHATSAPP_TEMPLATE_VARIABLES=client_name,event_date,event_time,location,trello_li
 
 ## Confirmacao por e-mail
 
-Quando `EMAIL_ENABLED=true`, o script envia confirmacao para o cliente quando cria um card novo.
+Quando `EMAIL_ENABLED=true` em `config/settings.json`, o script envia confirmacao para o cliente quando cria um card novo.
 Se um evento ja tinha sido sincronizado antes da funcao de e-mail existir, o proximo sync envia uma vez e grava `email_notified_at` no state.
 O e-mail inclui um anexo `ensaio.ics` para o cliente adicionar o ensaio ao calendario.
 
 Secrets recomendados para Gmail:
 
 ```text
-EMAIL_ENABLED=true
-SMTP_HOST=smtp.gmail.com
-SMTP_PORT=587
-SMTP_DOMAIN=gmail.com
 SMTP_USERNAME=seuemail@gmail.com
 SMTP_PASSWORD=SENHA_DE_APP_DO_GMAIL
-SMTP_STARTTLS=true
-SMTP_AUTH=plain
 EMAIL_FROM=seuemail@gmail.com
-EMAIL_FROM_NAME="Nome do Studio"
-EMAIL_SUBJECT_PREFIX="Confirmacao de ensaio"
 ```
 
 Mensagem padrao:
@@ -340,14 +324,11 @@ Para personalizar, configure `EMAIL_BODY_TEMPLATE` usando estas variaveis:
 
 ## Lembretes por e-mail
 
-Quando `EMAIL_ENABLED=true`, o workflow `Send Trello Reminders` roda uma vez por dia e envia e-mails internos para `REMINDER_EMAIL_TO`.
+Quando `EMAIL_ENABLED=true` em `config/settings.json`, o workflow `Send Trello Reminders` roda uma vez por dia e envia e-mails internos para `REMINDER_EMAIL_TO`.
 Se `REMINDER_EMAIL_TO` nao for configurado, o destinatario padrao e `EMAIL_FROM`.
 
 Secrets recomendados:
 
 ```text
-EMAIL_ENABLED=true
 REMINDER_EMAIL_TO=operacao@example.com
-TRELLO_GALLERY_LIST_ID=69026faa813ce18fe16387e7
-TRELLO_EDITING_LIST_ID=69026fe3e95b323354f27f6d
 ```

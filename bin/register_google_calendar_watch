@@ -2,28 +2,19 @@
 
 $LOAD_PATH.unshift(File.expand_path("../lib", __dir__))
 
-env_path = File.expand_path("../.env", __dir__)
-if File.exist?(env_path)
-  File.readlines(env_path, chomp: true).each do |line|
-    next if line.empty? || line.start_with?("#") || !line.include?("=")
-
-    key, value = line.split("=", 2)
-    ENV[key] ||= value.to_s.strip.gsub(/\A(["'])(.*)\1\z/, "\\2")
-  end
-end
-
 require "securerandom"
+require "photo_workflow/settings"
 require "photo_workflow/google_calendar_client"
 require "photo_workflow/state_store"
 
-callback_url = ENV.fetch("WEBHOOK_PUBLIC_URL") { raise "Missing ENV WEBHOOK_PUBLIC_URL" }
-channel_id = ENV["GOOGLE_WEBHOOK_CHANNEL_ID"].to_s.strip
+callback_url = PhotoWorkflow::Settings.required("WEBHOOK_PUBLIC_URL")
+channel_id = PhotoWorkflow::Settings.value("GOOGLE_WEBHOOK_CHANNEL_ID", "").to_s.strip
 channel_id = SecureRandom.uuid if channel_id.empty?
-channel_token = ENV["WEBHOOK_SHARED_TOKEN"]
-ttl_seconds = ENV.fetch("GOOGLE_WEBHOOK_TTL_SECONDS", "604800").to_i
+channel_token = PhotoWorkflow::Settings.value("WEBHOOK_SHARED_TOKEN")
+ttl_seconds = PhotoWorkflow::Settings.integer("GOOGLE_WEBHOOK_TTL_SECONDS", 604800)
 
 calendar_client = PhotoWorkflow::GoogleCalendarClient.new
-state_store = PhotoWorkflow::StateStore.new(path: ENV.fetch("WEBHOOK_STATE_PATH", "data/google_calendar_webhook_state.json"))
+state_store = PhotoWorkflow::StateStore.new(path: PhotoWorkflow::Settings.value("WEBHOOK_STATE_PATH", "data/google_calendar_webhook_state.json"))
 state = state_store.all
 
 if state["channel_id"] && state["resource_id"]

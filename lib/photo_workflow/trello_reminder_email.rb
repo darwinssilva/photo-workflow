@@ -2,6 +2,7 @@ require "date"
 require "time"
 
 require_relative "email_client"
+require_relative "settings"
 require_relative "state_store"
 require_relative "trello_client"
 
@@ -12,7 +13,7 @@ module PhotoWorkflow
     PAYMENT_KIND = "payment"
     EXTRA_PAYMENT_KIND = "extra_payment"
 
-    def initialize(trello_client: TrelloClient.new, email_client: EmailClient.new, state_store: StateStore.new(path: ENV.fetch("TRELLO_REMINDER_STATE_PATH", "data/trello_reminders.json")), today: Date.today)
+    def initialize(trello_client: TrelloClient.new, email_client: EmailClient.new, state_store: StateStore.new(path: Settings.value("TRELLO_REMINDER_STATE_PATH", "data/trello_reminders.json")), today: Date.today)
       @trello_client = trello_client
       @email_client = email_client
       @state_store = state_store
@@ -26,7 +27,8 @@ module PhotoWorkflow
       end
 
       state = state_store.all
-      sent_count = reminder_configs.sum { |config| send_due_reminders(config, state) }
+      due_groups = due_reminders_by_config(state)
+      sent_count = send_daily_summary(due_groups, state)
       state_store.save(state)
       puts "Trello reminder finished. #{sent_count} email(s) sent."
     end
@@ -68,9 +70,15 @@ module PhotoWorkflow
       ]
     end
 
-    def send_due_reminders(config, state)
-      trello_client.list_cards(config.fetch(:list_id)).count do |card|
-        reminder_due?(card, config) && send_reminder(card, config, state)
+    def due_reminders_by_config(state)
+      reminder_configs.each_with_object({}) do |config, groups|
+        cards = trello_client.list_cards(config.fetch(:list_id)).select do |card|
+          reminder_due?(card, config) && !reminder_sent_today?(card, config, state)
+        end
+        groups[config.fetch(:kind)] = {
+          config: config,
+          cards: cards
+        }
       end
     end
 
@@ -84,63 +92,103 @@ module PhotoWorkflow
       today >= due_date + config.fetch(:trigger_offset_days)
     end
 
-    def send_reminder(card, config, state)
-      key = state_key(card, config)
-      return false if reminder_sent_today?(card, config, state)
+    def send_daily_summary(due_groups, state)
+      groups_with_cards = due_groups.values.select { |entry| entry.fetch(:cards).any? }
+      return 0 if groups_with_cards.empty?
 
       email_client.deliver_text(
         to: recipients,
-        subject: config.fetch(:subject) + " - " + card.fetch("name", ""),
-        body: reminder_body(card, config)
+        subject: daily_subject(groups_with_cards),
+        body: daily_body(groups_with_cards)
       )
 
-      state[key] = {
-        "card_id" => card.fetch("id"),
-        "kind" => config.fetch(:kind),
-        "card_name" => card.fetch("name", ""),
-        "due" => card["due"],
-        "reminder_date" => today.iso8601,
-        "sent_at" => Time.now.utc.iso8601
-      }
-      puts "Reminder email sent for #{card.fetch("name", card.fetch("id"))}"
-      true
+      mark_groups_as_sent(groups_with_cards, state)
+      puts "Consolidated reminder email sent with #{groups_with_cards.sum { |entry| entry.fetch(:cards).size }} card(s)."
+      1
     rescue StandardError => error
-      warn "Reminder email failed for #{card.fetch("name", card.fetch("id"))}: #{error.message}"
-      false
+      warn "Consolidated reminder email failed: #{error.message}"
+      0
     end
 
-    def reminder_body(card, config)
+    def mark_groups_as_sent(groups_with_cards, state)
+      sent_at = Time.now.utc.iso8601
+      groups_with_cards.each do |entry|
+        config = entry.fetch(:config)
+        entry.fetch(:cards).each do |card|
+          state[state_key(card, config)] = {
+            "card_id" => card.fetch("id"),
+            "kind" => config.fetch(:kind),
+            "card_name" => card.fetch("name", ""),
+            "due" => card["due"],
+            "reminder_date" => today.iso8601,
+            "sent_at" => sent_at
+          }
+        end
+      end
+    end
+
+    def daily_subject(groups_with_cards)
+      base = env_value("REMINDER_EMAIL_DAILY_SUBJECT", "Resumo diario de lembretes Trello")
+      total_cards = groups_with_cards.sum { |entry| entry.fetch(:cards).size }
+      "#{base} - #{today.strftime("%d/%m/%Y")} (#{total_cards} card(s))"
+    end
+
+    def daily_body(groups_with_cards)
+      lines = [
+        "Ola!",
+        "",
+        "Segue o resumo diario consolidado dos lembretes de Trello.",
+        "Data: #{today.strftime("%d/%m/%Y")}",
+        ""
+      ]
+
+      groups_with_cards.each do |entry|
+        config = entry.fetch(:config)
+        cards = entry.fetch(:cards)
+
+        lines << "Situacao: #{config.fetch(:list_name)}"
+        lines << "Regra: #{summary_rule_for(config)}"
+        lines << "Quantidade: #{cards.size}"
+        lines << ""
+
+        cards.each_with_index do |card, index|
+          lines.concat(card_summary_lines(card, index + 1))
+          lines << ""
+        end
+      end
+
+      lines.concat([
+        "Atenciosamente,",
+        env_value("EMAIL_FROM_NAME", "Photo Workflow")
+      ])
+
+      lines.join("\n")
+    end
+
+    def summary_rule_for(config)
+      case config.fetch(:kind)
+      when GALLERY_KIND
+        "Aguardando galeria ha #{config.fetch(:trigger_offset_days)} dia(s) apos o due."
+      when EDITING_KIND
+        "Aguardando edicao ha #{config.fetch(:trigger_offset_days)} dia(s) apos o due."
+      when PAYMENT_KIND
+        "Card presente na lista de pagamento pendente."
+      when EXTRA_PAYMENT_KIND
+        "Card presente na lista de pagamento extra pendente."
+      else
+        "Regra nao informada."
+      end
+    end
+
+    def card_summary_lines(card, position)
       due_date = card_due_date(card)
 
       [
-        "Ola!",
-        "",
-        reminder_message(config, due_date),
-        "",
-        "Card: #{card.fetch("name", "")}",
-        "Lista: #{config.fetch(:list_name)}",
+        "#{position}. #{card.fetch("name", "(sem nome)")}",
         optional_line("Data de referencia", format_date(due_date)),
         "Link: #{card["shortUrl"] || card["url"]}",
-        "",
-        "Descricao:",
-        blank_string?(card["desc"]) ? "(sem descricao)" : card["desc"],
-        "",
-        "Atenciosamente,",
-        env_value("EMAIL_FROM_NAME", "Photo Workflow")
-      ].join("\n")
-    end
-
-    def reminder_message(config, due_date)
-      case config.fetch(:kind)
-      when GALLERY_KIND
-        "Este ensaio esta aguardando galeria ha 2 dias desde #{format_date(due_date)}."
-      when EDITING_KIND
-        "Este ensaio esta aguardando edicao ha 15 dias desde #{format_date(due_date)}."
-      when PAYMENT_KIND
-        "Este card ainda esta em Aguardando pagamento."
-      when EXTRA_PAYMENT_KIND
-        "Este card ainda esta em Aguardando pagamento extra."
-      end
+        "Descricao: #{blank_string?(card["desc"]) ? "(sem descricao)" : card["desc"]}"
+      ].compact
     end
 
     def card_due_date(card)
@@ -193,10 +241,7 @@ module PhotoWorkflow
     end
 
     def env_value(name, fallback = nil)
-      value = ENV[name]
-      return fallback if blank_string?(value)
-
-      value
+      Settings.value(name, fallback)
     end
 
     def blank_string?(value)

@@ -25,23 +25,10 @@ jobs:
         env:
           TRELLO_KEY: ${{ secrets.TRELLO_KEY }}
           TRELLO_TOKEN: ${{ secrets.TRELLO_TOKEN }}
-          TRELLO_GALLERY_LIST_ID: ${{ secrets.TRELLO_GALLERY_LIST_ID }}
-          TRELLO_EDITING_LIST_ID: ${{ secrets.TRELLO_EDITING_LIST_ID }}
-          TRELLO_PAYMENT_LIST_ID: ${{ secrets.TRELLO_PAYMENT_LIST_ID }}
-          TRELLO_EXTRA_PAYMENT_LIST_ID: ${{ secrets.TRELLO_EXTRA_PAYMENT_LIST_ID }}
-          GALLERY_REMINDER_DAYS_AFTER_SESSION: ${{ secrets.GALLERY_REMINDER_DAYS_AFTER_SESSION }}
-          EDITING_REMINDER_DAYS_AFTER_SESSION: ${{ secrets.EDITING_REMINDER_DAYS_AFTER_SESSION }}
           REMINDER_EMAIL_TO: ${{ secrets.REMINDER_EMAIL_TO }}
-          EMAIL_ENABLED: ${{ secrets.EMAIL_ENABLED }}
-          SMTP_HOST: ${{ secrets.SMTP_HOST }}
-          SMTP_PORT: ${{ secrets.SMTP_PORT }}
-          SMTP_DOMAIN: ${{ secrets.SMTP_DOMAIN }}
           SMTP_USERNAME: ${{ secrets.SMTP_USERNAME }}
           SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
-          SMTP_STARTTLS: ${{ secrets.SMTP_STARTTLS }}
-          SMTP_AUTH: ${{ secrets.SMTP_AUTH }}
           EMAIL_FROM: ${{ secrets.EMAIL_FROM }}
-          EMAIL_FROM_NAME: ${{ secrets.EMAIL_FROM_NAME }}
 
       - name: Commit reminder state
         run: |

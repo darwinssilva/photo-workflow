@@ -1,6 +1,7 @@
 require "time"
 
 require_relative "http_json"
+require_relative "settings"
 
 module PhotoWorkflow
   class WhatsAppClient
@@ -18,7 +19,7 @@ module PhotoWorkflow
     }.freeze
 
     def enabled?
-      ENV.fetch("WHATSAPP_ENABLED", "false").casecmp("true").zero?
+      Settings.boolean("WHATSAPP_ENABLED", false)
     end
 
     def notify_event_created(event:, card:)
@@ -43,7 +44,7 @@ module PhotoWorkflow
     def send_template_message(to:, variables:)
       template_payload = {
         name: required_env("WHATSAPP_TEMPLATE_NAME"),
-        language: { code: ENV.fetch("WHATSAPP_TEMPLATE_LANGUAGE", DEFAULT_TEMPLATE_LANGUAGE) }
+        language: { code: Settings.value("WHATSAPP_TEMPLATE_LANGUAGE", DEFAULT_TEMPLATE_LANGUAGE) }
       }
 
       if variables.any?
@@ -90,7 +91,7 @@ module PhotoWorkflow
     end
 
     def variable_names
-      ENV.fetch("WHATSAPP_TEMPLATE_VARIABLES", DEFAULT_TEMPLATE_VARIABLES)
+      Settings.value("WHATSAPP_TEMPLATE_VARIABLES", DEFAULT_TEMPLATE_VARIABLES)
          .split(",")
          .map(&:strip)
          .reject(&:empty?)
@@ -143,7 +144,7 @@ module PhotoWorkflow
     end
 
     def fallback_recipients
-      ENV.fetch("WHATSAPP_TO", "").split(",").map(&:strip).reject(&:empty?)
+      Settings.value("WHATSAPP_TO", "").split(",").map(&:strip).reject(&:empty?)
     end
 
     def client_phone(event)
@@ -210,12 +211,12 @@ module PhotoWorkflow
     end
 
     def messages_url
-      version = ENV.fetch("WHATSAPP_GRAPH_API_VERSION", DEFAULT_GRAPH_API_VERSION)
+      version = Settings.value("WHATSAPP_GRAPH_API_VERSION", DEFAULT_GRAPH_API_VERSION)
       "https://graph.facebook.com/#{version}/#{required_env("WHATSAPP_PHONE_NUMBER_ID")}/messages"
     end
 
     def required_env(name)
-      ENV.fetch(name) { raise "Missing ENV #{name}" }
+      Settings.required(name)
     end
   end
 end

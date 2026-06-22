@@ -1,10 +1,11 @@
 require_relative "calendar_to_trello_sync"
 require_relative "google_calendar_client"
+require_relative "settings"
 require_relative "state_store"
 
 module PhotoWorkflow
   class GoogleCalendarWebhookHandler
-    def initialize(calendar_client: GoogleCalendarClient.new, sync_service: nil, webhook_state_store: StateStore.new(path: ENV.fetch("WEBHOOK_STATE_PATH", "data/google_calendar_webhook_state.json")))
+    def initialize(calendar_client: GoogleCalendarClient.new, sync_service: nil, webhook_state_store: StateStore.new(path: Settings.value("WEBHOOK_STATE_PATH", "data/google_calendar_webhook_state.json")))
       @calendar_client = calendar_client
       @sync_service = sync_service || CalendarToTrelloSync.new(calendar_client: calendar_client)
       @webhook_state_store = webhook_state_store
@@ -87,7 +88,7 @@ module PhotoWorkflow
     end
 
     def valid_channel_token?(headers)
-      expected = ENV["WEBHOOK_SHARED_TOKEN"].to_s
+      expected = Settings.value("WEBHOOK_SHARED_TOKEN", "").to_s
       return true if expected.empty?
 
       token = header_value(headers, "X-Goog-Channel-Token").to_s

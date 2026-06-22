@@ -5,6 +5,7 @@ require "time"
 require "timeout"
 
 require_relative "http_json"
+require_relative "settings"
 
 module PhotoWorkflow
   class EmailClient
@@ -20,6 +21,14 @@ module PhotoWorkflow
     end
 
     def notify_event_created(event:, card:)
+      notify_event(event: event, card: card, kind: :created)
+    end
+
+    def notify_event_updated(event:, card:)
+      notify_event(event: event, card: card, kind: :updated)
+    end
+
+    def notify_event(event:, card:, kind:)
       unless enabled?
         puts "Email notification disabled for #{event.fetch("summary", event.fetch("id"))}"
         return :disabled
@@ -33,11 +42,11 @@ module PhotoWorkflow
 
       deliver(
         to: recipient,
-        subject: subject_for(event),
-        body: body_for(event, card),
+        subject: subject_for(event, kind: kind),
+        body: body_for(event, card, kind: kind),
         calendar: calendar_attachment_for(event, recipient)
       )
-      puts "Email notification sent to #{recipient} for #{event.fetch("summary", event.fetch("id"))}"
+      puts "Email notification (#{kind}) sent to #{recipient} for #{event.fetch("summary", event.fetch("id"))}"
       :sent
     end
 
@@ -166,20 +175,34 @@ module PhotoWorkflow
       end
     end
 
-    def subject_for(event)
-      env_value("EMAIL_SUBJECT_PREFIX", "Confirmacao de ensaio") + " - " + event.fetch("summary", "")
+    def subject_for(event, kind: :created)
+      prefix = case kind
+               when :updated
+                 env_value("EMAIL_SUBJECT_PREFIX_UPDATED", env_value("EMAIL_SUBJECT_PREFIX", "Atualizacao de ensaio"))
+               else
+                 env_value("EMAIL_SUBJECT_PREFIX", "Confirmacao de ensaio")
+               end
+
+      prefix + " - " + event.fetch("summary", "")
     end
 
-    def body_for(event, card)
-      template = env_value("EMAIL_BODY_TEMPLATE")
+    def body_for(event, card, kind: :created)
+      template = case kind
+                 when :updated
+                   env_value("EMAIL_BODY_TEMPLATE_UPDATED") || env_value("EMAIL_BODY_TEMPLATE")
+                 else
+                   env_value("EMAIL_BODY_TEMPLATE")
+                 end
       return interpolate(template, event, card) if template && !template.empty?
 
       form_fields = form_fields_for(event)
 
+      intro = kind == :updated ? "Seu ensaio foi atualizado com sucesso." : "Seu ensaio foi agendado com sucesso."
+
       [
         "Ola!",
         "",
-        "Seu ensaio foi agendado com sucesso.",
+        intro,
         "",
         "Ensaio: #{event.fetch("summary", "")}",
         optional_line("Nome", form_fields["nome"]),
@@ -389,10 +412,7 @@ module PhotoWorkflow
     end
 
     def env_value(name, fallback = nil)
-      value = ENV[name]
-      return fallback if value.nil? || value.empty?
-
-      value
+      Settings.value(name, fallback)
     end
   end
 end

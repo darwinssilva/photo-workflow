@@ -1,9 +1,11 @@
 require "fileutils"
 require "json"
 
+require_relative "settings"
+
 module PhotoWorkflow
   class StateStore
-    def initialize(path: ENV.fetch("STATE_PATH", "data/calendar_event_syncs.json"))
+    def initialize(path: Settings.value("STATE_PATH", "data/calendar_event_syncs.json"))
       @path = path
     end
 
@@ -23,4 +25,3 @@ module PhotoWorkflow
     attr_reader :path
   end
 end
-

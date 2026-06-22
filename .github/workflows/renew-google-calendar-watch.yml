@@ -30,8 +30,6 @@ jobs:
           WEBHOOK_PUBLIC_URL: ${{ secrets.WEBHOOK_PUBLIC_URL }}
           WEBHOOK_SHARED_TOKEN: ${{ secrets.WEBHOOK_SHARED_TOKEN }}
           GOOGLE_WEBHOOK_CHANNEL_ID: ${{ secrets.GOOGLE_WEBHOOK_CHANNEL_ID }}
-          GOOGLE_WEBHOOK_TTL_SECONDS: ${{ secrets.GOOGLE_WEBHOOK_TTL_SECONDS }}
-          WEBHOOK_STATE_PATH: data/google_calendar_webhook_state.json
 
       - name: Commit webhook state
         run: |

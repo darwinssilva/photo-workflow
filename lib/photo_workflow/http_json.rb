@@ -3,6 +3,8 @@ require "net/http"
 require "timeout"
 require "uri"
 
+require_relative "settings"
+
 module PhotoWorkflow
   class HttpJson
     DEFAULT_OPEN_TIMEOUT = 10
@@ -89,7 +91,7 @@ module PhotoWorkflow
     end
 
     def self.env_integer(name, fallback)
-      ENV.fetch(name, fallback).to_i
+      Settings.integer(name, fallback)
     end
 
     def self.parse_response(response)

@@ -1,4 +1,5 @@
 require_relative "http_json"
+require_relative "settings"
 
 module PhotoWorkflow
   class TrelloClient
@@ -72,7 +73,7 @@ module PhotoWorkflow
     end
 
     def required_env(name)
-      ENV.fetch(name) { raise "Missing ENV #{name}" }
+      Settings.required(name)
     end
   end
 end

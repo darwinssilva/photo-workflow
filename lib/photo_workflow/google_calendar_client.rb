@@ -3,6 +3,7 @@ require "time"
 require "uri"
 
 require_relative "http_json"
+require_relative "settings"
 
 module PhotoWorkflow
   class GoogleCalendarClient
@@ -107,11 +108,11 @@ module PhotoWorkflow
     end
 
     def required_env(name)
-      ENV.fetch(name) { raise "Missing ENV #{name}" }
+      Settings.required(name)
     end
 
     def env_integer(name, fallback)
-      ENV.fetch(name, fallback).to_i
+      Settings.integer(name, fallback)
     end
 
     def today_start
