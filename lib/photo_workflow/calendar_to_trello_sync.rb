@@ -20,63 +20,65 @@ module PhotoWorkflow
     end
 
     def call(events: nil, archive_missing: true)
-      state = state_store.all
-      events ||= calendar_client.upcoming_events
-      synced_count = 0
-      archived_count = archive_missing ? archive_removed_events(state, events) : 0
+      state_store.with_lock do
+        state = state_store.all
+        events ||= calendar_client.upcoming_events
+        synced_count = 0
+        archived_count = archive_missing ? archive_removed_events(state, events) : 0
 
-      events.each do |event|
-        archived_count += 1 if archive_if_no_longer_syncable(state, event)
-        next unless syncable_event?(event)
+        events.each do |event|
+          archived_count += 1 if archive_if_no_longer_syncable(state, event)
+          next unless syncable_event?(event)
 
-        event_id = event.fetch("id")
-        payload = card_payload(event)
-        fingerprint = fingerprint_for(payload)
-        current_state = state[event_id]
+          event_id = event.fetch("id")
+          payload = card_payload(event)
+          fingerprint = fingerprint_for(payload)
+          current_state = state[event_id]
 
-        if should_create_card?(current_state)
-          existing_card = find_existing_card(payload)
-          if existing_card
-            trello_client.update_card(existing_card.fetch("id"), **payload)
-            state[event_id] = state_payload(event, existing_card.fetch("id"), fingerprint, trello_card_url(existing_card))
-            preserve_email_notification(state[event_id], current_state) if current_state
-            handle_reused_card_email_notification(state[event_id], event, existing_card)
-            puts "Reused existing Trello card for #{event.fetch("summary")}"
-          else
-            card = trello_client.create_card(**payload)
-            state[event_id] = state_payload(event, card.fetch("id"), fingerprint, trello_card_url(card))
-            handle_email_notification_result(state[event_id], notify_event_created(event, card))
-            puts "Created Trello card for #{event.fetch("summary")}"
+          if should_create_card?(current_state)
+            existing_card = find_existing_card(payload)
+            if existing_card
+              trello_client.update_card(existing_card.fetch("id"), **payload)
+              state[event_id] = state_payload(event, existing_card.fetch("id"), fingerprint, trello_card_url(existing_card))
+              preserve_email_notification(state[event_id], current_state) if current_state
+              handle_reused_card_email_notification(state[event_id], event, existing_card)
+              puts "Reused existing Trello card for #{event.fetch("summary")}"
+            else
+              card = trello_client.create_card(**payload)
+              state[event_id] = state_payload(event, card.fetch("id"), fingerprint, trello_card_url(card))
+              handle_email_notification_result(state[event_id], notify_event_created(event, card))
+              puts "Created Trello card for #{event.fetch("summary")}"
+            end
+            synced_count += 1
+          elsif current_state["fingerprint"] != fingerprint
+            trello_client.update_card(current_state.fetch("trello_card_id"), **payload)
+            state[event_id] = state_payload(event, current_state.fetch("trello_card_id"), fingerprint, current_state["trello_card_url"])
+            preserve_email_notification(state[event_id], current_state)
+
+            if event_update_notifications_enabled? && notification_relevant_update?(current_state, event)
+              handle_email_notification_result(state[event_id], notify_event_updated(event, trello_card_reference(state[event_id])))
+            elsif email_notification_pending?(state[event_id])
+              handle_email_notification_result(state[event_id], notify_email_created(event, trello_card_reference(state[event_id])))
+            end
+
+            synced_count += 1
+            puts "Updated Trello card for #{event.fetch("summary")}"
+          elsif backfill_existing_email_notifications? && email_notification_pending?(current_state)
+            card = trello_card_reference(current_state)
+            handle_email_notification_result(current_state, notify_email_created(event, card))
           end
-          synced_count += 1
-        elsif current_state["fingerprint"] != fingerprint
-          trello_client.update_card(current_state.fetch("trello_card_id"), **payload)
-          state[event_id] = state_payload(event, current_state.fetch("trello_card_id"), fingerprint, current_state["trello_card_url"])
-          preserve_email_notification(state[event_id], current_state)
-
-          if event_update_notifications_enabled? && notification_relevant_update?(current_state, event)
-            handle_email_notification_result(state[event_id], notify_event_updated(event, trello_card_reference(state[event_id])))
-          elsif email_notification_pending?(state[event_id])
-            handle_email_notification_result(state[event_id], notify_email_created(event, trello_card_reference(state[event_id])))
-          end
-
-          synced_count += 1
-          puts "Updated Trello card for #{event.fetch("summary")}"
-        elsif backfill_existing_email_notifications? && email_notification_pending?(current_state)
-          card = trello_card_reference(current_state)
-          handle_email_notification_result(current_state, notify_email_created(event, card))
         end
+
+        sort_trello_lists
+        state_store.save(state)
+        puts "Sync finished. #{synced_count} card(s) created or updated."
+        puts "Archive finished. #{archived_count} card(s) archived."
+
+        {
+          synced_count: synced_count,
+          archived_count: archived_count
+        }
       end
-
-      sort_trello_lists
-      state_store.save(state)
-      puts "Sync finished. #{synced_count} card(s) created or updated."
-      puts "Archive finished. #{archived_count} card(s) archived."
-
-      {
-        synced_count: synced_count,
-        archived_count: archived_count
-      }
     end
 
     private
@@ -85,10 +87,12 @@ module PhotoWorkflow
 
     def syncable_event?(event)
       summary = event.fetch("summary", "")
+      normalized_summary = normalized_event_summary(summary)
 
       event["status"] != "cancelled" &&
         summary.match?(event_summary_pattern) &&
-        !summary.match?(excluded_event_summary_pattern)
+        !summary.match?(excluded_event_summary_pattern) &&
+        !normalized_summary.casecmp("Agenda fechada").zero?
     end
 
     def archive_if_no_longer_syncable(state, event)
@@ -112,6 +116,10 @@ module PhotoWorkflow
 
     def excluded_event_summary_pattern
       Regexp.new(Settings.value("EXCLUDED_EVENT_SUMMARY_PATTERN", "\\A\\z"), Regexp::IGNORECASE)
+    end
+
+    def normalized_event_summary(summary)
+      summary.to_s.strip.gsub(/[[:punct:]\s]+\z/, "")
     end
 
     def should_create_card?(record)

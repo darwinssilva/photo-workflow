@@ -13,14 +13,19 @@ module PhotoWorkflow
       created: {
         name: "ensaio_agendado",
         language: "pt_BR",
-        variable_names: %w[client_name summary event_date]
+        # Keep positional order aligned with approved template:
+        # {{1}} service, {{2}} date, {{3}} name
+        variable_names: %w[shoot_type event_date client_name]
       },
       updated: {
         name: "ensaio_alterado",
         language: "pt_BR",
-        variable_names: %w[client_name summary event_date]
+        named_parameters: true,
+        variable_names: %w[client_name shoot_type event_date event_time],
+        parameter_names: %w[nome servico data data_nov]
       }
     }.freeze
+    DESCRIPTION_FIELD_LABELS = %w[nome modelo email telefone tipo referencias origem titulo].freeze
     WEEKDAY_NAMES = {
       0 => "domingo",
       1 => "segunda-feira",
@@ -58,6 +63,9 @@ module PhotoWorkflow
         variables: template_variables(event, card, kind: kind)
       )
       puts "WhatsApp notification sent for #{event.fetch("summary", event.fetch("id", "unknown"))} to #{normalize_phone(to_number)}"
+    rescue HttpJson::Error => error
+      warn "WhatsApp notification failed for #{event.fetch("summary", event.fetch("id", "unknown"))}: HTTP #{error.code} - #{error.body}"
+      raise
     end
 
     private
@@ -72,29 +80,36 @@ module PhotoWorkflow
         template_payload[:components] = [
           {
             type: "body",
-            parameters: variables.map { |value| { type: "text", text: value.to_s } }
+            parameters: build_template_parameters(template_config, variables)
           }
         ]
       end
 
-      HttpJson.post_json(
+      normalized_to = normalize_phone(to)
+      puts "WhatsApp request: template=#{template_payload[:name]} to=#{normalized_to} params=#{template_payload.dig(:components, 0, :parameters)&.map { |param| param[:parameter_name] || param[:text] }.inspect}"
+
+      response = HttpJson.post_json(
         messages_url,
         headers: {
           "Authorization" => "Bearer #{required_env("WHATSAPP_ACCESS_TOKEN")}"
         },
         body: {
           messaging_product: "whatsapp",
-          to: normalize_phone(to),
+          to: normalized_to,
           type: "template",
           template: template_payload
         }
       )
+
+      puts "WhatsApp API response: #{response.inspect}"
+      response
     end
 
     def template_variables(event, card, kind:)
       template_config(kind).fetch(:variable_names).map do |name|
         case name
         when "client_name" then client_name(event)
+        when "shoot_type" then shoot_type(event)
         when "summary" then event.fetch("summary", "")
         when "start" then formatted_time(event.fetch("start", {}))
         when "end" then formatted_time(event.fetch("end", {}))
@@ -108,6 +123,22 @@ module PhotoWorkflow
         else
           event[name] || ""
         end
+      end
+    end
+
+    def build_template_parameters(template_config, variables)
+      variable_names = template_config.fetch(:variable_names)
+      if template_config.fetch(:named_parameters, false)
+        parameter_names = template_config.fetch(:parameter_names, variable_names)
+        parameter_names.zip(variables).map do |name, value|
+          {
+            type: "text",
+            parameter_name: name,
+            text: value.to_s
+          }
+        end
+      else
+        variables.map { |value| { type: "text", text: value.to_s } }
       end
     end
 
@@ -196,13 +227,20 @@ module PhotoWorkflow
     end
 
     def client_name(event)
-      summary_name = event.fetch("summary", "").split(" - ", 2)[1]
-      return summary_name.strip unless blank_string?(summary_name)
-
       described_name = extract_description_field(event["description"], "nome")
       return described_name unless blank_string?(described_name)
 
+      summary_name = event.fetch("summary", "").split(" - ", 2)[1]
+      return summary_name.strip unless blank_string?(summary_name)
+
       attendee_name(event["attendees"])
+    end
+
+    def shoot_type(event)
+      described_type = extract_description_field(event["description"], "tipo")
+      return described_type unless blank_string?(described_type)
+
+      event.fetch("summary", "")
     end
 
     def attendee_name(attendees)
@@ -217,14 +255,28 @@ module PhotoWorkflow
     end
 
     def extract_description_field(description, field_name)
-      return "" if blank_string?(description)
+      fields = description_fields(description)
+      fields.fetch(normalize_description_key(field_name), "")
+    end
 
-      line = description.each_line.find do |item|
-        item.match?(/^#{Regexp.escape(field_name)}\s*:/i)
+    def description_fields(description)
+      return {} if blank_string?(description)
+
+      labels = DESCRIPTION_FIELD_LABELS.join("|")
+      pattern = /(?:^|\s)(#{labels})\s*:\s*(.*?)(?=(?:\s*(?:#{labels})\s*:\s*)|\z)/i
+
+      description.to_s.scan(pattern).each_with_object({}) do |(label, value), fields|
+        normalized_label = normalize_description_key(label)
+        fields[normalized_label] ||= value.to_s.strip
       end
-      return "" unless line
+    end
 
-      line.split(":", 2).last.to_s.strip
+    def normalize_description_key(key)
+      key.to_s
+         .downcase
+         .tr("áàâãäéèêëíìîïóòôõöúùûüç", "aaaaaeeeeiiiiooooouuuuc")
+         .gsub(/[^a-z0-9]+/, "_")
+         .gsub(/\A_+|_+\z/, "")
     end
 
     def blank_string?(value)

@@ -56,16 +56,17 @@
   },
   "366mpfmjn6srs0elgqhg2liujg": {
     "google_event_id": "366mpfmjn6srs0elgqhg2liujg",
-    "trello_card_id": "6a363048983f7092cbe103df",
-    "trello_card_url": "https://trello.com/c/sBL00I1u",
+    "trello_card_id": "6a3b1b341bab8c0ffa3b3e33",
+    "trello_card_url": "https://trello.com/c/6ZA8iw2W",
     "summary": "Agenda fechada.",
     "starts_at": "2026-06-25T09:00:00-03:00",
     "description": "",
     "fingerprint": "ac862b4cd7f01f38a47a7f0491541049ff3cd89eea4b12a7e09ad9f326407c16",
-    "synced_at": "2026-06-22T23:18:06Z",
-    "email_skipped_at": "2026-06-22T23:18:06Z",
+    "synced_at": "2026-06-23T23:48:04Z",
+    "email_skipped_at": "2026-06-23T23:48:04Z",
     "email_skip_reason": "missing_client_email",
-    "email_skipped_fingerprint": "ac862b4cd7f01f38a47a7f0491541049ff3cd89eea4b12a7e09ad9f326407c16"
+    "email_skipped_fingerprint": "ac862b4cd7f01f38a47a7f0491541049ff3cd89eea4b12a7e09ad9f326407c16",
+    "archived_at": "2026-06-23T23:50:52Z"
   },
   "68q38c1i70qj2b9kc8q36b9k69gm2bb1cgrjabb16op68d9h70r3cc1hc4": {
     "google_event_id": "68q38c1i70qj2b9kc8q36b9k69gm2bb1cgrjabb16op68d9h70r3cc1hc4",
@@ -180,6 +181,17 @@
     "email_skipped_at": "2026-06-18T22:53:23Z",
     "email_skip_reason": "missing_client_email",
     "email_skipped_fingerprint": "e8936785a326a0ca8e69d66114aaee802aa68e2900435c4bb46848eed85fc885"
+  },
+  "9n5a6ag4dpth595k8lsbs8hpn8": {
+    "google_event_id": "9n5a6ag4dpth595k8lsbs8hpn8",
+    "trello_card_id": "6a3b1c50be50bd856237d00e",
+    "trello_card_url": "https://trello.com/c/cgPaMwNQ",
+    "summary": "Solicitação - Ouro - Susan Soares",
+    "starts_at": "2026-06-25T14:00:00-03:00",
+    "description": "Nome: Susan Soares\nModelo: Stella Soares\nEmail: susan.soares77@gmail.com\nTelefone: 11988286565\nTipo: Ouro\nReferencias: \n\nOrigem: Google Forms",
+    "fingerprint": "7fee1f46cd31955d4e6121ecc9f29e6b849b8c8a07e155d8c68d20f3b601f2e7",
+    "synced_at": "2026-06-23T23:54:12Z",
+    "email_notified_at": "2026-06-23T23:48:10Z"
   },
   "c8r3gchh6cq3ebb568p6cb9k6gr62bb174pj4bb6cgqjaor264o3id1ick": {
     "google_event_id": "c8r3gchh6cq3ebb568p6cb9k6gr62bb174pj4bb6cgqjaor264o3id1ick",
@@ -313,15 +325,15 @@
   },
   "f522ltr1mo4urvuo3cnmfigu7s": {
     "google_event_id": "f522ltr1mo4urvuo3cnmfigu7s",
-    "trello_card_id": "6a34923be7190af4846bf911",
-    "trello_card_url": "https://trello.com/c/udbevYck",
+    "trello_card_id": "6a3b0ba03b5c28bc0c9562ea",
+    "trello_card_url": "https://trello.com/c/MQUPAZN2",
     "summary": "Festa Junina escola Stella",
     "starts_at": "2026-06-28T09:00:00-03:00",
     "description": "",
     "fingerprint": "edd6a8c3a9caa05a87d421bfb258e5d6b03149f72f12fe897f139d7d1a73e0a0",
-    "synced_at": "2026-06-22T23:18:09Z",
-    "email_skipped_at": "2026-06-22T23:18:09Z",
-    "email_skip_reason": "missing_client_email",
+    "synced_at": "2026-06-23T22:58:25Z",
+    "email_skipped_at": "2026-06-23T22:58:25Z",
+    "email_skip_reason": "reused_existing_card",
     "email_skipped_fingerprint": "edd6a8c3a9caa05a87d421bfb258e5d6b03149f72f12fe897f139d7d1a73e0a0"
   },
   "j684acag6o0timavop31n8q5t8": {
@@ -336,13 +348,13 @@
   },
   "m67884uptlj1bkr20cmqsd7cjo": {
     "google_event_id": "m67884uptlj1bkr20cmqsd7cjo",
-    "trello_card_id": "6a39c700fcd39253c748bc84",
-    "trello_card_url": "https://trello.com/c/L8tH5HBe",
+    "trello_card_id": "6a3b1c4fe16b3d9015962eb6",
+    "trello_card_url": "https://trello.com/c/dFRdtxqX",
     "summary": "Solicitação - Ouro - Darwin Silva",
-    "starts_at": "2026-10-27T15:00:00-03:00",
+    "starts_at": "2026-06-24T17:00:00-03:00",
     "description": "Nome: Darwin Silva\nModelo: Stella\nEmail: darwins.silva.ds@gmail.com\nTelefone: 11983238356\nTipo: Ouro\nReferencias: \n\nOrigem: Google Forms",
-    "fingerprint": "aeaa17a7664f28a3d209444056b60f89980cde68749299f92732c40926dd9fe3",
-    "synced_at": "2026-06-23T10:27:42Z",
-    "email_notified_at": "2026-06-23T10:27:44Z"
+    "fingerprint": "09079c8a92a7a3f34760355ff1f74776ac7cec6e24dd971610b6c4043a31fb45",
+    "synced_at": "2026-06-23T23:54:11Z",
+    "email_notified_at": "2026-06-23T23:50:52Z"
   }
 }

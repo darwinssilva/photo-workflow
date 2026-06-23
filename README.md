@@ -223,7 +223,7 @@ Templates usados pelo codigo:
 Criacao: ensaio_agendado
 Atualizacao: ensaio_alterado
 Idioma: pt_BR
-Variaveis (ordem): client_name, summary, event_date
+Variaveis (ordem): client_name, summary, event_date, event_time
 ```
 
 Secrets recomendados:
