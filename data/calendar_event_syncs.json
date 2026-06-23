@@ -51,7 +51,8 @@
     "description": "Nome: Darwin SIlva\nModelo: Stella\nEmail: darwins.silva.ds@gmail.com\nTelefone: 11983238356\nTipo: Ouro\nReferencias: \n\nOrigem: Google Forms",
     "fingerprint": "ac18c596745b678c40651ba17d1255e94ae25710a1917d0155dca23e509a3601",
     "synced_at": "2026-06-22T23:18:06Z",
-    "email_notified_at": "2026-06-22T23:17:47Z"
+    "email_notified_at": "2026-06-22T23:17:47Z",
+    "archived_at": "2026-06-23T10:27:40Z"
   },
   "366mpfmjn6srs0elgqhg2liujg": {
     "google_event_id": "366mpfmjn6srs0elgqhg2liujg",
@@ -332,5 +333,16 @@
     "fingerprint": "0a6b5e6c1712a5c0ccc15e8b4e3527956680e8ba3c428f720be5f8d0bf08e6bf",
     "synced_at": "2026-06-19T19:31:07Z",
     "email_notified_at": "2026-06-19T00:12:09Z"
+  },
+  "m67884uptlj1bkr20cmqsd7cjo": {
+    "google_event_id": "m67884uptlj1bkr20cmqsd7cjo",
+    "trello_card_id": "6a39c700fcd39253c748bc84",
+    "trello_card_url": "https://trello.com/c/L8tH5HBe",
+    "summary": "Solicitação - Ouro - Darwin Silva",
+    "starts_at": "2026-10-27T15:00:00-03:00",
+    "description": "Nome: Darwin Silva\nModelo: Stella\nEmail: darwins.silva.ds@gmail.com\nTelefone: 11983238356\nTipo: Ouro\nReferencias: \n\nOrigem: Google Forms",
+    "fingerprint": "aeaa17a7664f28a3d209444056b60f89980cde68749299f92732c40926dd9fe3",
+    "synced_at": "2026-06-23T10:27:42Z",
+    "email_notified_at": "2026-06-23T10:27:44Z"
   }
 }
