@@ -7,6 +7,14 @@
     "reminder_date": "2026-06-22",
     "sent_at": "2026-06-22T23:24:00Z"
   },
+  "editing:6a3324754b4775e28538f9b1:2026-06-23": {
+    "card_id": "6a3324754b4775e28538f9b1",
+    "kind": "editing",
+    "card_name": "Newbor Maria Alice (Josy)",
+    "due": "2026-06-01T20:30:00.000Z",
+    "reminder_date": "2026-06-23",
+    "sent_at": "2026-06-23T12:02:28Z"
+  },
   "editing:6a332478f72e18bedd2e6af9:2026-06-22": {
     "card_id": "6a332478f72e18bedd2e6af9",
     "kind": "editing",
@@ -14,6 +22,14 @@
     "due": "2026-06-06T15:30:00.000Z",
     "reminder_date": "2026-06-22",
     "sent_at": "2026-06-22T23:24:00Z"
+  },
+  "editing:6a332478f72e18bedd2e6af9:2026-06-23": {
+    "card_id": "6a332478f72e18bedd2e6af9",
+    "kind": "editing",
+    "card_name": "Ensaio Gestante Valéria",
+    "due": "2026-06-06T15:30:00.000Z",
+    "reminder_date": "2026-06-23",
+    "sent_at": "2026-06-23T12:02:28Z"
   },
   "editing:6a33247c4d18b2467fcd2e28:2026-06-22": {
     "card_id": "6a33247c4d18b2467fcd2e28",
@@ -23,6 +39,14 @@
     "reminder_date": "2026-06-22",
     "sent_at": "2026-06-22T23:24:00Z"
   },
+  "editing:6a33247c4d18b2467fcd2e28:2026-06-23": {
+    "card_id": "6a33247c4d18b2467fcd2e28",
+    "kind": "editing",
+    "card_name": "Newborn Henrique (Gessica)",
+    "due": "2026-05-30T20:45:00.000Z",
+    "reminder_date": "2026-06-23",
+    "sent_at": "2026-06-23T12:02:28Z"
+  },
   "extra_payment:6a332486a094c12f2530fa94:2026-06-22": {
     "card_id": "6a332486a094c12f2530fa94",
     "kind": "extra_payment",
@@ -30,6 +54,14 @@
     "due": "2026-06-03T21:30:00.000Z",
     "reminder_date": "2026-06-22",
     "sent_at": "2026-06-22T23:24:00Z"
+  },
+  "extra_payment:6a332486a094c12f2530fa94:2026-06-23": {
+    "card_id": "6a332486a094c12f2530fa94",
+    "kind": "extra_payment",
+    "card_name": "Newborn Clara (Paula)",
+    "due": "2026-06-03T21:30:00.000Z",
+    "reminder_date": "2026-06-23",
+    "sent_at": "2026-06-23T12:02:28Z"
   },
   "gallery:6a33367b4129e7c0e1e1a7e7:2026-06-22": {
     "card_id": "6a33367b4129e7c0e1e1a7e7",
@@ -39,6 +71,14 @@
     "reminder_date": "2026-06-22",
     "sent_at": "2026-06-22T23:24:00Z"
   },
+  "gallery:6a33367b4129e7c0e1e1a7e7:2026-06-23": {
+    "card_id": "6a33367b4129e7c0e1e1a7e7",
+    "kind": "gallery",
+    "card_name": "Smash the Cake Helena (Ana Carolina) Ursinho Pooh",
+    "due": "2026-06-18T21:00:00.000Z",
+    "reminder_date": "2026-06-23",
+    "sent_at": "2026-06-23T12:02:28Z"
+  },
   "gallery:6a33367d0704c154ce51c8d1:2026-06-22": {
     "card_id": "6a33367d0704c154ce51c8d1",
     "kind": "gallery",
@@ -46,6 +86,14 @@
     "due": "2026-06-19T17:00:00.000Z",
     "reminder_date": "2026-06-22",
     "sent_at": "2026-06-22T23:24:00Z"
+  },
+  "gallery:6a33367d0704c154ce51c8d1:2026-06-23": {
+    "card_id": "6a33367d0704c154ce51c8d1",
+    "kind": "gallery",
+    "card_name": "Newborn Zeinab (Luana)",
+    "due": "2026-06-19T17:00:00.000Z",
+    "reminder_date": "2026-06-23",
+    "sent_at": "2026-06-23T12:02:28Z"
   },
   "gallery:6a33367dcdebc21e6da2c5c3:2026-06-22": {
     "card_id": "6a33367dcdebc21e6da2c5c3",
@@ -55,6 +103,14 @@
     "reminder_date": "2026-06-22",
     "sent_at": "2026-06-22T23:24:00Z"
   },
+  "gallery:6a33367dcdebc21e6da2c5c3:2026-06-23": {
+    "card_id": "6a33367dcdebc21e6da2c5c3",
+    "kind": "gallery",
+    "card_name": "3 meses Murilo (Cris)",
+    "due": "2026-06-20T12:00:00.000Z",
+    "reminder_date": "2026-06-23",
+    "sent_at": "2026-06-23T12:02:28Z"
+  },
   "gallery:6a33367e622dcc9c10b003df:2026-06-22": {
     "card_id": "6a33367e622dcc9c10b003df",
     "kind": "gallery",
@@ -63,6 +119,14 @@
     "reminder_date": "2026-06-22",
     "sent_at": "2026-06-22T23:24:00Z"
   },
+  "gallery:6a33367e622dcc9c10b003df:2026-06-23": {
+    "card_id": "6a33367e622dcc9c10b003df",
+    "kind": "gallery",
+    "card_name": "Newborn Lucas (Beatriz)",
+    "due": "2026-06-20T14:00:00.000Z",
+    "reminder_date": "2026-06-23",
+    "sent_at": "2026-06-23T12:02:28Z"
+  },
   "gallery:6a33367f45335a84f7282153:2026-06-22": {
     "card_id": "6a33367f45335a84f7282153",
     "kind": "gallery",
@@ -70,5 +134,13 @@
     "due": "2026-06-20T17:00:00.000Z",
     "reminder_date": "2026-06-22",
     "sent_at": "2026-06-22T23:24:00Z"
+  },
+  "gallery:6a33367f45335a84f7282153:2026-06-23": {
+    "card_id": "6a33367f45335a84f7282153",
+    "kind": "gallery",
+    "card_name": "Cobertura Festa 1 ano Helena",
+    "due": "2026-06-20T17:00:00.000Z",
+    "reminder_date": "2026-06-23",
+    "sent_at": "2026-06-23T12:02:28Z"
   }
 }
