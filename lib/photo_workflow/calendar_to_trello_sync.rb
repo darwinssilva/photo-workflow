@@ -40,7 +40,7 @@ module PhotoWorkflow
             trello_client.update_card(existing_card.fetch("id"), **payload)
             state[event_id] = state_payload(event, existing_card.fetch("id"), fingerprint, trello_card_url(existing_card))
             preserve_email_notification(state[event_id], current_state) if current_state
-            handle_email_notification_result(state[event_id], notify_email_created(event, trello_card_reference(state[event_id]))) if email_notification_pending?(state[event_id])
+            handle_reused_card_email_notification(state[event_id], event, existing_card)
             puts "Reused existing Trello card for #{event.fetch("summary")}"
           else
             card = trello_client.create_card(**payload)
@@ -214,7 +214,7 @@ module PhotoWorkflow
     end
 
     def notify_event_updated(event, card)
-      notify_with("WhatsApp", event) { whatsapp_client.notify_event_created(event: event, card: card) }
+      notify_with("WhatsApp", event) { whatsapp_client.notify_event_updated(event: event, card: card) }
       notify_email_updated(event, card)
     end
 
@@ -284,6 +284,16 @@ module PhotoWorkflow
         mark_email_notification(record)
       when :missing_client_email
         mark_email_skip(record, "missing_client_email")
+      end
+    end
+
+    def handle_reused_card_email_notification(record, event, existing_card)
+      return unless email_notification_pending?(record)
+
+      if notify_reused_card_email?
+        handle_email_notification_result(record, notify_email_created(event, existing_card))
+      else
+        mark_email_skip(record, "reused_existing_card")
       end
     end
 
@@ -380,6 +390,10 @@ module PhotoWorkflow
 
     def delete_removed_trello_cards?
       Settings.boolean("TRELLO_DELETE_REMOVED_EVENTS", false)
+    end
+
+    def notify_reused_card_email?
+      Settings.boolean("EMAIL_NOTIFY_REUSED_CARDS", false)
     end
 
     def required_env(name)

@@ -7,7 +7,20 @@ module PhotoWorkflow
   class WhatsAppClient
     DEFAULT_GRAPH_API_VERSION = "v24.0"
     DEFAULT_TEMPLATE_LANGUAGE = "pt_BR"
-    DEFAULT_TEMPLATE_VARIABLES = "client_name,summary,event_date,event_time,location,trello_link"
+    PHONE_LABELS = %w[telefone whatsapp celular fone phone].freeze
+    PHONE_PATTERN = /(?:\+?55\s*)?(?:\(?\d{2}\)?\s*)?(?:9\d{4}|\d{4})[-\s]?\d{4}/
+    TEMPLATE_CONFIGS = {
+      created: {
+        name: "ensaio_agendado",
+        language: "pt_BR",
+        variable_names: %w[client_name summary event_date]
+      },
+      updated: {
+        name: "ensaio_alterado",
+        language: "pt_BR",
+        variable_names: %w[client_name summary event_date]
+      }
+    }.freeze
     WEEKDAY_NAMES = {
       0 => "domingo",
       1 => "segunda-feira",
@@ -23,28 +36,36 @@ module PhotoWorkflow
     end
 
     def notify_event_created(event:, card:)
+      notify_event(event: event, card: card, kind: :created)
+    end
+
+    def notify_event_updated(event:, card:)
+      notify_event(event: event, card: card, kind: :updated)
+    end
+
+    def notify_event(event:, card:, kind:)
       return unless enabled?
 
-      # Try to get client phone from event, fallback to WHATSAPP_TO
-      to_number = client_phone(event) || fallback_recipients.first
+      to_number = client_phone(event)
       unless to_number
-        puts "WhatsApp notification skipped for #{event.fetch("summary", event.fetch("id", "unknown"))}: missing phone"
+        puts "WhatsApp notification skipped for #{event.fetch("summary", event.fetch("id", "unknown"))}: missing phone in event description"
         return
       end
 
       send_template_message(
         to: to_number,
-        variables: template_variables(event, card)
+        template_config: template_config(kind),
+        variables: template_variables(event, card, kind: kind)
       )
       puts "WhatsApp notification sent for #{event.fetch("summary", event.fetch("id", "unknown"))} to #{normalize_phone(to_number)}"
     end
 
     private
 
-    def send_template_message(to:, variables:)
+    def send_template_message(to:, template_config:, variables:)
       template_payload = {
-        name: required_env("WHATSAPP_TEMPLATE_NAME"),
-        language: { code: Settings.value("WHATSAPP_TEMPLATE_LANGUAGE", DEFAULT_TEMPLATE_LANGUAGE) }
+        name: template_config.fetch(:name),
+        language: { code: template_config.fetch(:language, DEFAULT_TEMPLATE_LANGUAGE) }
       }
 
       if variables.any?
@@ -70,8 +91,8 @@ module PhotoWorkflow
       )
     end
 
-    def template_variables(event, card)
-      variable_names.map do |name|
+    def template_variables(event, card, kind:)
+      template_config(kind).fetch(:variable_names).map do |name|
         case name
         when "client_name" then client_name(event)
         when "summary" then event.fetch("summary", "")
@@ -90,11 +111,8 @@ module PhotoWorkflow
       end
     end
 
-    def variable_names
-      Settings.value("WHATSAPP_TEMPLATE_VARIABLES", DEFAULT_TEMPLATE_VARIABLES)
-         .split(",")
-         .map(&:strip)
-         .reject(&:empty?)
+    def template_config(kind)
+      TEMPLATE_CONFIGS.fetch(kind, TEMPLATE_CONFIGS.fetch(:created))
     end
 
     def formatted_time(date_hash)
@@ -139,24 +157,42 @@ module PhotoWorkflow
       ""
     end
 
-    def recipients
-      required_env("WHATSAPP_TO").split(",").map(&:strip).reject(&:empty?)
-    end
-
-    def fallback_recipients
-      Settings.value("WHATSAPP_TO", "").split(",").map(&:strip).reject(&:empty?)
-    end
-
     def client_phone(event)
-      # Try to extract from description: "telefone: 11 98765-4321"
-      phone_from_desc = extract_description_field(event["description"], "telefone")
+      phone_from_desc = extract_phone_from_description(event["description"])
       return phone_from_desc unless blank_string?(phone_from_desc)
 
       # Try to extract from summary: "2025-01-15 - João Silva - (11) 98765-4321"
       parts = event.fetch("summary", "").split(" - ")
-      return normalize_phone(parts[-1]) if parts.length >= 3
+      if parts.length >= 3
+        phone_from_summary = detect_phone(parts[-1])
+        return phone_from_summary unless blank_string?(phone_from_summary)
+      end
 
       nil
+    end
+
+    def extract_phone_from_description(description)
+      return "" if blank_string?(description)
+
+      PHONE_LABELS.each do |label|
+        value = extract_description_field(description, label)
+        phone = detect_phone(value)
+        return phone unless blank_string?(phone)
+      end
+
+      detect_phone(description)
+    end
+
+    def detect_phone(text)
+      return "" if blank_string?(text)
+
+      raw = text.to_s.match(PHONE_PATTERN)&.[](0)
+      return "" if blank_string?(raw)
+
+      digits = normalize_phone(raw)
+      return "" if digits.length < 10
+
+      digits.start_with?("55") ? digits : "55#{digits}"
     end
 
     def client_name(event)

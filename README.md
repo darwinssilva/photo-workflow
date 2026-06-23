@@ -215,23 +215,15 @@ https://api.trello.com/1/boards/TRELLO_BOARD_ID/lists?key=TRELLO_KEY&token=TRELL
 
 ## WhatsApp Cloud API
 
-Quando `WHATSAPP_ENABLED=true` em `config/settings.json`, o script envia uma mensagem somente quando cria um card novo.
+Quando `WHATSAPP_ENABLED=true` em `config/settings.json`, o script envia mensagem em criacao e em atualizacao relevante de evento.
 
-Template recomendado:
+Templates usados pelo codigo:
 
 ```text
-Nome: ensaio_agendado_sucesso
+Criacao: ensaio_agendado
+Atualizacao: ensaio_alterado
 Idioma: pt_BR
-Categoria: Utility
-Corpo:
-Ola, {{1}}!
-Seu ensaio foi agendado com sucesso.
-
-Ensaio: {{2}}
-Data: {{3}}
-Horario: {{4}}
-Local: {{5}}
-Card no Trello: {{6}}
+Variaveis (ordem): client_name, summary, event_date
 ```
 
 Secrets recomendados:
@@ -239,38 +231,17 @@ Secrets recomendados:
 ```text
 WHATSAPP_PHONE_NUMBER_ID=ID_DO_NUMERO_DA_META
 WHATSAPP_ACCESS_TOKEN=TOKEN_DA_META
-WHATSAPP_TO=5511999999999
 ```
 
-`WHATSAPP_TO` aceita mais de um telefone separado por virgula:
+O numero do cliente e extraido da descricao do evento da agenda. Exemplos aceitos:
 
 ```text
-WHATSAPP_TO=5511999999999,5511888888888
-```
-
-Variaveis disponiveis para `WHATSAPP_TEMPLATE_VARIABLES`:
-
-```text
-client_name,summary,start,end,event_date,event_time,weekday,location,description,calendar_link,trello_link
+Telefone: 11 99999-9999
+WhatsApp: +55 11 99999-9999
+Celular: (11) 99999-9999
 ```
 
 `client_name` tenta extrair o nome nesta ordem: sufixo do titulo apos ` - `, linha `Nome:` da descricao e nome de participante da agenda.
-
-Se quiser um texto mais enxuto para notificacao interna, um template curto que funciona bem e:
-
-```text
-Novo ensaio confirmado.
-Cliente: {{1}}
-Quando: {{2}} as {{3}}
-Onde: {{4}}
-Trello: {{5}}
-```
-
-Com este setting:
-
-```text
-WHATSAPP_TEMPLATE_VARIABLES=client_name,event_date,event_time,location,trello_link
-```
 
 ## Confirmacao por e-mail
 

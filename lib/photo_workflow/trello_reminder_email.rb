@@ -128,7 +128,7 @@ module PhotoWorkflow
     end
 
     def daily_subject(groups_with_cards)
-      base = env_value("REMINDER_EMAIL_DAILY_SUBJECT", "Pendências para hoje")
+      base = "Pendências para hoje"
       total_cards = groups_with_cards.sum { |entry| entry.fetch(:cards).size }
       "#{base} - #{today.strftime("%d/%m/%Y")} (#{pluralize(total_cards, "pendência", "pendências")})"
     end

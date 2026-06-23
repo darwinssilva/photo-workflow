@@ -178,7 +178,7 @@ module PhotoWorkflow
     def subject_for(event, kind: :created)
       prefix = case kind
                when :updated
-                 env_value("EMAIL_SUBJECT_PREFIX_UPDATED", env_value("EMAIL_SUBJECT_PREFIX", "Atualizacao de ensaio"))
+                 "Atualizacao de ensaio"
                else
                  env_value("EMAIL_SUBJECT_PREFIX", "Confirmacao de ensaio")
                end
