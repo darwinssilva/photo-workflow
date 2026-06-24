@@ -31,6 +31,19 @@
     "email_skip_reason": "missing_client_email",
     "email_skipped_fingerprint": "2db30b2ea7cae9ace17d97340f30c9332940519f6ac7464559de880b35f672c6"
   },
+  "264pqofgf7gumekepbumge3j60": {
+    "google_event_id": "264pqofgf7gumekepbumge3j60",
+    "trello_card_id": "6a3be81a6b4100db65044742",
+    "trello_card_url": "https://trello.com/c/M8wDvUEV",
+    "summary": "Solicitação - Ouro - Gabriela Lima Pinheiro",
+    "starts_at": "2026-07-13T16:30:00-03:00",
+    "description": "Nome: Gabriela Lima Pinheiro\nModelo: Matteo\nEmail: gabi-pinheiro@hotmail.com\nTelefone: 11947439335\nTipo: Ouro\nReferencias: Bosque, balanço com ursinhos, atemporal com cores claras e fotos com os pais\n\nBebê 9 dias\n\nOrigem: Google Forms",
+    "fingerprint": "c1f67f812a7484c27d020241836e5a7fcd90f7f988be27c63f3dd46b0e9d89f6",
+    "synced_at": "2026-06-24T21:47:10Z",
+    "email_skipped_at": "2026-06-24T21:47:10Z",
+    "email_skip_reason": "reused_existing_card",
+    "email_skipped_fingerprint": "c1f67f812a7484c27d020241836e5a7fcd90f7f988be27c63f3dd46b0e9d89f6"
+  },
   "2kdtqhpnecdh5trd3j191blc44": {
     "google_event_id": "2kdtqhpnecdh5trd3j191blc44",
     "trello_card_id": "6a336066ad083680a966fa59",
@@ -336,6 +349,19 @@
     "email_skipped_at": "2026-06-23T22:58:25Z",
     "email_skip_reason": "reused_existing_card",
     "email_skipped_fingerprint": "edd6a8c3a9caa05a87d421bfb258e5d6b03149f72f12fe897f139d7d1a73e0a0"
+  },
+  "ffolsjofvs1frq9dg8bp9dosm0": {
+    "google_event_id": "ffolsjofvs1frq9dg8bp9dosm0",
+    "trello_card_id": "6a3c02e1d9caf5560411fa10",
+    "trello_card_url": "https://trello.com/c/xn5MfxbF",
+    "summary": "Solicitação - Bronze - Amanda Ruiz",
+    "starts_at": "2026-06-26T15:00:00-03:00",
+    "description": "Nome: Amanda Ruiz\nModelo: Catarina\nEmail: mana_campos@hotmail.com\nTelefone: 1198482-4824\nTipo: Bronze\nReferencias: Baby Clean\n\nBebê 11 dias \n\nOrigem: Google Forms",
+    "fingerprint": "216ff98b48e98cb800c36c6b05f0ebd7fee769e13dfdeeb1cecce56dd0806b4c",
+    "synced_at": "2026-06-24T21:47:09Z",
+    "email_skipped_at": "2026-06-24T21:47:09Z",
+    "email_skip_reason": "reused_existing_card",
+    "email_skipped_fingerprint": "216ff98b48e98cb800c36c6b05f0ebd7fee769e13dfdeeb1cecce56dd0806b4c"
   },
   "j684acag6o0timavop31n8q5t8": {
     "google_event_id": "j684acag6o0timavop31n8q5t8",
