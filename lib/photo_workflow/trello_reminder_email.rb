@@ -263,12 +263,12 @@ module PhotoWorkflow
       return nil unless desc.include?(marker)
 
       after_marker = desc.split(marker, 2).last.to_s
-      after_marker.split("Dados completos da agenda:", 2).first.to_s.strip
+      after_marker.to_s.strip
     end
 
     def strip_generated_description(desc)
       desc.lines.reject do |line|
-        line.match?(/\A(Ensaio criado automaticamente|Titulo:|Status:|Inicio:|Fim:|Local:|Link da agenda:|Criador:|Organizador:|Participantes:|Dados completos da agenda:|```)/)
+        line.match?(/\A(Ensaio criado automaticamente|Titulo:|Status:|Inicio:|Fim:|Local:|Link da agenda:|Criador:|Organizador:|Participantes:)/)
       end.join.strip
     end
 

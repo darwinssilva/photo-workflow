@@ -37,14 +37,17 @@ module PhotoWorkflow
 
           if should_create_card?(current_state)
             existing_card = find_existing_card(payload)
+            existing_card ||= recheck_existing_card(payload)
             if existing_card
               trello_client.update_card(existing_card.fetch("id"), **payload)
+              existing_card = settle_duplicate_cards(payload, existing_card)
               state[event_id] = state_payload(event, existing_card.fetch("id"), fingerprint, trello_card_url(existing_card))
               preserve_email_notification(state[event_id], current_state) if current_state
               handle_reused_card_email_notification(state[event_id], event, existing_card)
               puts "Reused existing Trello card for #{event.fetch("summary")}"
             else
               card = trello_client.create_card(**payload)
+              card = settle_duplicate_cards(payload, card)
               state[event_id] = state_payload(event, card.fetch("id"), fingerprint, trello_card_url(card))
               handle_email_notification_result(state[event_id], notify_event_created(event, card))
               puts "Created Trello card for #{event.fetch("summary")}"
@@ -134,10 +137,67 @@ module PhotoWorkflow
     end
 
     def find_existing_card(payload)
-      trello_client.find_active_card_by_name(payload.fetch(:name))
+      preferred_card(matching_existing_cards(payload))
     rescue HttpJson::Error => error
       warn "Could not search existing Trello card for #{payload.fetch(:name)}: #{error.message}"
       nil
+    end
+
+    def recheck_existing_card(payload)
+      delay = trello_create_recheck_seconds
+      return nil unless delay.positive?
+
+      sleep(delay)
+      find_existing_card(payload)
+    end
+
+    def matching_existing_cards(payload)
+      trello_client
+        .find_active_cards_by_name(payload.fetch(:name))
+        .select { |card| matching_due_date?(card, payload.fetch(:due)) }
+    end
+
+    def settle_duplicate_cards(payload, preferred)
+      return preferred unless dedupe_trello_cards?
+
+      delay = trello_dedupe_settle_seconds
+      sleep(delay) if delay.positive?
+
+      cards = matching_existing_cards(payload)
+      cards << preferred unless cards.any? { |card| card["id"] == preferred["id"] }
+      return preferred if cards.size < 2
+
+      keeper = preferred_card(cards)
+      cards.each do |card|
+        next if card["id"] == keeper["id"]
+
+        trello_client.archive_card(card.fetch("id"))
+        puts "Archived duplicate Trello card #{card.fetch("id")} for #{payload.fetch(:name)}"
+      end
+
+      keeper
+    rescue HttpJson::Error => error
+      warn "Could not dedupe Trello cards for #{payload.fetch(:name)}: #{error.message}"
+      preferred
+    end
+
+    def preferred_card(cards)
+      cards.min_by { |card| card_preference_key(card) }
+    end
+
+    def card_preference_key(card)
+      activity = card["dateLastActivity"].to_s
+      activity = "9999-12-31T23:59:59.999Z" if activity.empty?
+
+      [activity, card["pos"].to_f]
+    end
+
+    def matching_due_date?(card, due)
+      return card["due"].to_s.empty? if due.nil?
+
+      Time.parse(card.fetch("due")).getlocal(due.utc_offset).to_date == due.to_date
+    rescue KeyError, ArgumentError
+      false
     end
 
     def trello_card_inactive?(record)
@@ -349,12 +409,7 @@ module PhotoWorkflow
         "Participantes: #{attendees_label(event["attendees"])}",
         "",
         "Descricao da agenda:",
-        event["description"],
-        "",
-        "Dados completos da agenda:",
-        "```json",
-        JSON.pretty_generate(event),
-        "```"
+        event["description"]
       ].compact.join("\n")
     end
 
@@ -402,6 +457,18 @@ module PhotoWorkflow
 
     def notify_reused_card_email?
       Settings.boolean("EMAIL_NOTIFY_REUSED_CARDS", false)
+    end
+
+    def dedupe_trello_cards?
+      Settings.boolean("TRELLO_DEDUPE_CARDS", true)
+    end
+
+    def trello_create_recheck_seconds
+      Settings.integer("TRELLO_CREATE_RECHECK_SECONDS", 2)
+    end
+
+    def trello_dedupe_settle_seconds
+      Settings.integer("TRELLO_DEDUPE_SETTLE_SECONDS", 1)
     end
 
     def required_env(name)
