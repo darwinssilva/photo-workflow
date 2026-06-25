@@ -117,7 +117,8 @@
     "synced_at": "2026-06-22T23:18:08Z",
     "email_skipped_at": "2026-06-22T23:18:08Z",
     "email_skip_reason": "missing_client_email",
-    "email_skipped_fingerprint": "035ed4eb73d21bc07006e0956695d8ac6527fd378e2413039125fbb2ecc94c94"
+    "email_skipped_fingerprint": "035ed4eb73d21bc07006e0956695d8ac6527fd378e2413039125fbb2ecc94c94",
+    "archived_at": "2026-06-25T22:40:23Z"
   },
   "6go66cr16lh3cb9jcdijcb9k6ss6ab9oc5h68b9k6di3cdpp6li3cd9ick": {
     "google_event_id": "6go66cr16lh3cb9jcdijcb9k6ss6ab9oc5h68b9k6di3cdpp6li3cd9ick",
@@ -144,6 +145,19 @@
     "email_skipped_at": "2026-06-22T23:18:07Z",
     "email_skip_reason": "missing_client_email",
     "email_skipped_fingerprint": "d4d0c191801bd1b0522012aae8d73e209c6aa5869f2444dd511ed840aae6009e"
+  },
+  "6kqm8c9kc8rjcbb36sojib9k74r3ib9pc8rj8b9pchim8c326gp3ce3664": {
+    "google_event_id": "6kqm8c9kc8rjcbb36sojib9k74r3ib9pc8rj8b9pchim8c326gp3ce3664",
+    "trello_card_id": "6a3d8d2cd308356f669004e8",
+    "trello_card_url": "https://trello.com/c/19Nhixlr",
+    "summary": "Newborn Thiago (Anne)",
+    "starts_at": "2026-07-11T15:00:00-03:00",
+    "description": "",
+    "fingerprint": "1da38efffcba397bc460582ad8deecd6ec1f97045c6e002524f8b36453740ab7",
+    "synced_at": "2026-06-25T22:40:25Z",
+    "email_skipped_at": "2026-06-25T22:40:25Z",
+    "email_skip_reason": "reused_existing_card",
+    "email_skipped_fingerprint": "1da38efffcba397bc460582ad8deecd6ec1f97045c6e002524f8b36453740ab7"
   },
   "6lgjic1g6ks6ab9jcgo62b9k6cs38b9pcop32b9kcdgm6pho65hjicb560": {
     "google_event_id": "6lgjic1g6ks6ab9jcgo62b9k6cs38b9pcop32b9kcdgm6pho65hjicb560",
@@ -337,6 +351,19 @@
     "email_skip_reason": "missing_client_email",
     "email_skipped_fingerprint": "52c508d855d7ad2776dc144b88a5d79f9a6083f09e202ffa81ab20d38c786db8"
   },
+  "dl7d92ob8jvs9gndol4qejuq5o": {
+    "google_event_id": "dl7d92ob8jvs9gndol4qejuq5o",
+    "trello_card_id": "6a3c02e1d9caf5560411fa10",
+    "trello_card_url": "https://trello.com/c/xn5MfxbF",
+    "summary": "Solicitação - Bronze - Amanda Ruiz",
+    "starts_at": "2026-06-26T15:00:00-03:00",
+    "description": "Nome: Amanda Ruiz\nModelo: Catarina\nEmail: mana_campos@hotmail.com\nTelefone: 1198482-4824\nTipo: Bronze\nReferencias: Baby Clean\n\nOrigem: Google Forms",
+    "fingerprint": "d79f356d04e0b52f11d5d517cfbf70c7d8a7b8db974a7ad0c043c6714a400966",
+    "synced_at": "2026-06-25T22:40:23Z",
+    "email_skipped_at": "2026-06-25T22:40:23Z",
+    "email_skip_reason": "reused_existing_card",
+    "email_skipped_fingerprint": "d79f356d04e0b52f11d5d517cfbf70c7d8a7b8db974a7ad0c043c6714a400966"
+  },
   "f522ltr1mo4urvuo3cnmfigu7s": {
     "google_event_id": "f522ltr1mo4urvuo3cnmfigu7s",
     "trello_card_id": "6a3b0ba03b5c28bc0c9562ea",
@@ -362,6 +389,19 @@
     "email_skipped_at": "2026-06-24T21:47:09Z",
     "email_skip_reason": "reused_existing_card",
     "email_skipped_fingerprint": "216ff98b48e98cb800c36c6b05f0ebd7fee769e13dfdeeb1cecce56dd0806b4c"
+  },
+  "j3qnmuqu19o8le1c09bp9airg4": {
+    "google_event_id": "j3qnmuqu19o8le1c09bp9airg4",
+    "trello_card_id": "6a3d6967681f08d60e553244",
+    "trello_card_url": "https://trello.com/c/5MtJCO6L",
+    "summary": "Solicitação - Ouro - Bruna Santana Chaves de Souza",
+    "starts_at": "2026-06-29T09:00:00-03:00",
+    "description": "Nome: Bruna Santana Chaves de Souza\nModelo: Clara\nEmail: admdiegoseoxossi@gmail.com\nTelefone: 11912986522\nTipo: Ouro\nReferencias: À definir\n\nBebê 14 dias \n\nOrigem: Google Forms",
+    "fingerprint": "1a69fd9e0069014eaf14cf2f4b328159532246fc7aed0ff49c1a7141614196d1",
+    "synced_at": "2026-06-25T22:40:24Z",
+    "email_skipped_at": "2026-06-25T22:40:24Z",
+    "email_skip_reason": "reused_existing_card",
+    "email_skipped_fingerprint": "1a69fd9e0069014eaf14cf2f4b328159532246fc7aed0ff49c1a7141614196d1"
   },
   "j684acag6o0timavop31n8q5t8": {
     "google_event_id": "j684acag6o0timavop31n8q5t8",
