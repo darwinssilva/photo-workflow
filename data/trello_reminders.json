@@ -23,6 +23,14 @@
     "reminder_date": "2026-06-24",
     "sent_at": "2026-06-24T11:55:47Z"
   },
+  "editing:6a3324754b4775e28538f9b1:2026-06-25": {
+    "card_id": "6a3324754b4775e28538f9b1",
+    "kind": "editing",
+    "card_name": "Newbor Maria Alice (Josy)",
+    "due": "2026-06-01T20:30:00.000Z",
+    "reminder_date": "2026-06-25",
+    "sent_at": "2026-06-25T11:54:16Z"
+  },
   "editing:6a332478f72e18bedd2e6af9:2026-06-22": {
     "card_id": "6a332478f72e18bedd2e6af9",
     "kind": "editing",
@@ -46,6 +54,14 @@
     "due": "2026-06-06T15:30:00.000Z",
     "reminder_date": "2026-06-24",
     "sent_at": "2026-06-24T11:55:47Z"
+  },
+  "editing:6a332478f72e18bedd2e6af9:2026-06-25": {
+    "card_id": "6a332478f72e18bedd2e6af9",
+    "kind": "editing",
+    "card_name": "Ensaio Gestante Valéria",
+    "due": "2026-06-06T15:30:00.000Z",
+    "reminder_date": "2026-06-25",
+    "sent_at": "2026-06-25T11:54:16Z"
   },
   "editing:6a33247c4d18b2467fcd2e28:2026-06-22": {
     "card_id": "6a33247c4d18b2467fcd2e28",
@@ -71,6 +87,14 @@
     "reminder_date": "2026-06-24",
     "sent_at": "2026-06-24T11:55:47Z"
   },
+  "editing:6a33247c4d18b2467fcd2e28:2026-06-25": {
+    "card_id": "6a33247c4d18b2467fcd2e28",
+    "kind": "editing",
+    "card_name": "Newborn Henrique (Gessica)",
+    "due": "2026-05-30T20:45:00.000Z",
+    "reminder_date": "2026-06-25",
+    "sent_at": "2026-06-25T11:54:16Z"
+  },
   "editing:6a33248043f98661cb3fd24b:2026-06-24": {
     "card_id": "6a33248043f98661cb3fd24b",
     "kind": "editing",
@@ -78,6 +102,22 @@
     "due": "2026-06-09T18:30:00.000Z",
     "reminder_date": "2026-06-24",
     "sent_at": "2026-06-24T11:55:47Z"
+  },
+  "editing:6a33248043f98661cb3fd24b:2026-06-25": {
+    "card_id": "6a33248043f98661cb3fd24b",
+    "kind": "editing",
+    "card_name": "Newborn Lua (Luna)",
+    "due": "2026-06-09T18:30:00.000Z",
+    "reminder_date": "2026-06-25",
+    "sent_at": "2026-06-25T11:54:16Z"
+  },
+  "editing:6a3324892bcab99eab638f56:2026-06-25": {
+    "card_id": "6a3324892bcab99eab638f56",
+    "kind": "editing",
+    "card_name": "Newborn Arthur (Jaila)",
+    "due": "2026-06-10T22:30:00.000Z",
+    "reminder_date": "2026-06-25",
+    "sent_at": "2026-06-25T11:54:16Z"
   },
   "extra_payment:6a332486a094c12f2530fa94:2026-06-22": {
     "card_id": "6a332486a094c12f2530fa94",
@@ -103,6 +143,14 @@
     "reminder_date": "2026-06-24",
     "sent_at": "2026-06-24T11:55:47Z"
   },
+  "extra_payment:6a332486a094c12f2530fa94:2026-06-25": {
+    "card_id": "6a332486a094c12f2530fa94",
+    "kind": "extra_payment",
+    "card_name": "Newborn Clara (Paula)",
+    "due": "2026-06-03T21:30:00.000Z",
+    "reminder_date": "2026-06-25",
+    "sent_at": "2026-06-25T11:54:16Z"
+  },
   "gallery:6a33367b4129e7c0e1e1a7e7:2026-06-22": {
     "card_id": "6a33367b4129e7c0e1e1a7e7",
     "kind": "gallery",
@@ -126,6 +174,14 @@
     "due": "2026-06-18T21:00:00.000Z",
     "reminder_date": "2026-06-24",
     "sent_at": "2026-06-24T11:55:47Z"
+  },
+  "gallery:6a33367b4129e7c0e1e1a7e7:2026-06-25": {
+    "card_id": "6a33367b4129e7c0e1e1a7e7",
+    "kind": "gallery",
+    "card_name": "Smash the Cake Helena (Ana Carolina) Ursinho Pooh",
+    "due": "2026-06-18T21:00:00.000Z",
+    "reminder_date": "2026-06-25",
+    "sent_at": "2026-06-25T11:54:16Z"
   },
   "gallery:6a33367d0704c154ce51c8d1:2026-06-22": {
     "card_id": "6a33367d0704c154ce51c8d1",
@@ -223,6 +279,14 @@
     "reminder_date": "2026-06-24",
     "sent_at": "2026-06-24T11:55:47Z"
   },
+  "gallery:6a33367f45335a84f7282153:2026-06-25": {
+    "card_id": "6a33367f45335a84f7282153",
+    "kind": "gallery",
+    "card_name": "Cobertura Festa 1 ano Helena",
+    "due": "2026-06-20T17:00:00.000Z",
+    "reminder_date": "2026-06-25",
+    "sent_at": "2026-06-25T11:54:16Z"
+  },
   "gallery:6a33367f80d32bb273530d32:2026-06-24": {
     "card_id": "6a33367f80d32bb273530d32",
     "kind": "gallery",
@@ -238,5 +302,21 @@
     "due": "2026-06-22T17:00:00.000Z",
     "reminder_date": "2026-06-24",
     "sent_at": "2026-06-24T11:55:47Z"
+  },
+  "gallery:6a333681102db96e4664d489:2026-06-25": {
+    "card_id": "6a333681102db96e4664d489",
+    "kind": "gallery",
+    "card_name": "Maria Lívia (Thais)",
+    "due": "2026-06-23T15:00:00.000Z",
+    "reminder_date": "2026-06-25",
+    "sent_at": "2026-06-25T11:54:16Z"
+  },
+  "gallery:6a3336823dfe70bd24c2b74d:2026-06-25": {
+    "card_id": "6a3336823dfe70bd24c2b74d",
+    "kind": "gallery",
+    "card_name": "Newborn Luísa (Patrícia)",
+    "due": "2026-06-23T19:30:00.000Z",
+    "reminder_date": "2026-06-25",
+    "sent_at": "2026-06-25T11:54:16Z"
   }
 }
