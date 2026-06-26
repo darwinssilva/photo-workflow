@@ -325,6 +325,19 @@
     "fingerprint": "13fabebd37d2647f43e5b1c0afb50de8a76e77c45a7c8fbd1a33d0ad00b55592",
     "synced_at": "2026-06-18T00:12:06Z"
   },
+  "clgm2dr468ojgb9o61ijib9k6krj2b9pc9hj0b9k64qjcpb3cgo6cdj2ck": {
+    "google_event_id": "clgm2dr468ojgb9o61ijib9k6krj2b9pc9hj0b9k64qjcpb3cgo6cdj2ck",
+    "trello_card_id": "6a3ee2ec9295d88aaf8404f7",
+    "trello_card_url": "https://trello.com/c/tlYCDD29",
+    "summary": "Acompanhamento Natan (Andressa) 2 meses",
+    "starts_at": "2026-07-09T14:00:00-03:00",
+    "description": "",
+    "fingerprint": "56429c76be496f884ccc899af39c01b600468b304aedfebcca69dc3fc79d7ae6",
+    "synced_at": "2026-06-26T21:44:21Z",
+    "email_skipped_at": "2026-06-26T21:44:21Z",
+    "email_skip_reason": "reused_existing_card",
+    "email_skipped_fingerprint": "56429c76be496f884ccc899af39c01b600468b304aedfebcca69dc3fc79d7ae6"
+  },
   "clj36pj370sjab9i75ij4b9k6dij8bb16ssm8b9pcdj30or3cpj64phjcg": {
     "google_event_id": "clj36pj370sjab9i75ij4b9k6dij8bb16ssm8b9pcdj30or3cpj64phjcg",
     "trello_card_id": "6a3336823dfe70bd24c2b74d",
