@@ -440,6 +440,19 @@
     "synced_at": "2026-06-19T19:31:07Z",
     "email_notified_at": "2026-06-19T00:12:09Z"
   },
+  "lq1fikqoqf13nct60bjt2qbohs": {
+    "google_event_id": "lq1fikqoqf13nct60bjt2qbohs",
+    "trello_card_id": "6a3f1e0b11d65bdb3de2bfe1",
+    "trello_card_url": "https://trello.com/c/GuUkQh4K",
+    "summary": "Solicitação - Ouro - Joselia",
+    "starts_at": "2026-07-04T13:00:00-03:00",
+    "description": "Nome: Joselia\nModelo: Gisele\nEmail: joselia.renato123@gmail.com\nTelefone: 11958498252\nTipo: Ouro\nReferencias: Balanço e arco com flores, atemporal\n\nBebê 20 dias\n\nOrigem: Google Forms",
+    "fingerprint": "66c83da8469c18dae3c161fbe76d34b53bcacb2004e481478b247a58cd041794",
+    "synced_at": "2026-06-27T09:57:05Z",
+    "email_skipped_at": "2026-06-27T09:57:05Z",
+    "email_skip_reason": "reused_existing_card",
+    "email_skipped_fingerprint": "66c83da8469c18dae3c161fbe76d34b53bcacb2004e481478b247a58cd041794"
+  },
   "m67884uptlj1bkr20cmqsd7cjo": {
     "google_event_id": "m67884uptlj1bkr20cmqsd7cjo",
     "trello_card_id": "6a3b1c4fe16b3d9015962eb6",
