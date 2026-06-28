@@ -167,6 +167,14 @@
     "reminder_date": "2026-06-27",
     "sent_at": "2026-06-27T11:31:49Z"
   },
+  "extra_payment:6a332486a094c12f2530fa94:2026-06-28": {
+    "card_id": "6a332486a094c12f2530fa94",
+    "kind": "extra_payment",
+    "card_name": "Newborn Clara (Paula)",
+    "due": "2026-06-03T21:30:00.000Z",
+    "reminder_date": "2026-06-28",
+    "sent_at": "2026-06-28T11:35:00Z"
+  },
   "gallery:6a33367b4129e7c0e1e1a7e7:2026-06-22": {
     "card_id": "6a33367b4129e7c0e1e1a7e7",
     "kind": "gallery",
@@ -214,6 +222,14 @@
     "due": "2026-06-18T21:00:00.000Z",
     "reminder_date": "2026-06-27",
     "sent_at": "2026-06-27T11:31:49Z"
+  },
+  "gallery:6a33367b4129e7c0e1e1a7e7:2026-06-28": {
+    "card_id": "6a33367b4129e7c0e1e1a7e7",
+    "kind": "gallery",
+    "card_name": "Smash the Cake Helena (Ana Carolina) Ursinho Pooh",
+    "due": "2026-06-18T21:00:00.000Z",
+    "reminder_date": "2026-06-28",
+    "sent_at": "2026-06-28T11:35:00Z"
   },
   "gallery:6a33367d0704c154ce51c8d1:2026-06-22": {
     "card_id": "6a33367d0704c154ce51c8d1",
@@ -350,6 +366,22 @@
     "due": "2026-06-23T19:30:00.000Z",
     "reminder_date": "2026-06-25",
     "sent_at": "2026-06-25T11:54:16Z"
+  },
+  "gallery:6a373a14e07bca2d075ec1fe:2026-06-28": {
+    "card_id": "6a373a14e07bca2d075ec1fe",
+    "kind": "gallery",
+    "card_name": "Newborn José Murilo (Naiara)",
+    "due": "2026-06-26T21:00:00.000Z",
+    "reminder_date": "2026-06-28",
+    "sent_at": "2026-06-28T11:35:00Z"
+  },
+  "gallery:6a3db0e54ef136e5834fb35e:2026-06-28": {
+    "card_id": "6a3db0e54ef136e5834fb35e",
+    "kind": "gallery",
+    "card_name": "Solicitação - Bronze - Amanda Ruiz",
+    "due": "2026-06-26T18:00:00.000Z",
+    "reminder_date": "2026-06-28",
+    "sent_at": "2026-06-28T11:35:00Z"
   },
   "payment:6a373a14e07bca2d075ec1fe:2026-06-27": {
     "card_id": "6a373a14e07bca2d075ec1fe",
