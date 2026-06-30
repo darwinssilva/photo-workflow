@@ -172,6 +172,19 @@
     "email_skip_reason": "missing_client_email",
     "email_skipped_fingerprint": "30766ac93a7818c0f3f89de6b42becbec886e66ab5b5d2f5db2b34a6339ccc89"
   },
+  "6rtjda3brk1tgu1p2fnvtjpn1g": {
+    "google_event_id": "6rtjda3brk1tgu1p2fnvtjpn1g",
+    "trello_card_id": "6a43f92e4763ebab4f3af72b",
+    "trello_card_url": "https://trello.com/c/8DhNYHbW",
+    "summary": "Solicitação - Prata - Ana Paula",
+    "starts_at": "2026-07-03T12:00:00-03:00",
+    "description": "Nome: Ana Paula\nModelo: Sarah\nEmail: x_paulla@hotmail.com\nTelefone: 11 972017311\nTipo: Prata\nReferencias: Balanço e Unicórnio\n\nBebê 11 dias \n\nOrigem: Google Forms",
+    "fingerprint": "a9f9f7e1c328f2400673733d3a95f5db720d623c4eea8e594310bc33e4ce5efa",
+    "synced_at": "2026-06-30T21:47:24Z",
+    "email_skipped_at": "2026-06-30T21:47:24Z",
+    "email_skip_reason": "reused_existing_card",
+    "email_skipped_fingerprint": "a9f9f7e1c328f2400673733d3a95f5db720d623c4eea8e594310bc33e4ce5efa"
+  },
   "74p34oho6kp34b9mc8o3ib9k6cq3abb2c4p3ebb46ss3cd33cgq38e1k6s": {
     "google_event_id": "74p34oho6kp34b9mc8o3ib9k6cq3abb2c4p3ebb46ss3cd33cgq38e1k6s",
     "trello_card_id": "6a341b7d1fe7014ee9da6b63",
@@ -356,13 +369,13 @@
     "trello_card_id": "6a3df64e253e889f527b2bfe",
     "trello_card_url": "https://trello.com/c/XOw5gT7d",
     "summary": "Newborn Danny (Up Altas Aventuras)",
-    "starts_at": "2026-07-01T08:00:00-03:00",
+    "starts_at": "2026-07-03T08:00:00-03:00",
     "description": "",
-    "fingerprint": "60528a4622b91d52a4e7678ab5c519e58b985d4e7c8116d83fefb7e0370afc30",
-    "synced_at": "2026-06-26T10:24:55Z",
-    "email_skipped_at": "2026-06-26T10:24:55Z",
-    "email_skip_reason": "reused_existing_card",
-    "email_skipped_fingerprint": "60528a4622b91d52a4e7678ab5c519e58b985d4e7c8116d83fefb7e0370afc30"
+    "fingerprint": "02286cfb7bb11bd687011992de049ac4021dd2021feed4a0abed1dee9ad480d0",
+    "synced_at": "2026-06-30T21:47:24Z",
+    "email_skipped_at": "2026-06-30T21:47:24Z",
+    "email_skip_reason": "missing_client_email",
+    "email_skipped_fingerprint": "02286cfb7bb11bd687011992de049ac4021dd2021feed4a0abed1dee9ad480d0"
   },
   "coq38e9hccpm2bb46gp66b9kccoj8bb1c4o34bb269h3ic9j6go36p3360": {
     "google_event_id": "coq38e9hccpm2bb46gp66b9kccoj8bb1c4o34bb269h3ic9j6go36p3360",
