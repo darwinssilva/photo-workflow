@@ -183,6 +183,14 @@
     "reminder_date": "2026-06-29",
     "sent_at": "2026-06-29T12:32:05Z"
   },
+  "extra_payment:6a332486a094c12f2530fa94:2026-06-30": {
+    "card_id": "6a332486a094c12f2530fa94",
+    "kind": "extra_payment",
+    "card_name": "Newborn Clara (Paula)",
+    "due": "2026-06-03T21:30:00.000Z",
+    "reminder_date": "2026-06-30",
+    "sent_at": "2026-06-30T11:52:46Z"
+  },
   "gallery:6a33367b4129e7c0e1e1a7e7:2026-06-22": {
     "card_id": "6a33367b4129e7c0e1e1a7e7",
     "kind": "gallery",
@@ -246,6 +254,14 @@
     "due": "2026-06-18T21:00:00.000Z",
     "reminder_date": "2026-06-29",
     "sent_at": "2026-06-29T12:32:05Z"
+  },
+  "gallery:6a33367b4129e7c0e1e1a7e7:2026-06-30": {
+    "card_id": "6a33367b4129e7c0e1e1a7e7",
+    "kind": "gallery",
+    "card_name": "Smash the Cake Helena (Ana Carolina) Ursinho Pooh",
+    "due": "2026-06-18T21:00:00.000Z",
+    "reminder_date": "2026-06-30",
+    "sent_at": "2026-06-30T11:52:46Z"
   },
   "gallery:6a33367d0704c154ce51c8d1:2026-06-22": {
     "card_id": "6a33367d0704c154ce51c8d1",
