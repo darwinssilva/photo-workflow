@@ -331,12 +331,12 @@
     "trello_card_url": "https://trello.com/c/tlYCDD29",
     "summary": "Acompanhamento Natan (Andressa) 2 meses",
     "starts_at": "2026-07-09T14:00:00-03:00",
-    "description": "",
-    "fingerprint": "56429c76be496f884ccc899af39c01b600468b304aedfebcca69dc3fc79d7ae6",
-    "synced_at": "2026-06-26T21:44:21Z",
-    "email_skipped_at": "2026-06-26T21:44:21Z",
-    "email_skip_reason": "reused_existing_card",
-    "email_skipped_fingerprint": "56429c76be496f884ccc899af39c01b600468b304aedfebcca69dc3fc79d7ae6"
+    "description": "Tema Safari\nQuer roupinha marrom ou verde\n\nValor a ser pago no dia 150,00",
+    "fingerprint": "56a17b0c6b0d1aa42e69615aac41c185735475897ce484afb70ef978a7bb2840",
+    "synced_at": "2026-06-30T10:27:07Z",
+    "email_skipped_at": "2026-06-30T10:27:07Z",
+    "email_skip_reason": "missing_client_email",
+    "email_skipped_fingerprint": "56a17b0c6b0d1aa42e69615aac41c185735475897ce484afb70ef978a7bb2840"
   },
   "clj36pj370sjab9i75ij4b9k6dij8bb16ssm8b9pcdj30or3cpj64phjcg": {
     "google_event_id": "clj36pj370sjab9i75ij4b9k6dij8bb16ssm8b9pcdj30or3cpj64phjcg",
