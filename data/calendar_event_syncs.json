@@ -222,6 +222,19 @@
     "email_skip_reason": "missing_client_email",
     "email_skipped_fingerprint": "e8936785a326a0ca8e69d66114aaee802aa68e2900435c4bb46848eed85fc885"
   },
+  "7rho9sgs7lt21g1s5aubsfug6k": {
+    "google_event_id": "7rho9sgs7lt21g1s5aubsfug6k",
+    "trello_card_id": "6a4539c187baee05b2a81190",
+    "trello_card_url": "https://trello.com/c/VeuXCjvc",
+    "summary": "Consulta nutrólogo",
+    "starts_at": "2026-07-08T14:00:00-03:00",
+    "description": "",
+    "fingerprint": "24cecfb4e74eeec7c9015f49e5d398a2eeb98f9b693b0e6dc1abfa519d74c8b0",
+    "synced_at": "2026-07-01T21:47:47Z",
+    "email_skipped_at": "2026-07-01T21:47:47Z",
+    "email_skip_reason": "reused_existing_card",
+    "email_skipped_fingerprint": "24cecfb4e74eeec7c9015f49e5d398a2eeb98f9b693b0e6dc1abfa519d74c8b0"
+  },
   "9n5a6ag4dpth595k8lsbs8hpn8": {
     "google_event_id": "9n5a6ag4dpth595k8lsbs8hpn8",
     "trello_card_id": "6a3b1c50be50bd856237d00e",
