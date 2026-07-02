@@ -488,5 +488,18 @@
     "synced_at": "2026-06-23T23:54:11Z",
     "email_notified_at": "2026-06-23T23:50:52Z",
     "archived_at": "2026-06-24T10:24:55Z"
+  },
+  "m9cr5affbjnmrdtuf8k9o4rk9o": {
+    "google_event_id": "m9cr5affbjnmrdtuf8k9o4rk9o",
+    "trello_card_id": "6a45d940c20a2a62bdcbca50",
+    "trello_card_url": "https://trello.com/c/zZDjvM66",
+    "summary": "Solicitação - Ouro - Cristiane",
+    "starts_at": "2026-07-02T14:00:00-03:00",
+    "description": "Nome: Cristiane\nModelo: Bernardo\nEmail: cristiane_c15@hotmail.com\nTelefone: 11952106703\nTipo: Ouro\nReferencias: Caminha, urso marrom, roupa ursinho azul \nBebê 15 dias\n\nOrigem: Google Forms",
+    "fingerprint": "6fe24e561a9c55c7c4839efb5bcc2078b2d9379ce5c0a331c68b2c0143eb40f9",
+    "synced_at": "2026-07-02T10:15:52Z",
+    "email_skipped_at": "2026-07-02T10:15:52Z",
+    "email_skip_reason": "reused_existing_card",
+    "email_skipped_fingerprint": "6fe24e561a9c55c7c4839efb5bcc2078b2d9379ce5c0a331c68b2c0143eb40f9"
   }
 }
