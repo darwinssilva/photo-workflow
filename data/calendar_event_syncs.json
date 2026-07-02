@@ -296,6 +296,19 @@
     "email_skip_reason": "missing_client_email",
     "email_skipped_fingerprint": "ffc2725d81e7e47d46bb96a25dbb987aeed804b0b1ce8e33109c133838a3ff66"
   },
+  "cdalflubp0esjtcngqbdcrhack": {
+    "google_event_id": "cdalflubp0esjtcngqbdcrhack",
+    "trello_card_id": "6a469992d2329c37fd2656be",
+    "trello_card_url": "https://trello.com/c/zSkMIaX6",
+    "summary": "Agenda fechada (Pós jogo 😅)",
+    "starts_at": "2026-07-06T08:00:00-03:00",
+    "description": "",
+    "fingerprint": "0d1375caf2d683cee194673eecef4e0b0ab101542ca7c26e2a90f0c6b1d83b2f",
+    "synced_at": "2026-07-02T21:41:32Z",
+    "email_skipped_at": "2026-07-02T21:41:32Z",
+    "email_skip_reason": "reused_existing_card",
+    "email_skipped_fingerprint": "0d1375caf2d683cee194673eecef4e0b0ab101542ca7c26e2a90f0c6b1d83b2f"
+  },
   "cgp66p1lc5i68b9m64p3gb9k6sq68bb261ij8bb26ti6ccpkcosmccj160": {
     "google_event_id": "cgp66p1lc5i68b9m64p3gb9k6sq68bb261ij8bb26ti6ccpkcosmccj160",
     "trello_card_id": "6a3337d5634edd681e0942a7",
