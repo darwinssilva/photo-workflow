@@ -40,6 +40,8 @@
   "EMAIL_SUBJECT_PREFIX_UPDATED": "Atualizacao de ensaio",
   "CALENDAR_TIMEZONE": "America/Sao_Paulo",
   "WHATSAPP_ENABLED": false,
+  "WHATSAPP_REMINDER_DAYS_BEFORE_EVENT": 1,
+  "WHATSAPP_REMINDER_STATE_PATH": "data/whatsapp_event_reminders.json",
   "WHATSAPP_TEMPLATE_NAME": "ensaio_agendado_sucesso",
   "WHATSAPP_TEMPLATE_LANGUAGE": "pt_BR",
   "WHATSAPP_TEMPLATE_VARIABLES": "client_name,summary,event_date,event_time,location,trello_link",

@@ -30,6 +30,13 @@ module PhotoWorkflow
         named_parameters: true,
         variable_names: %w[client_name shoot_type event_date],
         parameter_names: %w[client_name shoot_type event_date]
+      },
+      reminder: {
+        name: "lembre_ensaio",
+        language: "pt_BR",
+        named_parameters: true,
+        variable_names: %w[client_name event_date event_time],
+        parameter_names: %w[client_name event_date event_time]
       }
     }.freeze
     DESCRIPTION_FIELD_LABELS = %w[nome modelo email telefone tipo referencias origem titulo].freeze
@@ -59,13 +66,17 @@ module PhotoWorkflow
       notify_event(event: event, card: card, kind: :cancelled)
     end
 
+    def notify_event_reminder(event:)
+      notify_event(event: event, card: {}, kind: :reminder)
+    end
+
     def notify_event(event:, card:, kind:)
-      return unless enabled?
+      return :disabled unless enabled?
 
       to_number = client_phone(event)
       unless to_number
         puts "WhatsApp notification skipped for #{event.fetch("summary", event.fetch("id", "unknown"))}: missing phone in event description"
-        return
+        return :missing_phone
       end
 
       send_template_message(
@@ -74,6 +85,7 @@ module PhotoWorkflow
         variables: template_variables(event, card, kind: kind)
       )
       puts "WhatsApp notification sent for #{event.fetch("summary", event.fetch("id", "unknown"))} to #{normalize_phone(to_number)}"
+      :sent
     rescue HttpJson::Error => error
       warn "WhatsApp notification failed for #{event.fetch("summary", event.fetch("id", "unknown"))}: HTTP #{error.code} - #{error.body}"
       raise

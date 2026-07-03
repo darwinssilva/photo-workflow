@@ -107,8 +107,8 @@ module PhotoWorkflow
       record = state[event_id]
       return false unless record && !record["archived_at"]
 
-      archive_trello_card(record)
-      notify_event_cancelled(record_event(record, event), trello_card_reference(record))
+      archived_now = archive_trello_card(record)
+      handle_cancellation_notification(record, record_event(record, event)) if archived_now
       record["archived_at"] = Time.now.utc.iso8601
       puts "Archived Trello card for #{record.fetch("summary", event_id)}"
       true
@@ -216,8 +216,8 @@ module PhotoWorkflow
         next if active_event_ids.include?(event_id)
         next unless tracked_event_still_relevant?(record)
 
-        archive_trello_card(record)
-        notify_event_cancelled(record_event(record), trello_card_reference(record))
+        archived_now = archive_trello_card(record)
+        handle_cancellation_notification(record, record_event(record)) if archived_now
         record["archived_at"] = Time.now.utc.iso8601
         archived_count += 1
         puts "Archived Trello card for #{record.fetch("summary", event_id)}"
@@ -227,15 +227,25 @@ module PhotoWorkflow
     end
 
     def archive_trello_card(record)
+      return false unless trello_card_active_for_archive?(record)
+
       if delete_removed_trello_cards?
         trello_client.delete_card(record.fetch("trello_card_id"))
       else
         trello_client.archive_card(record.fetch("trello_card_id"))
       end
+      true
     rescue HttpJson::Error => error
       raise unless error.code == 404
 
       puts "Trello card already missing for #{record.fetch("summary", record.fetch("google_event_id", "unknown"))}; marking as archived."
+      false
+    end
+
+    def trello_card_active_for_archive?(record)
+      trello_client.active_card?(record.fetch("trello_card_id"))
+    rescue KeyError
+      false
     end
 
     def sort_trello_lists
@@ -290,6 +300,22 @@ module PhotoWorkflow
 
     def notify_event_cancelled(event, card)
       notify_with("WhatsApp", event) { whatsapp_client.notify_event_cancelled(event: event, card: card) }
+    end
+
+    def handle_cancellation_notification(record, event)
+      return if cancellation_notification_handled?(record)
+
+      case notify_event_cancelled(event, trello_card_reference(record))
+      when :sent
+        record["whatsapp_cancelled_notified_at"] = Time.now.utc.iso8601
+      when :missing_phone
+        record["whatsapp_cancelled_skipped_at"] = Time.now.utc.iso8601
+        record["whatsapp_cancelled_skip_reason"] = "missing_phone"
+      end
+    end
+
+    def cancellation_notification_handled?(record)
+      record["whatsapp_cancelled_notified_at"] || record["whatsapp_cancelled_skipped_at"]
     end
 
     def notify_email_created(event, card)

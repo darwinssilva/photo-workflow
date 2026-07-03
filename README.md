@@ -229,8 +229,16 @@ Atualizacao: ensaio_alterado
 Cancelamento: ensaio_cancelado
   Parametros nomeados: client_name, shoot_type, event_date
 
+Lembrete: lembre_ensaio
+  Parametros nomeados: client_name, event_date, event_time
+
 Idioma: pt_BR
 ```
+
+O script `bin/send_whatsapp_event_reminders` envia o template `lembre_ensaio`
+para eventos que acontecem em `WHATSAPP_REMINDER_DAYS_BEFORE_EVENT` dia(s).
+Por padrao, o lembrete sai 1 dia antes do ensaio. O state em
+`data/whatsapp_event_reminders.json` evita reenviar o mesmo lembrete.
 
 Secrets recomendados:
 

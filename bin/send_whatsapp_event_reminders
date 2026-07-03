@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+
+$LOAD_PATH.unshift(File.expand_path("../lib", __dir__))
+
+require "photo_workflow/whatsapp_event_reminder"
+
+PhotoWorkflow::WhatsAppEventReminder.new.call
