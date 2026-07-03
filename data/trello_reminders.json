@@ -455,6 +455,14 @@
     "reminder_date": "2026-06-27",
     "sent_at": "2026-06-27T11:31:49Z"
   },
+  "payment:6a3d6967681f08d60e553244:2026-07-03": {
+    "card_id": "6a3d6967681f08d60e553244",
+    "kind": "payment",
+    "card_name": "Solicitação - Ouro - Bruna Santana Chaves de Souza",
+    "due": "2026-07-02T12:00:00.000Z",
+    "reminder_date": "2026-07-03",
+    "sent_at": "2026-07-03T11:47:20Z"
+  },
   "payment:6a3db0e54ef136e5834fb35e:2026-06-27": {
     "card_id": "6a3db0e54ef136e5834fb35e",
     "kind": "payment",
@@ -462,5 +470,13 @@
     "due": "2026-06-26T18:00:00.000Z",
     "reminder_date": "2026-06-27",
     "sent_at": "2026-06-27T11:31:49Z"
+  },
+  "payment:6a45d940c20a2a62bdcbca50:2026-07-03": {
+    "card_id": "6a45d940c20a2a62bdcbca50",
+    "kind": "payment",
+    "card_name": "Solicitação - Ouro - Cristiane",
+    "due": "2026-07-02T17:00:00.000Z",
+    "reminder_date": "2026-07-03",
+    "sent_at": "2026-07-03T11:47:20Z"
   }
 }
