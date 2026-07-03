@@ -215,15 +215,21 @@ https://api.trello.com/1/boards/TRELLO_BOARD_ID/lists?key=TRELLO_KEY&token=TRELL
 
 ## WhatsApp Cloud API
 
-Quando `WHATSAPP_ENABLED=true` em `config/settings.json`, o script envia mensagem em criacao e em atualizacao relevante de evento.
+Quando `WHATSAPP_ENABLED=true` em `config/settings.json`, o script envia mensagem em criacao, atualizacao relevante e cancelamento de evento.
 
 Templates usados pelo codigo:
 
 ```text
 Criacao: ensaio_agendado
+  Variaveis: {{1}} servico, {{2}} data, {{3}} nome
+
 Atualizacao: ensaio_alterado
+  Parametros nomeados: nome, servico, data, data_nov
+
+Cancelamento: ensaio_cancelado
+  Parametros nomeados: client_name, shoot_type, event_date
+
 Idioma: pt_BR
-Variaveis (ordem): client_name, summary, event_date, event_time
 ```
 
 Secrets recomendados:

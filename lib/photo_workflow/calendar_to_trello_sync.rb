@@ -108,6 +108,7 @@ module PhotoWorkflow
       return false unless record && !record["archived_at"]
 
       archive_trello_card(record)
+      notify_event_cancelled(record_event(record, event), trello_card_reference(record))
       record["archived_at"] = Time.now.utc.iso8601
       puts "Archived Trello card for #{record.fetch("summary", event_id)}"
       true
@@ -216,6 +217,7 @@ module PhotoWorkflow
         next unless tracked_event_still_relevant?(record)
 
         archive_trello_card(record)
+        notify_event_cancelled(record_event(record), trello_card_reference(record))
         record["archived_at"] = Time.now.utc.iso8601
         archived_count += 1
         puts "Archived Trello card for #{record.fetch("summary", event_id)}"
@@ -284,6 +286,10 @@ module PhotoWorkflow
     def notify_event_updated(event, card)
       notify_with("WhatsApp", event) { whatsapp_client.notify_event_updated(event: event, card: card) }
       notify_email_updated(event, card)
+    end
+
+    def notify_event_cancelled(event, card)
+      notify_with("WhatsApp", event) { whatsapp_client.notify_event_cancelled(event: event, card: card) }
     end
 
     def notify_email_created(event, card)
@@ -374,6 +380,22 @@ module PhotoWorkflow
 
     def trello_card_url(card)
       card["shortUrl"] || card["url"]
+    end
+
+    def record_event(record, event = nil)
+      {
+        "id" => record["google_event_id"],
+        "summary" => event&.fetch("summary", nil) || record.fetch("summary", ""),
+        "status" => "cancelled",
+        "description" => event&.fetch("description", nil) || record.fetch("description", ""),
+        "start" => record_time_hash(record["starts_at"])
+      }
+    end
+
+    def record_time_hash(value)
+      return {} if value.to_s.empty?
+
+      { "dateTime" => value }
     end
 
     def tracked_event_still_relevant?(record)

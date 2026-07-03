@@ -23,6 +23,13 @@ module PhotoWorkflow
         named_parameters: true,
         variable_names: %w[client_name shoot_type event_date event_time],
         parameter_names: %w[nome servico data data_nov]
+      },
+      cancelled: {
+        name: "ensaio_cancelado",
+        language: "pt_BR",
+        named_parameters: true,
+        variable_names: %w[client_name shoot_type event_date],
+        parameter_names: %w[client_name shoot_type event_date]
       }
     }.freeze
     DESCRIPTION_FIELD_LABELS = %w[nome modelo email telefone tipo referencias origem titulo].freeze
@@ -46,6 +53,10 @@ module PhotoWorkflow
 
     def notify_event_updated(event:, card:)
       notify_event(event: event, card: card, kind: :updated)
+    end
+
+    def notify_event_cancelled(event:, card:)
+      notify_event(event: event, card: card, kind: :cancelled)
     end
 
     def notify_event(event:, card:, kind:)
