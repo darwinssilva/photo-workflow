@@ -63,7 +63,11 @@ module PhotoWorkflow
     end
 
     def find_active_cards_by_name(name, list_id: required_env("TRELLO_LIST_ID"))
-      list_cards(list_id).select { |card| !card["closed"] && card["name"] == name }
+      active_cards(list_id: list_id).select { |card| card["name"] == name }
+    end
+
+    def active_cards(list_id: required_env("TRELLO_LIST_ID"))
+      list_cards(list_id).reject { |card| card["closed"] }
     end
 
     private

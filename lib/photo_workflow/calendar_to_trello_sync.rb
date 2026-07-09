@@ -154,8 +154,27 @@ module PhotoWorkflow
 
     def matching_existing_cards(payload)
       trello_client
-        .find_active_cards_by_name(payload.fetch(:name))
+        .active_cards
+        .select { |card| matching_card_identity?(card, payload) }
         .select { |card| matching_due_date?(card, payload.fetch(:due)) }
+    end
+
+    def matching_card_identity?(card, payload)
+      return true if card["name"] == payload.fetch(:name)
+
+      calendar_link = calendar_link_from_description(payload.fetch(:desc))
+      return false if calendar_link.empty?
+
+      calendar_link_from_description(card["desc"]) == calendar_link
+    end
+
+    def calendar_link_from_description(description)
+      description.to_s.each_line do |line|
+        match = line.match(/\ALink da agenda:\s*(\S+)\s*\z/)
+        return match[1] unless match.nil?
+      end
+
+      ""
     end
 
     def settle_duplicate_cards(payload, preferred)
