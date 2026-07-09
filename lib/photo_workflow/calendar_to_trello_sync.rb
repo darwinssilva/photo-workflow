@@ -436,10 +436,32 @@ module PhotoWorkflow
 
     def card_payload(event)
       {
-        name: event.fetch("summary"),
+        name: card_title(event),
         desc: card_description(event),
         due: delivery_date(event)
       }
+    end
+
+    def card_title(event)
+      responsible_name = description_field(event["description"], "Nome")
+      model_name = description_field(event["description"], "Modelo")
+      return event.fetch("summary") if responsible_name.empty? || model_name.empty?
+
+      shoot_type = description_field(event["description"], "Tipo")
+      birth_date = description_field(event["description"], "Data Nascimento")
+      birth_date = description_field(event["description"], "Data de nascimento") if birth_date.empty?
+      model_details = birth_date.empty? ? model_name : "#{model_name} - Nasc. #{birth_date}"
+      title = "#{model_details} (Responsável: #{responsible_name})"
+      shoot_type.empty? ? title : "#{shoot_type} - #{title}"
+    end
+
+    def description_field(description, label)
+      description.to_s.each_line do |line|
+        match = line.match(/\A\s*#{Regexp.escape(label)}\s*:\s*(.*?)\s*\z/i)
+        return match[1] unless match.nil?
+      end
+
+      ""
     end
 
     def card_description(event)
