@@ -199,6 +199,30 @@
     "reminder_date": "2026-07-01",
     "sent_at": "2026-07-01T12:02:19Z"
   },
+  "extra_payment:6a3324945bc6e57c6435c949:2026-07-09": {
+    "card_id": "6a3324945bc6e57c6435c949",
+    "kind": "extra_payment",
+    "card_name": "Newborn Clara (Taiany)",
+    "due": "2026-07-07T15:00:00.000Z",
+    "reminder_date": "2026-07-09",
+    "sent_at": "2026-07-09T12:11:25Z"
+  },
+  "extra_payment:6a33249dfec507135a61c78e:2026-07-09": {
+    "card_id": "6a33249dfec507135a61c78e",
+    "kind": "extra_payment",
+    "card_name": "Newborn Loewi (Stefanie)",
+    "due": "2026-07-07T23:00:00.000Z",
+    "reminder_date": "2026-07-09",
+    "sent_at": "2026-07-09T12:11:25Z"
+  },
+  "extra_payment:6a33367a1c7b156a95197bfe:2026-07-09": {
+    "card_id": "6a33367a1c7b156a95197bfe",
+    "kind": "extra_payment",
+    "card_name": "Newborn Lívia (Juliana)",
+    "due": "2026-07-08T12:00:00.000Z",
+    "reminder_date": "2026-07-09",
+    "sent_at": "2026-07-09T12:11:25Z"
+  },
   "gallery:6a33367b4129e7c0e1e1a7e7:2026-06-22": {
     "card_id": "6a33367b4129e7c0e1e1a7e7",
     "kind": "gallery",
@@ -447,6 +471,14 @@
     "reminder_date": "2026-06-29",
     "sent_at": "2026-06-29T12:32:05Z"
   },
+  "gallery:6a4823a56ac50399a361fd73:2026-07-09": {
+    "card_id": "6a4823a56ac50399a361fd73",
+    "kind": "gallery",
+    "card_name": "Solicitação - Prata - Heriene Xavier Mota",
+    "due": "2026-07-06T15:00:00.000Z",
+    "reminder_date": "2026-07-09",
+    "sent_at": "2026-07-09T12:11:25Z"
+  },
   "payment:6a373a14e07bca2d075ec1fe:2026-06-27": {
     "card_id": "6a373a14e07bca2d075ec1fe",
     "kind": "payment",
@@ -463,6 +495,14 @@
     "reminder_date": "2026-07-03",
     "sent_at": "2026-07-03T11:47:20Z"
   },
+  "payment:6a3d6967681f08d60e553244:2026-07-09": {
+    "card_id": "6a3d6967681f08d60e553244",
+    "kind": "payment",
+    "card_name": "Solicitação - Ouro - Bruna Santana Chaves de Souza",
+    "due": "2026-07-02T12:00:00.000Z",
+    "reminder_date": "2026-07-09",
+    "sent_at": "2026-07-09T12:11:25Z"
+  },
   "payment:6a3db0e54ef136e5834fb35e:2026-06-27": {
     "card_id": "6a3db0e54ef136e5834fb35e",
     "kind": "payment",
@@ -478,5 +518,21 @@
     "due": "2026-07-02T17:00:00.000Z",
     "reminder_date": "2026-07-03",
     "sent_at": "2026-07-03T11:47:20Z"
+  },
+  "payment:6a47f7be3d2041f5d849ec90:2026-07-09": {
+    "card_id": "6a47f7be3d2041f5d849ec90",
+    "kind": "payment",
+    "card_name": "Solicitação - Prata - Beatryz Blumtritt Lopes",
+    "due": "2026-07-08T17:00:00.000Z",
+    "reminder_date": "2026-07-09",
+    "sent_at": "2026-07-09T12:11:25Z"
+  },
+  "payment:6a4d9cf7b2c502ee49f352bb:2026-07-09": {
+    "card_id": "6a4d9cf7b2c502ee49f352bb",
+    "kind": "payment",
+    "card_name": "Solicitação - Prata - Ana Gabriela",
+    "due": "2026-07-08T21:00:00.000Z",
+    "reminder_date": "2026-07-09",
+    "sent_at": "2026-07-09T12:11:25Z"
   }
 }
