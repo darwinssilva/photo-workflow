@@ -469,9 +469,17 @@ module PhotoWorkflow
       shoot_type = description_field(event["description"], "Tipo")
       birth_date = description_field(event["description"], "Data Nascimento")
       birth_date = description_field(event["description"], "Data de nascimento") if birth_date.empty?
+      birth_date = formatted_birth_date(birth_date)
       model_details = birth_date.empty? ? model_name : "#{model_name} - Nasc. #{birth_date}"
       title = "#{model_details} (Responsável: #{responsible_name})"
       shoot_type.empty? ? title : "#{shoot_type} - #{title}"
+    end
+
+    def formatted_birth_date(value)
+      match = value.match(/\A(\d{4})\/(\d{1,2})\/(\d{1,2})\z/)
+      return value unless match
+
+      format("%02d/%02d/%04d", match[3], match[2], match[1])
     end
 
     def description_field(description, label)
