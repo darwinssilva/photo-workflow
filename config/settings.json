@@ -40,6 +40,8 @@
   "EMAIL_SUBJECT_PREFIX_UPDATED": "Atualizacao de ensaio",
   "CALENDAR_TIMEZONE": "America/Sao_Paulo",
   "WHATSAPP_ENABLED": false,
+  "WHATSAPP_AUTO_REPLY_ENABLED": true,
+  "WHATSAPP_AUTO_REPLY_TEXT": "Olá! Este número é utilizado exclusivamente para notificações automáticas e não recebe atendimento por aqui. Para falar conosco, entre em contato pelo telefone (11) 92529-6565.",
   "WHATSAPP_REMINDER_DAYS_BEFORE_EVENT": 1,
   "WHATSAPP_REMINDER_STATE_PATH": "data/whatsapp_event_reminders.json",
   "WHATSAPP_TEMPLATE_NAME": "ensaio_agendado_sucesso",

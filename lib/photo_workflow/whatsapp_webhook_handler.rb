@@ -1,9 +1,16 @@
 require "json"
+require "set"
 
 require_relative "settings"
+require_relative "whatsapp_client"
 
 module PhotoWorkflow
   class WhatsAppWebhookHandler
+    def initialize(whatsapp_client: WhatsAppClient.new)
+      @whatsapp_client = whatsapp_client
+      @processed_message_ids = Set.new
+    end
+
     def verify(mode:, verify_token:, challenge:)
       return response(400, "missing mode") if blank_string?(mode)
       return response(400, "missing challenge") if blank_string?(challenge)
@@ -21,16 +28,17 @@ module PhotoWorkflow
     def receive(body:)
       payload = parse_json(body)
       statuses = extract_statuses(payload)
-
-      if statuses.empty?
-        puts "WhatsApp webhook received without status updates."
-        return response(200, "ok")
-      end
+      messages = extract_messages(payload)
 
       statuses.each do |status|
         log_status(status)
       end
 
+      messages.each do |message|
+        reply_to_message(message)
+      end
+
+      puts "WhatsApp webhook received without messages or status updates." if statuses.empty? && messages.empty?
       response(200, "ok")
     rescue JSON::ParserError => error
       warn "WhatsApp webhook invalid JSON: #{error.message}"
@@ -67,6 +75,38 @@ module PhotoWorkflow
           end
         end
       end
+    end
+
+    def extract_messages(payload)
+      entries = payload.fetch("entry", [])
+      return [] unless entries.is_a?(Array)
+
+      entries.flat_map do |entry|
+        changes = entry.fetch("changes", [])
+        next [] unless changes.is_a?(Array)
+
+        changes.flat_map do |change|
+          value = change["value"] || {}
+          messages = value["messages"] || []
+          messages.is_a?(Array) ? messages : []
+        end
+      end
+    end
+
+    def reply_to_message(message)
+      return unless Settings.boolean("WHATSAPP_AUTO_REPLY_ENABLED", true)
+
+      message_id = message["id"].to_s
+      sender = message["from"].to_s
+      return if blank_string?(message_id) || blank_string?(sender)
+      return if @processed_message_ids.include?(message_id)
+
+      text = Settings.value(
+        "WHATSAPP_AUTO_REPLY_TEXT",
+        "Ola! Este numero e utilizado exclusivamente para notificacoes automaticas e nao recebe atendimento por aqui. Para falar conosco, entre em contato pelo telefone (11) 92529-6565."
+      )
+      @whatsapp_client.send_text_message(to: sender, text: text)
+      @processed_message_ids.add(message_id)
     end
 
     def log_status(status)

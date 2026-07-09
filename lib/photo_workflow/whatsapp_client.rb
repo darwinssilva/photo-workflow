@@ -70,6 +70,28 @@ module PhotoWorkflow
       notify_event(event: event, card: {}, kind: :reminder)
     end
 
+    def send_text_message(to:, text:)
+      return :disabled unless enabled?
+
+      normalized_to = normalize_phone(to)
+      response = HttpJson.post_json(
+        messages_url,
+        headers: {
+          "Authorization" => "Bearer #{required_env("WHATSAPP_ACCESS_TOKEN")}"
+        },
+        body: {
+          messaging_product: "whatsapp",
+          recipient_type: "individual",
+          to: normalized_to,
+          type: "text",
+          text: { preview_url: false, body: text }
+        }
+      )
+
+      puts "WhatsApp text message sent to #{normalized_to}"
+      response
+    end
+
     def notify_event(event:, card:, kind:)
       return :disabled unless enabled?
 
