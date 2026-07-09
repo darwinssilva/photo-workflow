@@ -14,8 +14,8 @@ module PhotoWorkflow
         name: "ensaio_agendado",
         language: "pt_BR",
         # Keep positional order aligned with approved template:
-        # {{1}} service, {{2}} date, {{3}} name
-        variable_names: %w[shoot_type event_date client_name]
+        # {{1}} service, {{2}} date, {{3}} name, {{4}} time
+        variable_names: %w[shoot_type event_date client_name event_time]
       },
       updated: {
         name: "ensaio_alterado",

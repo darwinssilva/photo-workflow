@@ -221,7 +221,7 @@ Templates usados pelo codigo:
 
 ```text
 Criacao: ensaio_agendado
-  Variaveis: {{1}} servico, {{2}} data, {{3}} nome
+  Variaveis: {{1}} servico, {{2}} data, {{3}} nome, {{4}} horario
 
 Atualizacao: ensaio_alterado
   Parametros nomeados: nome, servico, data, data_nov
