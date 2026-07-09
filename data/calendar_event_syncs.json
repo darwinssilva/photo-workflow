@@ -38,8 +38,8 @@
     "summary": "Solicitação - Ouro - Gabriela Lima Pinheiro",
     "starts_at": "2026-07-13T16:30:00-03:00",
     "description": "Nome: Gabriela Lima Pinheiro\nModelo: Matteo\nEmail: gabi-pinheiro@hotmail.com\nTelefone: 11947439335\nTipo: Ouro\nReferencias: Bosque, balanço com ursinhos, atemporal com cores claras e fotos com os pais\n\nBebê 9 dias\n\nOrigem: Google Forms",
-    "fingerprint": "fda8b06722c66b0afbd9b575954b15d63da48022e56d24e7ebe1cd8f03ba3d65",
-    "synced_at": "2026-07-03T16:50:14Z",
+    "fingerprint": "c75915b58cad9b139f216ad4b0fcf7c7c01f9071bd8d2e84a93cf6e4fabb83c0",
+    "synced_at": "2026-07-09T10:35:43Z",
     "email_notified_at": "2026-07-03T16:50:15Z"
   },
   "2kdtqhpnecdh5trd3j191blc44": {
@@ -78,6 +78,19 @@
     "email_skip_reason": "missing_client_email",
     "email_skipped_fingerprint": "ac862b4cd7f01f38a47a7f0491541049ff3cd89eea4b12a7e09ad9f326407c16",
     "archived_at": "2026-06-23T23:50:52Z"
+  },
+  "4jolbj12c2e6lumog3lb3p6n28": {
+    "google_event_id": "4jolbj12c2e6lumog3lb3p6n28",
+    "trello_card_id": "6a4f1c6d20a16cf319f940bd",
+    "trello_card_url": "https://trello.com/c/4Cg8XCgw",
+    "summary": "Solicitação -  - Hellen Beatriz de Andrade Jabes",
+    "starts_at": "2026-08-01T10:00:00-03:00",
+    "description": "Nome: Hellen Beatriz de Andrade Jabes\nModelo: Davi de Andrade Jabes\nIdade: 3 meses\nEmail: beatriz20101925@hotmail.com\nTelefone: 11930186580\nTipo: \nReferencias: Cores\n\n2º azul \n3º terracota \n4º Amarelo mostarda\n5º Verde\n6º azul claro \n7º Vermelho (Natal)\n8º  Laranja \n9º preto?\n10° verde Militar \n11º Bege\n\nOrigem: Google Forms",
+    "fingerprint": "717947e84ffda281a2cc90de5f7dd16ddb2b66c1d3fd794199d5c9de5799bc54",
+    "synced_at": "2026-07-09T10:35:47Z",
+    "email_skipped_at": "2026-07-09T10:35:47Z",
+    "email_skip_reason": "reused_existing_card",
+    "email_skipped_fingerprint": "717947e84ffda281a2cc90de5f7dd16ddb2b66c1d3fd794199d5c9de5799bc54"
   },
   "68q38c1i70qj2b9kc8q36b9k69gm2bb1cgrjabb16op68d9h70r3cc1hc4": {
     "google_event_id": "68q38c1i70qj2b9kc8q36b9k69gm2bb1cgrjabb16op68d9h70r3cc1hc4",
@@ -181,16 +194,29 @@
     "synced_at": "2026-07-03T16:50:02Z",
     "email_notified_at": "2026-07-03T16:50:04Z"
   },
+  "6spmap9icoom6b9o61gjab9kcko3ebb16gs38bb3c5hjce3474s62c9j74": {
+    "google_event_id": "6spmap9icoom6b9o61gjab9kcko3ebb16gs38bb3c5hjce3474s62c9j74",
+    "trello_card_id": "6a495616170015e298660574",
+    "trello_card_url": "https://trello.com/c/JjEawSD2",
+    "summary": "Feriado",
+    "starts_at": "2026-07-09T00:00:00+00:00",
+    "description": "",
+    "fingerprint": "41125218fd612e9e01e76553cbaa78b40eb23669cbd4d5991506c5149933079a",
+    "synced_at": "2026-07-09T10:35:36Z",
+    "email_skipped_at": "2026-07-09T10:35:36Z",
+    "email_skip_reason": "reused_existing_card",
+    "email_skipped_fingerprint": "41125218fd612e9e01e76553cbaa78b40eb23669cbd4d5991506c5149933079a"
+  },
   "74p34oho6kp34b9mc8o3ib9k6cq3abb2c4p3ebb46ss3cd33cgq38e1k6s": {
     "google_event_id": "74p34oho6kp34b9mc8o3ib9k6cq3abb2c4p3ebb46ss3cd33cgq38e1k6s",
     "trello_card_id": "6a341b7d1fe7014ee9da6b63",
     "trello_card_url": "https://trello.com/c/HE7nyqnS",
     "summary": "Acompanhamento Manuela 4 meses (Thais) - Festa Junina",
-    "starts_at": "2026-07-13T14:00:00-03:00",
-    "description": "Nome: Thais\nEmail: darwins.silva.ds@gmail.com\nTelefone: 1193238356\nPacote: Ouro\nPagamento: a Pagar\nObservacoes: Roupa da barbie",
-    "fingerprint": "2e8de0b62b36ad89bde18aeb0cd508476e4041333b9a509914002feb9598332b",
-    "synced_at": "2026-07-03T16:50:13Z",
-    "email_notified_at": "2026-06-22T21:23:06Z"
+    "starts_at": "2026-07-14T13:00:00-03:00",
+    "description": "Nome: Thais\nEmail: darwins.silva.ds@gmail.com\nTelefone: 1193238356\nPacote: acompanhamento 150,00\nPagamento: a Pagar\nObservacoes: festa junina",
+    "fingerprint": "e2d0c7975ab6c713952c9c4ca6c58cc79879562437988a2698ef8afea7ea6a60",
+    "synced_at": "2026-07-09T10:35:44Z",
+    "email_notified_at": "2026-07-09T10:35:46Z"
   },
   "74p6cp1pcos3ib9g6lj64b9kc4r64bb16cqjab9g6gomcohhcdij8oph6s": {
     "google_event_id": "74p6cp1pcos3ib9g6lj64b9kc4r64bb16cqjab9g6gomcohhcdij8oph6s",
@@ -361,6 +387,19 @@
     "fingerprint": "13fabebd37d2647f43e5b1c0afb50de8a76e77c45a7c8fbd1a33d0ad00b55592",
     "synced_at": "2026-06-18T00:12:06Z"
   },
+  "cjomqu7a2353c7327uiehjvjq4": {
+    "google_event_id": "cjomqu7a2353c7327uiehjvjq4",
+    "trello_card_id": "6a4f20b18e70a8184f3bba85",
+    "trello_card_url": "https://trello.com/c/SBVcNfa8",
+    "summary": "Ouro - Stella Soares - Nasc. 07/12/2021 (Responsável: Darwin Silva)",
+    "starts_at": "2026-07-10T20:00:00-03:00",
+    "description": "Nome: Darwin Silva\nModelo: Stella Soares\nData Nascimento: 07/12/2021\nEmail: darwins.silva.ds@gmail.com\nTelefone: 11983238356\nTipo: Ouro\nReferencias: \n\nOrigem: Google Forms",
+    "fingerprint": "c50d09235889edbb007c9f34c835b9ba33565b0c444ec5f3160e2d3e3433cd25",
+    "synced_at": "2026-07-09T10:35:41Z",
+    "email_skipped_at": "2026-07-09T10:35:41Z",
+    "email_skip_reason": "reused_existing_card",
+    "email_skipped_fingerprint": "c50d09235889edbb007c9f34c835b9ba33565b0c444ec5f3160e2d3e3433cd25"
+  },
   "clgm2dr468ojgb9o61ijib9k6krj2b9pc9hj0b9k64qjcpb3cgo6cdj2ck": {
     "google_event_id": "clgm2dr468ojgb9o61ijib9k6krj2b9pc9hj0b9k64qjcpb3cgo6cdj2ck",
     "trello_card_id": "6a3ee2f1ace20f71c0395aea",
@@ -372,7 +411,8 @@
     "synced_at": "2026-07-03T16:50:13Z",
     "email_skipped_at": "2026-07-03T16:50:13Z",
     "email_skip_reason": "reused_existing_card",
-    "email_skipped_fingerprint": "ff286c37aaa69bc5ee5b283a0b805d36823ae91364be29dee0c62d71b8c23547"
+    "email_skipped_fingerprint": "ff286c37aaa69bc5ee5b283a0b805d36823ae91364be29dee0c62d71b8c23547",
+    "archived_at": "2026-07-09T10:35:34Z"
   },
   "clj36pj370sjab9i75ij4b9k6dij8bb16ssm8b9pcdj30or3cpj64phjcg": {
     "google_event_id": "clj36pj370sjab9i75ij4b9k6dij8bb16ssm8b9pcdj30or3cpj64phjcg",
@@ -412,6 +452,19 @@
     "email_skipped_at": "2026-06-22T23:18:03Z",
     "email_skip_reason": "missing_client_email",
     "email_skipped_fingerprint": "52c508d855d7ad2776dc144b88a5d79f9a6083f09e202ffa81ab20d38c786db8"
+  },
+  "d6opvgumtjifn7phsas9bf9i8c": {
+    "google_event_id": "d6opvgumtjifn7phsas9bf9i8c",
+    "trello_card_id": "6a4f1c5be64197be2e8a6e30",
+    "trello_card_url": "https://trello.com/c/SdSoS7BV",
+    "summary": "Solicitação - Prata - Carolina",
+    "starts_at": "2026-07-09T12:00:00-03:00",
+    "description": "Nome: Carolina\nModelo: Bento\nIdade: 30 dias\nEmail: Carolinamelsan@gmail.com\nTelefone: 11 91767-9960\nTipo: Prata\nReferencias: Balanço madeira + lua branca + ursinho + coração azul\n\nEndereço: Avenida vila ema 4049 - Reserva Vila Ema\n\nOrigem: Google Forms",
+    "fingerprint": "52cd6301600c5051f16d905212df996dc6a9dd6b9694a3f0bff533fe83eb10ab",
+    "synced_at": "2026-07-09T10:35:38Z",
+    "email_skipped_at": "2026-07-09T10:35:38Z",
+    "email_skip_reason": "reused_existing_card",
+    "email_skipped_fingerprint": "52cd6301600c5051f16d905212df996dc6a9dd6b9694a3f0bff533fe83eb10ab"
   },
   "dl7d92ob8jvs9gndol4qejuq5o": {
     "google_event_id": "dl7d92ob8jvs9gndol4qejuq5o",
@@ -500,6 +553,19 @@
     "synced_at": "2026-06-19T19:31:07Z",
     "email_notified_at": "2026-06-19T00:12:09Z"
   },
+  "kubeuqmq9f6pter143k6kd0hhk": {
+    "google_event_id": "kubeuqmq9f6pter143k6kd0hhk",
+    "trello_card_id": "6a4f1c5f35ec990339b3048b",
+    "trello_card_url": "https://trello.com/c/HbjMRWbS",
+    "summary": "Solicitação - Prata - Gabriela Girotto",
+    "starts_at": "2026-07-10T19:00:00-03:00",
+    "description": "Nome: Gabriela Girotto\nModelo: Celina\nIdade: 18 dias\nEmail: g.girotto@outlook.com\nTelefone: (11) 963012009\nTipo: Prata\nReferencias: balanço, baby clean e família (Olhar referência de fotos de família no grupo de Ensaios)\n\nOrigem: Google Forms",
+    "fingerprint": "35204f0f5232d0f84cd3fcb46db46d6d1759a4f4198cfd0901ceb17e3101340a",
+    "synced_at": "2026-07-09T10:35:39Z",
+    "email_skipped_at": "2026-07-09T10:35:39Z",
+    "email_skip_reason": "reused_existing_card",
+    "email_skipped_fingerprint": "35204f0f5232d0f84cd3fcb46db46d6d1759a4f4198cfd0901ceb17e3101340a"
+  },
   "lq1fikqoqf13nct60bjt2qbohs": {
     "google_event_id": "lq1fikqoqf13nct60bjt2qbohs",
     "trello_card_id": "6a3f1e0b11d65bdb3de2bfe1",
@@ -535,5 +601,18 @@
     "email_skipped_at": "2026-07-02T10:15:52Z",
     "email_skip_reason": "reused_existing_card",
     "email_skipped_fingerprint": "6fe24e561a9c55c7c4839efb5bcc2078b2d9379ce5c0a331c68b2c0143eb40f9"
+  },
+  "t1jnshe6l8ca9p0800d9jbj65o": {
+    "google_event_id": "t1jnshe6l8ca9p0800d9jbj65o",
+    "trello_card_id": "6a4f1c67b8115b7fd50d63e1",
+    "trello_card_url": "https://trello.com/c/fWeyyxN0",
+    "summary": "Solicitação - Prata - Elaine Cristina Cavalcante",
+    "starts_at": "2026-07-11T10:00:00-03:00",
+    "description": "Nome: Elaine Cristina Cavalcante\nModelo: Arthur\nIdade: 17 dias\nEmail: nani_cristinac@hotmail.com\nTelefone: (11)96714-4675\nTipo: Prata\nReferencias: Clean e Atemporal, cores claras\n\nOrigem: Google Forms",
+    "fingerprint": "5c3893bfbceb81b757e6556b4acb759c38030135c72055e483b1bc12cc1560a7",
+    "synced_at": "2026-07-09T10:35:42Z",
+    "email_skipped_at": "2026-07-09T10:35:42Z",
+    "email_skip_reason": "reused_existing_card",
+    "email_skipped_fingerprint": "5c3893bfbceb81b757e6556b4acb759c38030135c72055e483b1bc12cc1560a7"
   }
 }
