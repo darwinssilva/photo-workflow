@@ -476,7 +476,7 @@ module PhotoWorkflow
     end
 
     def formatted_birth_date(value)
-      match = value.match(/\A(\d{4})\/(\d{1,2})\/(\d{1,2})\z/)
+      match = value.match(/\A(\d{4})[\/-](\d{1,2})[\/-](\d{1,2})\z/)
       return value unless match
 
       format("%02d/%02d/%04d", match[3], match[2], match[1])

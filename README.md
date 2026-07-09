@@ -258,7 +258,7 @@ Celular: (11) 99999-9999
 Quando a descricao possui `Nome:`, `Modelo:` e `Tipo:`, o titulo do card segue
 o formato `Tipo - Modelo - Nasc. Data (Responsavel: Nome)`. A data de nascimento e
 omitida quando nao estiver preenchida. Sem nome ou modelo, o titulo original do
-evento e mantido. Datas recebidas como `AAAA/MM/DD` sao exibidas como
+evento e mantido. Datas recebidas como `AAAA/MM/DD` ou `AAAA-MM-DD` sao exibidas como
 `DD/MM/AAAA`.
 
 `client_name` tenta extrair o nome nesta ordem: sufixo do titulo apos ` - `, linha `Nome:` da descricao e nome de participante da agenda.
