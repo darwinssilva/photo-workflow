@@ -257,6 +257,19 @@
     "email_skip_reason": "reused_existing_card",
     "email_skipped_fingerprint": "93193b4d708af635d51de5482927858d0bf88fa6c8c33024d5413fda78ecab5d"
   },
+  "8nr2e82fg1df0iqligbmu2lfn4": {
+    "google_event_id": "8nr2e82fg1df0iqligbmu2lfn4",
+    "trello_card_id": "6a5006facb15a42d364cd482",
+    "trello_card_url": "https://trello.com/c/aD4jsOHh",
+    "summary": "Ouro - Jade - Nasc. 26/06/2026 (Responsável: Bruna Ciríaco)",
+    "starts_at": "2026-07-18T15:00:00-03:00",
+    "description": "Nome: Bruna Ciríaco\nModelo: Jade\nData Nascimento: 26/06/2026\nEmail: brunna.ciriaco@gmail.com\nTelefone: 11 97849-0005\nTipo: Ouro\nReferencias: Ainda não decidiu\n\nOrigem: Google Forms",
+    "fingerprint": "b38ded19ccfec5f1ee705b230fae3c86bf59d5e677e78e026bcd96c1d8b9b7dd",
+    "synced_at": "2026-07-09T21:46:55Z",
+    "email_skipped_at": "2026-07-09T21:46:55Z",
+    "email_skip_reason": "reused_existing_card",
+    "email_skipped_fingerprint": "b38ded19ccfec5f1ee705b230fae3c86bf59d5e677e78e026bcd96c1d8b9b7dd"
+  },
   "9n5a6ag4dpth595k8lsbs8hpn8": {
     "google_event_id": "9n5a6ag4dpth595k8lsbs8hpn8",
     "trello_card_id": "6a3b1c50be50bd856237d00e",
@@ -398,7 +411,8 @@
     "synced_at": "2026-07-09T10:35:41Z",
     "email_skipped_at": "2026-07-09T10:35:41Z",
     "email_skip_reason": "reused_existing_card",
-    "email_skipped_fingerprint": "c50d09235889edbb007c9f34c835b9ba33565b0c444ec5f3160e2d3e3433cd25"
+    "email_skipped_fingerprint": "c50d09235889edbb007c9f34c835b9ba33565b0c444ec5f3160e2d3e3433cd25",
+    "archived_at": "2026-07-09T21:46:52Z"
   },
   "clgm2dr468ojgb9o61ijib9k6krj2b9pc9hj0b9k64qjcpb3cgo6cdj2ck": {
     "google_event_id": "clgm2dr468ojgb9o61ijib9k6krj2b9pc9hj0b9k64qjcpb3cgo6cdj2ck",
