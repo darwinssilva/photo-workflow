@@ -7,5 +7,14 @@
     "target_event_date": "2026-07-04",
     "status": "skipped_missing_phone",
     "recorded_at": "2026-07-03T17:22:58Z"
+  },
+  "lembre_ensaio:6kqm8c9kc8rjcbb36sojib9k74r3ib9pc8rj8b9pchim8c326gp3ce3664:2026-07-11": {
+    "google_event_id": "6kqm8c9kc8rjcbb36sojib9k74r3ib9pc8rj8b9pchim8c326gp3ce3664",
+    "summary": "Newborn Thiago (Anne)",
+    "starts_at": "2026-07-11T15:00:00-03:00",
+    "reminder_date": "2026-07-10",
+    "target_event_date": "2026-07-11",
+    "status": "skipped_missing_phone",
+    "recorded_at": "2026-07-10T12:53:27Z"
   }
 }
