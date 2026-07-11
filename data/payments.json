@@ -1,0 +1,414 @@
+{
+  "payments": [
+    {
+      "date": "2026-07-02",
+      "client": "Bruna Santana",
+      "amount_cents": 50000,
+      "method": "pix",
+      "note": "",
+      "id": "697ab830-2c56-48bb-958c-33171bdf49cf",
+      "created_at": "2026-08-01T18:06:42Z",
+      "updated_at": "2026-08-01T18:07:01Z"
+    },
+    {
+      "date": "2026-07-02",
+      "client": "Daniela Borelli",
+      "amount_cents": 24000,
+      "method": "pix",
+      "note": "Foto Extra",
+      "id": "3e79b0fb-df32-4ff7-a348-ac17bb537584",
+      "created_at": "2026-08-01T18:08:02Z",
+      "updated_at": "2026-08-01T18:08:02Z"
+    },
+    {
+      "date": "2026-07-02",
+      "client": "Cristiano Vicente",
+      "amount_cents": 55000,
+      "method": "pix",
+      "note": "",
+      "id": "220bcbf3-9305-4d98-9530-fae317201267",
+      "created_at": "2026-08-01T18:08:34Z",
+      "updated_at": "2026-08-01T18:08:34Z"
+    },
+    {
+      "date": "2026-07-03",
+      "client": "Ana Paul",
+      "amount_cents": 40000,
+      "method": "pix",
+      "note": "",
+      "id": "eda6f72c-e16a-4b4b-86e7-adcfa280246f",
+      "created_at": "2026-08-01T18:08:58Z",
+      "updated_at": "2026-08-01T18:08:58Z"
+    },
+    {
+      "date": "2026-07-04",
+      "client": "Bebe Edgar",
+      "amount_cents": 35000,
+      "method": "pix",
+      "note": "",
+      "id": "042a788a-cd4f-4d4c-b906-0e2e45cacd93",
+      "created_at": "2026-08-01T18:09:40Z",
+      "updated_at": "2026-08-01T18:09:40Z"
+    },
+    {
+      "date": "2026-07-04",
+      "client": "Eduardo Gimenes",
+      "amount_cents": 130000,
+      "method": "pix",
+      "note": "Acompanhamento mensal",
+      "id": "d4bc9ab7-7bbc-4794-9f14-242740a80a6f",
+      "created_at": "2026-08-01T18:10:20Z",
+      "updated_at": "2026-08-01T18:10:20Z"
+    },
+    {
+      "date": "2026-07-04",
+      "client": "Valeria Cristina",
+      "amount_cents": 20000,
+      "method": "pix",
+      "note": "Fotos Extra",
+      "id": "91157cdd-f430-4233-a07b-6107150e0b15",
+      "created_at": "2026-08-01T18:10:51Z",
+      "updated_at": "2026-08-01T18:10:51Z"
+    },
+    {
+      "date": "2026-07-06",
+      "client": "Bebe Eloa",
+      "amount_cents": 40000,
+      "method": "cartao",
+      "note": "",
+      "id": "79a85c9a-eb4d-47cb-8e71-5e581591866f",
+      "created_at": "2026-08-01T18:11:38Z",
+      "updated_at": "2026-08-01T18:11:38Z"
+    },
+    {
+      "date": "2026-07-06",
+      "client": "Patricia Braga",
+      "amount_cents": 6000,
+      "method": "pix",
+      "note": "Foto extra",
+      "id": "74fdc582-1463-4200-8ad7-3032c84b1a79",
+      "created_at": "2026-08-01T18:12:10Z",
+      "updated_at": "2026-08-01T18:12:10Z"
+    },
+    {
+      "date": "2026-07-06",
+      "client": "Jennypher",
+      "amount_cents": 6000,
+      "method": "pix",
+      "note": "Foto extra",
+      "id": "17046759-3e99-46d8-acb8-d47010c2b58d",
+      "created_at": "2026-08-01T18:12:48Z",
+      "updated_at": "2026-08-01T18:12:48Z"
+    },
+    {
+      "date": "2026-07-06",
+      "client": "Bebe Murilo",
+      "amount_cents": 10000,
+      "method": "cartao",
+      "note": "Foto extra",
+      "id": "323e4018-96fc-495e-8dab-9c596eb6a334",
+      "created_at": "2026-08-01T18:13:26Z",
+      "updated_at": "2026-08-01T18:13:26Z"
+    },
+    {
+      "date": "2026-07-08",
+      "client": "Julian Gomes",
+      "amount_cents": 14000,
+      "method": "pix",
+      "note": "Foto extra",
+      "id": "7dd740b3-d054-48fe-ac34-25abb0e52b3c",
+      "created_at": "2026-08-01T18:14:03Z",
+      "updated_at": "2026-08-01T18:14:03Z"
+    },
+    {
+      "date": "2026-06-08",
+      "client": "Ana Luiza",
+      "amount_cents": 2000,
+      "method": "pix",
+      "note": "Foto extra",
+      "id": "0f1d744e-ff0d-4faf-af14-dcae35b00323",
+      "created_at": "2026-08-01T18:14:32Z",
+      "updated_at": "2026-08-01T18:14:32Z"
+    },
+    {
+      "date": "2026-07-08",
+      "client": "Stefanie",
+      "amount_cents": 2000,
+      "method": "pix",
+      "note": "Foto extra",
+      "id": "18b81cd6-a2e5-4457-bc4b-9c3dd611ec70",
+      "created_at": "2026-08-01T18:14:59Z",
+      "updated_at": "2026-08-01T18:14:59Z"
+    },
+    {
+      "date": "2026-07-09",
+      "client": "Bebe Clara",
+      "amount_cents": 6000,
+      "method": "pix",
+      "note": "Foto extra",
+      "id": "f10c73a9-7331-46dc-8563-41c3c81e7fd0",
+      "created_at": "2026-08-01T18:15:25Z",
+      "updated_at": "2026-08-01T18:15:25Z"
+    },
+    {
+      "date": "2026-07-08",
+      "client": "Ana Gabriela",
+      "amount_cents": 40000,
+      "method": "pix",
+      "note": "",
+      "id": "e6f67536-1eb9-4333-bc46-2527659160d4",
+      "created_at": "2026-08-01T18:15:46Z",
+      "updated_at": "2026-08-01T18:15:46Z"
+    },
+    {
+      "date": "2026-07-11",
+      "client": "Bebe Arthur",
+      "amount_cents": 40000,
+      "method": "cartao",
+      "note": "",
+      "id": "119844a8-295f-4250-812f-ee2d19a7cd6c",
+      "created_at": "2026-08-01T18:16:22Z",
+      "updated_at": "2026-08-01T18:16:22Z"
+    },
+    {
+      "date": "2026-07-11",
+      "client": "Bebe Kayron",
+      "amount_cents": 20000,
+      "method": "pix",
+      "note": "Foto extra",
+      "id": "2c6f82dd-5dab-44ee-b316-266ef55745e6",
+      "created_at": "2026-08-01T18:17:09Z",
+      "updated_at": "2026-08-01T18:17:09Z"
+    },
+    {
+      "date": "2026-07-11",
+      "client": "Bebe Thiago",
+      "amount_cents": 50000,
+      "method": "cartao",
+      "note": "",
+      "id": "5d6011d3-1cdd-4fb9-a9a3-f36deb0bd016",
+      "created_at": "2026-08-01T18:17:32Z",
+      "updated_at": "2026-08-01T18:17:32Z"
+    },
+    {
+      "date": "2026-07-13",
+      "client": "Joselia",
+      "amount_cents": 10000,
+      "method": "pix",
+      "note": "Foto extra",
+      "id": "10b8aef7-b54d-402c-bc07-98529f87ed5d",
+      "created_at": "2026-08-01T18:17:54Z",
+      "updated_at": "2026-08-01T18:17:54Z"
+    },
+    {
+      "date": "2026-07-14",
+      "client": "Bebe Henrique",
+      "amount_cents": 14000,
+      "method": "pix",
+      "note": "Foto extra",
+      "id": "bc48eb48-0435-47d7-83ea-63c0e4534897",
+      "created_at": "2026-08-01T18:18:19Z",
+      "updated_at": "2026-08-01T18:18:19Z"
+    },
+    {
+      "date": "2026-07-14",
+      "client": "Larisa Ferro",
+      "amount_cents": 40000,
+      "method": "pix",
+      "note": "",
+      "id": "b198e00b-8041-427a-ac48-a8e3dfbb4888",
+      "created_at": "2026-08-01T18:18:40Z",
+      "updated_at": "2026-08-01T18:18:40Z"
+    },
+    {
+      "date": "2026-07-15",
+      "client": "Bebe Laura",
+      "amount_cents": 40000,
+      "method": "pix",
+      "note": "",
+      "id": "142736f1-c871-464a-95fd-b5a9fb21852c",
+      "created_at": "2026-08-01T18:19:00Z",
+      "updated_at": "2026-08-01T18:19:00Z"
+    },
+    {
+      "date": "2026-07-15",
+      "client": "Bebe Jose Murilo",
+      "amount_cents": 16900,
+      "method": "pix",
+      "note": "Foto extra",
+      "id": "eef8325d-fd8d-4300-bef2-30be28745ce4",
+      "created_at": "2026-08-01T18:19:32Z",
+      "updated_at": "2026-08-01T18:19:32Z"
+    },
+    {
+      "date": "2026-07-18",
+      "client": "Marina",
+      "amount_cents": 50000,
+      "method": "pix",
+      "note": "",
+      "id": "aa1cea03-e9eb-4fd2-a427-d301a34f2445",
+      "created_at": "2026-08-01T18:19:55Z",
+      "updated_at": "2026-08-01T18:19:55Z"
+    },
+    {
+      "date": "2026-07-18",
+      "client": "Jade",
+      "amount_cents": 50000,
+      "method": "pix",
+      "note": "",
+      "id": "3a43b8f1-39d1-474b-a248-1415552c2b77",
+      "created_at": "2026-08-01T18:20:37Z",
+      "updated_at": "2026-08-01T18:20:37Z"
+    },
+    {
+      "date": "2026-07-20",
+      "client": "Bebe Luisa",
+      "amount_cents": 30000,
+      "method": "cartao",
+      "note": "",
+      "id": "83ebca51-da96-4423-b249-841a2707f20c",
+      "created_at": "2026-08-01T18:21:08Z",
+      "updated_at": "2026-08-01T18:21:08Z"
+    },
+    {
+      "date": "2026-07-21",
+      "client": "Bebe Marina",
+      "amount_cents": 50000,
+      "method": "pix",
+      "note": "",
+      "id": "d3d4409e-b866-4a2f-9ee1-89839c103a2d",
+      "created_at": "2026-08-01T18:21:28Z",
+      "updated_at": "2026-08-01T18:21:28Z"
+    },
+    {
+      "date": "2026-07-23",
+      "client": "Bebe Clara",
+      "amount_cents": 30000,
+      "method": "pix",
+      "note": "Foto extra",
+      "id": "ba93e46c-5eba-4b87-82d3-e03785c29b3e",
+      "created_at": "2026-08-01T18:21:52Z",
+      "updated_at": "2026-08-01T18:21:52Z"
+    },
+    {
+      "date": "2026-07-24",
+      "client": "Bebe Celina",
+      "amount_cents": 40000,
+      "method": "pix",
+      "note": "",
+      "id": "33eba3a9-280a-4405-9acc-c8fd83b3ef4b",
+      "created_at": "2026-08-01T18:22:10Z",
+      "updated_at": "2026-08-01T18:22:10Z"
+    },
+    {
+      "date": "2026-07-23",
+      "client": "Bebe Heitor",
+      "amount_cents": 10000,
+      "method": "pix",
+      "note": "",
+      "id": "03b47274-8e40-44c1-bf4c-20e01b1867e6",
+      "created_at": "2026-08-01T18:22:32Z",
+      "updated_at": "2026-08-01T18:22:32Z"
+    },
+    {
+      "date": "2026-07-25",
+      "client": "Jayne",
+      "amount_cents": 30000,
+      "method": "pix",
+      "note": "",
+      "id": "bbbf1c56-9bf5-4269-a932-8abe96d0e7b8",
+      "created_at": "2026-08-01T18:22:50Z",
+      "updated_at": "2026-08-01T18:22:50Z"
+    },
+    {
+      "date": "2026-07-25",
+      "client": "Bento",
+      "amount_cents": 10000,
+      "method": "pix",
+      "note": "Foto extra",
+      "id": "1c2b15ac-a727-40f1-b4b2-dae729ae0a48",
+      "created_at": "2026-08-01T18:23:09Z",
+      "updated_at": "2026-08-01T18:23:09Z"
+    },
+    {
+      "date": "2026-07-27",
+      "client": "Bebe Isaac",
+      "amount_cents": 60000,
+      "method": "cartao",
+      "note": "",
+      "id": "c1e2ecc4-5a89-4d88-bd56-439f10fc6a5f",
+      "created_at": "2026-08-01T18:23:44Z",
+      "updated_at": "2026-08-01T18:23:44Z"
+    },
+    {
+      "date": "2026-07-27",
+      "client": "Bebe Zeinab",
+      "amount_cents": 15000,
+      "method": "pix",
+      "note": "Foto extra",
+      "id": "050ee8be-318b-46b8-903d-f9dfdba9d9ef",
+      "created_at": "2026-08-01T18:24:04Z",
+      "updated_at": "2026-08-01T18:24:04Z"
+    },
+    {
+      "date": "2026-07-29",
+      "client": "Matteo",
+      "amount_cents": 50000,
+      "method": "cartao",
+      "note": "",
+      "id": "95f87682-2380-4ce4-a260-f315114bdca5",
+      "created_at": "2026-08-01T18:24:28Z",
+      "updated_at": "2026-08-01T18:24:28Z"
+    },
+    {
+      "date": "2026-07-30",
+      "client": "Bebe Marina",
+      "amount_cents": 14000,
+      "method": "pix",
+      "note": "Foto extra",
+      "id": "471e19f5-fb8a-4a9e-a53e-cef71169e23f",
+      "created_at": "2026-08-01T18:25:12Z",
+      "updated_at": "2026-08-01T18:25:12Z"
+    },
+    {
+      "date": "2026-07-30",
+      "client": "Bernardo",
+      "amount_cents": 30000,
+      "method": "pix",
+      "note": "",
+      "id": "f8d74946-ded7-4862-81e1-46347066ee34",
+      "created_at": "2026-08-01T18:25:38Z",
+      "updated_at": "2026-08-01T18:25:38Z"
+    },
+    {
+      "date": "2026-07-31",
+      "client": "Henry",
+      "amount_cents": 50000,
+      "method": "pix",
+      "note": "",
+      "id": "864dba44-f09b-4c52-b385-cc2abb94e1d5",
+      "created_at": "2026-08-01T18:25:55Z",
+      "updated_at": "2026-08-01T18:25:55Z"
+    },
+    {
+      "date": "2026-07-31",
+      "client": "Lucas",
+      "amount_cents": 8000,
+      "method": "pix",
+      "note": "Extra",
+      "id": "29b24802-af5d-4a02-a824-439ab1941c34",
+      "created_at": "2026-08-01T18:26:12Z",
+      "updated_at": "2026-08-01T18:26:12Z"
+    },
+    {
+      "date": "2026-08-01",
+      "client": "Esther",
+      "amount_cents": 20000,
+      "method": "pix",
+      "note": "",
+      "id": "10258691-6e5b-43df-9b57-3bf5bf3d99ad",
+      "created_at": "2026-08-01T18:26:27Z",
+      "updated_at": "2026-08-01T18:26:27Z"
+    }
+  ]
+}

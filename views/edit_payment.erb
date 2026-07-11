@@ -1,0 +1,38 @@
+<header class="page-header">
+  <div>
+    <p class="eyebrow">Photo Workflow</p>
+    <h1>Editar pagamento</h1>
+  </div>
+  <a class="back-link" href="/payments?month=<%= @month %>">Voltar</a>
+</header>
+
+<section class="panel edit-panel">
+  <form class="payment-form" action="/payments/<%= @payment.fetch("id") %>" method="post">
+    <input type="hidden" name="month" value="<%= @month %>">
+    <label>
+      Data
+      <input name="date" type="date" value="<%= @payment.fetch("date") %>" required>
+    </label>
+    <label>
+      Cliente
+      <input name="client" type="text" value="<%= @payment.fetch("client") %>" required>
+    </label>
+    <label>
+      Valor
+      <input name="amount" type="text" inputmode="decimal" value="<%= payment_amount(@payment) %>" required>
+    </label>
+    <label>
+      Forma
+      <select name="method" required>
+        <% @methods.each do |method| %>
+          <option value="<%= method %>" <%= "selected" if method == @payment.fetch("method") %>><%= method.capitalize %></option>
+        <% end %>
+      </select>
+    </label>
+    <label>
+      Observacao
+      <textarea name="note" rows="3"><%= @payment.fetch("note", "") %></textarea>
+    </label>
+    <button class="primary" type="submit">Salvar</button>
+  </form>
+</section>

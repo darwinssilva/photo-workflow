@@ -161,6 +161,29 @@ ruby bin/sync_calendar_to_trello
 
 O script ja carrega o arquivo `.env` automaticamente. Se voce preferir exportar no shell, mantenha valores com espacos entre aspas.
 
+## Pagamentos manuais
+
+O projeto tambem tem um painel local simples para registrar pagamentos recebidos manualmente e acompanhar o faturamento mensal.
+
+```bash
+ruby bin/payments_web
+```
+
+Depois abra:
+
+```text
+http://localhost:4568/payments
+```
+
+Os lancamentos ficam em `data/payments.json`. Cada pagamento registra data, cliente, valor, forma de pagamento e observacao opcional. O painel permite filtrar por mes, ver total recebido, quantidade de pagamentos, media, totais por forma de pagamento, editar e excluir lancamentos.
+
+Se precisar mudar a porta ou o arquivo de dados:
+
+```text
+PAYMENTS_WEB_PORT=4569
+PAYMENTS_STATE_PATH=data/payments.local.json
+```
+
 ## Padrao recomendado no Google Agenda
 
 Titulo:

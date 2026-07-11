@@ -1,0 +1,123 @@
+<header class="page-header">
+  <div>
+    <p class="eyebrow">Photo Workflow</p>
+    <h1>Pagamentos</h1>
+  </div>
+  <form class="month-filter" action="/payments" method="get">
+    <label for="month">Mes</label>
+    <input id="month" name="month" type="month" value="<%= @month %>">
+    <button type="submit">Filtrar</button>
+  </form>
+</header>
+
+<% if @error %>
+  <p class="alert"><%= @error %></p>
+<% end %>
+
+<section class="summary" aria-label="Resumo de <%= month_label(@month) %>">
+  <article>
+    <span>Total recebido</span>
+    <strong><%= money(@totals.fetch(:total)) %></strong>
+  </article>
+  <article>
+    <span>Pagamentos</span>
+    <strong><%= @totals.fetch(:count) %></strong>
+  </article>
+  <article>
+    <span>Media</span>
+    <strong><%= money(@totals.fetch(:average)) %></strong>
+  </article>
+</section>
+
+<section class="content-grid">
+  <form class="panel payment-form" action="/payments" method="post">
+    <input type="hidden" name="month" value="<%= @month %>">
+    <h2>Novo pagamento</h2>
+    <label>
+      Data
+      <input name="date" type="date" value="<%= Date.today.iso8601 %>" required>
+    </label>
+    <label>
+      Cliente
+      <input name="client" type="text" placeholder="Nome do cliente" required>
+    </label>
+    <label>
+      Valor
+      <input name="amount" type="text" inputmode="decimal" placeholder="450,00" required>
+    </label>
+    <label>
+      Forma
+      <select name="method" required>
+        <% @methods.each do |method| %>
+          <option value="<%= method %>"><%= method.capitalize %></option>
+        <% end %>
+      </select>
+    </label>
+    <label>
+      Observacao
+      <textarea name="note" rows="3" placeholder="Entrada, restante, pacote..."></textarea>
+    </label>
+    <button class="primary" type="submit">Adicionar</button>
+  </form>
+
+  <section class="panel">
+    <div class="section-heading">
+      <h2><%= month_label(@month) %></h2>
+      <span><%= @payments.size %> lancamentos</span>
+    </div>
+
+    <% if @payments.empty? %>
+      <p class="empty">Nenhum pagamento registrado neste mes.</p>
+    <% else %>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Data</th>
+              <th>Cliente</th>
+              <th>Forma</th>
+              <th>Valor</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @payments.each do |payment| %>
+              <tr>
+                <td><%= Date.iso8601(payment.fetch("date")).strftime("%d/%m/%Y") %></td>
+                <td>
+                  <strong><%= payment.fetch("client") %></strong>
+                  <% unless payment.fetch("note", "").empty? %>
+                    <small><%= payment.fetch("note") %></small>
+                  <% end %>
+                </td>
+                <td><%= payment.fetch("method").capitalize %></td>
+                <td><%= money(payment) %></td>
+                <td class="actions">
+                  <a href="/payments/<%= payment.fetch("id") %>/edit?month=<%= @month %>">Editar</a>
+                  <form action="/payments/<%= payment.fetch("id") %>/delete" method="post">
+                    <input type="hidden" name="month" value="<%= @month %>">
+                    <button type="submit">Excluir</button>
+                  </form>
+                </td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    <% end %>
+  </section>
+</section>
+
+<% unless @totals.fetch(:by_method).empty? %>
+  <section class="panel methods">
+    <h2>Por forma de pagamento</h2>
+    <div class="method-list">
+      <% @totals.fetch(:by_method).each do |method, total| %>
+        <div>
+          <span><%= method.capitalize %></span>
+          <strong><%= money(total) %></strong>
+        </div>
+      <% end %>
+    </div>
+  </section>
+<% end %>

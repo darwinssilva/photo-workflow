@@ -1,0 +1,47 @@
+#!/usr/bin/env ruby
+
+require "json"
+
+path = ARGV.fetch(0)
+text = File.read(path)
+
+unless text.include?("<<<<<<<")
+  warn "No conflict markers found in #{path}"
+  exit 1
+end
+
+sections = text.split(/^<<<<<<< .*$\n|^=======\n|^>>>>>>> .*$\n/)
+
+unless sections.size >= 3
+  warn "Could not parse conflict markers in #{path}"
+  exit 1
+end
+
+base_prefix = sections.first
+left = sections[1]
+right = sections[2]
+suffix = sections[3..]&.join || ""
+
+def parse_json_fragment(prefix, fragment, suffix)
+  JSON.parse("#{prefix}#{fragment}#{suffix}")
+rescue JSON::ParserError => error
+  warn "Could not parse conflicted JSON fragment: #{error.message}"
+  exit 1
+end
+
+left_json = parse_json_fragment(base_prefix, left, suffix)
+right_json = parse_json_fragment(base_prefix, right, suffix)
+
+unless left_json.is_a?(Hash) && right_json.is_a?(Hash)
+  warn "Expected both JSON fragments to be objects"
+  exit 1
+end
+
+merged = left_json.merge(right_json) do |_key, remote_value, local_value|
+  remote_time = remote_value.is_a?(Hash) ? remote_value["synced_at"].to_s : ""
+  local_time = local_value.is_a?(Hash) ? local_value["synced_at"].to_s : ""
+
+  local_time >= remote_time ? local_value : remote_value
+end
+
+File.write(path, JSON.pretty_generate(merged.sort.to_h) + "\n")

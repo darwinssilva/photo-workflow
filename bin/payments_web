@@ -1,0 +1,97 @@
+#!/usr/bin/env ruby
+
+$LOAD_PATH.unshift(File.expand_path("../lib", __dir__))
+
+require "bundler/setup"
+require "sinatra/base"
+
+require "photo_workflow/payment_store"
+require "photo_workflow/settings"
+
+class PaymentsWeb < Sinatra::Base
+  set :root, File.expand_path("..", __dir__)
+  set :bind, PhotoWorkflow::Settings.value("PAYMENTS_WEB_BIND", "0.0.0.0")
+  set :port, PhotoWorkflow::Settings.integer("PAYMENTS_WEB_PORT", 4568)
+
+  helpers do
+    def money(value)
+      cents = value.is_a?(Hash) ? value.fetch("amount_cents") : (value * 100).round
+      reais = cents.to_i / 100
+      centavos = cents.to_i.abs % 100
+      "R$ #{reais.to_s.reverse.gsub(/(\d{3})(?=\d)/, '\\1.').reverse},#{centavos.to_s.rjust(2, "0")}"
+    end
+
+    def payment_amount(payment)
+      cents = payment.fetch("amount_cents").to_i
+      format("%<reais>d,%<centavos>02d", reais: cents / 100, centavos: cents.abs % 100)
+    end
+
+    def month_label(month)
+      Date.strptime("#{month}-01", "%Y-%m-%d").strftime("%m/%Y")
+    rescue ArgumentError
+      month
+    end
+  end
+
+  def store
+    @store ||= PhotoWorkflow::PaymentStore.new
+  end
+
+  get "/" do
+    redirect "/payments"
+  end
+
+  get "/payments" do
+    @month = params.fetch("month", Date.today.strftime("%Y-%m"))
+    @payments = store.month_payments(@month)
+    @totals = store.totals(@payments)
+    @methods = PhotoWorkflow::PaymentStore::METHODS
+    erb :payments
+  end
+
+  post "/payments" do
+    store.create(payment_params)
+    redirect "/payments?month=#{params.fetch("month", Date.today.strftime("%Y-%m"))}"
+  rescue ArgumentError => error
+    flash_error(error.message)
+  end
+
+  get "/payments/:id/edit" do
+    @payment = store.find(params.fetch("id"))
+    halt 404, "Pagamento nao encontrado" unless @payment
+
+    @month = params.fetch("month", @payment.fetch("date")[0, 7])
+    @methods = PhotoWorkflow::PaymentStore::METHODS
+    erb :edit_payment
+  end
+
+  post "/payments/:id" do
+    payment = store.update(params.fetch("id"), payment_params)
+    halt 404, "Pagamento nao encontrado" unless payment
+
+    redirect "/payments?month=#{params.fetch("month", payment.fetch("date")[0, 7])}"
+  rescue ArgumentError => error
+    flash_error(error.message)
+  end
+
+  post "/payments/:id/delete" do
+    store.delete(params.fetch("id"))
+    redirect "/payments?month=#{params.fetch("month", Date.today.strftime("%Y-%m"))}"
+  end
+
+  def payment_params
+    params.slice("date", "client", "amount", "method", "note")
+  end
+
+  def flash_error(message)
+    status 422
+    @error = message
+    @month = params.fetch("month", Date.today.strftime("%Y-%m"))
+    @payments = store.month_payments(@month)
+    @totals = store.totals(@payments)
+    @methods = PhotoWorkflow::PaymentStore::METHODS
+    erb :payments
+  end
+
+  run! if app_file == $PROGRAM_NAME
+end

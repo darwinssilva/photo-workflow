@@ -8,12 +8,21 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: trello-reminder-state
+  cancel-in-progress: false
+
 jobs:
   reminders:
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Update branch before reminders
+        run: git pull --ff-only origin main
 
       - uses: ruby/setup-ruby@v1
         with:
@@ -40,5 +49,9 @@ jobs:
             exit 0
           fi
           git commit -m "Update Trello reminder state"
-          git pull --rebase origin main
+          if ! git pull --rebase origin main; then
+            ruby script/resolve_json_conflict data/trello_reminders.json
+            git add data/trello_reminders.json
+            GIT_EDITOR=true git rebase --continue
+          fi
           git push origin HEAD:main

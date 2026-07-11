@@ -8,12 +8,21 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: google-calendar-watch-state
+  cancel-in-progress: false
+
 jobs:
   renew-watch:
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Update branch before renewal
+        run: git pull --ff-only origin main
 
       - uses: ruby/setup-ruby@v1
         with:
@@ -41,5 +50,9 @@ jobs:
             exit 0
           fi
           git commit -m "Update Google Calendar webhook state"
-          git pull --rebase origin main
+          if ! git pull --rebase origin main; then
+            ruby script/resolve_json_conflict data/google_calendar_webhook_state.json
+            git add data/google_calendar_webhook_state.json
+            GIT_EDITOR=true git rebase --continue
+          fi
           git push origin HEAD:main
