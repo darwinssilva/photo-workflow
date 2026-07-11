@@ -168,7 +168,8 @@
     "synced_at": "2026-07-03T16:50:13Z",
     "email_skipped_at": "2026-07-03T16:50:13Z",
     "email_skip_reason": "missing_client_email",
-    "email_skipped_fingerprint": "fba6ba9dc42e61da23a5c3199204923251e61ee1205c4ef25869dac088d68275"
+    "email_skipped_fingerprint": "fba6ba9dc42e61da23a5c3199204923251e61ee1205c4ef25869dac088d68275",
+    "archived_at": "2026-07-11T20:35:19Z"
   },
   "6lgjic1g6ks6ab9jcgo62b9k6cs38b9pcop32b9kcdgm6pho65hjicb560": {
     "google_event_id": "6lgjic1g6ks6ab9jcgo62b9k6cs38b9pcop32b9kcdgm6pho65hjicb560",
@@ -257,6 +258,16 @@
     "email_skip_reason": "reused_existing_card",
     "email_skipped_fingerprint": "93193b4d708af635d51de5482927858d0bf88fa6c8c33024d5413fda78ecab5d"
   },
+  "8kthiojora1d06n3e7pn094pnk": {
+    "google_event_id": "8kthiojora1d06n3e7pn094pnk",
+    "trello_card_id": "6a52a919c47f51539be47249",
+    "trello_card_url": "https://trello.com/c/Y5cvtj5i",
+    "summary": "Ouro - Jade - Nasc. 26/06/2026 (Responsável: Bruna Ciríaco)",
+    "starts_at": "2026-07-18T15:00:00-03:00",
+    "description": "Nome: Bruna Ciríaco\nModelo: Jade\nData Nascimento: 26/06/2026\nEmail: brunna.ciriaco@gmail.com\nTelefone: 11 97849-0005\nTipo: Ouro\nReferencias: olhar no grupo de Ensaios Agendados\n\nOrigem: Google Forms",
+    "fingerprint": "8c896c4f6f05c5d6b74f522f065207165e347be663fbdd29f9a217385e401f72",
+    "synced_at": "2026-07-11T20:35:38Z"
+  },
   "8nr2e82fg1df0iqligbmu2lfn4": {
     "google_event_id": "8nr2e82fg1df0iqligbmu2lfn4",
     "trello_card_id": "6a5006facb15a42d364cd482",
@@ -268,7 +279,8 @@
     "synced_at": "2026-07-09T21:46:55Z",
     "email_skipped_at": "2026-07-09T21:46:55Z",
     "email_skip_reason": "reused_existing_card",
-    "email_skipped_fingerprint": "b38ded19ccfec5f1ee705b230fae3c86bf59d5e677e78e026bcd96c1d8b9b7dd"
+    "email_skipped_fingerprint": "b38ded19ccfec5f1ee705b230fae3c86bf59d5e677e78e026bcd96c1d8b9b7dd",
+    "archived_at": "2026-07-11T20:35:20Z"
   },
   "9n5a6ag4dpth595k8lsbs8hpn8": {
     "google_event_id": "9n5a6ag4dpth595k8lsbs8hpn8",
@@ -520,6 +532,16 @@
     "email_skipped_fingerprint": "216ff98b48e98cb800c36c6b05f0ebd7fee769e13dfdeeb1cecce56dd0806b4c",
     "archived_at": "2026-06-26T10:24:53Z"
   },
+  "ftqiu1evvn59lmoh61nf5mm4q0": {
+    "google_event_id": "ftqiu1evvn59lmoh61nf5mm4q0",
+    "trello_card_id": "6a52a9141dda9bf017407b57",
+    "trello_card_url": "https://trello.com/c/lX71QeEI",
+    "summary": "Prata - Laura - Nasc. 12/06/2026 (Responsável: geisa paula)",
+    "starts_at": "2026-07-15T16:00:00-03:00",
+    "description": "Nome: geisa paula\nModelo: Laura\nData Nascimento: 12/06/2026\nEmail: drageusa.paula89@gmail.com\nTelefone: 11957046169\nTipo: Prata\nReferencias: \n\nOrigem: Google Forms",
+    "fingerprint": "0552b7ec4460cd2d9b807fb923971b94000c5424b0744b886630968020ef3dbf",
+    "synced_at": "2026-07-11T20:35:34Z"
+  },
   "h4v2absrcoc38aqb3ot3fcp3hg": {
     "google_event_id": "h4v2absrcoc38aqb3ot3fcp3hg",
     "trello_card_id": "6a47e50133d35c074dfb696e",
@@ -580,6 +602,16 @@
     "email_skip_reason": "reused_existing_card",
     "email_skipped_fingerprint": "35204f0f5232d0f84cd3fcb46db46d6d1759a4f4198cfd0901ceb17e3101340a"
   },
+  "ll926ka8k4efgamqtgmgcop1ak": {
+    "google_event_id": "ll926ka8k4efgamqtgmgcop1ak",
+    "trello_card_id": "6a52a9104e94b8617c21927c",
+    "trello_card_url": "https://trello.com/c/iliUNgPk",
+    "summary": "Prata - Helena - Nasc. 01/07/2026 (Responsável: Larissa ferro da Silva)",
+    "starts_at": "2026-07-14T15:30:00-03:00",
+    "description": "Nome: Larissa ferro da Silva\nModelo: Helena\nData Nascimento: 01/07/2026\nEmail: Larilazaro18@gmail.com\nTelefone: 11913188740\nTipo: Bronze\nReferencias: \n\nOrigem: Google Forms",
+    "fingerprint": "db7cb0f35c592d29b3b7950019393856bf94b3e520c156114572ce2f186f1f00",
+    "synced_at": "2026-07-11T20:35:29Z"
+  },
   "lq1fikqoqf13nct60bjt2qbohs": {
     "google_event_id": "lq1fikqoqf13nct60bjt2qbohs",
     "trello_card_id": "6a3f1e0b11d65bdb3de2bfe1",
@@ -615,6 +647,16 @@
     "email_skipped_at": "2026-07-02T10:15:52Z",
     "email_skip_reason": "reused_existing_card",
     "email_skipped_fingerprint": "6fe24e561a9c55c7c4839efb5bcc2078b2d9379ce5c0a331c68b2c0143eb40f9"
+  },
+  "sefr2aeifekrdni75q1ilm1ja8": {
+    "google_event_id": "sefr2aeifekrdni75q1ilm1ja8",
+    "trello_card_id": "6a52a90ab891bd8bee69562d",
+    "trello_card_url": "https://trello.com/c/7vRe8NnH",
+    "summary": "Ouro - Thiago - Nasc. 25/05/2026 (Responsável: Anne)",
+    "starts_at": "2026-07-11T15:00:00-03:00",
+    "description": "Nome: Anne\nModelo: Thiago\nData Nascimento: 25/05/2026\nEmail: annematiazi@outlook.com\nTelefone: 11984462023\nTipo: Ouro\nReferencias: Futebol, atemporal, balanço com ursinho\nVai trazer roupinha do são Paulo\n\nOrigem: Google Forms",
+    "fingerprint": "3ea85d8e40a33e57faf4bc22fb3ae8490647246d5473bc289d0f1f8dff9f07bd",
+    "synced_at": "2026-07-11T20:35:24Z"
   },
   "t1jnshe6l8ca9p0800d9jbj65o": {
     "google_event_id": "t1jnshe6l8ca9p0800d9jbj65o",
