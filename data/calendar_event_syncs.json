@@ -645,6 +645,19 @@
     "email_skip_reason": "reused_existing_card",
     "email_skipped_fingerprint": "6fe24e561a9c55c7c4839efb5bcc2078b2d9379ce5c0a331c68b2c0143eb40f9"
   },
+  "r335umiqev8rrqsf6qg89umoe4": {
+    "google_event_id": "r335umiqev8rrqsf6qg89umoe4",
+    "trello_card_id": "6a5670aea7e31fd1d20ce508",
+    "trello_card_url": "https://trello.com/c/McrOnkRd",
+    "summary": "Ouro - Benício - Nasc. 08/08/2026 (Responsável: Roberta)",
+    "starts_at": "2026-08-18T12:00:00-03:00",
+    "description": "Nome: Roberta\nModelo: Benício\nData Nascimento: 08/08/2026\nEmail: rocarvalho.roberta@gmail.com\nTelefone: 11966514657\nTipo: Ouro\nReferencias: Ainda vai decidir os cenários \n (550,00)\n\nOrigem: Google Forms",
+    "fingerprint": "5f9b4a7c6145a4cdb4a167be022efc86960d2e04493166e59e0b09a1cdd6b093",
+    "synced_at": "2026-07-14T21:35:04Z",
+    "email_skipped_at": "2026-07-14T21:35:04Z",
+    "email_skip_reason": "reused_existing_card",
+    "email_skipped_fingerprint": "5f9b4a7c6145a4cdb4a167be022efc86960d2e04493166e59e0b09a1cdd6b093"
+  },
   "sefr2aeifekrdni75q1ilm1ja8": {
     "google_event_id": "sefr2aeifekrdni75q1ilm1ja8",
     "trello_card_id": "6a52a90ab891bd8bee69562d",
