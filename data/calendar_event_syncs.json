@@ -36,10 +36,10 @@
     "trello_card_id": "6a3be81a6b4100db65044742",
     "trello_card_url": "https://trello.com/c/M8wDvUEV",
     "summary": "Solicitação - Ouro - Gabriela Lima Pinheiro",
-    "starts_at": "2026-07-18T10:00:00-03:00",
+    "starts_at": "2026-07-25T15:00:00-03:00",
     "description": "Nome: Gabriela Lima Pinheiro\nModelo: Matteo\nEmail: gabi-pinheiro@hotmail.com\nTelefone: 11947439335\nTipo: Ouro\nReferencias: Bosque, balanço com ursinhos, atemporal com cores claras e fotos com os pais\n\nBebê 9 dias\n\nOrigem: Google Forms",
-    "fingerprint": "2bd6116abac92726d710837683cca5b29224bb13e0ca73e7a23cb428cd69b99f",
-    "synced_at": "2026-07-12T21:32:43Z",
+    "fingerprint": "a30d8f6ac98e7e3e1228a6f00c0b29d84f6f33c645c5b51ec0bef34381da2f40",
+    "synced_at": "2026-07-16T21:37:55Z",
     "email_notified_at": "2026-07-03T16:50:15Z"
   },
   "2kdtqhpnecdh5trd3j191blc44": {
@@ -78,6 +78,19 @@
     "email_skip_reason": "missing_client_email",
     "email_skipped_fingerprint": "ac862b4cd7f01f38a47a7f0491541049ff3cd89eea4b12a7e09ad9f326407c16",
     "archived_at": "2026-06-23T23:50:52Z"
+  },
+  "4cpduapkodtjinepcsmf5hd5ss": {
+    "google_event_id": "4cpduapkodtjinepcsmf5hd5ss",
+    "trello_card_id": "6a5670aea7e31fd1d20ce508",
+    "trello_card_url": "https://trello.com/c/McrOnkRd",
+    "summary": "Ouro - Benício - Nasc. 08/08/2026 (Responsável: Roberta)",
+    "starts_at": "2026-08-18T12:00:00-03:00",
+    "description": "Nome: Roberta\nModelo: Benício\nData Nascimento: 08/08/2026\nEmail: rocarvalho.roberta@gmail.com\nTelefone: 11966514657\nTipo: Ouro\nReferencias: Ainda vai decidir os cenários \n (550,00)\n\nOrigem: Google Forms",
+    "fingerprint": "0500825667b7346e7ba61e76635d11d8af8abde98dc968219f6be09848350b6f",
+    "synced_at": "2026-07-16T21:37:57Z",
+    "email_skipped_at": "2026-07-16T21:37:57Z",
+    "email_skip_reason": "reused_existing_card",
+    "email_skipped_fingerprint": "0500825667b7346e7ba61e76635d11d8af8abde98dc968219f6be09848350b6f"
   },
   "4jolbj12c2e6lumog3lb3p6n28": {
     "google_event_id": "4jolbj12c2e6lumog3lb3p6n28",
@@ -644,6 +657,19 @@
     "email_skipped_at": "2026-07-02T10:15:52Z",
     "email_skip_reason": "reused_existing_card",
     "email_skipped_fingerprint": "6fe24e561a9c55c7c4839efb5bcc2078b2d9379ce5c0a331c68b2c0143eb40f9"
+  },
+  "mc1saot3q4o7s1anvjn47n25qo": {
+    "google_event_id": "mc1saot3q4o7s1anvjn47n25qo",
+    "trello_card_id": "6a5927900a8a4ae7cf95e4f2",
+    "trello_card_url": "https://trello.com/c/0uFyayzy",
+    "summary": "Prata - Marina - Nasc. 27/06/2026 (Responsável: Luana)",
+    "starts_at": "2026-07-18T10:00:00-03:00",
+    "description": "Nome: Luana\nModelo: Marina\nData Nascimento: 27/06/2026\nEmail: luana.fisio.life@gmail.com\nTelefone: 11 96114-2973\nTipo: Prata\nReferencias: Vai definir\n\nOrigem: Google Forms",
+    "fingerprint": "7202b8f70428a841af80048f4efced76679074f553e40a6785989a96050f4b37",
+    "synced_at": "2026-07-16T21:37:54Z",
+    "email_skipped_at": "2026-07-16T21:37:54Z",
+    "email_skip_reason": "reused_existing_card",
+    "email_skipped_fingerprint": "7202b8f70428a841af80048f4efced76679074f553e40a6785989a96050f4b37"
   },
   "r335umiqev8rrqsf6qg89umoe4": {
     "google_event_id": "r335umiqev8rrqsf6qg89umoe4",
