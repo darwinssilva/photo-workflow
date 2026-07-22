@@ -31,6 +31,16 @@
     "email_skip_reason": "missing_client_email",
     "email_skipped_fingerprint": "2db30b2ea7cae9ace17d97340f30c9332940519f6ac7464559de880b35f672c6"
   },
+  "1vojkgkllm6hmidb1s55j3ec0s": {
+    "google_event_id": "1vojkgkllm6hmidb1s55j3ec0s",
+    "trello_card_id": "6a6141ebe4e95dca02198907",
+    "trello_card_url": "https://trello.com/c/bsCYngoo",
+    "summary": "Manuela - Nasc. 18/03/2026 (Responsável: Thais de Oliveira)",
+    "starts_at": "2026-08-14T13:00:00-03:00",
+    "description": "Nome: Thais de Oliveira\nModelo: Manuela\nData Nascimento: 18/03/2026\nEmail: thaisoliveira212009@hotmail.com\nTelefone: (11)98263-8489\nTipo: \nReferencias: Cinco Meses - tema Chiquinha e Chaves (vai levar o sobrinho)\nPagar no dia - 300,00\n\nOrigem: Google Forms",
+    "fingerprint": "b3f07e480d352cbf0b62536228e517a4b41195a7b0f7c2de8255d48decafbb87",
+    "synced_at": "2026-07-22T22:19:25Z"
+  },
   "264pqofgf7gumekepbumge3j60": {
     "google_event_id": "264pqofgf7gumekepbumge3j60",
     "trello_card_id": "6a3be81a6b4100db65044742",
@@ -604,13 +614,10 @@
     "trello_card_id": "6a4f1c5f35ec990339b3048b",
     "trello_card_url": "https://trello.com/c/HbjMRWbS",
     "summary": "Solicitação - Prata - Gabriela Girotto",
-    "starts_at": "2026-07-10T19:00:00-03:00",
+    "starts_at": "2026-07-23T19:00:00-03:00",
     "description": "Nome: Gabriela Girotto\nModelo: Celina\nIdade: 18 dias\nEmail: g.girotto@outlook.com\nTelefone: (11) 963012009\nTipo: Prata\nReferencias: balanço, baby clean e família (Olhar referência de fotos de família no grupo de Ensaios)\n\nOrigem: Google Forms",
-    "fingerprint": "35204f0f5232d0f84cd3fcb46db46d6d1759a4f4198cfd0901ceb17e3101340a",
-    "synced_at": "2026-07-09T10:35:39Z",
-    "email_skipped_at": "2026-07-09T10:35:39Z",
-    "email_skip_reason": "reused_existing_card",
-    "email_skipped_fingerprint": "35204f0f5232d0f84cd3fcb46db46d6d1759a4f4198cfd0901ceb17e3101340a"
+    "fingerprint": "87ae92dae9dc5e7575fe5179dd42a5bb70ac499366a6b64ef16e462d6edd5630",
+    "synced_at": "2026-07-22T22:19:20Z"
   },
   "ll926ka8k4efgamqtgmgcop1ak": {
     "google_event_id": "ll926ka8k4efgamqtgmgcop1ak",
