@@ -1,4 +1,17 @@
 {
+  "0624tf1jtteahd6655ik69u2s4": {
+    "google_event_id": "0624tf1jtteahd6655ik69u2s4",
+    "trello_card_id": "6a6a236b7d306c1172b4c34e",
+    "trello_card_url": "https://trello.com/c/2eaqSi2F",
+    "summary": "Bronze - Antonella - Nasc. 08/07/2026 (Responsável: Bruna)",
+    "starts_at": "2026-08-01T15:00:00-03:00",
+    "description": "Nome: Bruna\nModelo: Antonella\nData Nascimento: 08/07/2026\nEmail: brunacoelhoarrais@hotmail.com\nTelefone: 11970439508\nTipo: Bronze\nReferencias: Vai decidir\n\nOrigem: Google Forms",
+    "fingerprint": "b231a8baaea364af69806bcf7e6cb7d738563d072afe7b2182a64349c0984b87",
+    "synced_at": "2026-08-01T21:34:25Z",
+    "email_skipped_at": "2026-08-01T21:34:25Z",
+    "email_skip_reason": "reused_existing_card",
+    "email_skipped_fingerprint": "b231a8baaea364af69806bcf7e6cb7d738563d072afe7b2182a64349c0984b87"
+  },
   "0efjnfjuk7nh5omhnpdjpvbebr": {
     "google_event_id": "0efjnfjuk7nh5omhnpdjpvbebr",
     "trello_card_id": "6a33367cda6c0567cfcaf8eb",
@@ -19,6 +32,19 @@
     "email_notified_at": null,
     "archived_at": "2026-06-19T00:50:11Z"
   },
+  "10mgq6ilfojpu5gmohceqqtbos": {
+    "google_event_id": "10mgq6ilfojpu5gmohceqqtbos",
+    "trello_card_id": "6a674bdf3e85e8cc8f447e9a",
+    "trello_card_url": "https://trello.com/c/OLZkRXmB",
+    "summary": "Prata - Inna - Nasc. 21/07/2026 (Responsável: Eva)",
+    "starts_at": "2026-08-05T18:00:00-03:00",
+    "description": "Nome: Eva\nModelo: Inna\nData Nascimento: 21/07/2026\nEmail: Eva.aparecida2304@gmail.com\nTelefone: 11925453794\nTipo: Prata\nReferencias: \n\nOrigem: Google Forms",
+    "fingerprint": "60ea90a36bb2879e92459b30e26de061f8ee405333c5949d57b4a25c9cc6e405",
+    "synced_at": "2026-08-01T21:34:32Z",
+    "email_skipped_at": "2026-08-01T21:34:32Z",
+    "email_skip_reason": "reused_existing_card",
+    "email_skipped_fingerprint": "60ea90a36bb2879e92459b30e26de061f8ee405333c5949d57b4a25c9cc6e405"
+  },
   "19bje9em8u926d9cdtvkojepvo": {
     "google_event_id": "19bje9em8u926d9cdtvkojepvo",
     "trello_card_id": "6a33367e622dcc9c10b003df",
@@ -30,6 +56,32 @@
     "email_skipped_at": "2026-06-19T19:31:06Z",
     "email_skip_reason": "missing_client_email",
     "email_skipped_fingerprint": "2db30b2ea7cae9ace17d97340f30c9332940519f6ac7464559de880b35f672c6"
+  },
+  "1vojkgkllm6hmidb1s55j3ec0s": {
+    "google_event_id": "1vojkgkllm6hmidb1s55j3ec0s",
+    "trello_card_id": "6a6141ebe4e95dca02198907",
+    "trello_card_url": "https://trello.com/c/bsCYngoo",
+    "summary": "Manuela - Nasc. 18/03/2026 (Responsável: Thais de Oliveira)",
+    "starts_at": "2026-08-14T13:00:00-03:00",
+    "description": "Nome: Thais de Oliveira\nModelo: Manuela\nData Nascimento: 18/03/2026\nEmail: thaisoliveira212009@hotmail.com\nTelefone: (11)98263-8489\nTipo: \nReferencias: Cinco Meses - tema Chiquinha e Chaves (vai levar o sobrinho)\nPagar no dia - 300,00\n\nOrigem: Google Forms",
+    "fingerprint": "b3f07e480d352cbf0b62536228e517a4b41195a7b0f7c2de8255d48decafbb87",
+    "synced_at": "2026-08-01T21:34:36Z",
+    "email_skipped_at": "2026-08-01T21:34:36Z",
+    "email_skip_reason": "reused_existing_card",
+    "email_skipped_fingerprint": "b3f07e480d352cbf0b62536228e517a4b41195a7b0f7c2de8255d48decafbb87"
+  },
+  "24a5385kdmi1nchlvtg4qilf7o": {
+    "google_event_id": "24a5385kdmi1nchlvtg4qilf7o",
+    "trello_card_id": "6a69b0224e89224e442da212",
+    "trello_card_url": "https://trello.com/c/DgPkHFD6",
+    "summary": "Exame Susan",
+    "starts_at": "2026-08-03T10:00:00-03:00",
+    "description": "",
+    "fingerprint": "f04c8b2975a9d8a300479b6bc7b4087d0febc4ef420ebfb848d82cac52f3a9ad",
+    "synced_at": "2026-08-01T21:34:26Z",
+    "email_skipped_at": "2026-08-01T21:34:26Z",
+    "email_skip_reason": "reused_existing_card",
+    "email_skipped_fingerprint": "f04c8b2975a9d8a300479b6bc7b4087d0febc4ef420ebfb848d82cac52f3a9ad"
   },
   "264pqofgf7gumekepbumge3j60": {
     "google_event_id": "264pqofgf7gumekepbumge3j60",
@@ -84,13 +136,10 @@
     "trello_card_id": "6a4f1c6d20a16cf319f940bd",
     "trello_card_url": "https://trello.com/c/4Cg8XCgw",
     "summary": "Solicitação -  - Hellen Beatriz de Andrade Jabes",
-    "starts_at": "2026-08-01T10:00:00-03:00",
-    "description": "Nome: Hellen Beatriz de Andrade Jabes\nModelo: Davi de Andrade Jabes\nIdade: 3 meses\nEmail: beatriz20101925@hotmail.com\nTelefone: 11930186580\nTipo: \nReferencias: Cores\n\n2º azul \n3º terracota \n4º Amarelo mostarda\n5º Verde\n6º azul claro \n7º Vermelho (Natal)\n8º  Laranja \n9º preto?\n10° verde Militar \n11º Bege\n\nOrigem: Google Forms",
-    "fingerprint": "717947e84ffda281a2cc90de5f7dd16ddb2b66c1d3fd794199d5c9de5799bc54",
-    "synced_at": "2026-07-09T10:35:47Z",
-    "email_skipped_at": "2026-07-09T10:35:47Z",
-    "email_skip_reason": "reused_existing_card",
-    "email_skipped_fingerprint": "717947e84ffda281a2cc90de5f7dd16ddb2b66c1d3fd794199d5c9de5799bc54"
+    "starts_at": "2026-08-15T10:00:00-03:00",
+    "description": "Nome: Hellen Beatriz de Andrade Jabes\nModelo: Davi de Andrade Jabes\nIdade: 3 meses\nEmail: beatriz20101925@hotmail.com\nTelefone: 11930186580\nTipo: Acompanhamento mensal (Pacote pago)\nReferencias: Cores\n\n2º azul \n3º terracota \n4º Amarelo mostarda\n5º Verde\n6º azul claro \n7º Vermelho (Natal)\n8º  Laranja \n9º preto?\n10° verde Militar \n11º Bege\n\nOrigem: Google Forms",
+    "fingerprint": "f76cafc46b23afad134cd50e61a8cbe9e7c5b7db17da06fa943bbc580894cbb1",
+    "synced_at": "2026-08-01T21:34:36Z"
   },
   "68q38c1i70qj2b9kc8q36b9k69gm2bb1cgrjabb16op68d9h70r3cc1hc4": {
     "google_event_id": "68q38c1i70qj2b9kc8q36b9k69gm2bb1cgrjabb16op68d9h70r3cc1hc4",
@@ -208,6 +257,19 @@
     "email_skip_reason": "reused_existing_card",
     "email_skipped_fingerprint": "41125218fd612e9e01e76553cbaa78b40eb23669cbd4d5991506c5149933079a"
   },
+  "6tgmceb4chim8bb374qj6b9kccp6ab9ockrj6b9i6ksjedr56li6ccr6c8": {
+    "google_event_id": "6tgmceb4chim8bb374qj6b9kccp6ab9ockrj6b9i6ksjedr56li6ccr6c8",
+    "trello_card_id": "6a6cb6eb09f9165bcc2071e6",
+    "trello_card_url": "https://trello.com/c/OHHp3iBU",
+    "summary": "Consulta Stella",
+    "starts_at": "2026-08-06T07:00:00-03:00",
+    "description": "",
+    "fingerprint": "b8b0287d85333f6ed0418749eee87df3b60f452fd2d83c279d00cf32c6e7ecd0",
+    "synced_at": "2026-08-01T21:34:33Z",
+    "email_skipped_at": "2026-08-01T21:34:33Z",
+    "email_skip_reason": "reused_existing_card",
+    "email_skipped_fingerprint": "b8b0287d85333f6ed0418749eee87df3b60f452fd2d83c279d00cf32c6e7ecd0"
+  },
   "74p34oho6kp34b9mc8o3ib9k6cq3abb2c4p3ebb46ss3cd33cgq38e1k6s": {
     "google_event_id": "74p34oho6kp34b9mc8o3ib9k6cq3abb2c4p3ebb46ss3cd33cgq38e1k6s",
     "trello_card_id": "6a341b7d1fe7014ee9da6b63",
@@ -282,6 +344,19 @@
     "email_skipped_fingerprint": "b38ded19ccfec5f1ee705b230fae3c86bf59d5e677e78e026bcd96c1d8b9b7dd",
     "archived_at": "2026-07-11T20:35:20Z"
   },
+  "98vqe25b9qjtbt5iag6eplvgsc": {
+    "google_event_id": "98vqe25b9qjtbt5iag6eplvgsc",
+    "trello_card_id": "6a6d112382bf48b34c8f1eb4",
+    "trello_card_url": "https://trello.com/c/wvpBxV46",
+    "summary": "Prata - Liz - Nasc. 14/07/2026 (Responsável: Luciana)",
+    "starts_at": "2026-08-04T15:00:00-03:00",
+    "description": "Nome: Luciana\nModelo: Liz\nData Nascimento: 14/07/2026\nEmail: lucianasilva.8311@gmail.com\nTelefone: 11967687597\nTipo: Prata\nReferencias: ,caminha, balanço, gosta de cores mais fortes, flores e bichinhos\n\nOrigem: Google Forms",
+    "fingerprint": "49fbc0dc602d7c41aa8d485a14866a056c51ef8dd51cd81d47803464c6f9586c",
+    "synced_at": "2026-08-01T21:34:29Z",
+    "email_skipped_at": "2026-08-01T21:34:29Z",
+    "email_skip_reason": "reused_existing_card",
+    "email_skipped_fingerprint": "49fbc0dc602d7c41aa8d485a14866a056c51ef8dd51cd81d47803464c6f9586c"
+  },
   "9n5a6ag4dpth595k8lsbs8hpn8": {
     "google_event_id": "9n5a6ag4dpth595k8lsbs8hpn8",
     "trello_card_id": "6a3b1c50be50bd856237d00e",
@@ -293,6 +368,19 @@
     "synced_at": "2026-06-23T23:54:12Z",
     "email_notified_at": "2026-06-23T23:48:10Z",
     "archived_at": "2026-06-24T10:24:55Z"
+  },
+  "ak65hkqkr248rgl1f5f6kkafjg": {
+    "google_event_id": "ak65hkqkr248rgl1f5f6kkafjg",
+    "trello_card_id": "6a63b6a175dbc4f7112d084c",
+    "trello_card_url": "https://trello.com/c/6xfFSB2t",
+    "summary": "Bronze - Esther - Nasc. 10/12/2026 (Responsável: Quesia Carina)",
+    "starts_at": "2026-12-15T12:00:00-03:00",
+    "description": "Nome: Quesia Carina\nModelo: Esther\nData Nascimento: 10/12/2026\nEmail: Quesia_sousa01@outlook.com\nTelefone: 11985207414\nTipo: Bronze\nReferencias: Ainda vai escolher\n\nOrigem: Google Forms",
+    "fingerprint": "7a4211be11aade58a9634a20b9e04985a2d9a08a6b1356445d106ccc08d397d4",
+    "synced_at": "2026-08-01T21:34:40Z",
+    "email_skipped_at": "2026-08-01T21:34:40Z",
+    "email_skip_reason": "reused_existing_card",
+    "email_skipped_fingerprint": "7a4211be11aade58a9634a20b9e04985a2d9a08a6b1356445d106ccc08d397d4"
   },
   "c8r3gchh6cq3ebb568p6cb9k6gr62bb174pj4bb6cgqjaor264o3id1ick": {
     "google_event_id": "c8r3gchh6cq3ebb568p6cb9k6gr62bb174pj4bb6cgqjaor264o3id1ick",
@@ -505,6 +593,19 @@
     "email_skip_reason": "reused_existing_card",
     "email_skipped_fingerprint": "887098c25f061ef524e816a8524ee516dda46a10eeb53f7cd83f92a23e195d8f"
   },
+  "esh2frnh89uqq68mb3trs2i3j4": {
+    "google_event_id": "esh2frnh89uqq68mb3trs2i3j4",
+    "trello_card_id": "6a6a0614715125c7d04880b5",
+    "trello_card_url": "https://trello.com/c/vTfXzjZa",
+    "summary": "Prata - Amália - Nasc. 18/07/2026 (Responsável: Anna Priscila)",
+    "starts_at": "2026-08-03T14:00:00-03:00",
+    "description": "Nome: Anna Priscila\nModelo: Amália\nData Nascimento: 18/07/2026\nEmail: annapriscilac@gmail.com\nTelefone: 11918530757\nTipo: Prata\nReferencias: Balanço + baby clean\n\nOrigem: Google Forms",
+    "fingerprint": "131c56a3d0e06ccdf9d52ea63ebe587cc14f427962f07b2d9c5580d6bce20cce",
+    "synced_at": "2026-08-01T21:34:27Z",
+    "email_skipped_at": "2026-08-01T21:34:27Z",
+    "email_skip_reason": "reused_existing_card",
+    "email_skipped_fingerprint": "131c56a3d0e06ccdf9d52ea63ebe587cc14f427962f07b2d9c5580d6bce20cce"
+  },
   "f522ltr1mo4urvuo3cnmfigu7s": {
     "google_event_id": "f522ltr1mo4urvuo3cnmfigu7s",
     "trello_card_id": "6a3b0ba03b5c28bc0c9562ea",
@@ -647,6 +748,45 @@
     "email_skipped_at": "2026-07-02T10:15:52Z",
     "email_skip_reason": "reused_existing_card",
     "email_skipped_fingerprint": "6fe24e561a9c55c7c4839efb5bcc2078b2d9379ce5c0a331c68b2c0143eb40f9"
+  },
+  "om510gphdu4p8mh34mk3nkjr10": {
+    "google_event_id": "om510gphdu4p8mh34mk3nkjr10",
+    "trello_card_id": "6a62565747a741feca3ca2f7",
+    "trello_card_url": "https://trello.com/c/t0kyRt6e",
+    "summary": "Natan - Nasc. 20/05/2026 (Responsável: Andressa)",
+    "starts_at": "2026-08-05T14:00:00-03:00",
+    "description": "Nome: Andressa\nModelo: Natan\nData Nascimento: 20/05/2026\nEmail: Dessaleal23@gmail.com\nTelefone: 11 94359-4567\nTipo: \nReferencias: Natan 3 meses tema Astronauta \n\nVai pagar no dia --> 150,00\n\nOrigem: Google Forms",
+    "fingerprint": "27de8d9b9078d166c88030feb71e40d36380834522b31c99cea5e3acf00eccd3",
+    "synced_at": "2026-08-01T21:34:30Z",
+    "email_skipped_at": "2026-08-01T21:34:30Z",
+    "email_skip_reason": "reused_existing_card",
+    "email_skipped_fingerprint": "27de8d9b9078d166c88030feb71e40d36380834522b31c99cea5e3acf00eccd3"
+  },
+  "r335umiqev8rrqsf6qg89umoe4": {
+    "google_event_id": "r335umiqev8rrqsf6qg89umoe4",
+    "trello_card_id": "6a6ca4f4470283f87168af54",
+    "trello_card_url": "https://trello.com/c/TKxQ43et",
+    "summary": "Ouro - Benício - Nasc. 08/08/2026 (Responsável: Roberta)",
+    "starts_at": "2026-08-13T09:00:00-03:00",
+    "description": "Nome: Roberta\nModelo: Benício\nData Nascimento: 08/08/2026\nEmail: rocarvalho.roberta@gmail.com\nTelefone: 11966514657\nTipo: Ouro\nReferencias: Ainda vai decidir os cenários \n (550,00)\n\nOrigem: Google Forms",
+    "fingerprint": "79e01df53eb52d92c316b1651e2c3f84a0b7d2acd304b8414b1c6da8cef77db8",
+    "synced_at": "2026-08-01T21:34:35Z",
+    "email_skipped_at": "2026-08-01T21:34:35Z",
+    "email_skip_reason": "reused_existing_card",
+    "email_skipped_fingerprint": "79e01df53eb52d92c316b1651e2c3f84a0b7d2acd304b8414b1c6da8cef77db8"
+  },
+  "rr2ejb3bnk2knkmipcg8jdvaco": {
+    "google_event_id": "rr2ejb3bnk2knkmipcg8jdvaco",
+    "trello_card_id": "6a6d10dec2b74c03ebdba985",
+    "trello_card_url": "https://trello.com/c/vJQFjZ6T",
+    "summary": "Prata - Antônio - Nasc. 10/08/2026 (Responsável: Jaqueline Almeida)",
+    "starts_at": "2026-08-20T09:00:00-03:00",
+    "description": "Nome: Jaqueline Almeida\nModelo: Antônio\nData Nascimento: 10/08/2026\nEmail: jaqueline.almeidaadvs@gmail.com\nTelefone: 11977091114\nTipo: Prata\nReferencias: Baby clean, pais. Vai escolher o outro cenário ainda.\n\nOrigem: Google Forms",
+    "fingerprint": "9df1566e4d4e3c26829f0ef82e98235d8c76dfdb1bd1b8b24f2ba222c13ba9be",
+    "synced_at": "2026-08-01T21:34:38Z",
+    "email_skipped_at": "2026-08-01T21:34:38Z",
+    "email_skip_reason": "reused_existing_card",
+    "email_skipped_fingerprint": "9df1566e4d4e3c26829f0ef82e98235d8c76dfdb1bd1b8b24f2ba222c13ba9be"
   },
   "sefr2aeifekrdni75q1ilm1ja8": {
     "google_event_id": "sefr2aeifekrdni75q1ilm1ja8",
