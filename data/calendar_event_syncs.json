@@ -788,6 +788,19 @@
     "email_skip_reason": "reused_existing_card",
     "email_skipped_fingerprint": "6fe24e561a9c55c7c4839efb5bcc2078b2d9379ce5c0a331c68b2c0143eb40f9"
   },
+  "njk97pjhjumak5if9pi21qhq20": {
+    "google_event_id": "njk97pjhjumak5if9pi21qhq20",
+    "trello_card_id": "6a6f939bdb87733585983610",
+    "trello_card_url": "https://trello.com/c/Pi1QoiS3",
+    "summary": "Prata - Anthony - Nasc. 24/07/2026 (Responsável: Kelly Carvalho)",
+    "starts_at": "2026-08-05T09:00:00-03:00",
+    "description": "Nome: Kelly Carvalho\nModelo: Anthony\nData Nascimento: 24/07/2026\nEmail: kellyalves0907@gmail.com\nTelefone: 11987719929\nTipo: Prata\nReferencias: \n\nOrigem: Google Forms",
+    "fingerprint": "18b012fecd988ebc922fc27756d450a642cc8c5641a1eb8610169265052b5e2f",
+    "synced_at": "2026-08-02T21:34:31Z",
+    "email_skipped_at": "2026-08-02T21:34:31Z",
+    "email_skip_reason": "reused_existing_card",
+    "email_skipped_fingerprint": "18b012fecd988ebc922fc27756d450a642cc8c5641a1eb8610169265052b5e2f"
+  },
   "om510gphdu4p8mh34mk3nkjr10": {
     "google_event_id": "om510gphdu4p8mh34mk3nkjr10",
     "trello_card_id": "6a62565747a741feca3ca2f7",
