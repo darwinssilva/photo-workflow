@@ -259,15 +259,15 @@
   },
   "6tgmceb4chim8bb374qj6b9kccp6ab9ockrj6b9i6ksjedr56li6ccr6c8": {
     "google_event_id": "6tgmceb4chim8bb374qj6b9kccp6ab9ockrj6b9i6ksjedr56li6ccr6c8",
-    "trello_card_id": "6a710ac537c9e9f32abc5050",
-    "trello_card_url": "https://trello.com/c/iZNkxdX8",
+    "trello_card_id": "6a718135eaaa3833ab100132",
+    "trello_card_url": "https://trello.com/c/Z0bIT8fY",
     "summary": "Consulta Stella",
     "starts_at": "2026-08-06T07:00:00-03:00",
     "description": "",
     "fingerprint": "b8b0287d85333f6ed0418749eee87df3b60f452fd2d83c279d00cf32c6e7ecd0",
-    "synced_at": "2026-08-03T21:40:22Z",
-    "email_skipped_at": "2026-08-03T21:40:22Z",
-    "email_skip_reason": "missing_client_email",
+    "synced_at": "2026-08-04T10:10:25Z",
+    "email_skipped_at": "2026-08-04T10:10:25Z",
+    "email_skip_reason": "reused_existing_card",
     "email_skipped_fingerprint": "b8b0287d85333f6ed0418749eee87df3b60f452fd2d83c279d00cf32c6e7ecd0"
   },
   "74p34oho6kp34b9mc8o3ib9k6cq3abb2c4p3ebb46ss3cd33cgq38e1k6s": {
@@ -381,7 +381,8 @@
     "synced_at": "2026-08-03T21:40:27Z",
     "email_skipped_at": "2026-08-03T21:40:27Z",
     "email_skip_reason": "missing_client_email",
-    "email_skipped_fingerprint": "566be748445f254201d91f81f769f6bc24c7fe9d96aad5f66cab786a84ec0e73"
+    "email_skipped_fingerprint": "566be748445f254201d91f81f769f6bc24c7fe9d96aad5f66cab786a84ec0e73",
+    "archived_at": "2026-08-04T10:10:21Z"
   },
   "9n5a6ag4dpth595k8lsbs8hpn8": {
     "google_event_id": "9n5a6ag4dpth595k8lsbs8hpn8",
@@ -631,6 +632,19 @@
     "email_skipped_at": "2026-08-01T21:34:27Z",
     "email_skip_reason": "reused_existing_card",
     "email_skipped_fingerprint": "131c56a3d0e06ccdf9d52ea63ebe587cc14f427962f07b2d9c5580d6bce20cce"
+  },
+  "euoballugo4a9vr5o7u4vrv4fk": {
+    "google_event_id": "euoballugo4a9vr5o7u4vrv4fk",
+    "trello_card_id": "6a71812c3770fa5182f5b0ce",
+    "trello_card_url": "https://trello.com/c/PQINi1fq",
+    "summary": "Consulta Stella",
+    "starts_at": "2026-08-04T09:00:00-03:00",
+    "description": "",
+    "fingerprint": "d16547308d82be17482a22a92d5dd0f99d16986b89f1a06c167bc84073deeed9",
+    "synced_at": "2026-08-04T10:10:23Z",
+    "email_skipped_at": "2026-08-04T10:10:23Z",
+    "email_skip_reason": "reused_existing_card",
+    "email_skipped_fingerprint": "d16547308d82be17482a22a92d5dd0f99d16986b89f1a06c167bc84073deeed9"
   },
   "f522ltr1mo4urvuo3cnmfigu7s": {
     "google_event_id": "f522ltr1mo4urvuo3cnmfigu7s",
