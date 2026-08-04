@@ -262,13 +262,13 @@
     "trello_card_id": "6a718135eaaa3833ab100132",
     "trello_card_url": "https://trello.com/c/Z0bIT8fY",
     "summary": "Consulta Stella",
-    "starts_at": "2026-08-06T07:00:00-03:00",
+    "starts_at": "2026-08-06T11:00:00-03:00",
     "description": "",
-    "fingerprint": "b8b0287d85333f6ed0418749eee87df3b60f452fd2d83c279d00cf32c6e7ecd0",
-    "synced_at": "2026-08-04T10:10:25Z",
-    "email_skipped_at": "2026-08-04T10:10:25Z",
-    "email_skip_reason": "reused_existing_card",
-    "email_skipped_fingerprint": "b8b0287d85333f6ed0418749eee87df3b60f452fd2d83c279d00cf32c6e7ecd0"
+    "fingerprint": "a22a8d5610fe6af05650f67c52c062c54f26f474e9a96c74d40c2a5d6ee68458",
+    "synced_at": "2026-08-04T21:43:07Z",
+    "email_skipped_at": "2026-08-04T21:43:07Z",
+    "email_skip_reason": "missing_client_email",
+    "email_skipped_fingerprint": "a22a8d5610fe6af05650f67c52c062c54f26f474e9a96c74d40c2a5d6ee68458"
   },
   "74p34oho6kp34b9mc8o3ib9k6cq3abb2c4p3ebb46ss3cd33cgq38e1k6s": {
     "google_event_id": "74p34oho6kp34b9mc8o3ib9k6cq3abb2c4p3ebb46ss3cd33cgq38e1k6s",
@@ -635,14 +635,14 @@
   },
   "euoballugo4a9vr5o7u4vrv4fk": {
     "google_event_id": "euoballugo4a9vr5o7u4vrv4fk",
-    "trello_card_id": "6a71812c3770fa5182f5b0ce",
-    "trello_card_url": "https://trello.com/c/PQINi1fq",
+    "trello_card_id": "6a720e98a96a4b3d9a401782",
+    "trello_card_url": "https://trello.com/c/SPQwdaWm",
     "summary": "Consulta Stella",
     "starts_at": "2026-08-04T09:00:00-03:00",
     "description": "",
     "fingerprint": "d16547308d82be17482a22a92d5dd0f99d16986b89f1a06c167bc84073deeed9",
-    "synced_at": "2026-08-04T10:10:23Z",
-    "email_skipped_at": "2026-08-04T10:10:23Z",
+    "synced_at": "2026-08-04T21:43:06Z",
+    "email_skipped_at": "2026-08-04T21:43:06Z",
     "email_skip_reason": "reused_existing_card",
     "email_skipped_fingerprint": "d16547308d82be17482a22a92d5dd0f99d16986b89f1a06c167bc84073deeed9"
   },
@@ -840,6 +840,19 @@
     "email_skipped_at": "2026-08-02T09:55:37Z",
     "email_skip_reason": "reused_existing_card",
     "email_skipped_fingerprint": "02cc6a7462312229a134d279e29eb6e4772e2992d8fe1aa133bb398f33a96878"
+  },
+  "qi82mvgmoc4l35o5agqmv8cthc": {
+    "google_event_id": "qi82mvgmoc4l35o5agqmv8cthc",
+    "trello_card_id": "6a71e10af1fbd1bcc5754dfa",
+    "trello_card_url": "https://trello.com/c/crJyEymP",
+    "summary": "Prata - Anthony - Nasc. 04/08/2026 (Responsável: Maria Eduarda Denami)",
+    "starts_at": "2026-08-15T13:00:00-03:00",
+    "description": "Nome: Maria Eduarda Denami\nModelo: Anthony\nData Nascimento: 04/08/2026\nEmail: dudadenami@outlook.com\nTelefone: (11)976007843\nTipo: Prata\nReferencias: Domicílio ? (TATUAPÉ)\n\nSofazinho e o outro cenário vai decidir ainda\n\nOrigem: Google Forms",
+    "fingerprint": "e3830b63dbeb393a4594489563203b51a6871d9b5f4f415bfd95775a098c1022",
+    "synced_at": "2026-08-04T21:43:09Z",
+    "email_skipped_at": "2026-08-04T21:43:09Z",
+    "email_skip_reason": "reused_existing_card",
+    "email_skipped_fingerprint": "e3830b63dbeb393a4594489563203b51a6871d9b5f4f415bfd95775a098c1022"
   },
   "r335umiqev8rrqsf6qg89umoe4": {
     "google_event_id": "r335umiqev8rrqsf6qg89umoe4",
