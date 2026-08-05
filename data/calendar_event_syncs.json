@@ -789,6 +789,19 @@
     "email_notified_at": "2026-06-23T23:50:52Z",
     "archived_at": "2026-06-24T10:24:55Z"
   },
+  "m7j4ir25ddmg4m7oa0lts7blk0": {
+    "google_event_id": "m7j4ir25ddmg4m7oa0lts7blk0",
+    "trello_card_id": "6a732c608f3cb5f3b108afe9",
+    "trello_card_url": "https://trello.com/c/2flL0FZt",
+    "summary": "Prata - Celina - Nasc. 28/07/2026 (Responsável: Thamires)",
+    "starts_at": "2026-08-07T11:00:00-03:00",
+    "description": "Nome: Thamires\nModelo: Celina\nData Nascimento: 28/07/2026\nEmail: thamires.silva.rodrigues@outlook.com\nTelefone: 11983101915\nTipo: Prata\nReferencias: Baby clean/poses e detalhes\n\n●●● ela não quer que o marido veja ela fazendo o pagamento ●●●\n\nOrigem: Google Forms",
+    "fingerprint": "f7ebf3f637ef317bccbff3b92bd202af8297064862e176a3f743cf19480ce930",
+    "synced_at": "2026-08-05T22:19:25Z",
+    "email_skipped_at": "2026-08-05T22:19:25Z",
+    "email_skip_reason": "reused_existing_card",
+    "email_skipped_fingerprint": "f7ebf3f637ef317bccbff3b92bd202af8297064862e176a3f743cf19480ce930"
+  },
   "m9cr5affbjnmrdtuf8k9o4rk9o": {
     "google_event_id": "m9cr5affbjnmrdtuf8k9o4rk9o",
     "trello_card_id": "6a45d940c20a2a62bdcbca50",
@@ -902,5 +915,18 @@
     "email_skipped_at": "2026-07-09T10:35:42Z",
     "email_skip_reason": "reused_existing_card",
     "email_skipped_fingerprint": "5c3893bfbceb81b757e6556b4acb759c38030135c72055e483b1bc12cc1560a7"
+  },
+  "t4fjjkotstabrbv4socdamn8dc": {
+    "google_event_id": "t4fjjkotstabrbv4socdamn8dc",
+    "trello_card_id": "6a71e10af1fbd1bcc5754dfa",
+    "trello_card_url": "https://trello.com/c/crJyEymP",
+    "summary": "Prata - Anthony - Nasc. 04/08/2026 (Responsável: Maria Eduarda Denami)",
+    "starts_at": "2026-08-15T13:00:00-03:00",
+    "description": "Nome: Maria Eduarda Denami\nModelo: Anthony\nData Nascimento: 04/08/2026\nEmail: dudadenami@outlook.com\nTelefone: (11)976007843\nTipo: Prata\nReferencias: Domicílio ? (TATUAPÉ)\n\nSofazinho e o outro cenário vai decidir ainda\n\nOrigem: Google Forms",
+    "fingerprint": "bac1d175f3953fa4bb34f7c7cc44ec5ad6ddd76fdeb7d419d05ea34a9176a711",
+    "synced_at": "2026-08-05T22:19:28Z",
+    "email_skipped_at": "2026-08-05T22:19:28Z",
+    "email_skip_reason": "reused_existing_card",
+    "email_skipped_fingerprint": "bac1d175f3953fa4bb34f7c7cc44ec5ad6ddd76fdeb7d419d05ea34a9176a711"
   }
 }
