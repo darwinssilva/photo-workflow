@@ -25,5 +25,14 @@
     "target_event_date": "2026-07-11",
     "status": "skipped_missing_phone",
     "recorded_at": "2026-07-10T12:53:27Z"
+  },
+  "lembre_ensaio:6tgmceb4chim8bb374qj6b9kccp6ab9ockrj6b9i6ksjedr56li6ccr6c8:2026-08-06": {
+    "google_event_id": "6tgmceb4chim8bb374qj6b9kccp6ab9ockrj6b9i6ksjedr56li6ccr6c8",
+    "summary": "Consulta Stella",
+    "starts_at": "2026-08-06T11:00:00-03:00",
+    "reminder_date": "2026-08-05",
+    "target_event_date": "2026-08-06",
+    "status": "skipped_missing_phone",
+    "recorded_at": "2026-08-05T12:43:46Z"
   }
 }
