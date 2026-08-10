@@ -906,6 +906,19 @@
     "email_skip_reason": "reused_existing_card",
     "email_skipped_fingerprint": "9df1566e4d4e3c26829f0ef82e98235d8c76dfdb1bd1b8b24f2ba222c13ba9be"
   },
+  "s99ar8nvov8ut8b00ut9lea7js": {
+    "google_event_id": "s99ar8nvov8ut8b00ut9lea7js",
+    "trello_card_id": "6a794243a79c613df0c5ea1a",
+    "trello_card_url": "https://trello.com/c/jXptwNPN",
+    "summary": "Consulta Tricologia",
+    "starts_at": "2026-08-12T10:30:00-03:00",
+    "description": "",
+    "fingerprint": "bbddd7b2ed80d22d1f53c4c5fc9778ae60e1473a3df45c299db2ec274db5d1cd",
+    "synced_at": "2026-08-10T10:35:15Z",
+    "email_skipped_at": "2026-08-10T10:35:15Z",
+    "email_skip_reason": "reused_existing_card",
+    "email_skipped_fingerprint": "bbddd7b2ed80d22d1f53c4c5fc9778ae60e1473a3df45c299db2ec274db5d1cd"
+  },
   "sefr2aeifekrdni75q1ilm1ja8": {
     "google_event_id": "sefr2aeifekrdni75q1ilm1ja8",
     "trello_card_id": "6a52a90ab891bd8bee69562d",
@@ -941,5 +954,18 @@
     "email_skipped_at": "2026-08-05T22:19:28Z",
     "email_skip_reason": "reused_existing_card",
     "email_skipped_fingerprint": "bac1d175f3953fa4bb34f7c7cc44ec5ad6ddd76fdeb7d419d05ea34a9176a711"
+  },
+  "u2mp6g6mcn7r7u7ht32lofgvgo": {
+    "google_event_id": "u2mp6g6mcn7r7u7ht32lofgvgo",
+    "trello_card_id": "6a7941e0b47652d3e85de7af",
+    "trello_card_url": "https://trello.com/c/mWMYFeCW",
+    "summary": "Consulta Endócrino Susan",
+    "starts_at": "2026-08-12T16:00:00-03:00",
+    "description": "",
+    "fingerprint": "7230337d6ff41392c9bd73f340e10576d01c647fd1b67bdd277024912daa1f07",
+    "synced_at": "2026-08-10T10:35:17Z",
+    "email_skipped_at": "2026-08-10T10:35:17Z",
+    "email_skip_reason": "reused_existing_card",
+    "email_skipped_fingerprint": "7230337d6ff41392c9bd73f340e10576d01c647fd1b67bdd277024912daa1f07"
   }
 }
