@@ -709,6 +709,19 @@
     "email_skip_reason": "reused_existing_card",
     "email_skipped_fingerprint": "60eed4c67d6b6dcb060f826a80f75f308eba1dff66a524fd12f146aa8d77c51f"
   },
+  "hr0iqflr9pevs8rs7qvmm20j7o": {
+    "google_event_id": "hr0iqflr9pevs8rs7qvmm20j7o",
+    "trello_card_id": "6a7b2b21611def943c25daf0",
+    "trello_card_url": "https://trello.com/c/MXpjqb3m",
+    "summary": "Prata - Isis - Nasc. 27/07/2026 (Responsável: Jessica Fidelis)",
+    "starts_at": "2026-08-17T11:00:00-03:00",
+    "description": "Nome: Jessica Fidelis\nModelo: Isis\nData Nascimento: 27/07/2026\nEmail: jessicafidelisps@gmail.com\nTelefone: 11943250237\nTipo: Prata\nReferencias: Vai decidir\n\nOrigem: Google Forms",
+    "fingerprint": "a108581c81468506e92fce308907d6301fab24765fb0f179a9e10f6b0eb658ec",
+    "synced_at": "2026-08-11T22:03:18Z",
+    "email_skipped_at": "2026-08-11T22:03:18Z",
+    "email_skip_reason": "reused_existing_card",
+    "email_skipped_fingerprint": "a108581c81468506e92fce308907d6301fab24765fb0f179a9e10f6b0eb658ec"
+  },
   "igjfslbfff2ci2aji9d93327dg": {
     "google_event_id": "igjfslbfff2ci2aji9d93327dg",
     "trello_card_id": "6a47e679a34fe0e43eb7ad6b",
@@ -987,5 +1000,18 @@
     "email_skipped_at": "2026-08-10T21:57:06Z",
     "email_skip_reason": "reused_existing_card",
     "email_skipped_fingerprint": "93ab524fd8e01b7507773e19d1af428a57c0420c59cb87469bd550840fd52b11"
+  },
+  "ujejp69jsv8inge7qqlqseu7bc": {
+    "google_event_id": "ujejp69jsv8inge7qqlqseu7bc",
+    "trello_card_id": "6a7b289764fe3e8800ada8fe",
+    "trello_card_url": "https://trello.com/c/OgaUg4wA",
+    "summary": "Prata - Ayana - Nasc. 27/07/2026 (Responsável: Flávia Lopes de Castro)",
+    "starts_at": "2026-08-13T14:00:00-03:00",
+    "description": "Nome: Flávia Lopes de Castro\nModelo: Ayana\nData Nascimento: 27/07/2026\nEmail: lopesdesignercastro@gmail.com\nTelefone: (31)99467-0295\nTipo: Prata\nReferencias: Vai decidir\n\nOrigem: Google Forms",
+    "fingerprint": "652b66071d3b6eb9418cf0db08849a264eb4f3a8797e8840ece3ae506ee2bfa7",
+    "synced_at": "2026-08-11T22:03:15Z",
+    "email_skipped_at": "2026-08-11T22:03:15Z",
+    "email_skip_reason": "reused_existing_card",
+    "email_skipped_fingerprint": "652b66071d3b6eb9418cf0db08849a264eb4f3a8797e8840ece3ae506ee2bfa7"
   }
 }
