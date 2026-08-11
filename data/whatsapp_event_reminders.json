@@ -34,5 +34,23 @@
     "target_event_date": "2026-08-06",
     "status": "skipped_missing_phone",
     "recorded_at": "2026-08-05T12:43:46Z"
+  },
+  "lembre_ensaio:s99ar8nvov8ut8b00ut9lea7js:2026-08-12": {
+    "google_event_id": "s99ar8nvov8ut8b00ut9lea7js",
+    "summary": "Consulta Tricologia",
+    "starts_at": "2026-08-12T10:30:00-03:00",
+    "reminder_date": "2026-08-11",
+    "target_event_date": "2026-08-12",
+    "status": "skipped_missing_phone",
+    "recorded_at": "2026-08-11T13:20:03Z"
+  },
+  "lembre_ensaio:u2mp6g6mcn7r7u7ht32lofgvgo:2026-08-12": {
+    "google_event_id": "u2mp6g6mcn7r7u7ht32lofgvgo",
+    "summary": "Consulta Endócrino Susan",
+    "starts_at": "2026-08-12T16:00:00-03:00",
+    "reminder_date": "2026-08-11",
+    "target_event_date": "2026-08-12",
+    "status": "skipped_missing_phone",
+    "recorded_at": "2026-08-11T13:20:03Z"
   }
 }
