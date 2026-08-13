@@ -35,6 +35,15 @@
     "status": "skipped_missing_phone",
     "recorded_at": "2026-08-05T12:43:46Z"
   },
+  "lembre_ensaio:dbu353uoh42dat1dhfeot3esfs:2026-08-14": {
+    "google_event_id": "dbu353uoh42dat1dhfeot3esfs",
+    "summary": "Ouro - Antônio - Nasc. 29/07/2026 (Responsável: Ariane Macedo Pinheiro)",
+    "starts_at": "2026-08-14T16:00:00-03:00",
+    "reminder_date": "2026-08-13",
+    "target_event_date": "2026-08-14",
+    "status": "skipped_missing_phone",
+    "recorded_at": "2026-08-13T13:25:33Z"
+  },
   "lembre_ensaio:s99ar8nvov8ut8b00ut9lea7js:2026-08-12": {
     "google_event_id": "s99ar8nvov8ut8b00ut9lea7js",
     "summary": "Consulta Tricologia",
