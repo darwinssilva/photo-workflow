@@ -294,6 +294,16 @@
     "email_skip_reason": "missing_client_email",
     "email_skipped_fingerprint": "c5e94ec60da99af349fc566160b5d547e3b030a0036b9cd6d477a22e5e671de0"
   },
+  "74pj2p1i6spmabb4ckqj8b9kchi3ibb165hjibb56cp38ohk70o66pb670": {
+    "google_event_id": "74pj2p1i6spmabb4ckqj8b9kchi3ibb165hjibb56cp38ohk70o66pb670",
+    "trello_card_id": "6a81e8fef40b8187be1f8996",
+    "trello_card_url": "https://trello.com/c/k7fmAutA",
+    "summary": "Ouro - Benício - Nasc. 08/08/2026 (Responsável: Roberta)",
+    "starts_at": "2026-08-18T12:00:00-03:00",
+    "description": "Nome: Roberta\nModelo: Benício\nData Nascimento: 08/08/2026\nEmail: rocarvalho.roberta@gmail.com\nTelefone: 11966514657\nTipo: Ouro\nReferencias: Ainda vai decidir os cenários \n (550,00)\n\nOrigem: Google Forms",
+    "fingerprint": "0ca566bb7be744bd29c9945404355ad28d7169cb09c48a1637de213e9d11f122",
+    "synced_at": "2026-08-16T16:44:47Z"
+  },
   "74q36d1o64o34bb1ccs64b9k6hh66bb1ccp6cbb270qj4d1i64qj0dr4cc": {
     "google_event_id": "74q36d1o64o34bb1ccs64b9k6hh66bb1ccp6cbb270qj4d1i64qj0dr4cc",
     "trello_card_id": "6a33367a1c7b156a95197bfe",
@@ -715,12 +725,9 @@
     "trello_card_url": "https://trello.com/c/MXpjqb3m",
     "summary": "Prata - Isis - Nasc. 27/07/2026 (Responsável: Jessica Fidelis)",
     "starts_at": "2026-08-17T11:00:00-03:00",
-    "description": "Nome: Jessica Fidelis\nModelo: Isis\nData Nascimento: 27/07/2026\nEmail: jessicafidelisps@gmail.com\nTelefone: 11943250237\nTipo: Prata\nReferencias: Vai decidir\n\nOrigem: Google Forms",
-    "fingerprint": "a108581c81468506e92fce308907d6301fab24765fb0f179a9e10f6b0eb658ec",
-    "synced_at": "2026-08-11T22:03:18Z",
-    "email_skipped_at": "2026-08-11T22:03:18Z",
-    "email_skip_reason": "reused_existing_card",
-    "email_skipped_fingerprint": "a108581c81468506e92fce308907d6301fab24765fb0f179a9e10f6b0eb658ec"
+    "description": "Nome: Jessica Fidelis\nModelo: Isis\nData Nascimento: 27/07/2026\nEmail: jessicafidelisps@gmail.com\nTelefone: 11943250237\nTipo: Prata\nReferencias: Lua e arco de flores \n\nOrigem: Google Forms",
+    "fingerprint": "a8221e8f130409a226927d2e9de254a7bc11030ed8472551fe4d5f2390adb477",
+    "synced_at": "2026-08-16T16:44:43Z"
   },
   "igjfslbfff2ci2aji9d93327dg": {
     "google_event_id": "igjfslbfff2ci2aji9d93327dg",
@@ -916,12 +923,9 @@
     "trello_card_url": "https://trello.com/c/vJQFjZ6T",
     "summary": "Prata - Antônio - Nasc. 10/08/2026 (Responsável: Jaqueline Almeida)",
     "starts_at": "2026-08-20T09:00:00-03:00",
-    "description": "Nome: Jaqueline Almeida\nModelo: Antônio\nData Nascimento: 10/08/2026\nEmail: jaqueline.almeidaadvs@gmail.com\nTelefone: 11977091114\nTipo: Prata\nReferencias: Baby clean, pais. Vai escolher o outro cenário ainda.\n\nOrigem: Google Forms",
-    "fingerprint": "9df1566e4d4e3c26829f0ef82e98235d8c76dfdb1bd1b8b24f2ba222c13ba9be",
-    "synced_at": "2026-08-01T21:34:38Z",
-    "email_skipped_at": "2026-08-01T21:34:38Z",
-    "email_skip_reason": "reused_existing_card",
-    "email_skipped_fingerprint": "9df1566e4d4e3c26829f0ef82e98235d8c76dfdb1bd1b8b24f2ba222c13ba9be"
+    "description": "Nome: Jaqueline Almeida\nModelo: Antônio\nData Nascimento: 10/08/2026\nEmail: jaqueline.almeidaadvs@gmail.com\nTelefone: 11977091114\nTipo: Prata\nReferencias: Baby clean, pais. Vai escolher o outro cenário ainda.\n\nOrigem: Google Forms\n\n\nDUPLICADO",
+    "fingerprint": "45d513f346742fcd19ea26afbcdcbbb27b17223a2f9ebc77892f54ec7ce09ad8",
+    "synced_at": "2026-08-16T16:44:49Z"
   },
   "s99ar8nvov8ut8b00ut9lea7js": {
     "google_event_id": "s99ar8nvov8ut8b00ut9lea7js",
@@ -1003,9 +1007,9 @@
     "trello_card_id": "6a7b289764fe3e8800ada8fe",
     "trello_card_url": "https://trello.com/c/OgaUg4wA",
     "summary": "Bronze - Ayana - Nasc. 27/07/2026 (Responsável: Flávia Lopes de Castro)",
-    "starts_at": "2026-08-13T14:00:00-03:00",
+    "starts_at": "2026-08-18T16:00:00-03:00",
     "description": "Nome: Flávia Lopes de Castro\nModelo: Ayana\nData Nascimento: 27/07/2026\nEmail: lopesdesignercastro@gmail.com\nTelefone: (31)99467-0295\nTipo: Bronze\nReferencias: Arco Flores\n\nOrigem: Google Forms",
-    "fingerprint": "aaa6f8d5001616f0928f76ea2cc5e6986bc8fe8b852de628b5e1f0cfd750d53c",
-    "synced_at": "2026-08-12T10:19:14Z"
+    "fingerprint": "153b61d92c6739ee3bd263a12b0faddde70ca904f0ff8f0f8098a225a978dcfa",
+    "synced_at": "2026-08-16T16:44:48Z"
   }
 }
