@@ -406,6 +406,19 @@
     "email_notified_at": "2026-06-23T23:48:10Z",
     "archived_at": "2026-06-24T10:24:55Z"
   },
+  "a083h01agnhqahs01hp91mklq8": {
+    "google_event_id": "a083h01agnhqahs01hp91mklq8",
+    "trello_card_id": "6a83258d1b01befa7a586711",
+    "trello_card_url": "https://trello.com/c/FQ9RElfS",
+    "summary": "Consulta nutricionista",
+    "starts_at": "2026-08-18T18:30:00-03:00",
+    "description": "",
+    "fingerprint": "3965a050bd3413e9c0e5451bdfbefeb3f491de3199f7f5fc2aa3f941eb8d85df",
+    "synced_at": "2026-08-17T21:39:16Z",
+    "email_skipped_at": "2026-08-17T21:39:16Z",
+    "email_skip_reason": "reused_existing_card",
+    "email_skipped_fingerprint": "3965a050bd3413e9c0e5451bdfbefeb3f491de3199f7f5fc2aa3f941eb8d85df"
+  },
   "ak65hkqkr248rgl1f5f6kkafjg": {
     "google_event_id": "ak65hkqkr248rgl1f5f6kkafjg",
     "trello_card_id": "6a63b6a175dbc4f7112d084c",
