@@ -432,6 +432,19 @@
     "email_skip_reason": "reused_existing_card",
     "email_skipped_fingerprint": "7a4211be11aade58a9634a20b9e04985a2d9a08a6b1356445d106ccc08d397d4"
   },
+  "b784p54dq6s3mj0pvdfr188k1o": {
+    "google_event_id": "b784p54dq6s3mj0pvdfr188k1o",
+    "trello_card_id": "6a83841e4d4000af7448f909",
+    "trello_card_url": "https://trello.com/c/maUJ0D8e",
+    "summary": "Prata - Laura - Nasc. 30/07/2026 (Responsável: Silvia do Valle)",
+    "starts_at": "2026-08-19T16:00:00-03:00",
+    "description": "Nome: Silvia do Valle\nModelo: Laura\nData Nascimento: 30/07/2026\nEmail: Silviagr.oliveira@gmail.com\nTelefone: (19)998725566\nTipo: Prata\nReferencias: ?\n\nOrigem: Google Forms",
+    "fingerprint": "b7491754df9595dd880e8f045202fa1f7fb3f7c4af038d0fde9639148351e69b",
+    "synced_at": "2026-08-18T21:36:37Z",
+    "email_skipped_at": "2026-08-18T21:36:37Z",
+    "email_skip_reason": "reused_existing_card",
+    "email_skipped_fingerprint": "b7491754df9595dd880e8f045202fa1f7fb3f7c4af038d0fde9639148351e69b"
+  },
   "c8r3gchh6cq3ebb568p6cb9k6gr62bb174pj4bb6cgqjaor264o3id1ick": {
     "google_event_id": "c8r3gchh6cq3ebb568p6cb9k6gr62bb174pj4bb6cgqjaor264o3id1ick",
     "trello_card_id": "6a33367b9fe02f30dfd73364",
@@ -801,6 +814,19 @@
     "email_skipped_at": "2026-07-09T10:35:39Z",
     "email_skip_reason": "reused_existing_card",
     "email_skipped_fingerprint": "35204f0f5232d0f84cd3fcb46db46d6d1759a4f4198cfd0901ceb17e3101340a"
+  },
+  "l5p12ivuicb26rboi2nn76jpu8": {
+    "google_event_id": "l5p12ivuicb26rboi2nn76jpu8",
+    "trello_card_id": "6a848ca04a49570f27178fbe",
+    "trello_card_url": "https://trello.com/c/oecxljoC",
+    "summary": "Prata - Rayssa - Nasc. 10/08/2026 (Responsável: Léa Maira)",
+    "starts_at": "2026-08-22T15:00:00-03:00",
+    "description": "Nome: Léa Maira\nModelo: Rayssa\nData Nascimento: 10/08/2026\nEmail: lea_sgarioni@hotmail.com\nTelefone: 11 94901-1175\nTipo: Prata\nReferencias: Baby Clean e o de flores\n\nOrigem: Google Forms",
+    "fingerprint": "f3afd53f31c0dec68b5822816655aeed2325053092ed7c77d1df268b59e536b9",
+    "synced_at": "2026-08-18T21:36:39Z",
+    "email_skipped_at": "2026-08-18T21:36:39Z",
+    "email_skip_reason": "reused_existing_card",
+    "email_skipped_fingerprint": "f3afd53f31c0dec68b5822816655aeed2325053092ed7c77d1df268b59e536b9"
   },
   "l6oa9p7l3cidfibpre0ai5os64": {
     "google_event_id": "l6oa9p7l3cidfibpre0ai5os64",
