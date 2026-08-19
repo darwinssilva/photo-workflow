@@ -923,6 +923,19 @@
     "email_skip_reason": "reused_existing_card",
     "email_skipped_fingerprint": "18b012fecd988ebc922fc27756d450a642cc8c5641a1eb8610169265052b5e2f"
   },
+  "nsrqm5g3eqqpm6l06ontsqs650": {
+    "google_event_id": "nsrqm5g3eqqpm6l06ontsqs650",
+    "trello_card_id": "6a8504507fa8294274273a8a",
+    "trello_card_url": "https://trello.com/c/jtiBaLYD",
+    "summary": "Acompanhamento Rafaela (Letícia)",
+    "starts_at": "2026-08-20T15:00:00-03:00",
+    "description": "",
+    "fingerprint": "04cabe27e05afde60e862442034d7991fe9f4baa8f466a8af75bc2fb001d2f7c",
+    "synced_at": "2026-08-19T09:48:25Z",
+    "email_skipped_at": "2026-08-19T09:48:25Z",
+    "email_skip_reason": "reused_existing_card",
+    "email_skipped_fingerprint": "04cabe27e05afde60e862442034d7991fe9f4baa8f466a8af75bc2fb001d2f7c"
+  },
   "om510gphdu4p8mh34mk3nkjr10": {
     "google_event_id": "om510gphdu4p8mh34mk3nkjr10",
     "trello_card_id": "6a62565747a741feca3ca2f7",
