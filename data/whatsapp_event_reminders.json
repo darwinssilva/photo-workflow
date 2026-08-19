@@ -44,6 +44,15 @@
     "status": "skipped_missing_phone",
     "recorded_at": "2026-08-13T13:25:33Z"
   },
+  "lembre_ensaio:nsrqm5g3eqqpm6l06ontsqs650:2026-08-20": {
+    "google_event_id": "nsrqm5g3eqqpm6l06ontsqs650",
+    "summary": "Acompanhamento Rafaela (Letícia)",
+    "starts_at": "2026-08-20T15:00:00-03:00",
+    "reminder_date": "2026-08-19",
+    "target_event_date": "2026-08-20",
+    "status": "skipped_missing_phone",
+    "recorded_at": "2026-08-19T12:58:34Z"
+  },
   "lembre_ensaio:s99ar8nvov8ut8b00ut9lea7js:2026-08-12": {
     "google_event_id": "s99ar8nvov8ut8b00ut9lea7js",
     "summary": "Consulta Tricologia",
