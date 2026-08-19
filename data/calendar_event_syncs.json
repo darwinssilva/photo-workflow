@@ -12,6 +12,19 @@
     "email_skip_reason": "reused_existing_card",
     "email_skipped_fingerprint": "b231a8baaea364af69806bcf7e6cb7d738563d072afe7b2182a64349c0984b87"
   },
+  "0detm6k5fho3sjb5ft9vfmkhr8": {
+    "google_event_id": "0detm6k5fho3sjb5ft9vfmkhr8",
+    "trello_card_id": "6a85dde8a584de182772352b",
+    "trello_card_url": "https://trello.com/c/6JmvUrHP",
+    "summary": "Prata - Cecília - Nasc. 28/07/2026 (Responsável: Beatriz)",
+    "starts_at": "2026-08-20T17:30:00-03:00",
+    "description": "Nome: Beatriz\nModelo: Cecília\nData Nascimento: 28/07/2026\nEmail: biiamaria5727@gmail.com\nTelefone: 11 95104-7999\nTipo: Prata\nReferencias: ?\n\nOrigem: Google Forms",
+    "fingerprint": "de77df24c8fa045b4978254554af84b0d6223031e8b96b67939e47e20e8599ee",
+    "synced_at": "2026-08-19T21:39:16Z",
+    "email_skipped_at": "2026-08-19T21:39:16Z",
+    "email_skip_reason": "reused_existing_card",
+    "email_skipped_fingerprint": "de77df24c8fa045b4978254554af84b0d6223031e8b96b67939e47e20e8599ee"
+  },
   "0efjnfjuk7nh5omhnpdjpvbebr": {
     "google_event_id": "0efjnfjuk7nh5omhnpdjpvbebr",
     "trello_card_id": "6a33367cda6c0567cfcaf8eb",
@@ -133,13 +146,16 @@
   },
   "4jolbj12c2e6lumog3lb3p6n28": {
     "google_event_id": "4jolbj12c2e6lumog3lb3p6n28",
-    "trello_card_id": "6a4f1c6d20a16cf319f940bd",
-    "trello_card_url": "https://trello.com/c/4Cg8XCgw",
+    "trello_card_id": "6a8592b46955d63ebed0f219",
+    "trello_card_url": "https://trello.com/c/dI8r3XYQ",
     "summary": "Solicitação -  - Hellen Beatriz de Andrade Jabes",
-    "starts_at": "2026-08-15T10:00:00-03:00",
+    "starts_at": "2026-08-22T13:00:00-03:00",
     "description": "Nome: Hellen Beatriz de Andrade Jabes\nModelo: Davi de Andrade Jabes\nIdade: 3 meses\nEmail: beatriz20101925@hotmail.com\nTelefone: 11930186580\nTipo: Acompanhamento mensal (Pacote pago)\nReferencias: Cores\n\n2º azul \n3º terracota \n4º Amarelo mostarda\n5º Verde\n6º azul claro \n7º Vermelho (Natal)\n8º  Laranja \n9º preto?\n10° verde Militar \n11º Bege\n\nOrigem: Google Forms",
-    "fingerprint": "f76cafc46b23afad134cd50e61a8cbe9e7c5b7db17da06fa943bbc580894cbb1",
-    "synced_at": "2026-08-01T21:34:36Z"
+    "fingerprint": "cfdb70292d903cc3ced806ae77adf52f959aed4b6fae8d528aaf1575e5811ffb",
+    "synced_at": "2026-08-19T21:39:22Z",
+    "email_skipped_at": "2026-08-19T21:39:22Z",
+    "email_skip_reason": "reused_existing_card",
+    "email_skipped_fingerprint": "cfdb70292d903cc3ced806ae77adf52f959aed4b6fae8d528aaf1575e5811ffb"
   },
   "68q38c1i70qj2b9kc8q36b9k69gm2bb1cgrjabb16op68d9h70r3cc1hc4": {
     "google_event_id": "68q38c1i70qj2b9kc8q36b9k69gm2bb1cgrjabb16op68d9h70r3cc1hc4",
@@ -795,12 +811,9 @@
     "trello_card_url": "https://trello.com/c/maUJ0D8e",
     "summary": "Prata - Laura - Nasc. 30/07/2026 (Responsável: Silvia do Valle)",
     "starts_at": "2026-08-19T16:00:00-03:00",
-    "description": "Nome: Silvia do Valle\nModelo: Laura\nData Nascimento: 30/07/2026\nEmail: Silviagr.oliveira@gmail.com\nTelefone: (19)998725566\nTipo: Prata\nReferencias: ?\n\nOrigem: Google Forms",
-    "fingerprint": "11e3cb0e0fbbef979625102251d7e5447daa3ccef73486bc22e243c6094ef2d6",
-    "synced_at": "2026-08-18T09:47:43Z",
-    "email_skipped_at": "2026-08-18T09:47:43Z",
-    "email_skip_reason": "reused_existing_card",
-    "email_skipped_fingerprint": "11e3cb0e0fbbef979625102251d7e5447daa3ccef73486bc22e243c6094ef2d6"
+    "description": "Nome: Silvia do Valle\nModelo: Laura\nData Nascimento: 30/07/2026\nEmail: Silviagr.oliveira@gmail.com\nTelefone: (19)998725566\nTipo: Prata\nReferencias: arco floral e lua\n\nOrigem: Google Forms",
+    "fingerprint": "69d87b76b3cbb34c35164bd298a794267445aed9203108ddb54a1ad78312c009",
+    "synced_at": "2026-08-19T21:39:14Z"
   },
   "kubeuqmq9f6pter143k6kd0hhk": {
     "google_event_id": "kubeuqmq9f6pter143k6kd0hhk",
@@ -851,6 +864,19 @@
     "fingerprint": "db7cb0f35c592d29b3b7950019393856bf94b3e520c156114572ce2f186f1f00",
     "synced_at": "2026-07-11T20:35:29Z"
   },
+  "lnp7j9aqjq90h15piekf3hf3n8": {
+    "google_event_id": "lnp7j9aqjq90h15piekf3hf3n8",
+    "trello_card_id": "6a848ca04a49570f27178fbe",
+    "trello_card_url": "https://trello.com/c/oecxljoC",
+    "summary": "Prata - Rayssa - Nasc. 10/08/2026 (Responsável: Léa Maira)",
+    "starts_at": "2026-08-22T15:00:00-03:00",
+    "description": "Nome: Léa Maira\nModelo: Rayssa\nData Nascimento: 10/08/2026\nEmail: lea_sgarioni@hotmail.com\nTelefone: 11 94901-1175\nTipo: Prata\nReferencias: Baby Clean e o de flores\n\nOrigem: Google Forms",
+    "fingerprint": "023fbe50130970f799a553ed1379c3d2ff00e12e202d5de2b06c07fc3d5a5b6d",
+    "synced_at": "2026-08-19T21:39:23Z",
+    "email_skipped_at": "2026-08-19T21:39:23Z",
+    "email_skip_reason": "reused_existing_card",
+    "email_skipped_fingerprint": "023fbe50130970f799a553ed1379c3d2ff00e12e202d5de2b06c07fc3d5a5b6d"
+  },
   "lq1fikqoqf13nct60bjt2qbohs": {
     "google_event_id": "lq1fikqoqf13nct60bjt2qbohs",
     "trello_card_id": "6a3f1e0b11d65bdb3de2bfe1",
@@ -900,6 +926,19 @@
     "email_skip_reason": "reused_existing_card",
     "email_skipped_fingerprint": "6fe24e561a9c55c7c4839efb5bcc2078b2d9379ce5c0a331c68b2c0143eb40f9"
   },
+  "me6d91ec1d3mbccod5tmdioh9c": {
+    "google_event_id": "me6d91ec1d3mbccod5tmdioh9c",
+    "trello_card_id": "6a85df295dbb7ee794bcab39",
+    "trello_card_url": "https://trello.com/c/pJ9341pu",
+    "summary": "Prata - Arthur - Nasc. 04/08/2026 (Responsável: Rosária Pereira Obara)",
+    "starts_at": "2026-08-21T09:00:00-03:00",
+    "description": "Nome: Rosária Pereira Obara\nModelo: Arthur\nData Nascimento: 04/08/2026\nEmail: rpobara@gmail.com\nTelefone: 11 94604-3012\nTipo: Prata\nReferencias: \n\nOrigem: Google Forms",
+    "fingerprint": "6a6297af7a0a1a11739c74773def230fd30373b01f4327c84c45d97ead25162b",
+    "synced_at": "2026-08-19T21:39:18Z",
+    "email_skipped_at": "2026-08-19T21:39:18Z",
+    "email_skip_reason": "reused_existing_card",
+    "email_skipped_fingerprint": "6a6297af7a0a1a11739c74773def230fd30373b01f4327c84c45d97ead25162b"
+  },
   "nfkdrduf5so7bnmld8msp0idoo": {
     "google_event_id": "nfkdrduf5so7bnmld8msp0idoo",
     "trello_card_id": "6a7618c5cbd637ea2e2ea9a4",
@@ -945,6 +984,19 @@
     "description": "Nome: Andressa\nModelo: Natan\nData Nascimento: 20/05/2026\nEmail: Dessaleal23@gmail.com\nTelefone: 11 94359-4567\nTipo: \nReferencias: Natan 3 meses tema Astronauta \n\nVai pagar no dia --> 150,00\n\nOrigem: Google Forms",
     "fingerprint": "9646cc4bb61ab80a5d64d845a49d32dcc6c53c90af7dd2770ca07ded0ea045ec",
     "synced_at": "2026-08-12T22:01:34Z"
+  },
+  "os2qiplm30kvj6fh0n5cpcej84": {
+    "google_event_id": "os2qiplm30kvj6fh0n5cpcej84",
+    "trello_card_id": "6a85df295dbb7ee794bcab39",
+    "trello_card_url": "https://trello.com/c/pJ9341pu",
+    "summary": "Prata - Arthur - Nasc. 04/08/2026 (Responsável: Rosária Pereira Obara)",
+    "starts_at": "2026-08-21T09:00:00-03:00",
+    "description": "Nome: Rosária Pereira Obara\nModelo: Arthur\nData Nascimento: 04/08/2026\nEmail: rpobara@gmail.com\nTelefone: 11 94604-3012\nTipo: Prata\nReferencias: \n\nOrigem: Google Forms",
+    "fingerprint": "340792d6ae1a0ef4fa310710ad8e0e061871d698be06525aa9b70ddd0114aada",
+    "synced_at": "2026-08-19T21:39:19Z",
+    "email_skipped_at": "2026-08-19T21:39:19Z",
+    "email_skip_reason": "reused_existing_card",
+    "email_skipped_fingerprint": "340792d6ae1a0ef4fa310710ad8e0e061871d698be06525aa9b70ddd0114aada"
   },
   "p2h26ofo8rkbm3m7901mncbpm8": {
     "google_event_id": "p2h26ofo8rkbm3m7901mncbpm8",
@@ -1040,6 +1092,19 @@
     "email_skipped_at": "2026-08-05T22:19:28Z",
     "email_skip_reason": "reused_existing_card",
     "email_skipped_fingerprint": "bac1d175f3953fa4bb34f7c7cc44ec5ad6ddd76fdeb7d419d05ea34a9176a711"
+  },
+  "tpfrg4dd36bi9toheg3hpsh2kc": {
+    "google_event_id": "tpfrg4dd36bi9toheg3hpsh2kc",
+    "trello_card_id": "6a85f0e818b11fcb744e76e2",
+    "trello_card_url": "https://trello.com/c/V6Keuo84",
+    "summary": "Prata - Lea - Nasc. 01/08/2026 (Responsável: Ghenwa)",
+    "starts_at": "2026-08-21T18:00:00-03:00",
+    "description": "Nome: Ghenwa\nModelo: Lea\nData Nascimento: 01/08/2026\nEmail: ghenwa_abdalah92@icloud.com\nTelefone: (11)954210740\nTipo: Prata\nReferencias: \n\nOrigem: Google Forms",
+    "fingerprint": "d435ff5561c9ef760a08681fefbbc30d824a56046a1f0894ba4f215476d76aaf",
+    "synced_at": "2026-08-19T21:39:20Z",
+    "email_skipped_at": "2026-08-19T21:39:20Z",
+    "email_skip_reason": "reused_existing_card",
+    "email_skipped_fingerprint": "d435ff5561c9ef760a08681fefbbc30d824a56046a1f0894ba4f215476d76aaf"
   },
   "u2mp6g6mcn7r7u7ht32lofgvgo": {
     "google_event_id": "u2mp6g6mcn7r7u7ht32lofgvgo",
