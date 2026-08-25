@@ -53,6 +53,15 @@
     "status": "skipped_missing_phone",
     "recorded_at": "2026-08-19T12:58:34Z"
   },
+  "lembre_ensaio:o5lqueeka9omgh7qn617364jd8:2026-08-26": {
+    "google_event_id": "o5lqueeka9omgh7qn617364jd8",
+    "summary": "Consulta Stella",
+    "starts_at": "2026-08-26T14:30:00-03:00",
+    "reminder_date": "2026-08-25",
+    "target_event_date": "2026-08-26",
+    "status": "skipped_missing_phone",
+    "recorded_at": "2026-08-25T16:34:59Z"
+  },
   "lembre_ensaio:s99ar8nvov8ut8b00ut9lea7js:2026-08-12": {
     "google_event_id": "s99ar8nvov8ut8b00ut9lea7js",
     "summary": "Consulta Tricologia",
