@@ -382,6 +382,19 @@
     "email_skip_reason": "missing_client_email",
     "email_skipped_fingerprint": "e8936785a326a0ca8e69d66114aaee802aa68e2900435c4bb46848eed85fc885"
   },
+  "763701dnaqmu7hch4mhjfo8l74": {
+    "google_event_id": "763701dnaqmu7hch4mhjfo8l74",
+    "trello_card_id": "6a91ce86cd99dc10d6dab3e9",
+    "trello_card_url": "https://trello.com/c/ejjcHtcd",
+    "summary": "Evento Escola Stella",
+    "starts_at": "2026-09-03T09:00:00-03:00",
+    "description": "",
+    "fingerprint": "fe47025b5425f0a66596c5e973504c73ebf6952e4fb6d5a42ab43db6fb5e9754",
+    "synced_at": "2026-08-28T22:11:10Z",
+    "email_skipped_at": "2026-08-28T22:11:10Z",
+    "email_skip_reason": "reused_existing_card",
+    "email_skipped_fingerprint": "fe47025b5425f0a66596c5e973504c73ebf6952e4fb6d5a42ab43db6fb5e9754"
+  },
   "7rho9sgs7lt21g1s5aubsfug6k": {
     "google_event_id": "7rho9sgs7lt21g1s5aubsfug6k",
     "trello_card_id": "6a4539c8aa15dae5114880da",
