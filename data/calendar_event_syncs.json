@@ -77,6 +77,19 @@
     "email_skip_reason": "missing_client_email",
     "email_skipped_fingerprint": "2db30b2ea7cae9ace17d97340f30c9332940519f6ac7464559de880b35f672c6"
   },
+  "1eouibi23pn9knn9435mhpkug0": {
+    "google_event_id": "1eouibi23pn9knn9435mhpkug0",
+    "trello_card_id": "6a93b419ec6d49d1c996c760",
+    "trello_card_url": "https://trello.com/c/bNF7FvmU",
+    "summary": "Aniversário",
+    "starts_at": "2026-09-04T16:00:00-03:00",
+    "description": "",
+    "fingerprint": "71c6651ffba6181551b804713b28bdbcc5e449ee6936e9d2ed738115d361c2c2",
+    "synced_at": "2026-08-30T09:24:22Z",
+    "email_skipped_at": "2026-08-30T09:24:22Z",
+    "email_skip_reason": "reused_existing_card",
+    "email_skipped_fingerprint": "71c6651ffba6181551b804713b28bdbcc5e449ee6936e9d2ed738115d361c2c2"
+  },
   "1vojkgkllm6hmidb1s55j3ec0s": {
     "google_event_id": "1vojkgkllm6hmidb1s55j3ec0s",
     "trello_card_id": "6a6141ebe4e95dca02198907",
