@@ -35,6 +35,15 @@
     "status": "skipped_missing_phone",
     "recorded_at": "2026-08-05T12:43:46Z"
   },
+  "lembre_ensaio:763701dnaqmu7hch4mhjfo8l74:2026-09-03": {
+    "google_event_id": "763701dnaqmu7hch4mhjfo8l74",
+    "summary": "Evento Escola Stella",
+    "starts_at": "2026-09-03T09:00:00-03:00",
+    "reminder_date": "2026-09-02",
+    "target_event_date": "2026-09-03",
+    "status": "skipped_missing_phone",
+    "recorded_at": "2026-09-02T21:21:58Z"
+  },
   "lembre_ensaio:dbu353uoh42dat1dhfeot3esfs:2026-08-14": {
     "google_event_id": "dbu353uoh42dat1dhfeot3esfs",
     "summary": "Ouro - Antônio - Nasc. 29/07/2026 (Responsável: Ariane Macedo Pinheiro)",
