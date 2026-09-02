@@ -925,10 +925,10 @@
     "trello_card_id": "6a8f46a139a7cf2e53a0881d",
     "trello_card_url": "https://trello.com/c/C3ut19l6",
     "summary": "Ouro / Exclusivo - Arthur - Nasc. 22/08/2026 (Responsável: Letícia de Carvalho)",
-    "starts_at": "2026-09-01T13:00:00-03:00",
+    "starts_at": "2026-09-03T13:00:00-03:00",
     "description": "Nome: Letícia de Carvalho\nModelo: Arthur\nData Nascimento: 22/08/2026\nEmail: le_de_carvalho@hotmail.com\nTelefone: 11971814439\nTipo: Ouro\nReferencias: Pacote Exclusivo\n\nBaby clean, atemporal e o de temas\n\nOrigem: Google Forms",
-    "fingerprint": "ba8971423302b16a2dbf504b726a9da645c1f999fe944f894c9c36993fbefd6e",
-    "synced_at": "2026-08-31T09:33:14Z"
+    "fingerprint": "f968cf301938a15470fd3c0fa866375d7d442d65ba515ddb1d2dd293e80684cf",
+    "synced_at": "2026-09-02T21:22:20Z"
   },
   "kmeid25kmko5qe2brkact8ic4g": {
     "google_event_id": "kmeid25kmko5qe2brkact8ic4g",
@@ -1302,6 +1302,19 @@
     "email_skipped_at": "2026-08-10T21:57:06Z",
     "email_skip_reason": "reused_existing_card",
     "email_skipped_fingerprint": "93ab524fd8e01b7507773e19d1af428a57c0420c59cb87469bd550840fd52b11"
+  },
+  "ug0neckob9rncnupq3egirs6bs": {
+    "google_event_id": "ug0neckob9rncnupq3egirs6bs",
+    "trello_card_id": "6a989390badeae718dd8e325",
+    "trello_card_url": "https://trello.com/c/85wSx6o6",
+    "summary": "Gravar vídeos!",
+    "starts_at": "2026-09-04T09:00:00-03:00",
+    "description": "",
+    "fingerprint": "707016e5de10f97729cf8cf75f7d916d92f53ba0fb1d1ae3ec751e4a8bcdc298",
+    "synced_at": "2026-09-02T21:22:25Z",
+    "email_skipped_at": "2026-09-02T21:22:25Z",
+    "email_skip_reason": "missing_client_email",
+    "email_skipped_fingerprint": "707016e5de10f97729cf8cf75f7d916d92f53ba0fb1d1ae3ec751e4a8bcdc298"
   },
   "ujejp69jsv8inge7qqlqseu7bc": {
     "google_event_id": "ujejp69jsv8inge7qqlqseu7bc",
