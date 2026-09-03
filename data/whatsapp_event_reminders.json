@@ -1,4 +1,13 @@
 {
+  "lembre_ensaio:1eouibi23pn9knn9435mhpkug0:2026-09-04": {
+    "google_event_id": "1eouibi23pn9knn9435mhpkug0",
+    "summary": "Aniversário",
+    "starts_at": "2026-09-04T16:00:00-03:00",
+    "reminder_date": "2026-09-03",
+    "target_event_date": "2026-09-04",
+    "status": "skipped_missing_phone",
+    "recorded_at": "2026-09-03T12:28:20Z"
+  },
   "lembre_ensaio:24a5385kdmi1nchlvtg4qilf7o:2026-08-03": {
     "google_event_id": "24a5385kdmi1nchlvtg4qilf7o",
     "summary": "Exame Susan",
@@ -88,5 +97,14 @@
     "target_event_date": "2026-08-12",
     "status": "skipped_missing_phone",
     "recorded_at": "2026-08-11T13:20:03Z"
+  },
+  "lembre_ensaio:ug0neckob9rncnupq3egirs6bs:2026-09-04": {
+    "google_event_id": "ug0neckob9rncnupq3egirs6bs",
+    "summary": "Gravar vídeos!",
+    "starts_at": "2026-09-04T09:00:00-03:00",
+    "reminder_date": "2026-09-03",
+    "target_event_date": "2026-09-04",
+    "status": "skipped_missing_phone",
+    "recorded_at": "2026-09-03T12:28:20Z"
   }
 }
