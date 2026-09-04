@@ -80,6 +80,15 @@
     "status": "skipped_missing_phone",
     "recorded_at": "2026-08-25T16:34:59Z"
   },
+  "lembre_ensaio:ptsp6uk8mnhjlic2epncg9ri4k:2026-09-05": {
+    "google_event_id": "ptsp6uk8mnhjlic2epncg9ri4k",
+    "summary": "Ouro - Alícia - Nasc. 21/08/2026 (Responsável: Gleicy Savala)",
+    "starts_at": "2026-09-05T15:00:00-03:00",
+    "reminder_date": "2026-09-04",
+    "target_event_date": "2026-09-05",
+    "status": "skipped_missing_phone",
+    "recorded_at": "2026-09-04T12:27:24Z"
+  },
   "lembre_ensaio:s99ar8nvov8ut8b00ut9lea7js:2026-08-12": {
     "google_event_id": "s99ar8nvov8ut8b00ut9lea7js",
     "summary": "Consulta Tricologia",
