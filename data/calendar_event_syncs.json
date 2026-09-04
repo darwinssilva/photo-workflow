@@ -1338,5 +1338,18 @@
     "description": "Nome: Flávia Lopes de Castro\nModelo: Ayana\nData Nascimento: 27/07/2026\nEmail: lopesdesignercastro@gmail.com\nTelefone: (31)99467-0295\nTipo: Bronze\nReferencias: Arco Flores\n\nOrigem: Google Forms",
     "fingerprint": "153b61d92c6739ee3bd263a12b0faddde70ca904f0ff8f0f8098a225a978dcfa",
     "synced_at": "2026-08-16T16:44:48Z"
+  },
+  "vfbbf914a3e57du382vvn7tolg": {
+    "google_event_id": "vfbbf914a3e57du382vvn7tolg",
+    "trello_card_id": "6a9b368f2034665f14e4e988",
+    "trello_card_url": "https://trello.com/c/Hbi4HR7h",
+    "summary": "Ouro - Dom - Nasc. 16/10/2026 (Responsável: Paula Perez)",
+    "starts_at": "2026-10-26T10:00:00-03:00",
+    "description": "Nome: Paula Perez\nModelo: Dom\nData Nascimento: 16/10/2026\nEmail: paula.carolinaperez@hotmail.com\nTelefone: 11989458932\nTipo: Ouro\nReferencias: Pagamento em 3x sem Juros\n\nOrigem: Google Forms",
+    "fingerprint": "e21d902fd980113fb1cd1d295a057e95a941aa4846f8ed5d87d0e624926a2e64",
+    "synced_at": "2026-09-04T21:22:25Z",
+    "email_skipped_at": "2026-09-04T21:22:25Z",
+    "email_skip_reason": "reused_existing_card",
+    "email_skipped_fingerprint": "e21d902fd980113fb1cd1d295a057e95a941aa4846f8ed5d87d0e624926a2e64"
   }
 }
