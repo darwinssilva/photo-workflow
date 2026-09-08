@@ -560,6 +560,19 @@
     "email_skip_reason": "reused_existing_card",
     "email_skipped_fingerprint": "b7491754df9595dd880e8f045202fa1f7fb3f7c4af038d0fde9639148351e69b"
   },
+  "b80u5qds8dd3hkeleotgjcp0c4": {
+    "google_event_id": "b80u5qds8dd3hkeleotgjcp0c4",
+    "trello_card_id": "6aa0470ff13694d7a9c75ee7",
+    "trello_card_url": "https://trello.com/c/FVJu0LYi",
+    "summary": "Prata - Nicolas - Nasc. 24/08/2026 (Responsável: Gabriella Franco Olivares)",
+    "starts_at": "2026-09-10T12:00:00-03:00",
+    "description": "Nome: Gabriella Franco Olivares\nModelo: Nicolas\nData Nascimento: 24/08/2026\nEmail: gabriellafolivares@hotmail.com\nTelefone: 11 964493673\nTipo: Prata\nReferencias: \n\nOrigem: Google Forms",
+    "fingerprint": "8811dc9bdaa64885ff17aaf56452e1a15ec96572973397b1b9275fd740f7e220",
+    "synced_at": "2026-09-08T21:21:32Z",
+    "email_skipped_at": "2026-09-08T21:21:32Z",
+    "email_skip_reason": "reused_existing_card",
+    "email_skipped_fingerprint": "8811dc9bdaa64885ff17aaf56452e1a15ec96572973397b1b9275fd740f7e220"
+  },
   "c4pjcc366ks38bb6cdj6ab9k75hm8b9o68pjcbb475imacb6ccq6ce9k64": {
     "google_event_id": "c4pjcc366ks38bb6cdj6ab9k75hm8b9o68pjcbb475imacb6ccq6ce9k64",
     "trello_card_id": "6a989b87b399c559fa5e2a1b",
@@ -882,6 +895,19 @@
     "email_skipped_at": "2026-07-03T16:50:09Z",
     "email_skip_reason": "reused_existing_card",
     "email_skipped_fingerprint": "d8a57fb05bd17f7395fbe92141f49d81f45c36c20a7ee111856f3adc3964e62e"
+  },
+  "h5tg1f0dtg3iffjqp8sqhtrv8s": {
+    "google_event_id": "h5tg1f0dtg3iffjqp8sqhtrv8s",
+    "trello_card_id": "6aa0471405baef6abedd4335",
+    "trello_card_url": "https://trello.com/c/yOvfg7TU",
+    "summary": "Prata - Maitê - Nasc. 15/08/2026 (Responsável: Lauriene da Silva Pacheco)",
+    "starts_at": "2026-09-12T10:00:00-03:00",
+    "description": "Nome: Lauriene da Silva Pacheco\nModelo: Maitê\nData Nascimento: 15/08/2026\nEmail: lauriene.rebeca@gmail.com\nTelefone: 11- 94896-5278\nTipo: Prata\nReferencias: Lua + Arco floral\n\nOrigem: Google Forms",
+    "fingerprint": "212ac7434aff1c547569a338703e2cf66acf360456cc9feaa3c3944dea3341f2",
+    "synced_at": "2026-09-08T21:21:33Z",
+    "email_skipped_at": "2026-09-08T21:21:33Z",
+    "email_skip_reason": "reused_existing_card",
+    "email_skipped_fingerprint": "212ac7434aff1c547569a338703e2cf66acf360456cc9feaa3c3944dea3341f2"
   },
   "hojsr2fsemun1egmqiajdrf2ds": {
     "google_event_id": "hojsr2fsemun1egmqiajdrf2ds",
