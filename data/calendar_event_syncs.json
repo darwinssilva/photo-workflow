@@ -573,6 +573,19 @@
     "email_skip_reason": "reused_existing_card",
     "email_skipped_fingerprint": "8811dc9bdaa64885ff17aaf56452e1a15ec96572973397b1b9275fd740f7e220"
   },
+  "bfllnr02ftq4c05a45kg1err18": {
+    "google_event_id": "bfllnr02ftq4c05a45kg1err18",
+    "trello_card_id": "6aa093927b82676e89f613ac",
+    "trello_card_url": "https://trello.com/c/78a1TYIg",
+    "summary": "Vitaminas",
+    "starts_at": "2026-09-09T15:00:00-03:00",
+    "description": "",
+    "fingerprint": "b2dec1a8e6f4015b15a079037ec3bd09106d5047e78a2aad3d84648799b0d0ed",
+    "synced_at": "2026-09-09T09:28:45Z",
+    "email_skipped_at": "2026-09-09T09:28:45Z",
+    "email_skip_reason": "reused_existing_card",
+    "email_skipped_fingerprint": "b2dec1a8e6f4015b15a079037ec3bd09106d5047e78a2aad3d84648799b0d0ed"
+  },
   "c4pjcc366ks38bb6cdj6ab9k75hm8b9o68pjcbb475imacb6ccq6ce9k64": {
     "google_event_id": "c4pjcc366ks38bb6cdj6ab9k75hm8b9o68pjcbb475imacb6ccq6ce9k64",
     "trello_card_id": "6a989b87b399c559fa5e2a1b",
