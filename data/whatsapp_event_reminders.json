@@ -53,6 +53,15 @@
     "status": "skipped_missing_phone",
     "recorded_at": "2026-09-02T21:21:58Z"
   },
+  "lembre_ensaio:cgs6coj46os30b9ichi6ab9kcgom4bb168sm8bb5c8o36d3268r62e1gco:2026-09-19": {
+    "google_event_id": "cgs6coj46os30b9ichi6ab9kcgom4bb168sm8bb5c8o36d3268r62e1gco",
+    "summary": "6 meses Murilo (Cris)",
+    "starts_at": "2026-09-19T15:00:00-03:00",
+    "reminder_date": "2026-09-18",
+    "target_event_date": "2026-09-19",
+    "status": "skipped_missing_phone",
+    "recorded_at": "2026-09-18T12:25:51Z"
+  },
   "lembre_ensaio:dbu353uoh42dat1dhfeot3esfs:2026-08-14": {
     "google_event_id": "dbu353uoh42dat1dhfeot3esfs",
     "summary": "Ouro - Antônio - Nasc. 29/07/2026 (Responsável: Ariane Macedo Pinheiro)",
@@ -61,6 +70,15 @@
     "target_event_date": "2026-08-14",
     "status": "skipped_missing_phone",
     "recorded_at": "2026-08-13T13:25:33Z"
+  },
+  "lembre_ensaio:hojsr2fsemun1egmqiajdrf2ds:2026-09-19": {
+    "google_event_id": "hojsr2fsemun1egmqiajdrf2ds",
+    "summary": "Ouro - Marina - Nasc. 27/06/2026 (Responsável: Luana Campos Roque)",
+    "starts_at": "2026-09-19T12:00:00-03:00",
+    "reminder_date": "2026-09-18",
+    "target_event_date": "2026-09-19",
+    "status": "skipped_missing_phone",
+    "recorded_at": "2026-09-18T12:25:51Z"
   },
   "lembre_ensaio:j07sgecpm2c2eq4gtp2n4mdsjc:2026-09-18": {
     "google_event_id": "j07sgecpm2c2eq4gtp2n4mdsjc",
@@ -115,6 +133,15 @@
     "target_event_date": "2026-08-12",
     "status": "skipped_missing_phone",
     "recorded_at": "2026-08-11T13:20:03Z"
+  },
+  "lembre_ensaio:u7ti2ujmkdcafe505qcjo2gouc:2026-09-19": {
+    "google_event_id": "u7ti2ujmkdcafe505qcjo2gouc",
+    "summary": "Ouro - Marina - Nasc. 27/06/2026 (Responsável: Luana Campos Roque)",
+    "starts_at": "2026-09-19T12:00:00-03:00",
+    "reminder_date": "2026-09-18",
+    "target_event_date": "2026-09-19",
+    "status": "skipped_missing_phone",
+    "recorded_at": "2026-09-18T12:25:51Z"
   },
   "lembre_ensaio:ug0neckob9rncnupq3egirs6bs:2026-09-04": {
     "google_event_id": "ug0neckob9rncnupq3egirs6bs",
