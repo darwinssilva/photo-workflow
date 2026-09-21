@@ -100,6 +100,19 @@
     "fingerprint": "ffd24dc0c7421b63d0a73e7f069dbaccd7b71248ffaae19fe823304c37588223",
     "synced_at": "2026-09-05T21:20:27Z"
   },
+  "1ss8c88pneaqslrl5j7rk7he9c": {
+    "google_event_id": "1ss8c88pneaqslrl5j7rk7he9c",
+    "trello_card_id": "6ab0fa2254da8851d2b49285",
+    "trello_card_url": "https://trello.com/c/MXx7v0Li",
+    "summary": "Agenda fechada (exames)",
+    "starts_at": "2026-09-22T08:00:00-03:00",
+    "description": "",
+    "fingerprint": "0494544438560bd527cd246460a10b97cb2bb31cfcea108556320aff38517385",
+    "synced_at": "2026-09-21T09:34:28Z",
+    "email_skipped_at": "2026-09-21T09:34:28Z",
+    "email_skip_reason": "missing_client_email",
+    "email_skipped_fingerprint": "0494544438560bd527cd246460a10b97cb2bb31cfcea108556320aff38517385"
+  },
   "1vojkgkllm6hmidb1s55j3ec0s": {
     "google_event_id": "1vojkgkllm6hmidb1s55j3ec0s",
     "trello_card_id": "6a6141ebe4e95dca02198907",
@@ -977,10 +990,10 @@
     "trello_card_id": "6a79f183f3147fb0df1cb21b",
     "trello_card_url": "https://trello.com/c/FqN8sAum",
     "summary": "Marina 3 Meses - Nasc. 27/06/2026 (Responsável: Luana Campos Roque)",
-    "starts_at": "2026-09-19T12:00:00-03:00",
+    "starts_at": "2026-09-26T12:00:00-03:00",
     "description": "Nome: Luana Campos Roque\nModelo: Marina\nData Nascimento: 27/06/2026\nEmail: luana.fisio.life@gmail.com\nTelefone: \nTipo: Ouro\nReferencias: Acompanhamento Trimestral\n\nTema: Borboleta Clean, cores claras\nReferência enviada para grupo \"ensaios agendados\"\n\nVai pagar no dia\n\nOrigem: Google Forms",
-    "fingerprint": "6b3859314c9abfb1640ce6e76ee701a5cd1ac9a9a189f25df0b08ea0efacba54",
-    "synced_at": "2026-09-18T21:22:52Z"
+    "fingerprint": "fa00d361170fe49ea0961f4894138bcfc2c54a90fb7b8d749a44bb9be22255d4",
+    "synced_at": "2026-09-21T09:34:29Z"
   },
   "hr0iqflr9pevs8rs7qvmm20j7o": {
     "google_event_id": "hr0iqflr9pevs8rs7qvmm20j7o",
@@ -1189,7 +1202,8 @@
     "synced_at": "2026-09-15T22:02:43Z",
     "email_skipped_at": "2026-09-15T22:02:43Z",
     "email_skip_reason": "missing_client_email",
-    "email_skipped_fingerprint": "3753028287f4e9eab45cc42f3c4f8d8fbe599dfa131cc33a8e48c33720bcb025"
+    "email_skipped_fingerprint": "3753028287f4e9eab45cc42f3c4f8d8fbe599dfa131cc33a8e48c33720bcb025",
+    "archived_at": "2026-09-21T09:34:23Z"
   },
   "m67884uptlj1bkr20cmqsd7cjo": {
     "google_event_id": "m67884uptlj1bkr20cmqsd7cjo",
@@ -1412,6 +1426,19 @@
     "description": "Nome: Anne\nModelo: Thiago\nData Nascimento: 25/05/2026\nEmail: annematiazi@outlook.com\nTelefone: 11984462023\nTipo: Ouro\nReferencias: Futebol, atemporal, balanço com ursinho\nVai trazer roupinha do são Paulo\n\nOrigem: Google Forms",
     "fingerprint": "3ea85d8e40a33e57faf4bc22fb3ae8490647246d5473bc289d0f1f8dff9f07bd",
     "synced_at": "2026-07-11T20:35:24Z"
+  },
+  "t07akos6bqi4n0jh0g6vokfhho": {
+    "google_event_id": "t07akos6bqi4n0jh0g6vokfhho",
+    "trello_card_id": "6ab0fa28f443a9b0cb8fc5c5",
+    "trello_card_url": "https://trello.com/c/ejuO8wvY",
+    "summary": "Agenda fechada (Aniversário Helena)",
+    "starts_at": "2026-09-26T15:00:00-03:00",
+    "description": "",
+    "fingerprint": "79c44417e95837326afa95b72b9ad31976e6b3c3b215cca1c8070ac3ba67dcf8",
+    "synced_at": "2026-09-21T09:34:34Z",
+    "email_skipped_at": "2026-09-21T09:34:34Z",
+    "email_skip_reason": "missing_client_email",
+    "email_skipped_fingerprint": "79c44417e95837326afa95b72b9ad31976e6b3c3b215cca1c8070ac3ba67dcf8"
   },
   "t1jnshe6l8ca9p0800d9jbj65o": {
     "google_event_id": "t1jnshe6l8ca9p0800d9jbj65o",
