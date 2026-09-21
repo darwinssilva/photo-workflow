@@ -8,6 +8,15 @@
     "status": "skipped_missing_phone",
     "recorded_at": "2026-09-03T12:28:20Z"
   },
+  "lembre_ensaio:1ss8c88pneaqslrl5j7rk7he9c:2026-09-22": {
+    "google_event_id": "1ss8c88pneaqslrl5j7rk7he9c",
+    "summary": "Agenda fechada (exames)",
+    "starts_at": "2026-09-22T08:00:00-03:00",
+    "reminder_date": "2026-09-21",
+    "target_event_date": "2026-09-22",
+    "status": "skipped_missing_phone",
+    "recorded_at": "2026-09-21T12:26:27Z"
+  },
   "lembre_ensaio:24a5385kdmi1nchlvtg4qilf7o:2026-08-03": {
     "google_event_id": "24a5385kdmi1nchlvtg4qilf7o",
     "summary": "Exame Susan",
