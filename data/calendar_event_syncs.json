@@ -136,6 +136,19 @@
     "email_skip_reason": "reused_existing_card",
     "email_skipped_fingerprint": "b3f07e480d352cbf0b62536228e517a4b41195a7b0f7c2de8255d48decafbb87"
   },
+  "20o0t71vump1f8vf6uhlm7asbo": {
+    "google_event_id": "20o0t71vump1f8vf6uhlm7asbo",
+    "trello_card_id": "6ab1a075c9f2f3fd5d5e0620",
+    "trello_card_url": "https://trello.com/c/hYhsxZMO",
+    "summary": "Ouro - Zaya - Nasc. 06/09/2026 (Responsável: Rahessa Mara Hossota Ribeiro)",
+    "starts_at": "2026-09-24T12:00:00-03:00",
+    "description": "Nome: Rahessa Mara Hossota Ribeiro\nModelo: Zaya\nData Nascimento: 06/09/2026\nEmail: rahess.hos@gmail.com\nTelefone: (11) 9 49457386\nTipo: Ouro\nReferencias: \n\nOrigem: Google Forms",
+    "fingerprint": "4fa5ec5d9650b6796a6d06218772ea342f3ec2ac12938fb429a130770735f2bc",
+    "synced_at": "2026-09-22T21:22:46Z",
+    "email_skipped_at": "2026-09-22T21:22:46Z",
+    "email_skip_reason": "reused_existing_card",
+    "email_skipped_fingerprint": "4fa5ec5d9650b6796a6d06218772ea342f3ec2ac12938fb429a130770735f2bc"
+  },
   "24a5385kdmi1nchlvtg4qilf7o": {
     "google_event_id": "24a5385kdmi1nchlvtg4qilf7o",
     "trello_card_id": "6a710ac0a97549d0e651f9d2",
@@ -1101,6 +1114,16 @@
     "synced_at": "2026-06-19T19:31:07Z",
     "email_notified_at": "2026-06-19T00:12:09Z"
   },
+  "j6cq3bulnv733gopca7dv6rvvg": {
+    "google_event_id": "j6cq3bulnv733gopca7dv6rvvg",
+    "trello_card_id": "6ab2f1ac84e1148572d22473",
+    "trello_card_url": "https://trello.com/c/eX13yjWG",
+    "summary": "Davi 3 meses - Nasc. 16/06/2026 (Responsável: Nery Marques)",
+    "starts_at": "2026-09-28T16:00:00-03:00",
+    "description": "Nome: Nery Marques\nModelo: Davi\nData Nascimento: 16/06/2026\nEmail: nerymaaarques@gmail.com\nTelefone: 11976268984\nTipo: Ouro\nReferencias: 3 meses Davi\nEstá pago**\n\nNão quer cenário. Referências no grupo \"Ensaios agendados \"\n\nOrigem: Google Forms",
+    "fingerprint": "9fd3cd2271619f9546b0f8fc5753fb874872e105a8ad995b9288f4d8c85737d4",
+    "synced_at": "2026-09-22T21:22:54Z"
+  },
   "jsu2shl0i5fhfiqhevl9ok6kto": {
     "google_event_id": "jsu2shl0i5fhfiqhevl9ok6kto",
     "trello_card_id": "6a8f46a139a7cf2e53a0881d",
@@ -1334,9 +1357,9 @@
     "trello_card_url": "https://trello.com/c/7wDhFTwN",
     "summary": "Bronze - Isis - Nasc. 10/09/2026 (Responsável: VALÉRIA)",
     "starts_at": "2026-09-24T16:00:00-03:00",
-    "description": "Nome: VALÉRIA\nModelo: Isis\nData Nascimento: 10/09/2026\nEmail: amaralvaleria97@gmail.con\nTelefone: 11 982027168\nTipo: Bronze\nReferencias: \n\nOrigem: Google Forms",
-    "fingerprint": "609fc184b7d7a4d10bec7ebcec97eba3a8e8eceb8be9bb5220164a8797e4d023",
-    "synced_at": "2026-09-18T21:23:04Z"
+    "description": "Nome: VALÉRIA\nModelo: Isis\nData Nascimento: 10/09/2026\nEmail: amaralvaleria97@gmail.con\nTelefone: 11 982027168\nTipo: Bronze\nReferencias: Lua\n\nOrigem: Google Forms",
+    "fingerprint": "6e34b2bbfd43ab4434e9f851dc36f866a24cf6781341077d163fa1a45c3e90d7",
+    "synced_at": "2026-09-22T21:22:48Z"
   },
   "om510gphdu4p8mh34mk3nkjr10": {
     "google_event_id": "om510gphdu4p8mh34mk3nkjr10",
@@ -1531,9 +1554,9 @@
     "trello_card_url": "https://trello.com/c/hYhsxZMO",
     "summary": "Ouro/Exclusivo - Zaya - Nasc. 06/09/2026 (Responsável: Rahessa Mara Hossota Ribeiro)",
     "starts_at": "2026-09-24T12:00:00-03:00",
-    "description": "Nome: Rahessa Mara Hossota Ribeiro\nModelo: Zaya\nData Nascimento: 06/09/2026\nEmail: rahess.hos@gmail.com\nTelefone: (11) 9 49457386\nTipo: Ouro\nReferencias: \n\nOrigem: Google Forms",
-    "fingerprint": "068a51b73d7e4297bc27951604135e3f086aff928a381485437f2e2d6944e905",
-    "synced_at": "2026-09-21T21:24:06Z"
+    "description": "Nome: Rahessa Mara Hossota Ribeiro\nModelo: Zaya\nData Nascimento: 06/09/2026\nEmail: rahess.hos@gmail.com\nTelefone: (11) 9 49457386\nTipo: Ouro\nReferencias: Detalhes, Enroladinha e Baby Clean (fotos referências no grupo \"ensaios agendados\"\n\nOrigem: Google Forms",
+    "fingerprint": "c0b581372df41c66dad40c73aeac5fdc3dc5808962b67b88728156c5ab151069",
+    "synced_at": "2026-09-22T21:22:47Z"
   },
   "u7ti2ujmkdcafe505qcjo2gouc": {
     "google_event_id": "u7ti2ujmkdcafe505qcjo2gouc",
