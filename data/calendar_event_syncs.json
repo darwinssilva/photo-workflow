@@ -962,6 +962,19 @@
     "fingerprint": "0552b7ec4460cd2d9b807fb923971b94000c5424b0744b886630968020ef3dbf",
     "synced_at": "2026-07-11T20:35:34Z"
   },
+  "fuvl3rb4mcb2g7j13hemcaaqq4": {
+    "google_event_id": "fuvl3rb4mcb2g7j13hemcaaqq4",
+    "trello_card_id": "6aba9b2a6e63d6a882c24344",
+    "trello_card_url": "https://trello.com/c/JqrVKaz2",
+    "summary": "Ouro - Eva - Nasc. 18/09/2026 (Responsável: Jessica)",
+    "starts_at": "2026-09-30T09:00:00-03:00",
+    "description": "Nome: Jessica\nModelo: Eva\nData Nascimento: 18/09/2026\nEmail: jessicacarassoli@gmail.com\nTelefone: 11961830519\nTipo: Ouro\nReferencias: \n\nOrigem: Google Forms",
+    "fingerprint": "e80e3d892cb9782f6348d90c112c01094ee37ff891ed3446c30bcab878cefcd7",
+    "synced_at": "2026-09-28T21:25:05Z",
+    "email_skipped_at": "2026-09-28T21:25:05Z",
+    "email_skip_reason": "reused_existing_card",
+    "email_skipped_fingerprint": "e80e3d892cb9782f6348d90c112c01094ee37ff891ed3446c30bcab878cefcd7"
+  },
   "gb9r6f4sinhq8m8riqm85ec43g": {
     "google_event_id": "gb9r6f4sinhq8m8riqm85ec43g",
     "trello_card_id": "6aadabafcbaf939d32824a29",
@@ -1076,6 +1089,19 @@
     "email_skipped_at": "2026-09-15T22:02:27Z",
     "email_skip_reason": "missing_client_email",
     "email_skipped_fingerprint": "76bff7dd98bd3c68f4ef77b39b3e98ad1f84b31fdbbcdae966e9f258858fe7b4"
+  },
+  "j26rogflk3oovhc20qecbbfsfc": {
+    "google_event_id": "j26rogflk3oovhc20qecbbfsfc",
+    "trello_card_id": "6abab3e633c985b81360ddc9",
+    "trello_card_url": "https://trello.com/c/zktJLDvn",
+    "summary": "Prata - Melany - Nasc. 28/08/2026 (Responsável: Mei qing (Melissa))",
+    "starts_at": "2026-09-29T16:00:00-03:00",
+    "description": "Nome: Mei qing (Melissa)\nModelo: Melany\nData Nascimento: 28/08/2026\nEmail: Melljoe.1314@hotmail.com\nTelefone: 11912121314\nTipo: Prata\nReferencias: \n\nOrigem: Google Forms",
+    "fingerprint": "22aad37777a1f1649122837467857d2f4ca6db72638ebe5fbcf1be316ecf726a",
+    "synced_at": "2026-09-28T21:25:03Z",
+    "email_skipped_at": "2026-09-28T21:25:03Z",
+    "email_skip_reason": "reused_existing_card",
+    "email_skipped_fingerprint": "22aad37777a1f1649122837467857d2f4ca6db72638ebe5fbcf1be316ecf726a"
   },
   "j2h1hldhamticiq30rr6alot68": {
     "google_event_id": "j2h1hldhamticiq30rr6alot68",
