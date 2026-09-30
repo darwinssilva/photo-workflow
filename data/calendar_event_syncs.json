@@ -1124,6 +1124,19 @@
     "synced_at": "2026-06-29T21:45:43Z",
     "email_notified_at": "2026-06-29T21:45:46Z"
   },
+  "j4frn65pb99c8dd2i54at10c68": {
+    "google_event_id": "j4frn65pb99c8dd2i54at10c68",
+    "trello_card_id": "6abd462993baa7ca172e234e",
+    "trello_card_url": "https://trello.com/c/jHoa3phr",
+    "summary": "Reforma Studio",
+    "starts_at": "2026-10-05T06:00:00-03:00",
+    "description": "",
+    "fingerprint": "0c93e470050a810af23cc20db4eac8d0a59573fe8f2d5d91b0cb0ce4d60de337",
+    "synced_at": "2026-09-30T21:27:32Z",
+    "email_skipped_at": "2026-09-30T21:27:32Z",
+    "email_skip_reason": "reused_existing_card",
+    "email_skipped_fingerprint": "0c93e470050a810af23cc20db4eac8d0a59573fe8f2d5d91b0cb0ce4d60de337"
+  },
   "j5rpr2n4pfjp0s8n0gaj8ogpv8": {
     "google_event_id": "j5rpr2n4pfjp0s8n0gaj8ogpv8",
     "trello_card_id": "6aa9c07d1e5e1db129b5e8f5",
@@ -1162,10 +1175,10 @@
     "trello_card_id": "6aba9b2a6e63d6a882c24344",
     "trello_card_url": "https://trello.com/c/JqrVKaz2",
     "summary": "Ouro/Exclusivo- Eva - Nasc. 18/09/2026 (Responsável: Jessica)",
-    "starts_at": "2026-09-30T09:00:00-03:00",
+    "starts_at": "2026-10-02T10:00:00-03:00",
     "description": "Nome: Jessica\nModelo: Eva\nData Nascimento: 18/09/2026\nEmail: jessicacarassoli@gmail.com\nTelefone: 11961830519\nTipo: Ouro\nReferencias: \n\nOrigem: Google Forms",
-    "fingerprint": "5164da4593c1dd3a91419c0ec464ab916bbb32676f69bd85e69fa97ec546b798",
-    "synced_at": "2026-09-28T16:51:56Z"
+    "fingerprint": "5a71d3d6af465eebe02894a640172864a4e8b5a620a9d874b8f0d82655f139bb",
+    "synced_at": "2026-09-30T21:27:30Z"
   },
   "jsu2shl0i5fhfiqhevl9ok6kto": {
     "google_event_id": "jsu2shl0i5fhfiqhevl9ok6kto",
@@ -1495,6 +1508,19 @@
     "description": "Nome: Jaqueline Almeida\nModelo: Antônio\nData Nascimento: 10/08/2026\nEmail: jaqueline.almeidaadvs@gmail.com\nTelefone: 11977091114\nTipo: Prata\nReferencias: Baby clean, pais. Vai escolher o outro cenário ainda.\n\nOrigem: Google Forms\n\n\nDUPLICADO",
     "fingerprint": "45d513f346742fcd19ea26afbcdcbbb27b17223a2f9ebc77892f54ec7ce09ad8",
     "synced_at": "2026-08-16T16:44:49Z"
+  },
+  "s1tajntqips7hn8o7r9n2a30qk": {
+    "google_event_id": "s1tajntqips7hn8o7r9n2a30qk",
+    "trello_card_id": "6abd0d648d62da96af9c7912",
+    "trello_card_url": "https://trello.com/c/dTnWUFJi",
+    "summary": "Reforma Studio",
+    "starts_at": "2026-10-06T06:00:00-03:00",
+    "description": "",
+    "fingerprint": "d7092970cc7b00142d541213a6732c384428004497df430ab7605e530f77932f",
+    "synced_at": "2026-09-30T21:27:34Z",
+    "email_skipped_at": "2026-09-30T21:27:34Z",
+    "email_skip_reason": "reused_existing_card",
+    "email_skipped_fingerprint": "d7092970cc7b00142d541213a6732c384428004497df430ab7605e530f77932f"
   },
   "s99ar8nvov8ut8b00ut9lea7js": {
     "google_event_id": "s99ar8nvov8ut8b00ut9lea7js",
