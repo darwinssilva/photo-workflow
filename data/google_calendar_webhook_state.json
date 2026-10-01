@@ -1,11 +1,11 @@
 {
-  "channel_expiration": "1791376092000",
-  "channel_id": "363e7322-0319-4d65-b7dd-4411444e0729",
+  "channel_expiration": "1791420759000",
+  "channel_id": "e9ad288b-e1dd-418e-8e0a-f27d3f4e918e",
   "last_message_number": "818494",
   "last_notification_at": "2026-06-19T01:32:08Z",
   "last_resource_state": "exists",
   "resource_id": "Rjr3L6oGYyOcYBRx6Td6XSeu0c0",
   "resource_uri": "https://www.googleapis.com/calendar/v3/calendars/susansoaresfotografia%40gmail.com/events?alt=json",
-  "updated_at": "2026-09-30T12:28:12Z",
+  "updated_at": "2026-10-01T00:52:39Z",
   "webhook_public_url": "https://photo-workflow.onrender.com/google-calendar/webhook"
 }
