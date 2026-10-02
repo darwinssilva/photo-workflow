@@ -344,6 +344,19 @@
     "email_skip_reason": "missing_client_email",
     "email_skipped_fingerprint": "d4d0c191801bd1b0522012aae8d73e209c6aa5869f2444dd511ed840aae6009e"
   },
+  "6iodfp5oe1j9qknu4ibn8iedko": {
+    "google_event_id": "6iodfp5oe1j9qknu4ibn8iedko",
+    "trello_card_id": "6abee1ed9af2eaea3e75bfd6",
+    "trello_card_url": "https://trello.com/c/zdIeSqYw",
+    "summary": "Ouro/Exclusivo - Gustavo - Nasc. 22/09/2026 (Responsável: Pamela Munhoz)",
+    "starts_at": "2026-10-03T09:00:00-03:00",
+    "description": "Nome: Pamela Munhoz\nModelo: Gustavo\nData Nascimento: 22/09/2026\nEmail: pam_munhoz@hotmail.com\nTelefone: 11961001545\nTipo: Prata\nReferencias: \n\nOrigem: Google Forms",
+    "fingerprint": "0d050d843a4eeb5939bd4bd63b2a0afdd322d56eed5408ad2d87e073901ee0ae",
+    "synced_at": "2026-10-02T09:30:57Z",
+    "email_skipped_at": "2026-10-02T09:30:57Z",
+    "email_skip_reason": "reused_existing_card",
+    "email_skipped_fingerprint": "0d050d843a4eeb5939bd4bd63b2a0afdd322d56eed5408ad2d87e073901ee0ae"
+  },
   "6kqm8c9kc8rjcbb36sojib9k74r3ib9pc8rj8b9pchim8c326gp3ce3664": {
     "google_event_id": "6kqm8c9kc8rjcbb36sojib9k74r3ib9pc8rj8b9pchim8c326gp3ce3664",
     "trello_card_id": "6a3d8d2cd308356f669004e8",
@@ -1593,6 +1606,19 @@
     "email_skipped_at": "2026-08-05T22:19:28Z",
     "email_skip_reason": "reused_existing_card",
     "email_skipped_fingerprint": "bac1d175f3953fa4bb34f7c7cc44ec5ad6ddd76fdeb7d419d05ea34a9176a711"
+  },
+  "tiq0idhk2bdhstoeki0k964nfs": {
+    "google_event_id": "tiq0idhk2bdhstoeki0k964nfs",
+    "trello_card_id": "6abee2dd734209fe5be25909",
+    "trello_card_url": "https://trello.com/c/8NKI5Pc0",
+    "summary": "Ouro - Erick Luiz - Nasc. 26/09/2026 (Responsável: Mayara Santos)",
+    "starts_at": "2026-10-09T16:00:00-03:00",
+    "description": "Nome: Mayara Santos\nModelo: Erick Luiz\nData Nascimento: 26/09/2026\nEmail: mayarasillva.santos@gmail.com\nTelefone: 11996944190\nTipo: Ouro\nReferencias: \n\nOrigem: Google Forms",
+    "fingerprint": "8a46f7031be0db1743433760a919e81a1b36d05f009ba8e22ba51294d01bebaf",
+    "synced_at": "2026-10-02T09:30:59Z",
+    "email_skipped_at": "2026-10-02T09:30:59Z",
+    "email_skip_reason": "reused_existing_card",
+    "email_skipped_fingerprint": "8a46f7031be0db1743433760a919e81a1b36d05f009ba8e22ba51294d01bebaf"
   },
   "tpfrg4dd36bi9toheg3hpsh2kc": {
     "google_event_id": "tpfrg4dd36bi9toheg3hpsh2kc",
