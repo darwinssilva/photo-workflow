@@ -98,6 +98,15 @@
     "status": "skipped_missing_phone",
     "recorded_at": "2026-09-17T12:27:32Z"
   },
+  "lembre_ensaio:j4frn65pb99c8dd2i54at10c68:2026-10-05": {
+    "google_event_id": "j4frn65pb99c8dd2i54at10c68",
+    "summary": "Reforma Studio",
+    "starts_at": "2026-10-05T06:00:00-03:00",
+    "reminder_date": "2026-10-04",
+    "target_event_date": "2026-10-05",
+    "status": "skipped_missing_phone",
+    "recorded_at": "2026-10-04T14:02:32Z"
+  },
   "lembre_ensaio:nsrqm5g3eqqpm6l06ontsqs650:2026-08-20": {
     "google_event_id": "nsrqm5g3eqqpm6l06ontsqs650",
     "summary": "Acompanhamento Rafaela (Letícia)",
