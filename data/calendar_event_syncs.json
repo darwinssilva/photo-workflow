@@ -504,6 +504,19 @@
     "email_skip_reason": "reused_existing_card",
     "email_skipped_fingerprint": "fe47025b5425f0a66596c5e973504c73ebf6952e4fb6d5a42ab43db6fb5e9754"
   },
+  "7d3vom49jj320uhdb7agkv50ko": {
+    "google_event_id": "7d3vom49jj320uhdb7agkv50ko",
+    "trello_card_id": "6abee2dd734209fe5be25909",
+    "trello_card_url": "https://trello.com/c/8NKI5Pc0",
+    "summary": "Ouro - Erick Luiz - Nasc. 26/09/2026 (Responsável: Mayara Santos)",
+    "starts_at": "2026-10-09T16:00:00-03:00",
+    "description": "Nome: Mayara Santos\nModelo: Erick Luiz\nData Nascimento: 26/09/2026\nEmail: mayarasillva.santos@gmail.com\nTelefone: 11996944190\nTipo: Ouro\nReferencias: \n\nOrigem: Google Forms",
+    "fingerprint": "416b913ae526b9bb9b08e24efb1a0636c973cb9683a712f50a08116f4854bd4a",
+    "synced_at": "2026-10-04T11:04:10Z",
+    "email_skipped_at": "2026-10-04T11:04:10Z",
+    "email_skip_reason": "reused_existing_card",
+    "email_skipped_fingerprint": "416b913ae526b9bb9b08e24efb1a0636c973cb9683a712f50a08116f4854bd4a"
+  },
   "7rho9sgs7lt21g1s5aubsfug6k": {
     "google_event_id": "7rho9sgs7lt21g1s5aubsfug6k",
     "trello_card_id": "6a4539c8aa15dae5114880da",
@@ -1485,6 +1498,19 @@
     "description": "Nome: Jaqueline Almeida\nModelo: Antônio\nData Nascimento: 07/08/2026\nEmail: jaqueline.almeidaadvs@gmail.com\nTelefone: 11977091114\nTipo: Prata\nReferencias: Baby clean, arco com ursinhos.\n\nOrigem: Google Forms",
     "fingerprint": "e1f82ca1c562fcb3d38c3115acc9548846f21288c40117ebaaa1080d7ca9882d",
     "synced_at": "2026-08-10T21:57:01Z"
+  },
+  "ppu8d5i60auej9f965b745au54": {
+    "google_event_id": "ppu8d5i60auej9f965b745au54",
+    "trello_card_id": "6ac18b4d5a7d36cb524e7616",
+    "trello_card_url": "https://trello.com/c/0s1GoEST",
+    "summary": "Prata - Fiorella - Nasc. 22/09/2026 (Responsável: Milena Góes)",
+    "starts_at": "2026-10-08T12:00:00-03:00",
+    "description": "Nome: Milena Góes\nModelo: Fiorella\nData Nascimento: 22/09/2026\nEmail: milenagmainardi@gmail.com\nTelefone: 11971659618\nTipo: Prata\nReferencias: Caminha e Baby clean\n\nOrigem: Google Forms",
+    "fingerprint": "f279b89471dbef8daed60668f7febc7e83a3c70a8ad58a6900cd5ab2425f7e91",
+    "synced_at": "2026-10-04T11:04:08Z",
+    "email_skipped_at": "2026-10-04T11:04:08Z",
+    "email_skip_reason": "reused_existing_card",
+    "email_skipped_fingerprint": "f279b89471dbef8daed60668f7febc7e83a3c70a8ad58a6900cd5ab2425f7e91"
   },
   "ptsp6uk8mnhjlic2epncg9ri4k": {
     "google_event_id": "ptsp6uk8mnhjlic2epncg9ri4k",
