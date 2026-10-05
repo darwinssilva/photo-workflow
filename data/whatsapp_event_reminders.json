@@ -134,6 +134,15 @@
     "status": "skipped_missing_phone",
     "recorded_at": "2026-09-04T12:27:24Z"
   },
+  "lembre_ensaio:s1tajntqips7hn8o7r9n2a30qk:2026-10-06": {
+    "google_event_id": "s1tajntqips7hn8o7r9n2a30qk",
+    "summary": "Reforma Studio",
+    "starts_at": "2026-10-06T06:00:00-03:00",
+    "reminder_date": "2026-10-05",
+    "target_event_date": "2026-10-06",
+    "status": "skipped_missing_phone",
+    "recorded_at": "2026-10-05T12:30:57Z"
+  },
   "lembre_ensaio:s99ar8nvov8ut8b00ut9lea7js:2026-08-12": {
     "google_event_id": "s99ar8nvov8ut8b00ut9lea7js",
     "summary": "Consulta Tricologia",
