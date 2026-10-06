@@ -100,6 +100,16 @@
     "email_skip_reason": "reused_existing_card",
     "email_skipped_fingerprint": "71c6651ffba6181551b804713b28bdbcc5e449ee6936e9d2ed738115d361c2c2"
   },
+  "1ioecnp02moo6fibue3c3hjl34": {
+    "google_event_id": "1ioecnp02moo6fibue3c3hjl34",
+    "trello_card_id": "6ac506dadb816ea20eb45b86",
+    "trello_card_url": "https://trello.com/c/fgtIdxls",
+    "summary": "Bronze - Sophia - Nasc. 12/09/2026 (Responsável: Fernanda Bárbara Ribeiro)",
+    "starts_at": "2026-10-08T16:00:00-03:00",
+    "description": "Nome: Fernanda Bárbara Ribeiro\nModelo: Sophia\nData Nascimento: 12/09/2026\nEmail: Fernanda.amorim96@outlook.com\nTelefone: 11 94011-6948\nTipo: Bronze\nReferencias: Balanço\n\nOrigem: Google Forms",
+    "fingerprint": "ab9e242183b2392b1e06bd49e94661289de0daee7759fded59e477edf61a38d3",
+    "synced_at": "2026-10-06T14:34:03Z"
+  },
   "1mldaasuoqi1m6c1oflt6k4dug": {
     "google_event_id": "1mldaasuoqi1m6c1oflt6k4dug",
     "trello_card_id": "6a9b4a4e8ec7d5de08d26300",
@@ -617,6 +627,16 @@
     "fingerprint": "dfee1d6f8417fc12402fd0728664a302e2a237016f2f9d27785e977c56b440af",
     "synced_at": "2026-08-30T21:21:03Z"
   },
+  "9n3n5med9obho52uf71g3kc1kc": {
+    "google_event_id": "9n3n5med9obho52uf71g3kc1kc",
+    "trello_card_id": "6ac506e48de384d6cd6eed16",
+    "trello_card_url": "https://trello.com/c/fZDHzt7b",
+    "summary": "Bronze - Bernardo Heitor - Nasc. 05/10/2026 (Responsável: Hillary Gabrieli Cunha de Sousa)",
+    "starts_at": "2026-10-10T15:00:00-03:00",
+    "description": "Nome: Hillary Gabrieli Cunha de Sousa\nModelo: Bernardo Heitor\nData Nascimento: 05/10/2026\nEmail: hillarygcsousa@gmail.com\nTelefone: (11) 98823-5324\nTipo: Bronze\nReferencias: Lua\n\nOrigem: Google Forms",
+    "fingerprint": "c2da9971a041bde1c757f50fe967678c9bc2df7a8d6de6f940c886d172f1ef96",
+    "synced_at": "2026-10-06T14:34:13Z"
+  },
   "9n5a6ag4dpth595k8lsbs8hpn8": {
     "google_event_id": "9n5a6ag4dpth595k8lsbs8hpn8",
     "trello_card_id": "6a3b1c50be50bd856237d00e",
@@ -974,6 +994,16 @@
     "email_skip_reason": "reused_existing_card",
     "email_skipped_fingerprint": "edd6a8c3a9caa05a87d421bfb258e5d6b03149f72f12fe897f139d7d1a73e0a0"
   },
+  "f6bfpqvrgofqutv53mvgnbh9mc": {
+    "google_event_id": "f6bfpqvrgofqutv53mvgnbh9mc",
+    "trello_card_id": "6ac506dfd57d03acb1eae8f8",
+    "trello_card_url": "https://trello.com/c/xNlNqiD4",
+    "summary": "Prata - Lorena - Nasc. 17/09/2022 (Responsável: Bianca Ismenia de Oliveira)",
+    "starts_at": "2026-10-10T10:00:00-03:00",
+    "description": "Nome: Bianca Ismenia de Oliveira\nModelo: Lorena\nData Nascimento: 17/09/2022\nEmail: bianca_ismenia@hotmail.com\nTelefone: 1198834-3041\nTipo: Prata\nReferencias: Balanço e arco floral\n\nOrigem: Google Forms",
+    "fingerprint": "7def25bf4b67cf642e419de69646672e3baf6fe72684b4f3f3ebd707a6612de1",
+    "synced_at": "2026-10-06T14:34:09Z"
+  },
   "ffolsjofvs1frq9dg8bp9dosm0": {
     "google_event_id": "ffolsjofvs1frq9dg8bp9dosm0",
     "trello_card_id": "6a3c02e1d9caf5560411fa10",
@@ -1112,6 +1142,19 @@
     "email_skipped_at": "2026-07-03T16:50:08Z",
     "email_skip_reason": "reused_existing_card",
     "email_skipped_fingerprint": "0a532bf93afc5cedc5e9ed6d50504c62be112d54d7d09cb897dd841084d239a1"
+  },
+  "inodqtghl8rnp4aau6pk4r1j5c": {
+    "google_event_id": "inodqtghl8rnp4aau6pk4r1j5c",
+    "trello_card_id": "6ac18b4d5a7d36cb524e7616",
+    "trello_card_url": "https://trello.com/c/0s1GoEST",
+    "summary": "Prata - Fiorella - Nasc. 22/09/2026 (Responsável: Milena Góes)",
+    "starts_at": "2026-10-08T12:00:00-03:00",
+    "description": "Nome: Milena Góes\nModelo: Fiorella\nData Nascimento: 22/09/2026\nEmail: milenagmainardi@gmail.com\nTelefone: 11971659618\nTipo: Prata\nReferencias: Caminha e Baby clean\n\nOrigem: Google Forms",
+    "fingerprint": "ea6e459c90dd710564aba6db39986a9ce1a802f8bd382d6fbf3f8982b5f5189b",
+    "synced_at": "2026-10-06T14:33:59Z",
+    "email_skipped_at": "2026-10-06T14:33:59Z",
+    "email_skip_reason": "reused_existing_card",
+    "email_skipped_fingerprint": "ea6e459c90dd710564aba6db39986a9ce1a802f8bd382d6fbf3f8982b5f5189b"
   },
   "j07sgecpm2c2eq4gtp2n4mdsjc": {
     "google_event_id": "j07sgecpm2c2eq4gtp2n4mdsjc",
