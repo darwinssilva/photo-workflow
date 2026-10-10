@@ -1041,6 +1041,19 @@
     "email_skip_reason": "reused_existing_card",
     "email_skipped_fingerprint": "e80e3d892cb9782f6348d90c112c01094ee37ff891ed3446c30bcab878cefcd7"
   },
+  "g0ahiobs5cikf9etc2er855kqo": {
+    "google_event_id": "g0ahiobs5cikf9etc2er855kqo",
+    "trello_card_id": "6aca83439ee4075b74df4675",
+    "trello_card_url": "https://trello.com/c/zSVidP6c",
+    "summary": "Ouro - Dom - Nasc. 07/10/2026 (Responsável: Paula Carolina Pérez Lopez)",
+    "starts_at": "2026-10-24T10:00:00-03:00",
+    "description": "Nome: Paula Carolina Pérez Lopez\nModelo: Dom\nData Nascimento: 07/10/2026\nEmail: paula.carolinaperez@hotmail.com\nTelefone: 11989458932\nTipo: Ouro\nReferencias: \n\nOrigem: Google Forms",
+    "fingerprint": "3e3226fb02fe0c7652391a4a0f791c899a56cfb174e3f9f9d4f76ba00b2fee6b",
+    "synced_at": "2026-10-10T21:25:46Z",
+    "email_skipped_at": "2026-10-10T21:25:46Z",
+    "email_skip_reason": "reused_existing_card",
+    "email_skipped_fingerprint": "3e3226fb02fe0c7652391a4a0f791c899a56cfb174e3f9f9d4f76ba00b2fee6b"
+  },
   "gb9r6f4sinhq8m8riqm85ec43g": {
     "google_event_id": "gb9r6f4sinhq8m8riqm85ec43g",
     "trello_card_id": "6aadabafcbaf939d32824a29",
