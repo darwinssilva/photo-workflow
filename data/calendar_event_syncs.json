@@ -414,6 +414,19 @@
     "email_skip_reason": "missing_client_email",
     "email_skipped_fingerprint": "30766ac93a7818c0f3f89de6b42becbec886e66ab5b5d2f5db2b34a6339ccc89"
   },
+  "6qvkoouk0jvd5h5ifg5eum8rmk": {
+    "google_event_id": "6qvkoouk0jvd5h5ifg5eum8rmk",
+    "trello_card_id": "6acf756722dccaae304195c7",
+    "trello_card_url": "https://trello.com/c/mSgnY9qb",
+    "summary": "Prata - Heitor - Nasc. 03/10/2026 (Responsável: Tayna lima Ferreira)",
+    "starts_at": "2026-10-16T12:00:00-03:00",
+    "description": "Nome: Tayna lima Ferreira\nModelo: Heitor\nData Nascimento: 03/10/2026\nEmail: Tayna.mvz@hotmail.com\nTelefone: 11997306632\nTipo: Prata\nReferencias: \n\nOrigem: Google Forms",
+    "fingerprint": "4344def7b6a23f3c277ca408562c2e88d788ac7a4d8f39a003d10c06c88bb906",
+    "synced_at": "2026-10-14T21:24:13Z",
+    "email_skipped_at": "2026-10-14T21:24:13Z",
+    "email_skip_reason": "reused_existing_card",
+    "email_skipped_fingerprint": "4344def7b6a23f3c277ca408562c2e88d788ac7a4d8f39a003d10c06c88bb906"
+  },
   "6rtjda3brk1tgu1p2fnvtjpn1g": {
     "google_event_id": "6rtjda3brk1tgu1p2fnvtjpn1g",
     "trello_card_id": "6a43f92e4763ebab4f3af72b",
@@ -469,13 +482,10 @@
     "trello_card_id": "6acedfbfcdba35396d19aeb7",
     "trello_card_url": "https://trello.com/c/yEQYeEQm",
     "summary": "Prata - Maria Ísis - Nasc. 23/09/2026 (Responsável: Maria Luiza Santos bueno)",
-    "starts_at": "2026-10-17T17:00:00-03:00",
+    "starts_at": "2026-10-17T16:00:00-03:00",
     "description": "Nome: Maria Luiza Santos bueno\nModelo: Maria Ísis\nData Nascimento: 23/09/2026\nEmail: marialuizasantosbueno@hotmail.com\nTelefone: 11943100304\nTipo: Prata\nReferencias: \n\nOrigem: Google Forms",
-    "fingerprint": "2ab7f3d404d60716cda9d7d52b9530f23ec8258dd21f5c015a1962b78cfea768",
-    "synced_at": "2026-10-14T09:29:32Z",
-    "email_skipped_at": "2026-10-14T09:29:32Z",
-    "email_skip_reason": "reused_existing_card",
-    "email_skipped_fingerprint": "2ab7f3d404d60716cda9d7d52b9530f23ec8258dd21f5c015a1962b78cfea768"
+    "fingerprint": "c28df0c04b24a487e4e875463e28d5d9ec07c6e5e6954504d22a53d8f3c697da",
+    "synced_at": "2026-10-14T21:24:14Z"
   },
   "74p34oho6kp34b9mc8o3ib9k6cq3abb2c4p3ebb46ss3cd33cgq38e1k6s": {
     "google_event_id": "74p34oho6kp34b9mc8o3ib9k6cq3abb2c4p3ebb46ss3cd33cgq38e1k6s",
