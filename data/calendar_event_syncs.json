@@ -464,6 +464,19 @@
     "email_skip_reason": "missing_client_email",
     "email_skipped_fingerprint": "a22a8d5610fe6af05650f67c52c062c54f26f474e9a96c74d40c2a5d6ee68458"
   },
+  "72d4tmeim5p4hos27sl6gnhc80": {
+    "google_event_id": "72d4tmeim5p4hos27sl6gnhc80",
+    "trello_card_id": "6acedfbfcdba35396d19aeb7",
+    "trello_card_url": "https://trello.com/c/yEQYeEQm",
+    "summary": "Prata - Maria Ísis - Nasc. 23/09/2026 (Responsável: Maria Luiza Santos bueno)",
+    "starts_at": "2026-10-17T17:00:00-03:00",
+    "description": "Nome: Maria Luiza Santos bueno\nModelo: Maria Ísis\nData Nascimento: 23/09/2026\nEmail: marialuizasantosbueno@hotmail.com\nTelefone: 11943100304\nTipo: Prata\nReferencias: \n\nOrigem: Google Forms",
+    "fingerprint": "2ab7f3d404d60716cda9d7d52b9530f23ec8258dd21f5c015a1962b78cfea768",
+    "synced_at": "2026-10-14T09:29:32Z",
+    "email_skipped_at": "2026-10-14T09:29:32Z",
+    "email_skip_reason": "reused_existing_card",
+    "email_skipped_fingerprint": "2ab7f3d404d60716cda9d7d52b9530f23ec8258dd21f5c015a1962b78cfea768"
+  },
   "74p34oho6kp34b9mc8o3ib9k6cq3abb2c4p3ebb46ss3cd33cgq38e1k6s": {
     "google_event_id": "74p34oho6kp34b9mc8o3ib9k6cq3abb2c4p3ebb46ss3cd33cgq38e1k6s",
     "trello_card_id": "6a341b7d1fe7014ee9da6b63",
@@ -970,13 +983,10 @@
     "trello_card_id": "6ace1d7530dcd02a66a8d80b",
     "trello_card_url": "https://trello.com/c/rQXTdZKz",
     "summary": "Ouro - Dom - Nasc. 07/10/2026 (Responsável: Paula Carolina Pérez Lopez)",
-    "starts_at": "2026-10-24T10:00:00-03:00",
+    "starts_at": "2026-10-17T10:00:00-03:00",
     "description": "Nome: Paula Carolina Pérez Lopez\nModelo: Dom\nData Nascimento: 07/10/2026\nEmail: paula.carolinaperez@hotmail.com\nTelefone: 11989458932\nTipo: Ouro\nReferencias: \n\nOrigem: Google Forms",
-    "fingerprint": "be62fb5eb1343fe52888b8b6c99ff0745133a8bfb9c4db3deeb46f06ac1de992",
-    "synced_at": "2026-10-13T21:25:33Z",
-    "email_skipped_at": "2026-10-13T21:25:33Z",
-    "email_skip_reason": "reused_existing_card",
-    "email_skipped_fingerprint": "be62fb5eb1343fe52888b8b6c99ff0745133a8bfb9c4db3deeb46f06ac1de992"
+    "fingerprint": "696eab083ecb9d2dc1b613f46ff78a812c300c1501da8e39b02785e3786cd2b6",
+    "synced_at": "2026-10-14T09:29:30Z"
   },
   "dl7d92ob8jvs9gndol4qejuq5o": {
     "google_event_id": "dl7d92ob8jvs9gndol4qejuq5o",
@@ -1531,6 +1541,19 @@
     "email_skipped_at": "2026-08-19T09:48:25Z",
     "email_skip_reason": "reused_existing_card",
     "email_skipped_fingerprint": "04cabe27e05afde60e862442034d7991fe9f4baa8f466a8af75bc2fb001d2f7c"
+  },
+  "nve4bvk2ofvkq53knp2botu694": {
+    "google_event_id": "nve4bvk2ofvkq53knp2botu694",
+    "trello_card_id": "6acea1c88606e6b013af9764",
+    "trello_card_url": "https://trello.com/c/PI45X4BJ",
+    "summary": "Bronze - Manuela e Sophia - Nasc. 12/09/2026 (Responsável: Lizely Veloso)",
+    "starts_at": "2026-10-16T18:00:00-03:00",
+    "description": "Nome: Lizely Veloso\nModelo: Manuela e Sophia\nData Nascimento: 12/09/2026\nEmail: lizelyveloso@hotmail.com\nTelefone: 952711897\nTipo: Bronze\nReferencias: \"Gosto de cores mais neutras mesmo! Vi um vestidinho branco/clarinho no Instagram de vocês, era mais ou menos o que eu estava pensando\"\n\nVai pagar 200,00 no dia \nUm cenário \n10 fotos digitais\n\nOrigem: Google Forms",
+    "fingerprint": "16b0f24b8851d104acf293e416af77c3f2062e5a2515f9e9ee8a29c2bf60b315",
+    "synced_at": "2026-10-14T09:29:29Z",
+    "email_skipped_at": "2026-10-14T09:29:29Z",
+    "email_skip_reason": "reused_existing_card",
+    "email_skipped_fingerprint": "16b0f24b8851d104acf293e416af77c3f2062e5a2515f9e9ee8a29c2bf60b315"
   },
   "o5lqueeka9omgh7qn617364jd8": {
     "google_event_id": "o5lqueeka9omgh7qn617364jd8",
