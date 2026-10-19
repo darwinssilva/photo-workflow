@@ -1857,6 +1857,19 @@
     "email_skip_reason": "reused_existing_card",
     "email_skipped_fingerprint": "93ab524fd8e01b7507773e19d1af428a57c0420c59cb87469bd550840fd52b11"
   },
+  "u9dqhu22jqgqo9mdg6ml89a91k": {
+    "google_event_id": "u9dqhu22jqgqo9mdg6ml89a91k",
+    "trello_card_id": "6ad5615b9367b58139778b67",
+    "trello_card_url": "https://trello.com/c/VJRXDice",
+    "summary": "Prata - Giorgia - Nasc. 27/09/2026 (Responsável: Dandara Inocêncio Couto da Silva)",
+    "starts_at": "2026-10-20T14:00:00-03:00",
+    "description": "Nome: Dandara Inocêncio Couto da Silva\nModelo: Giorgia\nData Nascimento: 27/09/2026\nEmail: Dandara.ics@hotmail.com\nTelefone: (11) 95490-1615\nTipo: Prata\nReferencias: \n\nOrigem: Google Forms",
+    "fingerprint": "f914c453eea8b20a643079fb22ce4b9a23a682438c7e4e5ee6b9407deb47f045",
+    "synced_at": "2026-10-19T09:36:47Z",
+    "email_skipped_at": "2026-10-19T09:36:47Z",
+    "email_skip_reason": "reused_existing_card",
+    "email_skipped_fingerprint": "f914c453eea8b20a643079fb22ce4b9a23a682438c7e4e5ee6b9407deb47f045"
+  },
   "ug0neckob9rncnupq3egirs6bs": {
     "google_event_id": "ug0neckob9rncnupq3egirs6bs",
     "trello_card_id": "6a989390badeae718dd8e325",
