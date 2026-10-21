@@ -817,6 +817,19 @@
     "email_skip_reason": "missing_client_email",
     "email_skipped_fingerprint": "4893ebe5cb7861e2a82cd215745e9101df29a8f4d9a26d12a1ce4462c6594ee0"
   },
+  "ccjcj27n6o25uukghcetf471b0": {
+    "google_event_id": "ccjcj27n6o25uukghcetf471b0",
+    "trello_card_id": "6ad7b7c39e0c28680310a063",
+    "trello_card_url": "https://trello.com/c/dOdnK2Pr",
+    "summary": "Prata - Antonella - Nasc. 05/10/2026 (Responsável: Janielly G Gomes Fortuna)",
+    "starts_at": "2026-10-21T14:00:00-03:00",
+    "description": "Nome: Janielly G Gomes Fortuna\nModelo: Antonella\nData Nascimento: 05/10/2026\nEmail: janiellyggomes@gmail.com\nTelefone: 11927277993\nTipo: Prata\nReferencias: \n\nOrigem: Google Forms",
+    "fingerprint": "4cf480ecb772565b5c0b620149ea922855352cd78df616cc6400b5567a4e91f7",
+    "synced_at": "2026-10-21T21:38:40Z",
+    "email_skipped_at": "2026-10-21T21:38:40Z",
+    "email_skip_reason": "reused_existing_card",
+    "email_skipped_fingerprint": "4cf480ecb772565b5c0b620149ea922855352cd78df616cc6400b5567a4e91f7"
+  },
   "ccsj4dhocor68b9g6opj8b9k6ti64bb2ccs3ebb2c4r3iob561gm4phpc8": {
     "google_event_id": "ccsj4dhocor68b9g6opj8b9k6ti64bb2ccs3ebb2c4r3iob561gm4phpc8",
     "trello_card_id": "6a33367d0704c154ce51c8d1",
