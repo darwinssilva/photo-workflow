@@ -695,6 +695,19 @@
     "email_skip_reason": "reused_existing_card",
     "email_skipped_fingerprint": "3965a050bd3413e9c0e5451bdfbefeb3f491de3199f7f5fc2aa3f941eb8d85df"
   },
+  "a5ca9jljmojcs0gh5056ucitb4": {
+    "google_event_id": "a5ca9jljmojcs0gh5056ucitb4",
+    "trello_card_id": "6ada3da92eade250688b2962",
+    "trello_card_url": "https://trello.com/c/1V9fIwwD",
+    "summary": "Ouro - Cecília - Nasc. 17/10/2026 (Responsável: Mirele Rodrigues de Oliveira)",
+    "starts_at": "2026-10-24T10:00:00-03:00",
+    "description": "Nome: Mirele Rodrigues de Oliveira\nModelo: Cecília\nData Nascimento: 17/10/2026\nEmail: Mika29091997@gmail.com\nTelefone: 11988457230\nTipo: Ouro\nReferencias: \n\nOrigem: Google Forms",
+    "fingerprint": "12ada0ec1363522014d1958b2529e285d557ce531b4d78513c786d5e9fae755c",
+    "synced_at": "2026-10-22T21:24:50Z",
+    "email_skipped_at": "2026-10-22T21:24:50Z",
+    "email_skip_reason": "reused_existing_card",
+    "email_skipped_fingerprint": "12ada0ec1363522014d1958b2529e285d557ce531b4d78513c786d5e9fae755c"
+  },
   "ak65hkqkr248rgl1f5f6kkafjg": {
     "google_event_id": "ak65hkqkr248rgl1f5f6kkafjg",
     "trello_card_id": "6a63b6a175dbc4f7112d084c",
@@ -1705,6 +1718,19 @@
     "email_skipped_at": "2026-08-01T21:34:35Z",
     "email_skip_reason": "reused_existing_card",
     "email_skipped_fingerprint": "79e01df53eb52d92c316b1651e2c3f84a0b7d2acd304b8414b1c6da8cef77db8"
+  },
+  "r5lttjk9k9d2r4gl24nr53bfp4": {
+    "google_event_id": "r5lttjk9k9d2r4gl24nr53bfp4",
+    "trello_card_id": "6ada18e49fa4d104db7808f1",
+    "trello_card_url": "https://trello.com/c/zOEID6Bi",
+    "summary": "Bronze - Ayla - Nasc. 07/10/2026 (Responsável: Valéria Nascimento Tosta)",
+    "starts_at": "2026-10-23T12:00:00-03:00",
+    "description": "Nome: Valéria Nascimento Tosta\nModelo: Ayla\nData Nascimento: 07/10/2026\nEmail: valeriatosta.adv@gmail.com\nTelefone: 11947515425\nTipo: Bronze\nReferencias: Poses\n\nOrigem: Google Forms",
+    "fingerprint": "83f9e5d20bb72691d35c6bb9100d57155693cd57f79cc7fbf2cb68bba277b3be",
+    "synced_at": "2026-10-22T21:24:48Z",
+    "email_skipped_at": "2026-10-22T21:24:48Z",
+    "email_skip_reason": "reused_existing_card",
+    "email_skipped_fingerprint": "83f9e5d20bb72691d35c6bb9100d57155693cd57f79cc7fbf2cb68bba277b3be"
   },
   "rr2ejb3bnk2knkmipcg8jdvaco": {
     "google_event_id": "rr2ejb3bnk2knkmipcg8jdvaco",
