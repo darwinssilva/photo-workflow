@@ -318,6 +318,19 @@
     "fingerprint": "91b848c4e72fdfa0a36370bc7a413e683bbf2fb90ffcbaae3aff870662bff910",
     "synced_at": "2026-10-13T21:25:21Z"
   },
+  "60r6cob6cgoj0b9h6opj2b9k6os30bb165i3ib9p68smcd1jccq34cb670": {
+    "google_event_id": "60r6cob6cgoj0b9h6opj2b9k6os30bb165i3ib9p68smcd1jccq34cb670",
+    "trello_card_id": "6adfa3b07a1f977d22549a6c",
+    "trello_card_url": "https://trello.com/c/tgHHRpnu",
+    "summary": "Marina 4 Meses - Nasc. 27/06/2026 (Responsável: Luana Campos Roque)",
+    "starts_at": "2026-11-14T15:00:00-03:00",
+    "description": "Nome: Luana Campos Roque\nModelo: Marina\nData Nascimento: 27/06/2026\nEmail: luana.fisio.life@gmail.com\nTelefone: \nTipo: Acompanhamento Mensal\nReferencias:  \n\nTema: \n\n\n\nOrigem: Google Forms",
+    "fingerprint": "945103e374cdbce3abb1fbd2ddadcc9984f71bca6b90073b193921f920fea528",
+    "synced_at": "2026-10-26T21:26:15Z",
+    "email_skipped_at": "2026-10-26T21:26:15Z",
+    "email_skip_reason": "reused_existing_card",
+    "email_skipped_fingerprint": "945103e374cdbce3abb1fbd2ddadcc9984f71bca6b90073b193921f920fea528"
+  },
   "65egs70kimcinb5ts2tkb4h12s": {
     "google_event_id": "65egs70kimcinb5ts2tkb4h12s",
     "trello_card_id": "6aa9c0864e3c447970387269",
@@ -1465,6 +1478,19 @@
     "email_skipped_at": "2026-08-02T09:55:35Z",
     "email_skip_reason": "reused_existing_card",
     "email_skipped_fingerprint": "84cd4d7526fa5e2900fbc1b990291a51d70cdf6fb717d79d1ac88f3c717784f3"
+  },
+  "lg8riipnlreq7tg1v3kr66o7t0": {
+    "google_event_id": "lg8riipnlreq7tg1v3kr66o7t0",
+    "trello_card_id": "6adf41c7bd16a736774de2ed",
+    "trello_card_url": "https://trello.com/c/979rkB2s",
+    "summary": "Prata - Isabella Beatriz - Nasc. 29/09/2026 (Responsável: Deborah Camilla Olesovs)",
+    "starts_at": "2026-10-28T14:00:00-03:00",
+    "description": "Nome: Deborah Camilla Olesovs\nModelo: Isabella Beatriz\nData Nascimento: 29/09/2026\nEmail: deboraholesovsnutricionista@gmail.com\nTelefone: 11963481672\nTipo: Prata\nReferencias: \n\nOrigem: Google Forms",
+    "fingerprint": "ecd2cb5e329745fd63e208f150a062a65da813a2f0f0b55757b1aa7d9def8689",
+    "synced_at": "2026-10-26T21:26:14Z",
+    "email_skipped_at": "2026-10-26T21:26:14Z",
+    "email_skip_reason": "reused_existing_card",
+    "email_skipped_fingerprint": "ecd2cb5e329745fd63e208f150a062a65da813a2f0f0b55757b1aa7d9def8689"
   },
   "ll926ka8k4efgamqtgmgcop1ak": {
     "google_event_id": "ll926ka8k4efgamqtgmgcop1ak",
