@@ -232,6 +232,19 @@
     "email_notified_at": "2026-06-22T23:17:47Z",
     "archived_at": "2026-06-23T10:27:40Z"
   },
+  "2qvtld16lot5q9n8psro88ema4": {
+    "google_event_id": "2qvtld16lot5q9n8psro88ema4",
+    "trello_card_id": "6aea264b1a8eaab609fd6393",
+    "trello_card_url": "https://trello.com/c/uhfTWB8T",
+    "summary": "Bronze - Jade - Nasc. 21/10/2026 (Responsável: Roana Brito)",
+    "starts_at": "2026-11-04T09:00:00-03:00",
+    "description": "Nome: Roana Brito\nModelo: Jade\nData Nascimento: 21/10/2026\nEmail: rooanabrt@gmail.com\nTelefone: 11959831315\nTipo: Bronze\nReferencias: Clean/foto com irmãos\n\nOrigem: Google Forms",
+    "fingerprint": "1eedb34de243bffeb9e87dbca1edeeadafd402cec621d3922003f1bccd31b5e5",
+    "synced_at": "2026-11-03T21:18:56Z",
+    "email_skipped_at": "2026-11-03T21:18:56Z",
+    "email_skip_reason": "reused_existing_card",
+    "email_skipped_fingerprint": "1eedb34de243bffeb9e87dbca1edeeadafd402cec621d3922003f1bccd31b5e5"
+  },
   "366mpfmjn6srs0elgqhg2liujg": {
     "google_event_id": "366mpfmjn6srs0elgqhg2liujg",
     "trello_card_id": "6a3b1b341bab8c0ffa3b3e33",
