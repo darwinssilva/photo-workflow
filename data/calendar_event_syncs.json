@@ -237,13 +237,10 @@
     "trello_card_id": "6aea264b1a8eaab609fd6393",
     "trello_card_url": "https://trello.com/c/uhfTWB8T",
     "summary": "Bronze - Jade - Nasc. 21/10/2026 (Responsável: Roana Brito)",
-    "starts_at": "2026-11-04T09:00:00-03:00",
+    "starts_at": "2026-11-06T15:00:00-03:00",
     "description": "Nome: Roana Brito\nModelo: Jade\nData Nascimento: 21/10/2026\nEmail: rooanabrt@gmail.com\nTelefone: 11959831315\nTipo: Bronze\nReferencias: Clean/foto com irmãos\n\nOrigem: Google Forms",
-    "fingerprint": "1eedb34de243bffeb9e87dbca1edeeadafd402cec621d3922003f1bccd31b5e5",
-    "synced_at": "2026-11-03T21:18:56Z",
-    "email_skipped_at": "2026-11-03T21:18:56Z",
-    "email_skip_reason": "reused_existing_card",
-    "email_skipped_fingerprint": "1eedb34de243bffeb9e87dbca1edeeadafd402cec621d3922003f1bccd31b5e5"
+    "fingerprint": "4d2745e0695af363824888c723886e480ae0477434c81d9177ce96a3907679d3",
+    "synced_at": "2026-11-05T21:18:41Z"
   },
   "366mpfmjn6srs0elgqhg2liujg": {
     "google_event_id": "366mpfmjn6srs0elgqhg2liujg",
@@ -1637,6 +1634,19 @@
     "email_skip_reason": "reused_existing_card",
     "email_skipped_fingerprint": "6a6297af7a0a1a11739c74773def230fd30373b01f4327c84c45d97ead25162b"
   },
+  "mif5ticpi6cd3vcprhhpb1an5g": {
+    "google_event_id": "mif5ticpi6cd3vcprhhpb1an5g",
+    "trello_card_id": "6aeceab404d706e5d77a952d",
+    "trello_card_url": "https://trello.com/c/Yjt3GBrY",
+    "summary": "Natal Família Ingrid",
+    "starts_at": "2026-11-27T14:00:00-03:00",
+    "description": "",
+    "fingerprint": "6f104a1bcb4de8781f3993729e1f3740ccbc1ac3dc8fda32b2bea066b5efa133",
+    "synced_at": "2026-11-05T21:18:44Z",
+    "email_skipped_at": "2026-11-05T21:18:44Z",
+    "email_skip_reason": "reused_existing_card",
+    "email_skipped_fingerprint": "6f104a1bcb4de8781f3993729e1f3740ccbc1ac3dc8fda32b2bea066b5efa133"
+  },
   "nfkdrduf5so7bnmld8msp0idoo": {
     "google_event_id": "nfkdrduf5so7bnmld8msp0idoo",
     "trello_card_id": "6a7618c5cbd637ea2e2ea9a4",
@@ -2031,11 +2041,8 @@
     "summary": "Aref (Domicílio) Exclusivo - Nasc. 15/10/2026 (Responsável: Ariane Latif)",
     "starts_at": "2026-11-06T09:00:00-03:00",
     "description": "Nome: Ariane Latif\nModelo: Aref\nData Nascimento: 15/10/2026\nEmail: ari.rmedeiros@gmail.com\nTelefone: 11 963651730\nTipo: Exclusivo\nReferencias: Lua, Harry Potter e Safari\n\n**Taxa 80,00**\n\nEndereço: Rua rodovalho da Fonseca, 343 - Pari\nApto 161\n\nOrigem: Google Forms",
-    "fingerprint": "39972fd61c96a51fc9eb9af6dd2eabb90e94f11cb55b12efecf60a5ab45ebb19",
-    "synced_at": "2026-11-04T21:18:41Z",
-    "email_skipped_at": "2026-11-04T21:18:41Z",
-    "email_skip_reason": "reused_existing_card",
-    "email_skipped_fingerprint": "39972fd61c96a51fc9eb9af6dd2eabb90e94f11cb55b12efecf60a5ab45ebb19"
+    "fingerprint": "f27ac34e40e9fa57e8071f1564aa82ab7ae220f0471abb20722295899a9ecc76",
+    "synced_at": "2026-11-05T21:18:40Z"
   },
   "unf9igfvo9047c662u70j65u2o": {
     "google_event_id": "unf9igfvo9047c662u70j65u2o",
