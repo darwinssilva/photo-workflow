@@ -449,6 +449,19 @@
     "email_skip_reason": "reused_existing_card",
     "email_skipped_fingerprint": "264c39c8125224439c6c9b56dbad2aebbca30f2914038b5513b9f281ca657f31"
   },
+  "6kojed9h65gm2b9j60o30b9k6orj2b9o70sm6b9oc5im4ob665j66dj364": {
+    "google_event_id": "6kojed9h65gm2b9j60o30b9k6orj2b9o70sm6b9oc5im4ob665j66dj364",
+    "trello_card_id": "6aedc655f2176889379ffd35",
+    "trello_card_url": "https://trello.com/c/52QAdWz5",
+    "summary": "🎄 Natan - Nasc. 20/05/2026 (Responsável: Andressa)",
+    "starts_at": "2026-12-02T15:00:00-03:00",
+    "description": "Nome: Andressa\nModelo: Natan\nData Nascimento: 20/05/2026\nEmail: Dessaleal23@gmail.com\nTelefone: 11 94359-4567\nTipo: \nReferencias: Natal Encantado \n\nVai pagar no dia \n\nOrigem: Google Forms",
+    "fingerprint": "eca42634067f66a30d363bdc010f251188f36a0dc2be18eb6dc387ff2c7561ef",
+    "synced_at": "2026-11-08T13:08:32Z",
+    "email_skipped_at": "2026-11-08T13:08:32Z",
+    "email_skip_reason": "reused_existing_card",
+    "email_skipped_fingerprint": "eca42634067f66a30d363bdc010f251188f36a0dc2be18eb6dc387ff2c7561ef"
+  },
   "6kqm8c9kc8rjcbb36sojib9k74r3ib9pc8rj8b9pchim8c326gp3ce3664": {
     "google_event_id": "6kqm8c9kc8rjcbb36sojib9k74r3ib9pc8rj8b9pchim8c326gp3ce3664",
     "trello_card_id": "6a3d8d2cd308356f669004e8",
@@ -1145,6 +1158,16 @@
     "email_skip_reason": "reused_existing_card",
     "email_skipped_fingerprint": "d16547308d82be17482a22a92d5dd0f99d16986b89f1a06c167bc84073deeed9"
   },
+  "f4t5jhvvtjbpqaahb18p6vvovg": {
+    "google_event_id": "f4t5jhvvtjbpqaahb18p6vvovg",
+    "trello_card_id": "6af07453a00974b19f72e6be",
+    "trello_card_url": "https://trello.com/c/boJQLycQ",
+    "summary": "🎄Natal Premium (Responsável: Raab Raquel pacheco da Silva)",
+    "starts_at": "2026-12-03T17:00:00-03:00",
+    "description": "Nome: Raab Raquel pacheco da Silva\nModelo: \nData Nascimento: \nEmail: pachecoraquel057@gmail.com\nTelefone: 1197952-2170\nTipo: \nReferencias: Pacote: Natal Premium\nCelular:  / 1197017-8489\nRede social: Raquel Pacheco ou pachecoraquel057\nNome da criança: Vicente da silva Nascimento e Maria Cecília pacheco do Nascimento \nIdade da criança:  11 anos e 6 mês \n+ 2 adolescentes\n\nOrigem: Google Forms",
+    "fingerprint": "1e61569e6b1c41a3738d7244c6ab018d452de5afdfe9f914e18b57e3012e3922",
+    "synced_at": "2026-11-08T13:08:36Z"
+  },
   "f522ltr1mo4urvuo3cnmfigu7s": {
     "google_event_id": "f522ltr1mo4urvuo3cnmfigu7s",
     "trello_card_id": "6a3b0ba03b5c28bc0c9562ea",
@@ -1224,6 +1247,16 @@
     "description": "Nome: Kamila Montano Gregorio\nModelo: Maria Cecília\nData Nascimento: 11/09/2026\nEmail: kamila.gregorio@hotmail.com\nTelefone: (11) 99261-9159\nTipo: Ouro\nReferencias: Clean, Lua e Balanço \n\n\n** Entrega até 5km, maiores distâncias a retirada fica por conta da cliente **\n\nOrigem: Google Forms",
     "fingerprint": "edaf7f5f73f261c164fb6d410decc3b75b220b827b9c25abad83171bd4c76816",
     "synced_at": "2026-09-18T21:22:57Z"
+  },
+  "gile172iiffu0nddtdktqjtdao": {
+    "google_event_id": "gile172iiffu0nddtdktqjtdao",
+    "trello_card_id": "6af0744bbbb05ddcf734e8d8",
+    "trello_card_url": "https://trello.com/c/eqkeN396",
+    "summary": "🎄 Maya (Responsável: Ingrid Costa)",
+    "starts_at": "2026-11-27T14:00:00-03:00",
+    "description": "Nome: Ingrid Costa\nModelo: Maya\nData Nascimento: \nEmail: ingrid_endsfeldz@hotmail.com\nTelefone: 11 99966-0380\nTipo: \nReferencias: Pacote escolhido: Encantado\nObservação(caso tenha):sem edição de fotos\nRecebendo todos os arquivos sem edição (R$249)\n \nRede social: @icendsfeldz\nNome da criança: Maya\nIdade da criança: 2 anos\n\nOrigem: Google Forms",
+    "fingerprint": "c74f13599f0f219075fcb7a6aa53a485e55687fdf85c8fd63765899dc1965e8c",
+    "synced_at": "2026-11-08T13:08:29Z"
   },
   "giqc4741riek1vid0sectiafpk": {
     "google_event_id": "giqc4741riek1vid0sectiafpk",
@@ -1645,7 +1678,8 @@
     "synced_at": "2026-11-05T21:18:44Z",
     "email_skipped_at": "2026-11-05T21:18:44Z",
     "email_skip_reason": "reused_existing_card",
-    "email_skipped_fingerprint": "6f104a1bcb4de8781f3993729e1f3740ccbc1ac3dc8fda32b2bea066b5efa133"
+    "email_skipped_fingerprint": "6f104a1bcb4de8781f3993729e1f3740ccbc1ac3dc8fda32b2bea066b5efa133",
+    "archived_at": "2026-11-08T13:08:24Z"
   },
   "nfkdrduf5so7bnmld8msp0idoo": {
     "google_event_id": "nfkdrduf5so7bnmld8msp0idoo",
@@ -1751,6 +1785,19 @@
     "description": "Nome: Jaqueline Almeida\nModelo: Antônio\nData Nascimento: 07/08/2026\nEmail: jaqueline.almeidaadvs@gmail.com\nTelefone: 11977091114\nTipo: Prata\nReferencias: Baby clean, arco com ursinhos.\n\nOrigem: Google Forms",
     "fingerprint": "e1f82ca1c562fcb3d38c3115acc9548846f21288c40117ebaaa1080d7ca9882d",
     "synced_at": "2026-08-10T21:57:01Z"
+  },
+  "p97ls3gbn80ecss3g261u9b3eg": {
+    "google_event_id": "p97ls3gbn80ecss3g261u9b3eg",
+    "trello_card_id": "6af0744bbbb05ddcf734e8d8",
+    "trello_card_url": "https://trello.com/c/eqkeN396",
+    "summary": "Maya (Responsável: Ingrid Costa)",
+    "starts_at": "2026-11-27T14:00:00-03:00",
+    "description": "Nome: Ingrid Costa\nModelo: Maya\nData Nascimento: \nEmail: ingrid_endsfeldz@hotmail.com\nTelefone: 11 99966-0380\nTipo: \nReferencias: Pacote escolhido: Encantado\nObservação(caso tenha):sem edição de fotos\nRecebendo todos os arquivos sem edição (R$249)\n \nRede social: @icendsfeldz\nNome da criança: Maya\nIdade da criança: 2 anos\n\nOrigem: Google Forms",
+    "fingerprint": "3d915ba3e2244b3e3e1c482e12761d6d5897d47113a9c48d19ec3486a6e582dc",
+    "synced_at": "2026-11-08T13:08:31Z",
+    "email_skipped_at": "2026-11-08T13:08:31Z",
+    "email_skip_reason": "reused_existing_card",
+    "email_skipped_fingerprint": "3d915ba3e2244b3e3e1c482e12761d6d5897d47113a9c48d19ec3486a6e582dc"
   },
   "ppu8d5i60auej9f965b745au54": {
     "google_event_id": "ppu8d5i60auej9f965b745au54",
