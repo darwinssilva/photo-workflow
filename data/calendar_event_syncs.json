@@ -632,6 +632,19 @@
     "email_skip_reason": "reused_existing_card",
     "email_skipped_fingerprint": "416b913ae526b9bb9b08e24efb1a0636c973cb9683a712f50a08116f4854bd4a"
   },
+  "7otku4a0399i94lf1ocvlqmhjs": {
+    "google_event_id": "7otku4a0399i94lf1ocvlqmhjs",
+    "trello_card_id": "6af6f64175612cfca5f939c8",
+    "trello_card_url": "https://trello.com/c/z9Z19lM0",
+    "summary": "Bronze - Henry - Nasc. 23/10/2026 (Responsável: Liliane)",
+    "starts_at": "2026-11-14T11:30:00-03:00",
+    "description": "Nome: Liliane\nModelo: Henry\nData Nascimento: 23/10/2026\nEmail: lilianesouza.rh@gmail.com\nTelefone: 11 96973-2127\nTipo: Bronze\nReferencias: Balde\n\nOrigem: Google Forms",
+    "fingerprint": "7e8556372804cdf4b06fae47ae43f42c75a7b457290234fde103269ccd7fa98e",
+    "synced_at": "2026-11-13T21:18:49Z",
+    "email_skipped_at": "2026-11-13T21:18:49Z",
+    "email_skip_reason": "reused_existing_card",
+    "email_skipped_fingerprint": "7e8556372804cdf4b06fae47ae43f42c75a7b457290234fde103269ccd7fa98e"
+  },
   "7rho9sgs7lt21g1s5aubsfug6k": {
     "google_event_id": "7rho9sgs7lt21g1s5aubsfug6k",
     "trello_card_id": "6a4539c8aa15dae5114880da",
@@ -1405,6 +1418,19 @@
     "description": "Nome: Jessica Fidelis\nModelo: Isis\nData Nascimento: 27/07/2026\nEmail: jessicafidelisps@gmail.com\nTelefone: 11943250237\nTipo: Prata\nReferencias: Lua e arco de flores \n\nOrigem: Google Forms",
     "fingerprint": "a8221e8f130409a226927d2e9de254a7bc11030ed8472551fe4d5f2390adb477",
     "synced_at": "2026-08-16T16:44:43Z"
+  },
+  "i10et3g6l44d87h16ekhah7si8": {
+    "google_event_id": "i10et3g6l44d87h16ekhah7si8",
+    "trello_card_id": "6af72a1e2ce11109c2e674ac",
+    "trello_card_url": "https://trello.com/c/yYnXvTD2",
+    "summary": "Apresentação Balllet Stella",
+    "starts_at": "2026-11-17T16:00:00-03:00",
+    "description": "",
+    "fingerprint": "28a36caee54076a1d5db0cce35c735f46aac463985bd9465cf47bcea4e28d524",
+    "synced_at": "2026-11-13T21:18:52Z",
+    "email_skipped_at": "2026-11-13T21:18:52Z",
+    "email_skip_reason": "reused_existing_card",
+    "email_skipped_fingerprint": "28a36caee54076a1d5db0cce35c735f46aac463985bd9465cf47bcea4e28d524"
   },
   "igjfslbfff2ci2aji9d93327dg": {
     "google_event_id": "igjfslbfff2ci2aji9d93327dg",
