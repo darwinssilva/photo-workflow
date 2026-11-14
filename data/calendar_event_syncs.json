@@ -1789,6 +1789,19 @@
     "email_skipped_fingerprint": "6f104a1bcb4de8781f3993729e1f3740ccbc1ac3dc8fda32b2bea066b5efa133",
     "archived_at": "2026-11-08T13:08:24Z"
   },
+  "n6ub7i26hro9k0235letu75tv8": {
+    "google_event_id": "n6ub7i26hro9k0235letu75tv8",
+    "trello_card_id": "6af78652f6b2168f4fbc9975",
+    "trello_card_url": "https://trello.com/c/PWS7MBzM",
+    "summary": "Prata - Anthony - Nasc. 18/10/2026 (Responsável: Amanda Veronesi)",
+    "starts_at": "2026-11-14T08:00:00-03:00",
+    "description": "Nome: Amanda Veronesi\nModelo: Anthony\nData Nascimento: 18/10/2026\nEmail: Amanda.viana@outlook.com.br\nTelefone: 11941277420\nTipo: Prata\nReferencias: Harry Potter e Cowboy \n\nOrigem: Google Forms",
+    "fingerprint": "c880d3c20ac6fc0f5554c4bebd07cfbc25cceeca95dc1dc82a56707253f27e0a",
+    "synced_at": "2026-11-14T09:18:27Z",
+    "email_skipped_at": "2026-11-14T09:18:27Z",
+    "email_skip_reason": "reused_existing_card",
+    "email_skipped_fingerprint": "c880d3c20ac6fc0f5554c4bebd07cfbc25cceeca95dc1dc82a56707253f27e0a"
+  },
   "nfkdrduf5so7bnmld8msp0idoo": {
     "google_event_id": "nfkdrduf5so7bnmld8msp0idoo",
     "trello_card_id": "6a7618c5cbd637ea2e2ea9a4",
@@ -2244,5 +2257,18 @@
     "email_skipped_at": "2026-11-10T21:18:30Z",
     "email_skip_reason": "reused_existing_card",
     "email_skipped_fingerprint": "b406e7343b03f49d02f6ccf43d1d468a74baf551ae945dfb035af997fe3673d0"
+  },
+  "voeus7jtigdm5pn8dhlvvpv9mo": {
+    "google_event_id": "voeus7jtigdm5pn8dhlvvpv9mo",
+    "trello_card_id": "6af6f64175612cfca5f939c8",
+    "trello_card_url": "https://trello.com/c/z9Z19lM0",
+    "summary": "Bronze - Henry - Nasc. 23/10/2026 (Responsável: Liliane)",
+    "starts_at": "2026-11-14T11:30:00-03:00",
+    "description": "Nome: Liliane\nModelo: Henry\nData Nascimento: 23/10/2026\nEmail: lilianesouza.rh@gmail.com\nTelefone: 11 96973-2127\nTipo: Bronze\nReferencias: \n\nOrigem: Google Forms",
+    "fingerprint": "259c226ae177274d40dfa6a402fb5044fcd9193564dd407dccd68c4bcd2b1714",
+    "synced_at": "2026-11-14T09:18:29Z",
+    "email_skipped_at": "2026-11-14T09:18:29Z",
+    "email_skip_reason": "reused_existing_card",
+    "email_skipped_fingerprint": "259c226ae177274d40dfa6a402fb5044fcd9193564dd407dccd68c4bcd2b1714"
   }
 }
