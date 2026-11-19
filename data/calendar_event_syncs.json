@@ -1231,6 +1231,19 @@
     "email_skip_reason": "reused_existing_card",
     "email_skipped_fingerprint": "887098c25f061ef524e816a8524ee516dda46a10eeb53f7cd83f92a23e195d8f"
   },
+  "dora44g7kej0u0jihl2hmvj7sc": {
+    "google_event_id": "dora44g7kej0u0jihl2hmvj7sc",
+    "trello_card_id": "6afebf6455c482f725f2d286",
+    "trello_card_url": "https://trello.com/c/6PiIZbau",
+    "summary": "Prata - José Felipe - Nasc. 05/11/2026 (Responsável: Gabriela Saldanha)",
+    "starts_at": "2026-11-27T18:30:00-03:00",
+    "description": "Nome: Gabriela Saldanha\nModelo: José Felipe\nData Nascimento: 05/11/2026\nEmail: gabriela-saldanha1@hotmail.com\nTelefone: 1198787-1884\nTipo: Prata\nReferencias: \n\nOrigem: Google Forms",
+    "fingerprint": "f50a1654b9d1330e8829ff41097428cdae5a9e63824674f7e6c044de239ea814",
+    "synced_at": "2026-11-19T21:18:36Z",
+    "email_skipped_at": "2026-11-19T21:18:36Z",
+    "email_skip_reason": "reused_existing_card",
+    "email_skipped_fingerprint": "f50a1654b9d1330e8829ff41097428cdae5a9e63824674f7e6c044de239ea814"
+  },
   "dvpkg3oook991p11jg8n2crjs8": {
     "google_event_id": "dvpkg3oook991p11jg8n2crjs8",
     "trello_card_id": "6af1b7f9ef7256664b3560a1",
@@ -1892,6 +1905,19 @@
     "email_skipped_fingerprint": "6f104a1bcb4de8781f3993729e1f3740ccbc1ac3dc8fda32b2bea066b5efa133",
     "archived_at": "2026-11-08T13:08:24Z"
   },
+  "mom9d9djcblnhel1sea86u6fic": {
+    "google_event_id": "mom9d9djcblnhel1sea86u6fic",
+    "trello_card_id": "6aff67b0b657a4f77b264b33",
+    "trello_card_url": "https://trello.com/c/WkXQINaJ",
+    "summary": "Agenda Fechada (Aniversário Stella)",
+    "starts_at": "2026-12-07T01:00:00-03:00",
+    "description": "",
+    "fingerprint": "bc10ed44cc9885b6d520dd92d2064a4feebbbfb169bf57407a3191a195dbb3ed",
+    "synced_at": "2026-11-19T21:18:42Z",
+    "email_skipped_at": "2026-11-19T21:18:42Z",
+    "email_skip_reason": "missing_client_email",
+    "email_skipped_fingerprint": "bc10ed44cc9885b6d520dd92d2064a4feebbbfb169bf57407a3191a195dbb3ed"
+  },
   "n6ub7i26hro9k0235letu75tv8": {
     "google_event_id": "n6ub7i26hro9k0235letu75tv8",
     "trello_card_id": "6af78652f6b2168f4fbc9975",
@@ -2107,6 +2133,16 @@
     "email_skipped_at": "2026-08-01T21:34:35Z",
     "email_skip_reason": "reused_existing_card",
     "email_skipped_fingerprint": "79e01df53eb52d92c316b1651e2c3f84a0b7d2acd304b8414b1c6da8cef77db8"
+  },
+  "r3un1r5k28bab9far9k4659ndg": {
+    "google_event_id": "r3un1r5k28bab9far9k4659ndg",
+    "trello_card_id": "6aff67a72a449e603a753b35",
+    "trello_card_url": "https://trello.com/c/n6B0DiZX",
+    "summary": "Exclusivo DOMICÍLIO - Benício - Nasc. 10/11/2026 (Responsável: Ananda)",
+    "starts_at": "2026-11-20T10:00:00-03:00",
+    "description": "Nome: Ananda\nModelo: Benício\nData Nascimento: 10/11/2026\nEmail: ananda_lopesdasilva@yahoo.com.br\nTelefone: 11 988562013\nTipo: Ouro\nReferencias: Caminha, família e círculo \n\nENDEREÇO: Rua Alger 306 casa 01 \nVila Rica\n\nOrigem: Google Forms",
+    "fingerprint": "462d7450806feb81937ceef93ff5521bc1af3d0cf5d1ce9dd24a1ce23958f148",
+    "synced_at": "2026-11-19T21:18:32Z"
   },
   "r5lttjk9k9d2r4gl24nr53bfp4": {
     "google_event_id": "r5lttjk9k9d2r4gl24nr53bfp4",
