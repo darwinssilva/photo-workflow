@@ -371,6 +371,19 @@
     "email_skip_reason": "reused_existing_card",
     "email_skipped_fingerprint": "945103e374cdbce3abb1fbd2ddadcc9984f71bca6b90073b193921f920fea528"
   },
+  "60sqhhmflb9e728hepglncgr68": {
+    "google_event_id": "60sqhhmflb9e728hepglncgr68",
+    "trello_card_id": "6b04add1dbce98313a5ecd5f",
+    "trello_card_url": "https://trello.com/c/ITmcdqDp",
+    "summary": "Prata - Catarina - Nasc. 04/12/2026 (Responsável: Patricia Urakawa)",
+    "starts_at": "2026-12-16T08:00:00-03:00",
+    "description": "Nome: Patricia Urakawa\nModelo: Catarina\nData Nascimento: 04/12/2026\nEmail: patiibarbosa@gmail.com\nTelefone: 61.998322526\nTipo: Prata\nReferencias: \n\nOrigem: Google Forms",
+    "fingerprint": "039c3573febf447b56b66ce7614df37d622cb45752cca82b856176b94a021bbe",
+    "synced_at": "2026-11-24T21:18:43Z",
+    "email_skipped_at": "2026-11-24T21:18:43Z",
+    "email_skip_reason": "reused_existing_card",
+    "email_skipped_fingerprint": "039c3573febf447b56b66ce7614df37d622cb45752cca82b856176b94a021bbe"
+  },
   "65egs70kimcinb5ts2tkb4h12s": {
     "google_event_id": "65egs70kimcinb5ts2tkb4h12s",
     "trello_card_id": "6aa9c0864e3c447970387269",
@@ -832,6 +845,16 @@
     "email_skipped_at": "2026-08-17T21:39:16Z",
     "email_skip_reason": "reused_existing_card",
     "email_skipped_fingerprint": "3965a050bd3413e9c0e5451bdfbefeb3f491de3199f7f5fc2aa3f941eb8d85df"
+  },
+  "a52g1p6h8qd7jlhell8vu30h3o": {
+    "google_event_id": "a52g1p6h8qd7jlhell8vu30h3o",
+    "trello_card_id": "6b05ff2b5f497a4e8c606be4",
+    "trello_card_url": "https://trello.com/c/CHC4LchS",
+    "summary": "Ouro - Miguel - Nasc. 07/11/2026 (Responsável: Thaís Heloísa Vaz farias)",
+    "starts_at": "2026-11-25T15:00:00-03:00",
+    "description": "Nome: Thaís Heloísa Vaz farias\nModelo: Miguel\nData Nascimento: 07/11/2026\nEmail: thais.vfarias@yahoo.com.br\nTelefone: 69 981212608\nTipo: Ouro\nReferencias: \n\nOrigem: Google Forms",
+    "fingerprint": "56559c28ae22ced60f5f2b1e2b126e73464ba29e94f2b5e27cfbec1a271a11be",
+    "synced_at": "2026-11-24T21:18:36Z"
   },
   "a5ca9jljmojcs0gh5056ucitb4": {
     "google_event_id": "a5ca9jljmojcs0gh5056ucitb4",
